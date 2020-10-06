@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98cebb7-7973-4b4a-95fb-163f5b91ee41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tutorial_JS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/part9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/Tutorial_HTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_HTML.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/Tutorial_JS.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +52,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Tutorials\MyFirstGame" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
