@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98cebb7-7973-4b4a-95fb-163f5b91ee41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tutorial_JS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Tutorial_HTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_HTML.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Tutorial_JS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_HTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_HTML.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_JS.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tutorial_HTML.html" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -61,12 +61,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d8c080d5-4ec9-4805-8180-39f501e43d6b" name="Default Changelist" comment="" />
+      <changelist id="e98cebb7-7973-4b4a-95fb-163f5b91ee41" name="Default Changelist" comment="" />
       <created>1601976327540</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601976327540</updated>
       <workItem from="1601976328585" duration="992000" />
+      <workItem from="1601984039429" duration="608000" />
     </task>
     <servers />
   </component>
@@ -83,5 +84,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601984059139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601984059139" />
   </component>
 </project>

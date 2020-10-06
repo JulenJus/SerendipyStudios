@@ -1,3 +1,3 @@
 window.onload = function () {
-    var game = new Phaser.Game();
+    let game = new Phaser.Game();
 }
