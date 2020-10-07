@@ -19,11 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8c080d5-4ec9-4805-8180-39f501e43d6b" name="Default Changelist" comment="" />
+    <list default="true" id="d8c080d5-4ec9-4805-8180-39f501e43d6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tutorial_HTML.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tutorial_JS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part9.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -35,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -64,5 +87,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
