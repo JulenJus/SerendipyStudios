@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98cebb7-7973-4b4a-95fb-163f5b91ee41" name="Default Changelist" comment="" />
+    <list default="true" id="e98cebb7-7973-4b4a-95fb-163f5b91ee41" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_HTML.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_HTML.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorial_JS.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tutorial_HTML.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../part5.html" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -65,6 +69,8 @@
       <updated>1601976327540</updated>
       <workItem from="1601976328585" duration="992000" />
       <workItem from="1601984039429" duration="608000" />
+      <workItem from="1602063879720" duration="3541000" />
+      <workItem from="1602145124848" duration="13455000" />
     </task>
     <servers />
   </component>
@@ -84,13 +90,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601984059139">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1602150563779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601984059139" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1602010198328">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602150563779" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1602064515918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602010198328" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602064515918" />
   </component>
 </project>
