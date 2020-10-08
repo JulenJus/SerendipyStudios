@@ -178,7 +178,7 @@ function update() {
         player.setVelocityX(0);
         player.anims.play('turn');
     }
-
+  
         //Jump
     if ((control_cursors.up.isDown || control_wasd.up.isDown) && player.body.touching.down) {
         player.setVelocityY(-330);
