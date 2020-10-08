@@ -1,18 +1,23 @@
+//Configure the game
 let config = {
     type: Phaser.AUTO,
     width: 1280,
     height: 720,
-    title: 'Tutorial',
-    version: '1.0',
-    pixelArt: true,
+    title: 'Tutorial',      //Optional
+    version: '1.0',         //Optional
+    pixelArt: true,         //If you make zoom, it does not blur the pixels, instead they remain scaled.
+
+    //Let the physics config
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: 300},
-            isPaused: false,
-            debug: false
+            gravity: {y: 300},          //The units are pixels/second
+            isPaused: false,            //Stops the physics or the game?
+            debug: false                //Enables/Disables the debug mode
         }
     },
+
+    //Let the game callbacks
     scene: {
         preload: preload,
         create: create,
@@ -21,160 +26,225 @@ let config = {
 };
 
 //Global variables
+//General
 let game = new Phaser.Game(config);
-let platforms;
-let skySpr;
-let player;
-let cursors_arrows;
-let cursors_wasd;
-let stars;
-let bombs;
-let score = 0;
-let scoreText;
 let gameOver;
 let gameMode = 'difficult';
 
+//Player
+let player;
+let control_cursors;
+let control_wasd;
+
+//World assets
+let skySpr;
+let platforms;
+let stars;
+let bombs;
+
+//Score
+let score = 0;
+let scoreText;
+
+//Game Loop functions
 function preload() {
+    //Load the resources
     this.load.image('bomb', 'assets/bomb.png');
-    this.load.spritesheet('dude', 'assets/dude.png', {frameWidth: 32, frameHeight: 48});
     this.load.image('platform', 'assets/platform.png');
     this.load.image('sky', 'assets/sky.png');
     this.load.image('star', 'assets/star.png');
+
+    this.load.spritesheet('dude', 'assets/dude.png', {frameWidth: 32, frameHeight: 48});
 }
 
 function create() {
-    //Create sky
-    skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0); //if we dont change the origin of the image to (0, 0) we would write: let sprite = this.add.image(config.width / 2, config.height / 2, 'sky');
-    skySpr.setScale(config.width / skySpr.width, config.height / skySpr.height); //the sky will have the size of the screen
+    //Create controls
+    control_cursors = this.input.keyboard.createCursorKeys();
+    control_wasd = this.input.keyboard.addKeys({
+        up:Phaser.Input.Keyboard.KeyCodes.W,
+        down:Phaser.Input.Keyboard.KeyCodes.S,
+        left:Phaser.Input.Keyboard.KeyCodes.A,
+        right:Phaser.Input.Keyboard.KeyCodes.D
+    });
 
-    //Create platforms
-    platforms = this.physics.add.staticGroup();
-    platforms.create(config.width / 2, config.height - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
+
+    //Create assets
+        //Create the sky
+    skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);      //The origin is in top left corner, so if you don't modify the sprite's center you'll only see the bottom right section.
+    skySpr.setScale(config.width / skySpr.width, config.height / skySpr.height); //Adjust to screen size
+
+        //Create the ground group
+    platforms = this.physics.add.staticGroup(); //The object will have collisions but won't be affected by gravity.
+                                                // The groups are used to contain same objects with same behaviours.
+        //Create the ground
+    platforms.create(config.width / 2, config.height - 16, 'platform').setScale(config.width / 400, 1).refreshBody();  //Let the ground.
+    // The refreshBody is to commit the changes over the object.
+
+        //Create other platforms
     platforms.create(600, 400, 'platform');
     platforms.create(50, 550, 'platform');
     platforms.create(1100, 220, 'platform');
 
-    //Create player
-    player = this.physics.add.sprite(100, 450, 'dude');
-    player.setBounceY(0.2);
-    player.setCollideWorldBounds(true);
-    player.body.setGravityY(0); //we can change a concrete body's gravity
+        //Create player
+            //Instance
+    player = this.physics.add.sprite(100, 450, 'dude'); //Init location/object
 
-    //Create stars
-    stars = this.physics.add.group({
-        key: 'star',
-        repeat: 5,
-        setXY: {x: 12, y: 0, stepX: 70}
-    });
-    stars.children.iterate(function (child) {
-        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-    });
+            //Config physics
+    player.setBounce(0.2);              //The rebound force when colliding with a physic object
+    player.setCollideWorldBounds(true); //Set the player not to be able to trespass the limits of the screen.
+                                        //They act as a physic object too, so that the pj rebounds against them.
 
-    //Create bombs
-    bombs = this.physics.add.group();
+    //player.body.setGravityY(-310);       //This function does not set a different gravity,
+    // but it sums the given amount to the world's gravity.
 
-    //Create all player animations
+            //Create animations
     this.anims.create({
-        key: 'left',
+        key: 'left',     //Animation alias
         frames: this.anims.generateFrameNumbers('dude', {start: 0, end: 3}),
-        frameRate: '8',
-        repeat: '-1'
+        frameRate: 10,
+        repeat: -1       //The animation loops infinitely
+    });
+
+    this.anims.create({
+        key: 'turn',
+        frames: [{key: 'dude', frame: 4}],
+        frameRate: 20
+        //Does not have repeat because it launches once.
     });
 
     this.anims.create({
         key: 'right',
         frames: this.anims.generateFrameNumbers('dude', {start: 5, end: 8}),
-        frameRate: '8',
-        repeat: '-1'
+        frameRate: 10,
+        repeat: -1       //The animation loops infinitely
     });
 
-    this.anims.create({
-        key: 'turn',
-        frames: this.anims.generateFrameNumbers('dude', {start: 4, end: 4}),
-        frameRate: '12'
+            //Create colliders
+    this.physics.add.collider(player, platforms, collideCallback);
+    //Detects if the player and the platforms are touching against each other.
+    // It is also able to invoke a callback function defined by the user to trigger a different behaviour -> Super useful!!
+
+        //Create stars
+            //Create instances
+    stars = this.physics.add.group({
+        key: 'star',     //Sprite id
+        repeat: 11,     //Number of instances
+        setXY: {x: 12, y: 0, stepX: 70}    //Initial pos, the space between them
     });
 
-    //Create controls
-    cursors_arrows = this.input.keyboard.createCursorKeys();
-    cursors_wasd = this.input.keyboard.addKeys({
-        up: Phaser.Input.Keyboard.KeyCodes.W,
-        down: Phaser.Input.Keyboard.KeyCodes.S,
-        left: Phaser.Input.Keyboard.KeyCodes.A,
-        right: Phaser.Input.Keyboard.KeyCodes.D,
+            //Set collisions
+    stars.children.iterate(function (child) {
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
+    this.physics.add.collider(stars, platforms);
 
-    //Create texts
+            //Set relation with pj
+    this.physics.add.overlap(player, stars, collectStar, null, this);
+    //overlap(object1, object2, collideCallback, processCallback, callbackContext);
+    //The processCallback can be used to do additional checks that determine
+    // whether the collideCallback is called or not.
+
+        //Create bombs
+            //Set group
+    bombs = this.physics.add.group();
+
+            //Config collisions
+    this.physics.add.collider(bombs, platforms);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+
+    //Create score
     scoreText = this.add.text(16, 16, 'Score: 0', {
         fontFamily: 'Gelato',
         fontStyle: 'Italic',
         fontSize: '32px',
-        fill: '#5bff00'
+        fill: '#000000'
     });
-
-    //Collisions
-    this.physics.add.collider(player, platforms);
-    this.physics.add.collider(stars, platforms);
-    this.physics.add.overlap(player, stars, collectStar, null, this);
-    this.physics.add.collider(bombs, platforms);
-    this.physics.add.overlap(player, bombs, bombHit, null, this);
+    //location, default string, style
 }
 
 function update() {
-    if (gameOver) {
-        return;
-    }
-    if (cursors_arrows.left.isDown || cursors_wasd.left.isDown) {
+    if(gameOver) return;
+
+    //Player movement
+        //Sides
+    if (control_cursors.left.isDown || control_wasd.left.isDown) {
         player.setVelocityX(-160);
         player.anims.play('left', true);
-    } else if (cursors_arrows.right.isDown || cursors_wasd.right.isDown) {
+    } else if (control_cursors.right.isDown || control_wasd.right.isDown) {
         player.setVelocityX(160);
         player.anims.play('right', true);
     } else {
         player.setVelocityX(0);
         player.anims.play('turn');
     }
-    if ((cursors_arrows.up.isDown || cursors_wasd.up.isDown) && player.body.touching.down) {
+  
+        //Jump
+    if ((control_cursors.up.isDown || control_wasd.up.isDown) && player.body.touching.down) {
         player.setVelocityY(-330);
-
     }
 }
 
+//Methods
+function collideCallback() {
+    console.log("Collided");
+}
+
 function collectStar(player, star) {
-    star.disableBody(true, true);
+    console.log("Overlapped");
+    star.disableBody(true, true);   //Hide obj, disable obj
 
     score += 10;
     scoreText.setText('Score: ' + score);
 
-
-    switch (gameMode) {
+    switch(gameMode){
         case 'easy':
-            if (stars.countActive(true) === 0) { //If there are no active stars (all have been collected)
+            if (stars.countActive(true) === 0) {
                 stars.children.iterate(function (child) {
-                    child.enableBody(true, child.x, 0, true, true); //reset all stars
+                    child.enableBody(true, child.x, 0, true, true)
+                    //enableBody(reset, x, y, enable, show)
                 });
-                let x = (player.x < config.width / 2) ? Phaser.Math.Between(config.width / 2, config.width) : Phaser.Math.Between(0, config.width / 2);
-                let bomb = bombs.create(x, 0, 'bomb');
+
+                let x = (player.x > config.width / 2) ?
+                    Phaser.Math.Between(config.width / 2, config.width) :
+                    Phaser.Math.Between(0, config.width / 2);
+
+                let bomb = bombs.create(x, 16, 'bomb');
                 bomb.setBounce(1);
                 bomb.setCollideWorldBounds(true);
-                bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+                bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);    //In which axis?
             }
+            break;
+
+
         case 'difficult':
-            if (stars.countActive(true) === 0) { //If there are no active stars (all have been collected)
+            if (stars.countActive(true) === 0) {
                 stars.children.iterate(function (child) {
-                    child.enableBody(true, child.x, 0, true, true); //reset all stars
+                    child.enableBody(true, child.x, 0, true, true)
+                    //enableBody(reset, x, y, enable, show)
                 });
             }
-            let x = (player.x < config.width / 2) ? Phaser.Math.Between(config.width / 2, config.width) : Phaser.Math.Between(0, config.width / 2);
-            let bomb = bombs.create(x, 0, 'bomb');
+
+            let x = (player.x < config.width / 2) ?
+                Phaser.Math.Between(config.width / 2, config.width) :
+                Phaser.Math.Between(0, config.width / 2);
+            let bomb = bombs.create(x, 16, 'bomb');
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
-            bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+            bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);    //In which axis?
+            break;
     }
 }
 
-function bombHit(player, bomb) {
-    this.physics.pause();
+function hitBomb(player, bomb) {
+    //You died
+    console.log("You died");
+
+    this.physics.pause();   //The game stops
     player.setTint(0xff0000);
     player.anims.play('turn');
     gameOver = true;
 }
+
+//<editor-fold desc="Region">
+//</editor-fold>
