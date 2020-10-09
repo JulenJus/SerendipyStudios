@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FirstSketch_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstSketch_main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phaser.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/placeholderplayer.png" beforeDir="false" />
+    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/FirstSketch_main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tutorials/MyFirstGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorials/MyFirstGame/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +61,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602231072351</updated>
-      <workItem from="1602231073589" duration="3058000" />
+      <workItem from="1602231073589" duration="11568000" />
     </task>
+    <task id="LOCAL-00001" summary="FirstSketch resource load">
+      <created>1602234161578</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602234161578</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,7 +87,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FirstSketch resource load" />
+    <option name="LAST_COMMIT_MESSAGE" value="FirstSketch resource load" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="1032" y="243" key="Vcs.Push.Dialog.v2" timestamp="1602234167541">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1602233326366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

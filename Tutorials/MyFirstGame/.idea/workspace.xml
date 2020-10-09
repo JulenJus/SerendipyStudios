@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8c080d5-4ec9-4805-8180-39f501e43d6b" name="Default Changelist" comment="Instalation trial &amp; Tutorial 0.1">
-      <change afterPath="$PROJECT_DIR$/../../Game/FirstSketch_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/FirstSketch_main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/phaser.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assets/placeholderplayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Game/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Game/FirstSketch_main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       <workItem from="1601976328585" duration="992000" />
       <workItem from="1602145197286" duration="13364000" />
       <workItem from="1602158779588" duration="93000" />
-      <workItem from="1602231041487" duration="2736000" />
+      <workItem from="1602231041487" duration="7892000" />
     </task>
     <task id="LOCAL-00001" summary="Instalation trial &amp; Tutorial 0.1">
       <created>1602066794838</created>
