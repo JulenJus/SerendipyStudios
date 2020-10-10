@@ -52,6 +52,7 @@ let zoomedOut;
 //Assets
 let skySpr;
 let platforms;
+let i = 0;
 
 //</editor-fold>
 
@@ -100,10 +101,7 @@ function create() {
     this.physics.add.collider(player, platforms);
 
     //Camera follow
-    //this.cameras.main.setBounds(0, 0, config.width, 2160); //First two parameters are an offset
-    this.cameras.main.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //First two parameters are an offset
-    this.cameras.main.startFollow(player);
-    //The camera's size must be adapted to the device's (config.width and config.height)
+    this.cameras.main.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //First two parameters are top left and the other two are bottom right corners
 }
 
 function update() {
@@ -111,34 +109,27 @@ function update() {
 
     //Player Movement
     if (controls.up.isDown)
-        player.setVelocityY(-225);
+        player.setVelocityY(-525);
     if (controls.right.isDown)
-        player.setVelocityX(150);
+        player.setVelocityX(250);
     if (controls.left.isDown)
-        player.setVelocityX(-150);
+        player.setVelocityX(-250);
 
-    //Map variation
-    // if (player.y < skySpr.height * scaledH - config.height / 2) {
-    //     this.cameras.main.startFollow(player);
-    // }
+    //Camera variation
+    this.cameras.main.scrollY = player.y - config.height / 2;
+    console.log("scrollX: " + this.cameras.main.scrollX);
+    console.log("scrollY: " + this.cameras.main.scrollY);
 
     if (player.y < config.height * 6 && !zoomedOut) {
         zoomedOut = true;
-        this.cameras.main.zoomTo(0.35, zoomOut(this.cameras.main, 0, 0, 0));
+        this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH, true);
+        this.cameras.main.zoomTo(1/3, 2000);
     }
     if (player.y < config.height * 3 && !zoomedIn) {
         zoomedIn = true;
-        this.cameras.main.zoomTo(1, zoomIn(this.cameras.main, 0, 0, 0));
+        //this.cameras.main.setBounds(config.width, 0, config.width, skySpr.height * scaledH, true);
+        this.cameras.main.zoomTo(1, 2000);
     }
-}
-
-function zoomOut(camera, progress, x, y){
-    //this.cameras.main.centerOn(player.x, player.y);
-    camera.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
-}
-function zoomIn(camera, progress, x, y){
-    //this.cameras.main.centerOn(player.x, player.y);
-    camera.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
 }
 
 //</editor-fold>
