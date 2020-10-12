@@ -18,6 +18,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -29,6 +30,10 @@
       <option name="presentableId" value="Default" />
       <updated>1601976241241</updated>
       <workItem from="1601976242818" duration="88000" />
+      <workItem from="1602235433173" duration="20540000" />
+      <workItem from="1602325656190" duration="12279000" />
+      <workItem from="1602412374000" duration="8719000" />
+      <workItem from="1602524908947" duration="501000" />
     </task>
     <servers />
   </component>
@@ -36,9 +41,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1601976306476">
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1602236618599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601976306476" />
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602236618599" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602246057324">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602246057324" />
   </component>
 </project>

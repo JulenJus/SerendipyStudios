@@ -1,9 +1,10 @@
 //<editor-fold desc="Configure the game">
 
 //Configure game
+
 let config = {
     type: Phaser.AUTO,
-    width: 1280,
+    width: 1280,        //The FoV of our camera will be the width x height we write here
     height: 720,        //[HERE] We have to make it responsive!
     title: 'First Sketch',
     version: '1.0',
@@ -36,7 +37,6 @@ let config = {
 //General
 let game = new Phaser.Game(config);
 let gameOver = false;
-let controlMode = 'Impulse';
 
 //Player
 let player;
@@ -53,10 +53,15 @@ let movementBarImpulsePercentages = [0.2, 0.35, 1];
 
 //Scene
 let levelWide = 500;
+let scaledW;
+let scaledH;
+let zoomedIn;
+let zoomedOut;
 
 //Assets
 let skySpr;
 let platforms;
+let i = 0;
 
 //</editor-fold>
 
@@ -67,7 +72,7 @@ let platforms;
 function preload() {
     //Load the resources
     this.load.image('player', 'Assets/Sprites/Player_Placeholder.png');
-    this.load.image('sky', 'Assets/Sprites/Background_Sky.png');
+    this.load.image('sky', 'Assets/Sprites/Background_Sky_Long2.png');
     this.load.image('platform', 'Assets/Sprites/Background_Platform.png');
 }
 
@@ -78,32 +83,35 @@ function create() {
         left: Phaser.Input.Keyboard.KeyCodes.A,
         right: Phaser.Input.Keyboard.KeyCodes.D
     });
+    this.input.keyboard.on('keydown_SPACE', jump);
 
     //Create assets
     skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
-    skySpr.setScale(config.width / skySpr.width, config.height / skySpr.height);
+    //skySpr.setScale(config.width / skySpr.width, config.height / skySpr.height);
+
+    //We have to rescale the background scale to adapt its size to the device's
+    scaledW = config.width / (skySpr.width / 3);
+    scaledH = config.height / (skySpr.height / 10);
+    skySpr.setScale(scaledW, scaledH);
 
     //Create level
     platforms = this.physics.add.staticGroup();
-
-    platforms.create(config.width / 2, config.height - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
-    platforms.create(config.width / 2 - levelWide / 2, config.height / 2, 'platform').setScale(1 / 400 * 32, config.height / 32).refreshBody();
-    platforms.create(config.width / 2 + levelWide / 2, config.height / 2, 'platform').setScale(1 / 400 * 32, config.height / 32).refreshBody();
-
+    platforms.create(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
+  
     //Create player
-    player = this.physics.add.sprite(config.width / 2, config.height - (32 + 32 / 2), 'player')
-        .setScale(32 / 334, 32 / 333).refreshBody();
+    player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player').setScale(32 / 334, 32 / 333).refreshBody();
     player.setBounce(0.4, 0.2);
     player.setDrag(40, 0);
     player.setCollideWorldBounds(true);
-
-    if (controlMode === 'Impulse') {
-        this.input.keyboard.on('keydown_SPACE', jump);
-    }
-
+  
     //Physics
     this.physics.add.collider(player, platforms, collideCallback);
-
+  
+    //Camera follow and bounds
+    this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //The world bounds define where the world colliders are (its like a box for the player/s)
+    this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
+    this.cameras.main.startFollow(player);
+  
     //Create score
     movementBarText = this.add.text(16, 16, 'Bar Value: 0', {
         fontFamily: 'Gelato',
@@ -114,8 +122,8 @@ function create() {
 }
 
 function update() {
-    //if(gameOver) return;
-
+    if (gameOver) return;
+  
     //Movement bar
     if (movementBarValue >= 100) {
         movementBarIncrement = -1;  //False -> Decrement
@@ -127,49 +135,18 @@ function update() {
     movementBarValue += 0.5 * movementBarIncrement;
     movementBarText.setText("Bar value: " + movementBarValue);
     //console.log("Bar value: " + movementBarValue);
-
-    //Player movement
-    switch (controlMode) {
-        case 'Impulse':
-            /*if (controls.up.isDown) {
-                console.log("Up");
-
-                let impulsePercentage = getImpulsePercentage(movementBarValue);
-                movementBarValue = 0;
-                movementBarText.setText("Bar value: " + movementBarValue);
-
-                player.setVelocityY(-225 * impulsePercentage);      //It's like an instant acceleration
-
-                if (controls.left.isDown) {
-                    //console.log("Left");
-                    player.setVelocityX(-150 * impulsePercentage);
-                }
-
-                if (controls.right.isDown) {
-                    //console.log("Right");
-                    player.setVelocityX(150 * impulsePercentage);
-                }
-            }*/
-            break;
-
-        case 'Constant':
-            if (controls.up.isDown) {
-                //console.log("Up");
-                player.setVelocityY(-225);      //It's like an instant acceleration
-            }
-
-            if (controls.left.isDown) {
-                //console.log("Left");
-                player.setVelocityX(-150);
-            }
-
-            if (controls.right.isDown) {
-                //console.log("Right");
-                player.setVelocityX(150);
-            }
-
-            break;
+  
+    //Camera variation
+    if (player.y < config.height * 6 && !zoomedOut) {
+        zoomedOut = true;
+        this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
+        this.cameras.main.zoomTo(1/3, 2000);
     }
+    if (player.y < config.height * 3 && !zoomedIn) {
+        zoomedIn = true;
+        this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
+        this.cameras.main.zoomTo(1, 2000);
+
 }
 
 //</editor-fold>
@@ -217,5 +194,5 @@ function getImpulsePercentage(movementBarValue) {
 function collideCallback() {
     //console.log("Collided");
 }
-
+  
 //</editor-fold>
