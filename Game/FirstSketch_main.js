@@ -87,7 +87,6 @@ function create() {
 
     //Create assets
     skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
-    //skySpr.setScale(config.width / skySpr.width, config.height / skySpr.height);
 
     //We have to rescale the background scale to adapt its size to the device's
     scaledW = config.width / (skySpr.width / 3);
@@ -113,7 +112,7 @@ function create() {
     this.cameras.main.startFollow(player);
   
     //Create score
-    movementBarText = this.add.text(16, 16, 'Bar Value: 0', {
+    movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
         fontFamily: 'Gelato',
         fontStyle: 'Italic',
         fontSize: '32px',
@@ -123,7 +122,7 @@ function create() {
 
 function update() {
     if (gameOver) return;
-  
+
     //Movement bar
     if (movementBarValue >= 100) {
         movementBarIncrement = -1;  //False -> Decrement
@@ -135,20 +134,19 @@ function update() {
     movementBarValue += 0.5 * movementBarIncrement;
     movementBarText.setText("Bar value: " + movementBarValue);
     //console.log("Bar value: " + movementBarValue);
-  
+
     //Camera variation
     if (player.y < config.height * 6 && !zoomedOut) {
         zoomedOut = true;
         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
-        this.cameras.main.zoomTo(1/3, 2000);
+        this.cameras.main.zoomTo(1 / 3, 2000);
     }
     if (player.y < config.height * 3 && !zoomedIn) {
         zoomedIn = true;
         this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1, 2000);
-
+    }
 }
-
 //</editor-fold>
 
 //<editor-fold desc="Methods">
