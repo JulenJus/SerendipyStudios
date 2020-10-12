@@ -88,8 +88,6 @@ function create() {
     platforms = this.physics.add.staticGroup();
 
     platforms.create(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
-    // platforms.create(config.width / 2 - levelWide / 2, config.height / 2, 'platform').setScale(1 / 400 * 32, config.height / 32).refreshBody();
-    // platforms.create(config.width / 2 + levelWide / 2, config.height / 2, 'platform').setScale(1 / 400 * 32, config.height / 32).refreshBody();
 
     //Create player
     player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player').setScale(32 / 334, 32 / 333).refreshBody();
@@ -101,10 +99,9 @@ function create() {
     this.physics.add.collider(player, platforms);
 
     //Camera follow and bounds
-    //this.cameras.main.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //First two parameters are top left and the other two are bottom right corners
     this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //The world bounds define where the world colliders are (its like a box for the player/s)
     this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
-    this.cameras.main.scrollX = config.width; //scrollX is X coordinate of the top left corner of the FoV of our cam
+    this.cameras.main.startFollow(player);
 }
 
 function update() {
@@ -119,18 +116,14 @@ function update() {
         player.setVelocityX(-250);
 
     //Camera variation
-    this.cameras.main.scrollY = player.y - config.height / 2; //scrollY is the Y coordinate top left corner of the FoV of our cam
-
     if (player.y < config.height * 6 && !zoomedOut) {
         zoomedOut = true;
         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
-        //this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1/3, 2000);
     }
     if (player.y < config.height * 3 && !zoomedIn) {
         zoomedIn = true;
         this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
-        //this.cameras.main.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1, 2000);
     }
 }
