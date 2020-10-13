@@ -78,12 +78,19 @@ function preload() {
 
 function create() {
     //Create controls
+    // controls = this.input.keyboard.addKeys({
+    //     up: Phaser.Input.Keyboard.KeyCodes.SPACE,
+    //     left: Phaser.Input.Keyboard.KeyCodes.A,
+    //     right: Phaser.Input.Keyboard.KeyCodes.D
+    // });
     controls = this.input.keyboard.addKeys({
-        up: Phaser.Input.Keyboard.KeyCodes.SPACE,
-        left: Phaser.Input.Keyboard.KeyCodes.A,
-        right: Phaser.Input.Keyboard.KeyCodes.D
+        up: Phaser.Input.Keyboard.KeyCodes.W,
+        left: Phaser.Input.Keyboard.KeyCodes.Q,
+        right: Phaser.Input.Keyboard.KeyCodes.E
     });
-    this.input.keyboard.on('keydown_SPACE', jump);
+    this.input.keyboard.on('keydown_W', jumpTry);
+    this.input.keyboard.on('keydown_Q', jumpTry);
+    this.input.keyboard.on('keydown_E', jumpTry);
 
     //Create assets
     skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
@@ -112,12 +119,12 @@ function create() {
     this.cameras.main.startFollow(player);
   
     //Create score
-    movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
-        fontFamily: 'Gelato',
-        fontStyle: 'Italic',
-        fontSize: '32px',
-        fill: '#000000'
-    });
+     movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
+         fontFamily: 'Gelato',
+         fontStyle: 'Italic',
+         fontSize: '32px',
+         fill: '#000000'
+     });
 }
 
 function update() {
@@ -153,25 +160,40 @@ function update() {
 
 //<editor-fold desc="Player movement methods">
 
-function jump() {
-    console.log("Up");
+function jumpTry() {
 
     let impulsePercentage = getImpulsePercentage(movementBarValue);
     movementBarValue = 0;
     movementBarText.setText("Bar value: " + movementBarValue);
 
-    player.setVelocityY(-225 * impulsePercentage);      //It's like an instant acceleration
+    player.setVelocityY(-400 * impulsePercentage); //It's like an instant acceleration
 
-    if (controls.left.isDown) {
-        //console.log("Left");
-        player.setVelocityX(-150 * impulsePercentage);
-    }
+    if (controls.left.isDown)
+        player.setVelocityX(-200 * impulsePercentage);
 
-    if (controls.right.isDown) {
-        //console.log("Right");
-        player.setVelocityX(150 * impulsePercentage);
-    }
+    else if (controls.right.isDown)
+        player.setVelocityX(200 * impulsePercentage);
 }
+
+// function jump() {
+//     console.log("Up");
+//
+//     let impulsePercentage = getImpulsePercentage(movementBarValue);
+//     movementBarValue = 0;
+//     movementBarText.setText("Bar value: " + movementBarValue);
+//
+//     player.setVelocityY(-400 * impulsePercentage);      //It's like an instant acceleration
+//
+//     if (controls.left.isDown) {
+//         //console.log("Left");
+//         player.setVelocityX(-200 * impulsePercentage);
+//     }
+//
+//     if (controls.right.isDown) {
+//         //console.log("Right");
+//         player.setVelocityX(200 * impulsePercentage);
+//     }
+// }
 
 function getImpulsePercentage(movementBarValue) {
     for (let i = 0; i < movementBarSections.length - 1; i++) {
