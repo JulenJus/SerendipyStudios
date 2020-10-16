@@ -4,7 +4,7 @@
 
 let config = {
     type: Phaser.AUTO,
-    width: 1280,        //The FoV of our camera will be the width x height we write here
+    width: 1080,        //The FoV of our camera will be the width x height we write here
     height: 720,        //[HERE] We have to make it responsive!
     title: 'First Sketch',
     version: '1.0',
@@ -18,6 +18,12 @@ let config = {
             isPaused: false,
             debug: false
         }
+    },
+
+    scale: {
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        mode: Phaser.Scale.FIT,
+        parent: 'mainCanvas'
     },
 
     //Let the game callbacks
@@ -45,10 +51,10 @@ let controls;
 //Movement bar
 let movementBarText;
 let movementBarValue = 0.0;
-let movementBarIncrement = true;
+let movementBarIncrement = 1;
 
 let movementBarSections = [0.0, 10.0, 30.0, 40.0, 50.0, 60.0, 70.0, 90.0, 100.0];
-let movementBarSectionPercentages = [1, 0, 1, 2, 2, 1, 0, 1];
+let movementBarTiers = [1, 0, 1, 2, 2, 1, 0, 1];
 let movementBarImpulsePercentages = [0.2, 0.35, 1];
 
 //Scene
@@ -77,20 +83,16 @@ function preload() {
 }
 
 function create() {
+
     //Create controls
-    // controls = this.input.keyboard.addKeys({
-    //     up: Phaser.Input.Keyboard.KeyCodes.SPACE,
-    //     left: Phaser.Input.Keyboard.KeyCodes.A,
-    //     right: Phaser.Input.Keyboard.KeyCodes.D
-    // });
     controls = this.input.keyboard.addKeys({
         up: Phaser.Input.Keyboard.KeyCodes.W,
         left: Phaser.Input.Keyboard.KeyCodes.Q,
         right: Phaser.Input.Keyboard.KeyCodes.E
     });
-    this.input.keyboard.on('keydown_W', jumpTry);
-    this.input.keyboard.on('keydown_Q', jumpTry);
-    this.input.keyboard.on('keydown_E', jumpTry);
+    this.input.keyboard.on('keydown_W', jump);
+    this.input.keyboard.on('keydown_Q', jump);
+    this.input.keyboard.on('keydown_E', jump);
 
     //Create assets
     skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
@@ -160,7 +162,7 @@ function update() {
 
 //<editor-fold desc="Player movement methods">
 
-function jumpTry() {
+function jump() {
 
     let impulsePercentage = getImpulsePercentage(movementBarValue);
     movementBarValue = 0;
@@ -175,31 +177,11 @@ function jumpTry() {
         player.setVelocityX(200 * impulsePercentage);
 }
 
-// function jump() {
-//     console.log("Up");
-//
-//     let impulsePercentage = getImpulsePercentage(movementBarValue);
-//     movementBarValue = 0;
-//     movementBarText.setText("Bar value: " + movementBarValue);
-//
-//     player.setVelocityY(-400 * impulsePercentage);      //It's like an instant acceleration
-//
-//     if (controls.left.isDown) {
-//         //console.log("Left");
-//         player.setVelocityX(-200 * impulsePercentage);
-//     }
-//
-//     if (controls.right.isDown) {
-//         //console.log("Right");
-//         player.setVelocityX(200 * impulsePercentage);
-//     }
-// }
-
 function getImpulsePercentage(movementBarValue) {
     for (let i = 0; i < movementBarSections.length - 1; i++) {
-        if(movementBarValue >= movementBarSections[i] && movementBarValue < movementBarSections[i+1]){
-            console.log("Impulse grade: " + movementBarSectionPercentages[i]);
-            return movementBarImpulsePercentages[movementBarSectionPercentages[i]];
+        if(movementBarValue >= movementBarSections[i] && movementBarValue < movementBarSections[i+1]){ //Check the section
+            console.log("Impulse grade: " + movementBarTiers[i]);
+            return movementBarImpulsePercentages[movementBarTiers[i]]; //Get the tier (color) of the section, and then its percentage
         }
     }
 
