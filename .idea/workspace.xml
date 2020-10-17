@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/BackgroundBrowserTry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Scripts/Utilities/UIBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Scripts/Utilities/align.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Scripts/Utilities/alignGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/phaser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Scripts/Utilities/phaser.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +48,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts\Utilities" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
   </component>
@@ -68,6 +76,7 @@
       <workItem from="1602576224410" duration="3835000" />
       <workItem from="1602835295576" duration="10449000" />
       <workItem from="1602853620004" duration="2739000" />
+      <workItem from="1602932328104" duration="1566000" />
     </task>
     <servers />
   </component>

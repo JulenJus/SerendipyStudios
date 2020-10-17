@@ -77,9 +77,9 @@ let i = 0;
 
 function preload() {
     //Load the resources
-    this.load.image('player', 'Assets/Sprites/Player_Placeholder.png');
-    this.load.image('sky', 'Assets/Sprites/Background_Sky_Long2.png');
-    this.load.image('platform', 'Assets/Sprites/Background_Platform.png');
+    this.load.image('player', '../Assets/Sprites/Player_Placeholder.png');
+    this.load.image('sky', '../Assets/Sprites/Background_Sky_Long2.png');
+    this.load.image('platform', '../Assets/Sprites/Background_Platform.png');
 }
 
 function create() {
