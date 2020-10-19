@@ -1,14 +1,20 @@
 //<editor-fold desc="Configure the game">
+// class FirstSketch_main extends Phaser.Scene{
+//     constructor() {
+//         super('MainScene');
+//     }
+
+
+// }
 
 //Configure game
-
 let config = {
     type: Phaser.AUTO,
     width: 1080,        //The FoV of our camera will be the width x height we write here
     height: 720,        //[HERE] We have to make it responsive!
     title: 'First Sketch',
     version: '1.0',
-    pixelArt: true,    //[HERE] Do we want this value either be true or false?
+    //pixelArt: true,    //[HERE] Do we want this value either be true or false?
 
     //Let the physics config
     physics: {
@@ -77,13 +83,13 @@ let i = 0;
 
 function preload() {
     //Load the resources
-    this.load.image('player', '../Assets/Sprites/Player_Placeholder.png');
+    this.load.image('player', '../Assets/Sprites/pinguino2.png');
     this.load.image('sky', '../Assets/Sprites/Background_Sky_Long2.png');
     this.load.image('platform', '../Assets/Sprites/Background_Platform.png');
+    this.load.spritesheet('penguin', '../Assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 }
 
 function create() {
-
     //Create controls
     controls = this.input.keyboard.addKeys({
         up: Phaser.Input.Keyboard.KeyCodes.W,
@@ -94,7 +100,7 @@ function create() {
     this.input.keyboard.on('keydown_Q', jump);
     this.input.keyboard.on('keydown_E', jump);
 
-    //Create assets
+    //Create background
     skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
 
     //We have to rescale the background scale to adapt its size to the device's
@@ -102,24 +108,38 @@ function create() {
     scaledH = config.height / (skySpr.height / 10);
     skySpr.setScale(scaledW, scaledH);
 
+    //Create grid
+    this.aGrid = new AlignGrid({scene: this, rows: 20, cols: 20, height: skySpr.height * scaledH , width: skySpr.width * scaledW});
+    this.aGrid.showNumbers();
+
     //Create level
     platforms = this.physics.add.staticGroup();
     platforms.create(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
-  
+
     //Create player
-    player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player').setScale(32 / 334, 32 / 333).refreshBody();
+    player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player').setScale(0.5, 0.5).refreshBody();//.setScale(96 / 370, 96 / 368).refreshBody();
     player.setBounce(0.4, 0.2);
     player.setDrag(40, 0);
     player.setCollideWorldBounds(true);
-  
+
+    //Penguin animation
+    // this.anims.create({
+    //     key: 'idle',     //Animation alias
+    //     frames: this.anims.generateFrameNumbers('penguin', {start: 0, end: 25}),
+    //     frameRate: 10,
+    //     repeat: -1       //The animation loops infinitely
+    // });
+    // player.anims.play('idle', true);
+
+
     //Physics
     this.physics.add.collider(player, platforms, collideCallback);
-  
+
     //Camera follow and bounds
     this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //The world bounds define where the world colliders are (its like a box for the player/s)
     this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
     this.cameras.main.startFollow(player);
-  
+
     //Create score
      movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
          fontFamily: 'Gelato',
@@ -196,5 +216,5 @@ function getImpulsePercentage(movementBarValue) {
 function collideCallback() {
     //console.log("Collided");
 }
-  
+
 //</editor-fold>
