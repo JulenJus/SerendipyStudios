@@ -32,9 +32,9 @@ let i = 0;
 //</editor-fold>
 
 
-class Scene2 extends Phaser.Scene {
+class Scene_Level_01 extends Phaser.Scene {
     constructor() {
-        super("main_level");
+        super("Level_01");
     }
 
 //<editor-fold desc="Game Loop functions">

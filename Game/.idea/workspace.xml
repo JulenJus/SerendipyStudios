@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,8 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/FirstSketch_main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorials/MyFirstGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorials/MyFirstGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1idIWLNADoppyvt4HiyIn4IForn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,6 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602231072351</updated>
       <workItem from="1602231073589" duration="11568000" />
+      <workItem from="1603213461728" duration="3622000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
@@ -86,12 +96,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FirstSketch resource load" />
     <option name="LAST_COMMIT_MESSAGE" value="FirstSketch resource load" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="967" y="251" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1603214198044">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="967" y="251" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1603214198044" />
+    <state x="738" y="116" key="SettingsEditor" timestamp="1603214199748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="738" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603214199748" />
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2" timestamp="1602234167541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

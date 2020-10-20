@@ -3,10 +3,10 @@ let config = {
     type: Phaser.AUTO,
     width: 1080,        //The FoV of our camera will be the width x height we write here
     height: 720,        //[HERE] We have to make it responsive!
-    title: 'First Sketch',
+    title: 'Fly penguin fly',
     version: '1.0',
     pixelArt: true,
-    scene: [Scene1, Scene2],
+    scene: [Scene_Preload, Scene_Level_01],
 
     //Let the physics config
     physics: {
