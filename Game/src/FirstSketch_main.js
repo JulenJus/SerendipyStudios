@@ -1,11 +1,4 @@
 //<editor-fold desc="Configure the game">
-// class FirstSketch_main extends Phaser.Scene{
-//     constructor() {
-//         super('MainScene');
-//     }
-
-
-// }
 
 //Configure game
 let config = {

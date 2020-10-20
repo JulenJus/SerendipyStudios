@@ -2,10 +2,7 @@ class Scene_Preload extends Phaser.Scene {
     constructor() {
         super("Preload");
     }
-    // init(){
-    //     this.add.text(20, 20, "Loading resources...");
-    // }
-
+    
     preload() {
         //Set the progress vars
         let progressBar = this.add.graphics();

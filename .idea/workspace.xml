@@ -20,26 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/src/Scene1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/Scene2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/lib/phaser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/BackgroundBrowserTry.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/BackgroundBrowserTry.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Platform.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Platform.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky_Long.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky_Long2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Player_Placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Player_Placeholder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/nivel1_inicio.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/nivel1_inicio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/penguins.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/penguins.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/pinguino2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/UIBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/UIBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/align.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/align.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/alignGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/phaser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/phaser.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scene_Preload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
