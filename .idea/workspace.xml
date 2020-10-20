@@ -20,15 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/penguins.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/pinguino2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Scene1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Scene2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/lib/phaser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/BackgroundBrowserTry.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/BackgroundBrowserTry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Platform.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Platform.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky_Long.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Background_Sky_Long2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Player_Placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Player_Placeholder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/nivel1_inicio.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/nivel1_inicio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/penguins.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/penguins.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/pinguino2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/UIBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/UIBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/align.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/align.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/alignGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Scripts/Utilities/phaser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/phaser.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,19 +64,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/Assets/Sprites" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/src/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts\Utilities" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,6 +100,7 @@
       <workItem from="1602932328104" duration="10103000" />
       <workItem from="1602948402883" duration="4137000" />
       <workItem from="1602957914909" duration="410000" />
+      <workItem from="1603204979265" duration="7391000" />
     </task>
     <servers />
   </component>
@@ -95,10 +120,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1602236618599">
+    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603212052281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602236618599" />
+    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603212052281" />
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1603212114379">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603212114379" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602844039261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
