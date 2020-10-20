@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b94e8f28-e706-45a2-9abc-9ba1f223efd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Game/src/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game/src/Scene_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Programming Interesting Links.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Programming Interesting Links.docx" afterDir="false" />
-    </list>
+    <list default="true" id="b94e8f28-e706-45a2-9abc-9ba1f223efd1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603221326214</updated>
       <workItem from="1603221327247" duration="3623000" />
+      <workItem from="1603225630250" duration="25000" />
     </task>
     <servers />
   </component>
@@ -70,11 +66,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603222389455">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603225650715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603222389455" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603225650715" />
   </component>
 </project>

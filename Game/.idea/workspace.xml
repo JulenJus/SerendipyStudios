@@ -24,9 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene_Level_01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scene_Preload.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Programming Interesting Links.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Programming Interesting Links.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +79,8 @@
       <workItem from="1602231073589" duration="11568000" />
       <workItem from="1603213461728" duration="5130000" />
       <workItem from="1603222391779" duration="2328000" />
+      <workItem from="1603225654298" duration="2167000" />
+      <workItem from="1603227881109" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>

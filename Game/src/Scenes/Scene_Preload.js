@@ -8,12 +8,12 @@ class Scene_Preload extends Phaser.Scene {
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
-        progressBox.fillRect(config.width/2 - 320/2, config.height/2 - 50/2, 320, 50);
+        progressBox.fillRect(game.config.width/2 - 320/2, game.config.height/2 - 50/2, 320, 50);
 
         //Set text
         let loadingText = this.make.text({
-            x: config.width / 2,
-            y: config.height / 2 - 50,
+            x: game.config.width / 2,
+            y: game.config.height / 2 - 50,
             text: 'Loading...',
             style: {
                 font: '20px monospace',
@@ -23,8 +23,8 @@ class Scene_Preload extends Phaser.Scene {
         loadingText.setOrigin(0.5, 0.5);
 
         let percentText = this.make.text({
-            x: config.width / 2,
-            y: config.height / 2,
+            x: game.config.width / 2,
+            y: game.config.height / 2,
             text: '0%',
             style: {
                 font: '18px monospace',
@@ -34,8 +34,8 @@ class Scene_Preload extends Phaser.Scene {
         percentText.setOrigin(0.5, 0.5);
 
         let assetText = this.make.text({
-            x: config.width / 2,
-            y: config.height / 2 + 50,
+            x: game.config.width / 2,
+            y: game.config.height / 2 + 50,
             text: '',
             style: {
                 font: '18px monospace',
@@ -54,7 +54,7 @@ class Scene_Preload extends Phaser.Scene {
             //Set progress bar
             progressBar.clear();
             progressBar.fillStyle(0xffffff, 1);
-            progressBar.fillRect(config.width/2 - 300/2, config.height/2 - 30/2, 300 * value, 30);
+            progressBar.fillRect(game.config.width/2 - 300/2, game.config.height/2 - 30/2, 300 * value, 30);
         });
 
         this.load.on('fileprogress', function (file) {
@@ -73,8 +73,8 @@ class Scene_Preload extends Phaser.Scene {
 
         //Load the resources
         this.load.image('player', '../assets/Sprites/pinguino2.png');
-        //this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
-        //this.load.image('platform', '../assets/Sprites/Background_Platform.png');
+        this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
+        this.load.image('platform', '../assets/Sprites/Background_Platform.png');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
         for(let i=0;i<1000;i++){

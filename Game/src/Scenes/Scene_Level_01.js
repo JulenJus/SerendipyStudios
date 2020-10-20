@@ -55,8 +55,8 @@ class Scene_Level_01 extends Phaser.Scene {
         skySpr = this.add.image(0, 0, 'sky').setOrigin(0, 0);
 
         //We have to rescale the background scale to adapt its size to the device's
-        scaledW = config.width / (skySpr.width / 3);
-        scaledH = config.height / (skySpr.height / 10);
+        scaledW = game.config.width / (skySpr.width / 3);
+        scaledH = game.config.height / (skySpr.height / 10);
         skySpr.setScale(scaledW, scaledH);
 
         //Create grid
@@ -65,10 +65,11 @@ class Scene_Level_01 extends Phaser.Scene {
 
         //Create level
         platforms = this.physics.add.staticGroup();
-        platforms.create(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 16, 'platform').setScale(config.width / 400, 1).refreshBody();
+        platforms.create(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 16, 'platform').setScale(game.config.width / 400, 1).refreshBody();
 
         //Create player
-        player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player').setScale(0.5, 0.5).refreshBody();//.setScale(96 / 370, 96 / 368).refreshBody();
+        player = this.physics.add.sprite(skySpr.width / 2 * scaledW, skySpr.height * scaledH - 32 - 333 / 2, 'player');
+        //player.setScale(0.3, 0.3).refreshBody();//.setScale(96 / 370, 96 / 368).refreshBody();
         player.setBounce(0.4, 0.2);
         player.setDrag(40, 0);
         player.setCollideWorldBounds(true);
@@ -86,7 +87,7 @@ class Scene_Level_01 extends Phaser.Scene {
         this.physics.add.collider(player, platforms, collideCallback);
 
         //Camera follow and bounds
-        this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH); //The world bounds define where the world colliders are (its like a box for the player/s)
+        this.physics.world.setBounds(game.config.width, 0, game.config.width, skySpr.height * scaledH); //The world bounds define where the world colliders are (its like a box for the player/s)
         this.cameras.main.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
         this.cameras.main.startFollow(player);
 
@@ -115,14 +116,14 @@ class Scene_Level_01 extends Phaser.Scene {
         //console.log("Bar value: " + movementBarValue);
 
         //Camera variation
-        if (player.y < config.height * 6 && !zoomedOut) {
+        if (player.y < game.config.height * 6 && !zoomedOut) {
             zoomedOut = true;
             this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
             this.cameras.main.zoomTo(1 / 3, 2000);
         }
-        if (player.y < config.height * 3 && !zoomedIn) {
+        if (player.y < game.config.height * 3 && !zoomedIn) {
             zoomedIn = true;
-            this.physics.world.setBounds(config.width, 0, config.width, skySpr.height * scaledH);
+            this.physics.world.setBounds(game.config.width, 0, game.config.width, skySpr.height * scaledH);
             this.cameras.main.zoomTo(1, 2000);
         }
     }
