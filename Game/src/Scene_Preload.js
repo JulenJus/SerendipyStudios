@@ -73,8 +73,8 @@ class Scene_Preload extends Phaser.Scene {
 
         //Load the resources
         this.load.image('player', '../assets/Sprites/pinguino2.png');
-        this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
-        this.load.image('platform', '../assets/Sprites/Background_Platform.png');
+        //this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
+        //this.load.image('platform', '../assets/Sprites/Background_Platform.png');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
         for(let i=0;i<1000;i++){
@@ -83,7 +83,7 @@ class Scene_Preload extends Phaser.Scene {
     }
     create(){
         //this.add.text(20, 20, "Loading resources...");
-        this.scene.start("main_level");
+        this.scene.start("Level_01");
     }
 
 }
