@@ -72,7 +72,7 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Load the resources
-        this.load.image('player', '../assets/Sprites/pinguino2.png');
+        this.load.image('player', '../assets/Sprites/pinguino2_resize2.png');
         this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
         this.load.image('platform', '../assets/Sprites/Background_Platform.png');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
