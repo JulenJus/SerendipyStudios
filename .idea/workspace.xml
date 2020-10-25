@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Empollon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._Marcas.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._walls.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/baseTileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet_prueba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resize2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resize2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
     </list>
@@ -59,10 +70,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,6 +97,12 @@
       <workItem from="1602948402883" duration="4137000" />
       <workItem from="1602957914909" duration="410000" />
       <workItem from="1603204979265" duration="7391000" />
+      <workItem from="1603276756100" duration="15342000" />
+      <workItem from="1603355785243" duration="12856000" />
+      <workItem from="1603379002794" duration="3000" />
+      <workItem from="1603388531633" duration="3004000" />
+      <workItem from="1603442551385" duration="5561000" />
+      <workItem from="1603640270427" duration="13194000" />
     </task>
     <servers />
   </component>
@@ -105,6 +122,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603300324630">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603300324630" />
     <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603212052281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

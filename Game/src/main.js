@@ -1,15 +1,16 @@
 window.onload = function(){
     var config= {
         type: Phaser.AUTO,
-        width:640,        //The FoV of our camera will be the width x height we write here
-        height: 940,        //[HERE] We have to make it responsive!
+        width:768,        //The FoV of our camera will be the width x height we write here
+        height: 1365,        //[HERE] We have to make it responsive!
         title: 'Fly penguin fly',
         version: '1.0',
         pixelArt: false,
         scene: [
             //Scene_Dummy,
             Scene_Preload,
-            Scene_Level_01
+            Scene_Level_01,
+            Scene_InGameHUD
         ],
 
         //Let the physics config

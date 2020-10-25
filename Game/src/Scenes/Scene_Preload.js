@@ -72,18 +72,23 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Load the resources
-        this.load.image('player', '../assets/Sprites/pinguino2_resize2.png');
-        this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
+        this.load.image('player', '../assets/Sprites/empollon.png');
+        this.load.image('sky', '../assets/Sprites/Level_Prototype.png');
         this.load.image('platform', '../assets/Sprites/Background_Platform.png');
+
+        this.load.image('tilesheet', '../assets/Tilemaps/baseTileset.png');
+        this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
+
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
-        for(let i=0;i<1000;i++){
-            this.load.image('logo'+i, '../assets/Sprites/zenvalogo' + i + '.png');
-        }
+        // for(let i=0;i<1000;i++){
+        //     this.load.image('logo'+i, '../assets/Sprites/zenvalogo' + i + '.png');
+        // }
     }
     create(){
         //this.add.text(20, 20, "Loading resources...");
         this.scene.start("Level_01");
+        this.scene.start("InGameHUD");
     }
 
 }
