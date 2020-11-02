@@ -27,7 +27,7 @@ let config = {
 
 //Global variables
 //General
-let game = new Phaser.Game(config);
+let game_tutorial = new Phaser.Game(config);
 let gameOver;
 let gameMode = 'difficult';
 

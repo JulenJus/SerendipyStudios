@@ -18,11 +18,11 @@ class AlignGrid
 		}
 		if (!config.height)
 		{
-			config.height=game.config.height;
+			config.height=game_tutorial.config.height;
 		}
 		if (!config.width)
 		{
-			config.width=game.config.width;
+			config.width=game_tutorial.config.width;
 		}
 
 		this.scene=config.scene;

@@ -20,22 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Empollon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._Marcas.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._walls.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/baseTileset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet_prueba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial_colliders.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_LeftPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/lib/matter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/lib/matter.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resize2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resize2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Player_Placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/nivel1_inicio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/baseTileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet_prueba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/lib/align.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/align.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorials/MyFirstGame/Tutorial_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorials/MyFirstGame/Tutorial_JS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/src/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/src/start.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,18 +66,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/src/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/assets/Tilemaps" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
@@ -103,6 +110,12 @@
       <workItem from="1603388531633" duration="3004000" />
       <workItem from="1603442551385" duration="5561000" />
       <workItem from="1603640270427" duration="13194000" />
+      <workItem from="1603726961296" duration="3960000" />
+      <workItem from="1603789434121" duration="7944000" />
+      <workItem from="1604051392257" duration="17606000" />
+      <workItem from="1604138571799" duration="8375000" />
+      <workItem from="1604230406484" duration="8295000" />
+      <workItem from="1604319295325" duration="2854000" />
     </task>
     <servers />
   </component>

@@ -1,37 +1,36 @@
 window.onload = function(){
-    var config= {
+    const config= {
         type: Phaser.AUTO,
-        width:768,        //The FoV of our camera will be the width x height we write here
-        height: 1365,        //[HERE] We have to make it responsive!
+        width: 768,        //The FoV of our camera will be the width x height we write here
+        height: 1365,
         title: 'Fly penguin fly',
         version: '1.0',
         pixelArt: false,
         scene: [
             //Scene_Dummy,
             Scene_Preload,
+            //Scene_LeftPanel,
             Scene_Level_01,
             Scene_InGameHUD
-        ],
-
-        //Let the physics config
+            ],
         physics: {
             default: 'arcade',
             arcade: {
                 gravity: {y: 300},
                 isPaused: false,
                 debug: false
-            }
+            },
         },
-
         scale: {
             autoCenter: Phaser.Scale.CENTER_BOTH,
             mode: Phaser.Scale.FIT,
             parent: 'mainCanvas'
-        }
-    }
+        },
+    };
 
     game = new Phaser.Game(config);
     window.focus();
+
     //resizeScreen();
     //window.addEventListener("resize", resizeScreen);
 }
