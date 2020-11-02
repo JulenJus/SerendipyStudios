@@ -20,28 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial_colliders.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_LeftPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/lib/matter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/lib/matter.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Sky_Long2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Player_Placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/nivel1_inicio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/baseTileset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tilesheet_prueba.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/lib/align.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/align.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/alignGrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tutorials/MyFirstGame/Tutorial_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorials/MyFirstGame/Tutorial_JS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/src/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/src/start.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +95,7 @@
       <workItem from="1604138571799" duration="8375000" />
       <workItem from="1604230406484" duration="8295000" />
       <workItem from="1604319295325" duration="2854000" />
+      <workItem from="1604322473072" duration="9000" />
     </task>
     <servers />
   </component>
