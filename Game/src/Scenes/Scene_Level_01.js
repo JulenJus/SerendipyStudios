@@ -1,4 +1,3 @@
-
 //<editor-fold desc="Global variables">
 
 //General
@@ -9,15 +8,6 @@ let rectangle;
 //Player
 let player;
 let controls;
-
-//Movement bar
-let movementBarText;
-let movementBarValue = 0.0;
-let movementBarIncrement = 1;
-
-let movementBarSections = [0.0, 10.0, 30.0, 40.0, 50.0, 60.0, 70.0, 90.0, 100.0];
-let movementBarTiers = [1, 0, 1, 2, 2, 1, 0, 1];
-let movementBarImpulsePercentages = [0.2, 0.35, 1];
 
 //Scene
 let levelWide = 500;
@@ -44,14 +34,7 @@ class Scene_Level_01 extends Phaser.Scene {
 //<editor-fold desc="Game Loop functions">
     create() {
         //Create controls
-        controls = this.input.keyboard.addKeys({
-            up: Phaser.Input.Keyboard.KeyCodes.W,
-            left: Phaser.Input.Keyboard.KeyCodes.Q,
-            right: Phaser.Input.Keyboard.KeyCodes.E
-        });
-        this.input.keyboard.on('keydown_W', jump);
-        this.input.keyboard.on('keydown_Q', jump);
-        this.input.keyboard.on('keydown_E', jump);
+        let player = new Player(this);
 
         //Create grid
         //this.aGrid = new AlignGrid({scene: this, rows: 20, cols: 20, height: skySpr.height * scaledH , width: skySpr.width * scaledW});
@@ -88,9 +71,9 @@ class Scene_Level_01 extends Phaser.Scene {
         //</editor-fold>
 
         //Create player
-        player = this.physics.add.sprite(levelWidth / 2, levelHeight - 32, 'player');
-        player.setBounce(0.4, 0.2);
-        player.setDrag(40, 0);
+        //player = this.physics.add.sprite(levelWidth / 2, levelHeight - 32, 'player');
+        //player.setBounce(0.4, 0.2);
+        //player.setDrag(40, 0);
 
         //Create zoom blocks
         //zoomOutBlocks = this.physics.add.staticGroup();
@@ -106,11 +89,11 @@ class Scene_Level_01 extends Phaser.Scene {
         // player.anims.play('idle', true);
 
         //Physics and collisions (triggers)
-        player.setCollideWorldBounds(true)
-        this.physics.add.collider(player, platforms, collideCallback);
-        this.physics.add.overlap(player, zoomOutBlocks, overlapCallback, null, this);
-        this.physics.add.collider(player, wallsLayer, null, null, this);
-        this.physics.add.collider(player, obstaclesLayer, null, null, this);
+        //player.setCollideWorldBounds(true)
+        // this.physics.add.collider(player, platforms, collideCallback);
+        // this.physics.add.overlap(player, zoomOutBlocks, overlapCallback, null, this);
+        // this.physics.add.collider(player, wallsLayer, null, null, this);
+        // this.physics.add.collider(player, obstaclesLayer, null, null, this);
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, levelWidth, levelHeight);
@@ -118,27 +101,17 @@ class Scene_Level_01 extends Phaser.Scene {
         this.cameras.main.startFollow(player);
 
         //Create score
+        /*
         movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
             fontFamily: 'Gelato',
             fontStyle: 'Italic',
             fontSize: '32px',
             fill: '#000000'
         });
+        */
     }
 
     update() {
-        if (gameOver) return;
-
-        //Movement bar
-        if (movementBarValue >= 100) {
-            movementBarIncrement = -1;  //False -> Decrement
-        }
-        if (movementBarValue <= 0) {
-            movementBarIncrement = 1;   //True -> Increment
-        }
-
-        movementBarValue += 0.5 * movementBarIncrement;
-        this.registry.set('movementBarVal', movementBarValue); //Store the movement bar value in the Game Data. We have to update the movementBarVal so that the HUD scene can get it updated
     }
 //</editor-fold>
 }
@@ -146,34 +119,6 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //<editor-fold desc="Player movement methods">
 
-function jump() {
-
-    let impulsePercentage = getImpulsePercentage(movementBarValue);
-    movementBarValue = 0;
-    movementBarText.setText("Bar value: " + movementBarValue);
-
-    player.setVelocityY(-400 * impulsePercentage); //It's like an instant acceleration
-
-    if (controls.left.isDown)
-        player.setVelocityX(-200 * impulsePercentage);
-
-    else if (controls.right.isDown)
-        player.setVelocityX(200 * impulsePercentage);
-}
-
-function getImpulsePercentage(movementBarValue) {
-    for (let i = 0; i < movementBarSections.length - 1; i++) {
-        if(movementBarValue >= movementBarSections[i] && movementBarValue < movementBarSections[i+1]){ //Check the section
-            console.log("Impulse grade: " + movementBarTiers[i]);
-            return movementBarImpulsePercentages[movementBarTiers[i]]; //Get the tier (color) of the section, and then its percentage
-        }
-    }
-
-    //Should never arrive this much
-    console.log("Impulse grade: FAILED.");
-    console.log("MovementBarValue: " + movementBarValue);
-    return 0;
-}
 
 //</editor-fold>
 
