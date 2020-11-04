@@ -2,8 +2,6 @@
 
 //General
 let gameOver = false;
-let matterEngine;
-let rectangle;
 
 //Player
 let player;
@@ -13,8 +11,6 @@ let controls;
 let levelWide = 500;
 let scaledW;
 let scaledH;
-let zoomedIn;
-let zoomedOut;
 let levelWidth = 2432;
 let levelHeight = 5120;
 
@@ -34,7 +30,6 @@ class Scene_Level_01 extends Phaser.Scene {
 //<editor-fold desc="Game Loop functions">
     create() {
         //Create controls
-        let player = new Player(this);
 
         //Create grid
         //this.aGrid = new AlignGrid({scene: this, rows: 20, cols: 20, height: skySpr.height * scaledH , width: skySpr.width * scaledW});
@@ -54,6 +49,9 @@ class Scene_Level_01 extends Phaser.Scene {
         wallsLayer.setCollisionByProperty({ collide: true });
         obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
 
+        //Create player
+        let player = new Player(this);
+
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
@@ -69,11 +67,6 @@ class Scene_Level_01 extends Phaser.Scene {
         //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
         // });
         //</editor-fold>
-
-        //Create player
-        //player = this.physics.add.sprite(levelWidth / 2, levelHeight - 32, 'player');
-        //player.setBounce(0.4, 0.2);
-        //player.setDrag(40, 0);
 
         //Create zoom blocks
         //zoomOutBlocks = this.physics.add.staticGroup();

@@ -73,15 +73,12 @@ class Scene_Preload extends Phaser.Scene {
 
         //Load the resources
         this.load.image('player', '../assets/Sprites/empollon.png');
-        this.load.image('sky', '../assets/Sprites/Level_Prototype.png');
-        this.load.image('platform', '../assets/Sprites/Background_Platform.png');
+        this.load.image('bar', '../assets/Sprites/penguins.png');
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
         this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
         this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
-        // for(let i=0;i<1000;i++){
-        //     this.load.image('logo'+i, '../assets/Sprites/zenvalogo' + i + '.png');
-        // }
+
     }
     create(){
         this.scene.start("Level_01");
