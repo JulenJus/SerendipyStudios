@@ -2,11 +2,23 @@ class MovementBar extends Phaser.GameObjects.Sprite {
     constructor(scene) {
         super(scene, level_01_Width / 2, level_01_Height - 32, 'bar');
 
-        this.isRunning = true;
+        //Control variables
+        this.isRunning = false;
 
+        //Sprite variables
+        this.barSpriteWidth = 520;
+        this.barSpriteHeight = 57;
+        this.markSpriteWidth = 57;
+        this.markSpriteHeight = 56;
+
+        //Util variables
         this.movementBarValue = 0;
         this.movementBarIncrement = 1;
 
+        //Pressed event
+        this.onMovementBarPressed = new Phaser.Events.EventEmitter();
+
+        //Info variables
         this.movementBarSections = [0.0, 10.0, 30.0, 40.0, 50.0, 60.0, 70.0, 90.0, 100.0];
         this.movementBarTiers = [1, 0, 1, 2, 2, 1, 0, 1];
         this.movementBarImpulsePercentages = [0.2, 0.35, 1];
@@ -16,7 +28,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         if (!this.isRunning) return;
 
         //Movement bar
-        if (this.movementBarValue >= 100) {
+        if (this.movementBarValue >= 100) {  //The offset is added to prevent the mark to surpass the bar without making it wait
             this.movementBarIncrement = -1;  //False -> Decrement
         }
         if (this.movementBarValue <= 0) {
@@ -27,24 +39,30 @@ class MovementBar extends Phaser.GameObjects.Sprite {
 
     //Methods
     getImpulse() {
-        let impulse = this.getImpulsePercentage()
+        if (!this.isRunning) return 0;
+
+        let tier = this.getImpulseTier();
+        let impulse = this.getImpulsePercentage(tier);
+
+        //Call the event in order to display the action onScreen
+        this.onMovementBarPressed.emit('onMovementBarPressed', this.movementBarValue, tier);
         this.movementBarValue = 0;
 
         return impulse;
     }
 
-    getImpulsePercentage() {
+    getImpulseTier(){
         for (let i = 0; i < this.movementBarSections.length - 1; i++) {
             if (this.movementBarValue >= this.movementBarSections[i] && this.movementBarValue < this.movementBarSections[i + 1]) { //Check the section
+                console.log("MovementBar value: " + this.movementBarValue);
                 console.log("Impulse grade: " + this.movementBarTiers[i]);
-                return this.movementBarImpulsePercentages[this.movementBarTiers[i]]; //Get the tier (color) of the section, and then its percentage
+                return this.movementBarTiers[i]; //Get the tier (color) of the section
             }
         }
+    }
 
-        //Should never arrive this much
-        //console.log("Impulse grade: FAILED.");
-        //console.log("MovementBarValue: " + this.movementBarValue);
-        return 0;
+    getImpulsePercentage(tier) {
+        return this.movementBarImpulsePercentages[tier]; //Get the percentage of the section, given it's tier
     }
 
     getText() {
