@@ -10,20 +10,19 @@ class Controls extends Phaser.Input.InputPlugin{
             'right': Phaser.Input.Keyboard.KeyCodes.E
         });
 
-        this.setControlsPc();
-        // if (scene.sys.game.device.os.android){
-        //     console.log("OS: Android");
-        //     this.setControlsMobile();
-        // }else if(scene.sys.game.device.os.chromeOS){
-        //     console.log("OS: Chrome");
-        //     this.setControlsPc();
-        // }else if(scene.sys.game.device.os.webApp){
-        //     console.log("OS: WebApp");
-        //     this.setControlsPc();
-        // }else if(scene.sys.game.device.os.desktop){
-        //     console.log("OS: Desktop");
-        //     this.setControlsPc();
-        // }
+        if (scene.sys.game.device.os.android){
+            console.log("OS: Android");
+            this.setControlsMobile();
+        }else if(scene.sys.game.device.os.chromeOS){
+            console.log("OS: Chrome");
+            this.setControlsPc();
+        }else if(scene.sys.game.device.os.webApp){
+            console.log("OS: WebApp");
+            this.setControlsPc();
+        }else if(scene.sys.game.device.os.desktop){
+            console.log("OS: Desktop");
+            this.setControlsPc();
+        }
     };
 
     setControlsPc(){
@@ -55,9 +54,7 @@ class Controls extends Phaser.Input.InputPlugin{
 
     setControlsMobile(){
         this.controlType = "Mobile";
-
         //Implement mobile controls [HERE]
-        //this.inputs;
     }
 
     // Jump(){

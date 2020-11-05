@@ -72,9 +72,14 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Load the resources
-        this.load.image('player', '../assets/Sprites/empollon.png');
-        this.load.image('bar', '../assets/Sprites/penguins.png');
+        this.load.image('player', '../assets/Sprites/Empollon.png');
+        this.load.image('bar', '../assets/Sprites/Barra.png');
+        this.load.image('blueMark', '../assets/Sprites/hieloazul.png');
+        this.load.image('greenMark', '../assets/Sprites/hieloverde.png');
+        this.load.image('yellowMark', '../assets/Sprites/hieloamarillo.png');
+        this.load.image('redwMark', '../assets/Sprites/hielorojo.png');
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
+        //this.load.image('limit', '../assets/Sprites/limit.png');
         this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
         this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});

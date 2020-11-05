@@ -5,21 +5,11 @@ let gameOver = false;
 
 //Player
 let player;
-let controls;
 
 //Scene
-let levelWide = 500;
-let scaledW;
-let scaledH;
-let levelWidth = 2432;
-let levelHeight = 5120;
+let level_01_Width = 0;
+let level_01_Height = 0;
 
-//assets
-let skySpr;
-let platforms;
-let zoomInBlocks;
-let zoomOutBlocks;
-let i = 0;
 //</editor-fold>
 
 class Scene_Level_01 extends Phaser.Scene {
@@ -29,29 +19,30 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //<editor-fold desc="Game Loop functions">
     create() {
-        //Create controls
-
         //Create grid
         //this.aGrid = new AlignGrid({scene: this, rows: 20, cols: 20, height: skySpr.height * scaledH , width: skySpr.width * scaledW});
         //this.aGrid.showNumbers();
 
         //Create tilemap
-        let map = this.make.tilemap({key: 'tilemap'});
-        let tiles = map.addTilesetImage('tilesheet', 'tilesheet', 64, 64, 1, 2);
+        this.map = this.make.tilemap({key: 'tilemap'});
+        this.tiles = this.map.addTilesetImage('tilesheet', 'tilesheet', 64, 64, 1, 2);
+
+        //Set level height and width according to the json's
+        level_01_Height = this.map.height * this.map.tileHeight;
+        level_01_Width = this.map.width * this.map.tileWidth;
 
         //Create layers from tilemap layers
-        map.createStaticLayer('background', tiles, 0, 0);
-        map.createStaticLayer('decoration', tiles, 0, 0);
-        const wallsLayer = map.createStaticLayer('walls', tiles, 0, 0);
-        const obstaclesLayer = map.createStaticLayer('obstacles', tiles, 0, 0);
+        this.map.createStaticLayer('background', this.tiles, 0, 0);
+        this.map.createStaticLayer('decoration', this.tiles, 0, 0);
+        this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
+        this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
         //Enable colissions with layers
-        wallsLayer.setCollisionByProperty({ collide: true });
-        obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
+        this.wallsLayer.setCollisionByProperty({ collide: true });
+        this.obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
 
         //Create player
-        let player = new Player(this);
-
+        player = new Player(this);
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
@@ -69,8 +60,8 @@ class Scene_Level_01 extends Phaser.Scene {
         //</editor-fold>
 
         //Create zoom blocks
-        //zoomOutBlocks = this.physics.add.staticGroup();
-        //zoomOutBlocks.create(skySpr.width / 2 * scaledW, game.config.height * 12, 'platform').setScale(game.config.width * 2 / 400, 1).refreshBody();
+        //this.zoomBlocks = this.physics.add.staticGroup();
+        //this.zoomBlocks.create(skySpr.width / 2 * scaledW, game.config.height * 12, 'platform').setScale(game.config.width * 2 / 400, 1).refreshBody();
 
         //Penguin animation
         // this.anims.create({
@@ -82,29 +73,20 @@ class Scene_Level_01 extends Phaser.Scene {
         // player.anims.play('idle', true);
 
         //Physics and collisions (triggers)
-        //player.setCollideWorldBounds(true)
-        // this.physics.add.collider(player, platforms, collideCallback);
-        // this.physics.add.overlap(player, zoomOutBlocks, overlapCallback, null, this);
-        // this.physics.add.collider(player, wallsLayer, null, null, this);
-        // this.physics.add.collider(player, obstaclesLayer, null, null, this);
+        //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
+        this.physics.add.collider(player, this.wallsLayer, null, null, this);
+        this.physics.add.collider(player, this.obstaclesLayer, null, null, this);
 
         //Camera follow and bounds
-        this.physics.world.setBounds(0, 0, levelWidth, levelHeight);
-        this.cameras.main.setBounds(0, 0, levelWidth, levelHeight); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
+        this.physics.world.setBounds(0, 0, level_01_Width, level_01_Height);
+        this.cameras.main.setBounds(0, 0, level_01_Width, level_01_Height); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
         this.cameras.main.startFollow(player);
-
-        //Create score
-        /*
-        movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, 'Bar Value: 0', {
-            fontFamily: 'Gelato',
-            fontStyle: 'Italic',
-            fontSize: '32px',
-            fill: '#000000'
-        });
-        */
     }
 
-    update() {
+    update()
+    {
+        //Update movement bar value
+        player.movementBar.updateMovementValue();
     }
 //</editor-fold>
 }
@@ -115,9 +97,6 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //</editor-fold>
 
-function collideCallback() {
-    //console.log("Collided");
-}
 function overlapCallback() {
     if(player.body.velocity.y < 0) {
         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);

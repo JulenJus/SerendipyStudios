@@ -1,7 +1,7 @@
 class Player extends Phaser.GameObjects.Sprite{
     //Constructor
     constructor(scene){
-        super(scene, levelWidth / 2, levelHeight - 32, 'player');
+        super(scene, level_01_Width / 2, level_01_Height - 252, 'player');
 
         //Set physics
         scene.add.existing(this);

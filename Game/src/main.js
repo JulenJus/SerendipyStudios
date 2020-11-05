@@ -1,3 +1,6 @@
+
+let game;
+
 window.onload = function(){
     const config= {
         type: Phaser.AUTO,
