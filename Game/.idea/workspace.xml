@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,7 @@
       <workItem from="1603726555428" duration="1941000" />
       <workItem from="1604482995268" duration="7410000" />
       <workItem from="1604580075377" duration="611000" />
+      <workItem from="1604581090724" duration="805000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>

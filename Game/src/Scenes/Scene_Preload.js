@@ -73,7 +73,7 @@ class Scene_Preload extends Phaser.Scene {
 
         //Load the resources
         this.load.image('player', '../assets/Sprites/Empollon.png');
-        this.load.image('bar', '../assets/Sprites/BarraAdjusted.png');
+        this.load.image('bar', '../assets/Sprites/barra.png');
         this.load.image('blueMark', '../assets/Sprites/hieloazul.png');
         this.load.image('greenMark', '../assets/Sprites/hieloverde.png');
         this.load.image('yellowMark', '../assets/Sprites/hieloamarillo.png');
