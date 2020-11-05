@@ -1,6 +1,6 @@
 class Player extends Phaser.GameObjects.Sprite{
     //Constructor
-    constructor(scene){
+    constructor(scene, controllable){
         super(scene, level_01_Width / 2, level_01_Height - 252, 'player');
 
         //Set physics
@@ -11,20 +11,14 @@ class Player extends Phaser.GameObjects.Sprite{
         this.body.setCollideWorldBounds(true);
 
         //Set controls
-        this.movementBar = new MovementBar(scene);
-        this.controls = new Controls(scene, this);
+        this.controllable = controllable;
+        if(this.controllable) {
+            this.movementBar = new MovementBar(scene);
+            this.controls = new Controls(scene, this);
+        }
 
         //Set appearance variables
         this.penguinType = 0;
         this.penguinSprite = 0;
     }
-
-    //Customization variables -> Appearance
-    setPenguinType(index){
-        this.penguinType = index;
-    };
-
-    setPenguinSprite(index){
-        this.penguinSprite = index;
-    };
 }

@@ -20,22 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Barra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/hieloamarillo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/hieloazul.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/hielorojo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/hieloverde.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/limit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Classes/UserPreferences.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Controls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/MovementBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +102,7 @@
       <workItem from="1604319295325" duration="2854000" />
       <workItem from="1604322473072" duration="9000" />
       <workItem from="1604506798062" duration="6571000" />
+      <workItem from="1604569361137" duration="3364000" />
     </task>
     <servers />
   </component>

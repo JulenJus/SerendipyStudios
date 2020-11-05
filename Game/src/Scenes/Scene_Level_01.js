@@ -42,7 +42,7 @@ class Scene_Level_01 extends Phaser.Scene {
         this.obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
 
         //Create player
-        player = new Player(this);
+        player = new Player(this, true);
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
@@ -85,8 +85,6 @@ class Scene_Level_01 extends Phaser.Scene {
 
     update()
     {
-        //Update movement bar value
-        player.movementBar.updateMovementValue();
     }
 //</editor-fold>
 }
