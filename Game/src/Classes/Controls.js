@@ -57,7 +57,7 @@ class Controls extends Phaser.Input.InputPlugin{
         let p = this.player;
         this.scene.input.on('pointerdown', function(pointer){
             let xVelocity;
-            this.impulsePercentage = p.movementBar.getImpulse();
+            
             if(pointer.y >= 75){
                 if (pointer.x <= game.config.width / 3) { //Left third of the screen
                     xVelocity = -200;
