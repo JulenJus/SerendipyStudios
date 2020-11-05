@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">ñbr
     <title>Title</title>
+    <!-- <script type="text/javascript" src="lib/matter.js" ></script>  matter physics file -->
     <script type="text/javascript" src="lib/phaser.js"></script> <!-- We have to import our JS files (the game itself and the phaser.min file) -->
     <script type="text/javascript" src="lib/align.js"></script>
     <script type="text/javascript" src="lib/alignGrid.js"></script>
     <script type="text/javascript" src="lib/UIBlock.js"></script>
-    <!--<script type="text/javascript" src="FirstSketch_main.js"></script>-->
+
+    <script type="text/javascript" src="Classes/MovementBar.js"></script>
+    <script type="text/javascript" src="Classes/Controls.js"></script>
+    <script type="text/javascript" src="Classes/Player.js"></script>
 
     <script type="text/javascript" src="Scenes/Scene_Dummy.js"></script>
+    <script type="text/javascript" src="Scenes/Scene_LeftPanel.js"></script>
     <script type="text/javascript" src="Scenes/Scene_Preload.js"></script>
     <script type="text/javascript" src="Scenes/Scene_Level_01.js"></script>
-
+    <script type="text/javascript" src="Scenes/Scene_InGameHUD.js"></script>
     <script type="text/javascript" src="main.js"></script>
 
     <style>
         #mainCanvas{
             position: fixed;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             margin: auto;
             align-self:center;
             background-image: url("../assets/Sprites/BackgroundBrowserTry.png");
         }
+
     </style>
 </head>
 <body>

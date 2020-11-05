@@ -23,13 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change afterPath="$PROJECT_DIR$/src/Classes/Controls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classes/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scene_Level_01.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scene_Preload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorials/ResponsiveTemplate/Enclave-Phaser-Template-gh-pages/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_Level_01.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +80,8 @@
       <workItem from="1603222391779" duration="2328000" />
       <workItem from="1603225654298" duration="2167000" />
       <workItem from="1603227881109" duration="109000" />
+      <workItem from="1603726555428" duration="1941000" />
+      <workItem from="1604482995268" duration="7410000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
@@ -112,6 +113,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="FirstSketch resource load" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1604490469027">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1604490469027" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604487144536">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604487144536" />
     <state x="967" y="251" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1603214198044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -128,6 +137,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
+    <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1604489211975">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="292" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604489211975" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1602233326366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

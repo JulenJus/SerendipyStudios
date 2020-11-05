@@ -10,7 +10,7 @@ class Scene_Preload extends Phaser.Scene {
         progressBox.fillStyle(0x222222, 0.8);
         progressBox.fillRect(game.config.width/2 - 320/2, game.config.height/2 - 50/2, 320, 50);
 
-        //Set text
+        //Set texts
         let loadingText = this.make.text({
             x: game.config.width / 2,
             y: game.config.height / 2 - 50,
@@ -72,18 +72,22 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Load the resources
-        this.load.image('player', '../assets/Sprites/pinguino2.png');
-        this.load.image('sky', '../assets/Sprites/Background_Sky_Long2.png');
-        this.load.image('platform', '../assets/Sprites/Background_Platform.png');
+        this.load.image('player', '../assets/Sprites/Empollon.png');
+        this.load.image('bar', '../assets/Sprites/Barra.png');
+        this.load.image('blueMark', '../assets/Sprites/hieloazul.png');
+        this.load.image('greenMark', '../assets/Sprites/hieloverde.png');
+        this.load.image('yellowMark', '../assets/Sprites/hieloamarillo.png');
+        this.load.image('redwMark', '../assets/Sprites/hielorojo.png');
+        this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
+        //this.load.image('limit', '../assets/Sprites/limit.png');
+        this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
+        this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
-        for(let i=0;i<1000;i++){
-            this.load.image('logo'+i, '../assets/Sprites/zenvalogo' + i + '.png');
-        }
     }
     create(){
-        //this.add.text(20, 20, "Loading resources...");
         this.scene.start("Level_01");
+        this.scene.start("InGameHUD");
     }
 
 }

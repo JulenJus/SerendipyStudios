@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Game/src/Classes/UserPreferences.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/MovementBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +50,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/src/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/assets/Tilemaps" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Scripts\Utilities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
@@ -84,6 +88,21 @@
       <workItem from="1602948402883" duration="4137000" />
       <workItem from="1602957914909" duration="410000" />
       <workItem from="1603204979265" duration="7391000" />
+      <workItem from="1603276756100" duration="15342000" />
+      <workItem from="1603355785243" duration="12856000" />
+      <workItem from="1603379002794" duration="3000" />
+      <workItem from="1603388531633" duration="3004000" />
+      <workItem from="1603442551385" duration="5561000" />
+      <workItem from="1603640270427" duration="13194000" />
+      <workItem from="1603726961296" duration="3960000" />
+      <workItem from="1603789434121" duration="7944000" />
+      <workItem from="1604051392257" duration="17606000" />
+      <workItem from="1604138571799" duration="8375000" />
+      <workItem from="1604230406484" duration="8295000" />
+      <workItem from="1604319295325" duration="2854000" />
+      <workItem from="1604322473072" duration="9000" />
+      <workItem from="1604506798062" duration="6571000" />
+      <workItem from="1604569361137" duration="3364000" />
     </task>
     <servers />
   </component>
@@ -103,6 +122,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604507962530">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604507962530" />
+    <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603300324630">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603300324630" />
     <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603212052281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

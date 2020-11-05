@@ -32,7 +32,7 @@ var gameConfig = {
 	},
 	scene: [Boot, Preloader, MainMenu, Settings, Story, Game]
 }
-game = new Phaser.Game(gameConfig);
+game_tutorial = new Phaser.Game(gameConfig);
 window.focus();
 
 // Usage tracking
