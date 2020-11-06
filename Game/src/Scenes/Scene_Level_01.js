@@ -75,7 +75,7 @@ class Scene_Level_01 extends Phaser.Scene {
         //Physics and collisions (triggers)
         //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
         this.physics.add.collider(player, this.wallsLayer, null, null, this);
-        this.physics.add.collider(player, this.obstaclesLayer, null, null, this);
+        this.obstacles_level_01 = this.physics.add.collider(player, this.obstaclesLayer, takeDamageCallback, null, this);
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, level_01_Width, level_01_Height);
@@ -94,6 +94,9 @@ class Scene_Level_01 extends Phaser.Scene {
 
 
 //</editor-fold>
+function takeDamageCallback() {
+    player.TakeDamage(this.obstacles_level_01);
+}
 
 function overlapCallback() {
     if(player.body.velocity.y < 0) {

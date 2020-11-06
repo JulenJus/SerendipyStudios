@@ -22,6 +22,8 @@
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

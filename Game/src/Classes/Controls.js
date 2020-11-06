@@ -37,20 +37,20 @@ class Controls extends Phaser.Input.InputPlugin {
         let p = this.player;
         let k = this.keyboardInput;
         this.scene.input.keyboard.on('keydown_W', function () {
-            if (k.up.isDown) {
+            if (k.up.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage); //It's like an instant acceleration
             }
         });
         this.scene.input.keyboard.on('keydown_Q', function () {
-            if (k.left.isDown) {
+            if (k.left.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage);
                 p.body.velocity.x = (-200 * this.impulsePercentage);
             }
         });
         this.scene.input.keyboard.on('keydown_E', function () {
-            if (k.right.isDown) {
+            if (k.right.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage);
                 p.body.velocity.x = (200 * this.impulsePercentage);
@@ -64,7 +64,7 @@ class Controls extends Phaser.Input.InputPlugin {
         this.scene.input.on('pointerdown', function (pointer) {
             let xVelocity;
 
-            if (pointer.y >= 75) {
+            if (pointer.y >= 75  && !p.isDamaged) {
                 if (pointer.x <= game.config.width / 3) { //Left third of the screen
                     xVelocity = -200;
                 } else if (pointer.x >= (game.config.width / 3) * 2) { //Right third of the screen

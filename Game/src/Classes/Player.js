@@ -20,5 +20,42 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set appearance variables
         this.penguinType = 0;
         this.penguinSprite = 0;
+        this.playerTint = this.tint;
+
+        //Set state variables
+        this.isDamaged = false;
     }
+
+    //Methods
+    TakeDamage(obstacles){
+        //Get a little bit slowed
+        this.body.velocity.y = (-400 * this.movementBar.movementBarImpulsePercentages[0]);
+
+        //Change to "damaged" state
+        this.tint = 0xff0000;
+        this.isDamaged = true;
+        obstacles.active = false;
+
+        let thisPlayer = this; //Reference for the change of scope
+
+        this.scene.time.addEvent({ //Blink immunity effect
+            delay: 150,
+            repeat: 5,
+            loop: false,
+            callback: function(){
+                thisPlayer.visible = !thisPlayer.visible;
+            }
+        });
+        //Return to normal state
+        this.scene.time.addEvent({
+            delay: 750,
+            loop: false,
+            callback: function(){
+                //Return to normal state
+                thisPlayer.tint = this.playerTint ;
+                thisPlayer.isDamaged = false;
+                obstacles.active = true;
+            }
+        });
+    };
 }
