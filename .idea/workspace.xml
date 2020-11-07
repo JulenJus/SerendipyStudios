@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/cajapowerup.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Controls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/mapa1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/mapa1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
@@ -59,11 +66,11 @@
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FirstSketch_main.html" type="JavascriptDebugType" uri="http://localhost:63342/SerendipyStudios/Game/src/FirstSketch_main.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,10 +127,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604507962530">
+    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604748455126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604507962530" />
+    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604748455126" />
     <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603300324630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
