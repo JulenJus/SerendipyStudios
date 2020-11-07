@@ -35,7 +35,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         if (this.movementBarValue <= 0) {
             this.movementBarIncrement = 1;   //True -> Increment
         }
-        this.movementBarValue += this.movementBarVelocity * this.movementBarIncrement;
+        this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement);// * game.time.physicsElapsed;
     }
 
     //Methods

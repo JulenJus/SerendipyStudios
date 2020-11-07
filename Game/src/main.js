@@ -1,8 +1,7 @@
-
 let game;
 
-window.onload = function(){
-    const config= {
+window.onload = function () {
+    const config = {
         type: Phaser.AUTO,
         width: 768,        //The FoV of our camera will be the width x height we write here
         height: 1365,
@@ -15,7 +14,7 @@ window.onload = function(){
             //Scene_LeftPanel,
             Scene_Level_01,
             Scene_InGameHUD
-            ],
+        ],
         physics: {
             default: 'arcade',
             arcade: {
@@ -33,6 +32,15 @@ window.onload = function(){
 
     game = new Phaser.Game(config);
     window.focus();
+
+    game.events.on('hidden',function(){
+        console.log('hidden');
+        console.log(game.time.elapsedTime);
+    },this);
+
+    game.events.on('visible',function(){
+        console.log('visible');
+    },this);
 
     //resizeScreen();
     //window.addEventListener("resize", resizeScreen);

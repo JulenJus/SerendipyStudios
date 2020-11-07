@@ -23,12 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change afterPath="$PROJECT_DIR$/src/Classes/WinLine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +65,11 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="FirstSketch_main.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/Game/src/FirstSketch_main.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,6 +87,7 @@
       <workItem from="1604482995268" duration="7410000" />
       <workItem from="1604580075377" duration="611000" />
       <workItem from="1604581090724" duration="805000" />
+      <workItem from="1604742040727" duration="5370000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>

@@ -12,6 +12,16 @@ let level_01_Height = 0;
 
 //</editor-fold>
 
+var testLoop = function (game) {
+    var loop = function (){
+        setTimeout(loop, 1000);
+
+        console.log("Loop");
+    }
+
+    loop();
+};
+
 class Scene_Level_01 extends Phaser.Scene {
     constructor() {
         super("Level_01");
@@ -19,6 +29,8 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //<editor-fold desc="Game Loop functions">
     create() {
+        this.disableVisibilityChange = true;
+        testLoop();
         //<editor-fold desc="Create the map">
 
         //Create grid
