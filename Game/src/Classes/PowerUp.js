@@ -20,7 +20,7 @@ class PowerUp extends Phaser.GameObjects.Sprite{
     GetDashPowerUp(){
         player.canDash = true;
         player.numDashes = 3;
-        //bar.tint = bar.tint = 0x00FF00;
+        //bar.tint = 0x00FF00;
         powerUpTime.setText(player.numDashes);
     }
 
