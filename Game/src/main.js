@@ -33,14 +33,14 @@ window.onload = function () {
     game = new Phaser.Game(config);
     window.focus();
 
-    game.events.on('hidden',function(){
-        console.log('hidden');
-        console.log(game.time.elapsedTime);
-    },this);
-
-    game.events.on('visible',function(){
-        console.log('visible');
-    },this);
+    // game.events.on('hidden',function(){
+    //     console.log('hidden');
+    //     console.log(game.time.elapsedTime);
+    // },this);
+    //
+    // game.events.on('visible',function(){
+    //     console.log('visible');
+    // },this);
 
     //resizeScreen();
     //window.addEventListener("resize", resizeScreen);

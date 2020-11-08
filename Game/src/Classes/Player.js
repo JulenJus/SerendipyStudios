@@ -32,12 +32,13 @@ class Player extends Phaser.GameObjects.Sprite{
         this.numDashes = 3;
     }
 
-    NormalizeBar(){
-        bar.clearTint();
-        powerUpTime.setText('');
-    }
+    // NormalizeBar(){
+    //     bar.clearTint();
+    //     powerUpTime.setText('');
+    // }
 
-    //Methods
+    //<editor-fold desc="Methods">
+
     TakeDamage(obstacles){
         //Get a little bit slowed
         this.body.velocity.y = (-400 * this.movementBar.movementBarImpulsePercentages[0]);
@@ -69,4 +70,18 @@ class Player extends Phaser.GameObjects.Sprite{
             }
         });
     };
+
+    UsePowerUp(){
+        console.log("Power up");
+
+        //Use the power up if you have one [HERE]
+    }
+
+    Squawk(){
+        console.log("squawk");
+
+        //Reproduce squawk audio depending on your skin [HERE]
+    }
+
+    //</editor-fold>
 }
