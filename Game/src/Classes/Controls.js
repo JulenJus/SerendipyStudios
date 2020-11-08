@@ -3,12 +3,15 @@ class Controls extends Phaser.Input.InputPlugin {
     constructor(scene, player) {
         super(scene);
         this.player = player;
-        this.thisScene = scene;
+        this.scene = scene;
         this.impulsePercentage = 0;
         this.keyboardInput = scene.input.keyboard.addKeys({
             'up': Phaser.Input.Keyboard.KeyCodes.W,
             'left': Phaser.Input.Keyboard.KeyCodes.Q,
-            'right': Phaser.Input.Keyboard.KeyCodes.E
+            'right': Phaser.Input.Keyboard.KeyCodes.E,
+            'object': Phaser.Input.Keyboard.KeyCodes.SPACE,
+            'squawk': Phaser.Input.Keyboard.KeyCodes.S,
+            'scape': Phaser.Input.Keyboard.KeyCodes.ESC
         });
 
         if (scene.sys.game.device.os.android) {
@@ -34,26 +37,48 @@ class Controls extends Phaser.Input.InputPlugin {
 
     setControlsPc() {
         this.controlType = "Pc";
-        let p = this.player;
-        let k = this.keyboardInput;
-        this.thisScene.input.keyboard.on('keydown_W', function () {
-            if (k.up.isDown && !p.isDamaged) {
-                this.impulsePercentage = p.movementBar.getImpulse();
-                p.body.velocity.y = (-400 * this.impulsePercentage); //It's like an instant acceleration
+        let player = this.player;
+        let keyboardInput = this.keyboardInput;
+
+        //Movement
+        this.scene.input.keyboard.on('keydown_W', function () {
+            if (keyboardInput.up.isDown && !player.isDamaged) {
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("up");
             }
         });
-        this.thisScene.input.keyboard.on('keydown_Q', function () {
-            if (k.left.isDown && !p.isDamaged) {
-                this.impulsePercentage = p.movementBar.getImpulse();
-                p.body.velocity.y = (-400 * this.impulsePercentage);
-                p.body.velocity.x = (-200 * this.impulsePercentage);
+        this.scene.input.keyboard.on('keydown_Q', function () {
+            if (keyboardInput.left.isDown && !player.isDamaged) {
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("left");
             }
         });
-        this.thisScene.input.keyboard.on('keydown_E', function () {
-            if (k.right.isDown && !p.isDamaged) {
-                this.impulsePercentage = p.movementBar.getImpulse();
-                p.body.velocity.y = (-400 * this.impulsePercentage);
-                p.body.velocity.x = (200 * this.impulsePercentage);
+
+        this.scene.input.keyboard.on('keydown_E', function () {
+            if (keyboardInput.right.isDown && !player.isDamaged) {
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("right");
+            }
+        });
+
+        //Use power up
+        this.scene.input.keyboard.on('keydown_SPACE', function () {
+            player.UsePowerUp();
+        });
+
+        //Squawk
+        this.scene.input.keyboard.on('keydown_S', function () {
+            player.Squawk();
+        });
+
+        //Escape
+        this.scene.input.keyboard.on("keydown_ESC", function () {
+            console.log("Escape");
+        });
+
+        this.scene.input.on('pointerdown', function (pointer) {
+            if (pointer.y < 125 && pointer.x > 650) {
+                console.log("Escape");
             }
         });
     }
@@ -61,20 +86,39 @@ class Controls extends Phaser.Input.InputPlugin {
     setControlsMobile() {
         this.controlType = "Mobile";
         let p = this.player;
-        this.thisScene.input.on('pointerdown', function (pointer) {
+        this.scene.input.on('pointerdown', function (pointer) {
+            console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
+
             let xVelocity;
 
-            if (pointer.y >= 75  && !p.isDamaged) {
+            //Movement
+            if (pointer.y >= 550 && !p.isDamaged) {
                 if (pointer.x <= game.config.width / 3) { //Left third of the screen
-                    xVelocity = -200;
+                    player.Move("left");
                 } else if (pointer.x >= (game.config.width / 3) * 2) { //Right third of the screen
-                    xVelocity = 200;
+                    player.Move("right");
                 } else { //Middle third of the screen
-                    xVelocity = 0;
+                    player.Move("up");
                 }
-                this.impulsePercentage = p.movementBar.getImpulse();
-                p.body.velocity.y = (-400 * this.impulsePercentage);
-                p.body.velocity.x = (xVelocity * this.impulsePercentage);
+                // this.impulsePercentage = p.movementBar.getImpulse();
+                // p.body.velocity.y = (-400 * this.impulsePercentage);
+                // p.body.velocity.x = (xVelocity * this.impulsePercentage);
+            }
+
+            //Use object
+            if (pointer.y < 125 && pointer.x < 125) {
+                player.UsePowerUp();
+            }
+
+            //Squawk
+            if (pointer.y < 200 &&
+                pointer.x > 200 && pointer.x < 600) {
+                player.Squawk();
+            }
+
+            //Escape
+            if (pointer.y < 125 && pointer.x > 650) {
+                console.log("Escape");
             }
         });
     }

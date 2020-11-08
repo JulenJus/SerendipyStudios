@@ -29,8 +29,9 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //<editor-fold desc="Game Loop functions">
     create() {
-        this.disableVisibilityChange = true;
-        testLoop();
+        //this.disableVisibilityChange = true;
+        //testLoop();
+
         //<editor-fold desc="Create the map">
 
         //Create grid
@@ -46,7 +47,7 @@ class Scene_Level_01 extends Phaser.Scene {
         level_01_Width = this.map.width * this.map.tileWidth;
 
         //Create layers from tilemap layers
-        this.backgoundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
+        this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
         this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -54,10 +55,11 @@ class Scene_Level_01 extends Phaser.Scene {
         //Enable colissions with layers
         this.wallsLayer.setCollisionByProperty({ collide: true });
         this.obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
-        this.backgoundLayer.setCollisionByProperty({ finishLine: true });
+        this.backgroundLayer.setCollisionByProperty({ finishLine: true });
         //</editor-fold>
 
-        //Create player
+        //<editor-fold desc ="Create player">
+
         player = new Player(this, true);
 
         //<editor-fold desc="Tilemap visual debugging">
@@ -91,33 +93,31 @@ class Scene_Level_01 extends Phaser.Scene {
 
         //Power Ups
         this.powerUpBoxes = this.physics.add.staticGroup();
-        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 300));
-        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 700));
-        this.powerUpBoxes.add(new PowerUp(this, player.x - 200, player.y - 500));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 300));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 700));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x - 200, player.y - 500));
 
         //Physics and collisions (triggers)
         //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
-        this.physics.add.overlap(player, this.backgoundLayer, null, null, this);
+        //this.physics.add.overlap(player, this.backgroundLayer, null, null, this);       //[HERE] For what is used this overlap?
         this.physics.add.collider(player, this.wallsLayer, null, null, this);
+        this.physics.add.overlap(player, this.backgroundLayer.finishLine, winCallback, null, this); //[HERE] it does not work!
         this.obstacles_level_01 = this.physics.add.collider(player, this.obstaclesLayer, takeDamageCallback, null, this);
         this.physics.add.overlap(player, this.powerUpBoxes, pickPowerUpCallback, null, this);
-
-        //Create finish line
-        this.winLine = new WinLine(this, player);
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, level_01_Width, level_01_Height);
         this.cameras.main.setBounds(0, 0, level_01_Width, level_01_Height); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
         this.cameras.main.startFollow(player);
+
+        //</editor-fold>
     }
 
     update()
     {
-        //Follow player sprite functions
-        if(player.isShielded){
-            player.playerShield.x = player.x
-            player.playerShield.y = player.y;
-        }
+        //Render the power up if needed
+        if(player.powerUpObject_Used !== null)
+            player.powerUpObject_Used.Render();
     }
 
 //</editor-fold>
@@ -131,10 +131,10 @@ function takeDamageCallback() {
 }
 
 function pickPowerUpCallback(player, powerUpBox) {
-    powerUpBox.DestroyBox(this.obstacles_level_01);
+    powerUpBox.PickBox(player);
 }
 
-function overlapCallback() {
+function cameraZoomCallback() {
     if (player.body.velocity.y < 0) {
         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1 / 3, 2000, "Linear", true);
@@ -142,6 +142,12 @@ function overlapCallback() {
         this.physics.world.setBounds(game.config.width * 2, 0, game.config.width * 2, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1, 2000, "Linear", true);
     }
+}
+
+function winCallback(){
+    console.log("You win");
+    console.log("POS X: " + player.body.position.x);
+    console.log("POS Y: " + player.body.position.y);
 }
 
 //</editor-fold>
