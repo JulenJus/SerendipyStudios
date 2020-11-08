@@ -25,11 +25,14 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set state variables
         this.isDamaged = false;
         this.isShielded = false;
-        this.canDash = false;
 
         //Set power up variables
-        this.playerShield = null;
-        this.numDashes = 3;
+        this.powerUpType = "none";
+        this.powerUpObject_Boxed = null;
+        this.powerUpObject_Used = null;
+
+        //this.powerUp_shield = null;
+        //this.powerUp_dash = 0;
     }
 
     // NormalizeBar(){
@@ -39,7 +42,35 @@ class Player extends Phaser.GameObjects.Sprite{
 
     //<editor-fold desc="Methods">
 
+    Move(direction){
+        if (!this.isDamaged) {
+            let impulsePercentage = this.movementBar.getImpulse();
+            switch(direction){
+                case "up":
+                    this.body.velocity.y = (-400 * impulsePercentage);
+                    break;
+                case "left":
+                    this.body.velocity.y = (-400 * impulsePercentage);
+                    this.body.velocity.x = (-200 * impulsePercentage);
+                    break;
+                case "right":
+                    this.body.velocity.y = (-400 * impulsePercentage);
+                    this.body.velocity.x = (200 * impulsePercentage);
+                    break;
+            }
+        }
+    }
+
+    Dash(impulsePercentage){
+        this.body.velocity.y = (-400 * impulsePercentage);
+    }
+
     TakeDamage(obstacles){
+        if(this.isShielded) {
+            this.powerUpObject_Used.Destroy();
+            return;
+        }
+
         //Get a little bit slowed
         this.body.velocity.y = (-400 * this.movementBar.movementBarImpulsePercentages[0]);
 
@@ -74,7 +105,10 @@ class Player extends Phaser.GameObjects.Sprite{
     UsePowerUp(){
         console.log("Power up");
 
-        //Use the power up if you have one [HERE]
+        //Use the power up if you have one
+        if(this.powerUpObject_Boxed !== null){
+            this.powerUpObject_Boxed.Use();
+        }
     }
 
     Squawk(){

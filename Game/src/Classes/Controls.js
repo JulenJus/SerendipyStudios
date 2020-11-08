@@ -43,23 +43,21 @@ class Controls extends Phaser.Input.InputPlugin {
         //Movement
         this.scene.input.keyboard.on('keydown_W', function () {
             if (keyboardInput.up.isDown && !player.isDamaged) {
-                this.impulsePercentage = player.movementBar.getImpulse();
-                player.body.velocity.y = (-400 * this.impulsePercentage); //It's like an instant acceleration
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("up");
             }
         });
         this.scene.input.keyboard.on('keydown_Q', function () {
             if (keyboardInput.left.isDown && !player.isDamaged) {
-                this.impulsePercentage = player.movementBar.getImpulse();
-                player.body.velocity.y = (-400 * this.impulsePercentage);
-                player.body.velocity.x = (-200 * this.impulsePercentage);
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("left");
             }
         });
 
         this.scene.input.keyboard.on('keydown_E', function () {
             if (keyboardInput.right.isDown && !player.isDamaged) {
-                this.impulsePercentage = player.movementBar.getImpulse();
-                player.body.velocity.y = (-400 * this.impulsePercentage);
-                player.body.velocity.x = (200 * this.impulsePercentage);
+                //this.impulsePercentage = player.movementBar.getImpulse();
+                player.Move("right");
             }
         });
 
@@ -96,15 +94,15 @@ class Controls extends Phaser.Input.InputPlugin {
             //Movement
             if (pointer.y >= 550 && !p.isDamaged) {
                 if (pointer.x <= game.config.width / 3) { //Left third of the screen
-                    xVelocity = -200;
+                    player.Move("left");
                 } else if (pointer.x >= (game.config.width / 3) * 2) { //Right third of the screen
-                    xVelocity = 200;
+                    player.Move("right");
                 } else { //Middle third of the screen
-                    xVelocity = 0;
+                    player.Move("up");
                 }
-                this.impulsePercentage = p.movementBar.getImpulse();
-                p.body.velocity.y = (-400 * this.impulsePercentage);
-                p.body.velocity.x = (xVelocity * this.impulsePercentage);
+                // this.impulsePercentage = p.movementBar.getImpulse();
+                // p.body.velocity.y = (-400 * this.impulsePercentage);
+                // p.body.velocity.x = (xVelocity * this.impulsePercentage);
             }
 
             //Use object

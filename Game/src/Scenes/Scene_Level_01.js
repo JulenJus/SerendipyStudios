@@ -93,9 +93,9 @@ class Scene_Level_01 extends Phaser.Scene {
 
         //Power Ups
         this.powerUpBoxes = this.physics.add.staticGroup();
-        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 300));
-        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 700));
-        this.powerUpBoxes.add(new PowerUp(this, player.x - 200, player.y - 500));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 300));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 700));
+        this.powerUpBoxes.add(new PowerUp_Box(this, player.x - 200, player.y - 500));
 
         //Physics and collisions (triggers)
         //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
@@ -115,11 +115,9 @@ class Scene_Level_01 extends Phaser.Scene {
 
     update()
     {
-        //Follow player sprite functions
-        if(player.isShielded){
-            player.playerShield.x = player.x
-            player.playerShield.y = player.y;
-        }
+        //Render the power up if needed
+        if(player.powerUpObject_Used !== null)
+            player.powerUpObject_Used.Render();
     }
 
 //</editor-fold>
@@ -133,7 +131,7 @@ function takeDamageCallback() {
 }
 
 function pickPowerUpCallback(player, powerUpBox) {
-    powerUpBox.DestroyBox(this.obstacles_level_01);
+    powerUpBox.PickBox(player);
 }
 
 function cameraZoomCallback() {
