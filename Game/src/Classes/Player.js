@@ -2,6 +2,7 @@ class Player extends Phaser.GameObjects.Sprite{
     //Constructor
     constructor(scene, controllable){
         super(scene, level_01_Width / 2, level_01_Height - 252, 'player');
+        this.thisScene = scene;
 
         //Set physics
         scene.add.existing(this);
@@ -13,17 +14,27 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set controls
         this.controllable = controllable;
         if(this.controllable) {
-            this.movementBar = new MovementBar(scene);
-            this.controls = new Controls(scene, this);
+            this.movementBar = new MovementBar(this.thisScene);
+            this.controls = new Controls(this.thisScene, this);
         }
 
         //Set appearance variables
         this.penguinType = 0;
         this.penguinSprite = 0;
-        this.playerTint = this.tint;
 
         //Set state variables
         this.isDamaged = false;
+        this.isShielded = false;
+        this.canDash = false;
+
+        //Set power up variables
+        this.playerShield = null;
+        this.numDashes = 3;
+    }
+
+    NormalizeBar(){
+        bar.clearTint();
+        powerUpTime.setText('');
     }
 
     //Methods
@@ -38,7 +49,7 @@ class Player extends Phaser.GameObjects.Sprite{
 
         let thisPlayer = this; //Reference for the change of scope
 
-        this.scene.time.addEvent({ //Blink immunity effect
+        this.thisScene.time.addEvent({ //Blink immunity effect
             delay: 150,
             repeat: 5,
             loop: false,
@@ -47,12 +58,12 @@ class Player extends Phaser.GameObjects.Sprite{
             }
         });
         //Return to normal state
-        this.scene.time.addEvent({
+        this.thisScene.time.addEvent({
             delay: 750,
             loop: false,
             callback: function(){
                 //Return to normal state
-                thisPlayer.tint = this.playerTint ;
+                thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
                 obstacles.active = true;
             }

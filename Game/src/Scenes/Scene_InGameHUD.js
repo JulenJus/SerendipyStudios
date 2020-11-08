@@ -1,3 +1,7 @@
+//Global variables
+let powerUpTime;
+let bar;
+
 class Scene_InGameHUD extends Phaser.Scene {
     constructor() {
         super("InGameHUD");
@@ -6,13 +10,19 @@ class Scene_InGameHUD extends Phaser.Scene {
 
     create() {
         //Create score
-        this.movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
+        // this.movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
+        //     fontFamily: 'Gelato',
+        //     fontStyle: 'Italic',
+        //     fontSize: '32px',
+        //     fill: '#ffffff'
+        // });
+        powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
             fontFamily: 'Gelato',
             fontStyle: 'Italic',
-            fontSize: '32px',
-            fill: '#ffffff'
+            fontSize: '64px',
+            fill: '#000000'
         });
-        this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'bar');
+        bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'bar');
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
         this.ghostBarMark = this.add.sprite(-500, -500, 'blueMark');
         // this.barMark.body.setAllowGravity(false)
@@ -31,7 +41,7 @@ class Scene_InGameHUD extends Phaser.Scene {
 
         //Update sprite positions
         this.barMark.x =
-            this.bar.x                                                                          //Center the sprite
+            bar.x                                                                          //Center the sprite
             - (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) / 2 +    //Put it at the beginning
             Phaser.Math.Clamp(                                                                  //Update the position depending on the barValue
                 (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) * (player.movementBar.movementBarValue / 100),
@@ -46,21 +56,25 @@ class Scene_InGameHUD extends Phaser.Scene {
 
     movementBarPressed(movementBarValue, tier){
         let sprite;
-        switch (tier){
-            case 0:
-                sprite = 'redMark';
-                break;
-            case 1:
-                sprite = 'yellowMark';
-                break;
-            case 2:
-                sprite = 'greenMark';
-                break;
+        if(!player.canDash) {
+            switch (tier) {
+                case 0:
+                    sprite = 'redMark';
+                    break;
+                case 1:
+                    sprite = 'yellowMark';
+                    break;
+                case 2:
+                    sprite = 'greenMark';
+                    break;
+            }
+        }else{
+            sprite = 'greenMark';
         }
 
         this.ghostBarMark.destroy();
         this.ghostBarMark = this.add.sprite(
-            this.bar.x - (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) / 2 +
+            bar.x - (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) / 2 +
             (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) * (movementBarValue / 100),
             game.config.height - 77.5,
             sprite);

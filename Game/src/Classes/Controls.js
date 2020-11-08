@@ -3,7 +3,7 @@ class Controls extends Phaser.Input.InputPlugin {
     constructor(scene, player) {
         super(scene);
         this.player = player;
-        this.scene = scene;
+        this.thisScene = scene;
         this.impulsePercentage = 0;
         this.keyboardInput = scene.input.keyboard.addKeys({
             'up': Phaser.Input.Keyboard.KeyCodes.W,
@@ -36,20 +36,20 @@ class Controls extends Phaser.Input.InputPlugin {
         this.controlType = "Pc";
         let p = this.player;
         let k = this.keyboardInput;
-        this.scene.input.keyboard.on('keydown_W', function () {
+        this.thisScene.input.keyboard.on('keydown_W', function () {
             if (k.up.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage); //It's like an instant acceleration
             }
         });
-        this.scene.input.keyboard.on('keydown_Q', function () {
+        this.thisScene.input.keyboard.on('keydown_Q', function () {
             if (k.left.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage);
                 p.body.velocity.x = (-200 * this.impulsePercentage);
             }
         });
-        this.scene.input.keyboard.on('keydown_E', function () {
+        this.thisScene.input.keyboard.on('keydown_E', function () {
             if (k.right.isDown && !p.isDamaged) {
                 this.impulsePercentage = p.movementBar.getImpulse();
                 p.body.velocity.y = (-400 * this.impulsePercentage);
@@ -61,7 +61,7 @@ class Controls extends Phaser.Input.InputPlugin {
     setControlsMobile() {
         this.controlType = "Mobile";
         let p = this.player;
-        this.scene.input.on('pointerdown', function (pointer) {
+        this.thisScene.input.on('pointerdown', function (pointer) {
             let xVelocity;
 
             if (pointer.y >= 75  && !p.isDamaged) {

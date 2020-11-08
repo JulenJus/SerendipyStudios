@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/cajapowerup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/mapa1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/mapa1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Level_01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
     </list>
@@ -54,16 +57,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
   </component>
@@ -108,6 +111,7 @@
       <workItem from="1604322473072" duration="9000" />
       <workItem from="1604506798062" duration="6571000" />
       <workItem from="1604569361137" duration="7463000" />
+      <workItem from="1604833853964" duration="19819000" />
     </task>
     <servers />
   </component>

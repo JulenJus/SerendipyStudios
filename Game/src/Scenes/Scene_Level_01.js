@@ -76,9 +76,9 @@ class Scene_Level_01 extends Phaser.Scene {
 
         //Power Ups
         this.powerUpBoxes = this.physics.add.staticGroup();
-        this.first = this.powerUpBoxes.create(player.x, player.y - 300, "powerUpBox").setScale(0.3, 0.3).refreshBody();
-        this.powerUpBoxes.create(player.x, player.y - 700, "powerUpBox").setScale(0.3, 0.3).refreshBody();
-        this.powerUpBoxes.create(player.x - 200, player.y - 500, "powerUpBox").setScale(0.3, 0.3).refreshBody();
+        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 300));
+        this.powerUpBoxes.add(new PowerUp(this, player.x, player.y - 700));
+        this.powerUpBoxes.add(new PowerUp(this, player.x - 200, player.y - 500));
 
         //Physics and collisions (triggers)
         //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
@@ -95,23 +95,23 @@ class Scene_Level_01 extends Phaser.Scene {
 
     update()
     {
+        //Follow player sprite functions
+        if(player.isShielded){
+            player.playerShield.x = player.x
+            player.playerShield.y = player.y;
+        }
     }
 //</editor-fold>
 }
 //<editor-fold desc="Methods">
-
-//<editor-fold desc="Player movement methods">
-
-
-//</editor-fold>
 
 //<editor-fold desc="Callbacks">
 function takeDamageCallback() {
     player.TakeDamage(this.obstacles_level_01);
 }
 
-function pickPowerUpCallback() {
-    console.log(this.powerUpBoxes.kill(this.first));<+8
+function pickPowerUpCallback(player, powerUpBox) {
+    powerUpBox.DestroyBox(this.obstacles_level_01);
 }
 
 function overlapCallback() {
