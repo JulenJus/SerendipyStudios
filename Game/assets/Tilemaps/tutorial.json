@@ -131,6 +131,15 @@
                         }]
                 }, 
                 {
+                 "id":12,
+                 "properties":[
+                        {
+                         "name":"finishLine",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }, 
+                {
                  "id":14,
                  "properties":[
                         {
