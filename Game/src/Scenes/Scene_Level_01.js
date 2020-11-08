@@ -12,6 +12,16 @@ let level_01_Height = 0;
 
 //</editor-fold>
 
+var testLoop = function (game) {
+    var loop = function (){
+        setTimeout(loop, 1000);
+
+        console.log("Loop");
+    }
+
+    loop();
+};
+
 class Scene_Level_01 extends Phaser.Scene {
     constructor() {
         super("Level_01");
@@ -19,6 +29,10 @@ class Scene_Level_01 extends Phaser.Scene {
 
 //<editor-fold desc="Game Loop functions">
     create() {
+        this.disableVisibilityChange = true;
+        testLoop();
+        //<editor-fold desc="Create the map">
+
         //Create grid
         //this.aGrid = new AlignGrid({scene: this, rows: 20, cols: 20, height: skySpr.height * scaledH , width: skySpr.width * scaledW});
         //this.aGrid.showNumbers();
@@ -38,8 +52,10 @@ class Scene_Level_01 extends Phaser.Scene {
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
         //Enable colissions with layers
-        this.wallsLayer.setCollisionByProperty({ collide: true });
-        this.obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
+        this.wallsLayer.setCollisionByProperty({collide: true});
+        this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
+
+        //</editor-fold>
 
         //Create player
         player = new Player(this, true);
@@ -77,20 +93,24 @@ class Scene_Level_01 extends Phaser.Scene {
         this.physics.add.collider(player, this.wallsLayer, null, null, this);
         this.obstacles_level_01 = this.physics.add.collider(player, this.obstaclesLayer, takeDamageCallback, null, this);
 
+        //Create finish line
+        this.winLine = new WinLine(this, player);
+
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, level_01_Width, level_01_Height);
         this.cameras.main.setBounds(0, 0, level_01_Width, level_01_Height); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
         this.cameras.main.startFollow(player);
     }
 
-    update()
-    {
+    update() {
     }
+
 //</editor-fold>
 }
+
 //<editor-fold desc="Methods">
 
-//<editor-fold desc="Player movement methods">
+//<editor-fold desc="Callbacks">
 
 
 //</editor-fold>
@@ -99,12 +119,13 @@ function takeDamageCallback() {
 }
 
 function overlapCallback() {
-    if(player.body.velocity.y < 0) {
+    if (player.body.velocity.y < 0) {
         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1 / 3, 2000, "Linear", true);
-    }else if (player.body.velocity.y > 0){
+    } else if (player.body.velocity.y > 0) {
         this.physics.world.setBounds(game.config.width * 2, 0, game.config.width * 2, skySpr.height * scaledH);
         this.cameras.main.zoomTo(1, 2000, "Linear", true);
     }
 }
+
 //</editor-fold>
