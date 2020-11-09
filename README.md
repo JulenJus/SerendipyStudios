@@ -254,7 +254,7 @@ Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en 
 
 ##### 5.2.2. Personajes no jugables
 
-Este es el Sargento, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 
 
@@ -275,7 +275,49 @@ Como bien se ha indicado en el apartado anterior, el juego cuenta con una estét
 
 #### 6.3. Concept Art
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
+- Personajes:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
+Steve
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
+Armin
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
+Bob
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+Kurta
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+Sargento Jack
+
+- Power Ups:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
+Caja Marrón
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/GreenPU.png" width="125">
+Caja Verde
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
+Caja Lila
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBox.png" width="125">
+Caja Verde Vista Frontal
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBoxShine.png" width="125">
+Caja brillando
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Shield.png" width="125">
+Escudo
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/ShieldShine.png" width="125">
+Escudo Brillando
+
+- Pantallas
+
+- Packs de Navidad
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Shop/Christmas%20Pack/Pack.png" width="125">
+
 
 
 #### 6.4. Animación 
@@ -288,6 +330,8 @@ Como bien se ha indicado en el apartado anterior, el juego cuenta con una estét
 #### 7.2. Animaciones 
 
 #### 7.3. Personajes 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
 
 
 ### 8. Sonido 
