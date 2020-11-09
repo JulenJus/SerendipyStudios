@@ -215,3 +215,94 @@ Al ser un juego enteramente online en el que el objetivo principal es llegar a l
 En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos y enemigos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más divertidos a la hora de competir con alguien, ya que será complicado avanzar si estar muy cerca de tus rivales. 
 
 También hay disponible un nivel tutorial, pensado para que los jugadores novatos se familiaricen con los controles y la mecánica del juego. Este tutorial contiene todos los tipos de enemigos y obstáculos que el jugador se encontrará en los otros mapas, distribuidos de tal forma que no sea demasiado complicado superar. 
+
+#### 4.5. Objetos, armas y power ups
+
+Los objetos y power ups que podrá obtener el jugador al recoger un objeto (previamente no se sabe lo que coge hasta que lo coge) son los siguientes: 
+
+- Escudo: Alrededor del pingüino del jugador aparecerá un escudo de hielo que este usará para superar un obstáculo sin necesitas de esquivarlo, pasando a través del mismo. Al ser un objeto que permite al jugador sobrepasar una gran cantidad de recorrido sin complicación, solo tiene la duración de 1 segundo desde que el jugador decide usarlo. 
+
+- Velocidad: Al hacer uso de este objeto, toda la barra inferior de impulso se pone de color verde durante X impulsos, permitiendo al jugador moverse siempre a la velocidad máxima, hasta que consuma el número de impulsos permitidos.
+
+
+#### 4.6. Arquitectura del software
+
+
+### 5. Trasfondo
+
+#### 5.1. Descripción detallada de la historia y la trama
+
+La historia se desarrolla en la Academia Pingüino, institución encargada de entrenar a sus pingüinos para convertirlos en los mejores soldados. El jugador adoptará el rol de cada uno de los personajes jugables, teniendo que superar las duras pruebas que el sargento le pondrá en cada uno de los niveles. Los enemigos son soldados veteranos, encargados de fortalecer a los más novatos. 
+
+#### 5.2. Personajes
+
+##### 5.2.1. Personajes jugables
+
+Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en la Academia Pingüino, cada uno de ellos tiene una motivación, personalidad y trasfondo diferente: 
+
+- Por un lado, tenemos a Steve: este joven pingüino ha tenido un sueño desde muy pequeño: ser el mejor pingüino volador de Pinguinea. Para conseguirlo, armado de determinación, se unió a la Academia Pingüino para lograr sus sueños. 
+
+- Otro de nuestros protagonistas es Armin: devoró todos los libros que pudo sobre la historia de los pingüinos voladores y es un acérrimo fan del famoso general Jack. Después de reunir suficiente coraje para unirse a la academia, está decido a hacer realidad por sí mismo lo que ha estudiado en los libros de la aleta de su héroe. 
+
+- Es siguiente en la lista es Bob: Bob tiene las cosas muy claras: no es muy listo, no es muy atlético, pero hay una cosa que desde luego es: cabezota, y cuando se le mete algo entre ceja y ceja no para hasta conseguirlo. Y lo único que tiene ahora entre las aletas este afable pero constante pingüino es ser el mejor volador de Pinguinea. 
+
+- Y por último, pero no menos importante, está Karta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+
+##### 5.2.2. Personajes no jugables
+
+Este es el Sargento, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+
+#### 5.3. Entornos y lugares
+
+
+### 6. Arte
+
+#### 6.1. Estética general del juego
+
+La estética general el juego es una muy amable y family friendly, pensada para atraer a un espectro grande de público.  Se ha optado por un estilo sencillo, puesto que al ser un party game, no se busca sobrecargar al jugador con demasiados elementos en pantalla o diseños muy elaborados; el objetivo es que se entienda todo lo que pasa en pantalla en todo momento, por lo que el juego se ha desarrollado con una estética simple y homogénea. 
+
+En cuanto al concepto general, el juego se desarrolla en la Academia Pingüino, por lo que van a abundar los colores fríos, estando presentes en todos momentos aquellos elementos como pueden ser hielo o nieve. Cada nivel se desarrolla en un lugar diferente (en la propia academia, en una cueva...), pero todos ellos comparten una característica: es una zona helada. 
+
+#### 6.2. Apartado visual
+
+Como bien se ha indicado en el apartado anterior, el juego cuenta con una estética simple y homogénea. El estilo de dibujo es uno muy limpio, compuesto mayoritariamente por líneas no demasiado gruesas, y un sombreado plano. De esta forma, el jugador no se sentirá agobiado por el diseño, y podrá distinguir de una forma muy sencilla qué está ocurriendo en la pantalla, identificando y reconociendo cada uno de los elementos. 
+
+#### 6.3. Concept Art
+
+#### 6.4. Animación 
+
+
+### 7. Animación 
+
+#### 7.1. Escenario 
+
+#### 7.2. Animaciones 
+
+#### 7.3. Personajes 
+
+
+### 8. Sonido 
+
+#### 8.1. Sonido ambiente y música 
+
+#### 8.2. Efectos sonoros 
+
+#### 8.3. Lista de sonidos 
+
+
+### 9. Interfaz 
+
+#### 9.1. Diseños básicos de los menús 
+
+#### 9.2. Diagrama de flujo 
+
+ 
+### 10. Hoja de ruta del desarrollo 
+
+#### 10.1. Hito 1 
+
+#### 10.2. Hito 2 
+
+#### 10.3. Hito 3 
+
+#### 10.4. Fecha de lanzamiento
