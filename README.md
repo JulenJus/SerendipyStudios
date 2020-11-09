@@ -275,6 +275,9 @@ Como bien se ha indicado en el apartado anterior, el juego cuenta con una estét
 
 #### 6.3. Concept Art
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
+
+
 #### 6.4. Animación 
 
 
