@@ -67,11 +67,9 @@
 
 ### 7. Animación 
 
-#### 7.1. Escenario 
+#### 7.1. Personajes 
 
-#### 7.2. Animaciones 
-
-#### 7.3. Personajes 
+#### 7.2. Objetos
 
 
 ### 8. Sonido 
@@ -188,7 +186,7 @@ Webstorm: 120€
 
 #### 4.1. Descripción detallada del concepto de juego
 
-El concepto de Flyguins se basa en ganar a tus rivales en una carrera vertical, haciendo uso de los diferentes objetos que el jugador irá encontrando a lo largo del mapa, al mismo tiempo que esquiva diferentes obstáculos y enemigos (NPCs). El jugador también podrá chocar a sus rivales, lanzándolos a los pinchos o haciendo que choquen con algún enemigo. 
+El concepto de Flyguins se basa en ganar a tus rivales en una carrera vertical, haciendo uso de los diferentes objetos que el jugador irá encontrando a lo largo del mapa, al mismo tiempo que esquiva diferentes obstáculos. El jugador también podrá chocar a sus rivales, lanzándolos a los pinchos o haciendo que choquen con alguna sierra mecánica. 
 
 Al acabar la partida, los jugadores podrán ver un ranking, y decidir jugar de nuevo (no necesariamente en el mismo mapa) o salir.
 
@@ -212,9 +210,9 @@ En la versión para Android, todo es táctil, por lo que basta con pulsar el lat
 
 Al ser un juego enteramente online en el que el objetivo principal es llegar a la meta antes que tus rivales, no existen misiones como tal, el jugador solo deberá centrarse en ser más rápido y hábil que sus rivales. 
 
-En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos y enemigos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más divertidos a la hora de competir con alguien, ya que será complicado avanzar si estar muy cerca de tus rivales. 
+En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más divertidos a la hora de competir con alguien, ya que será complicado avanzar si estar muy cerca de tus rivales. 
 
-También hay disponible un nivel tutorial, pensado para que los jugadores novatos se familiaricen con los controles y la mecánica del juego. Este tutorial contiene todos los tipos de enemigos y obstáculos que el jugador se encontrará en los otros mapas, distribuidos de tal forma que no sea demasiado complicado superar. 
+También hay disponible un nivel tutorial, pensado para que los jugadores novatos se familiaricen con los controles y la mecánica del juego. Este tutorial contiene todos los obstáculos que el jugador se encontrará en los otros mapas, distribuidos de tal forma que no sea demasiado complicado superar. 
 
 #### 4.5. Objetos, armas y power ups
 
@@ -241,17 +239,23 @@ La historia se desarrolla en la Academia Pingüino, institución encargada de en
 Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en la Academia Pingüino, cada uno de ellos tiene una motivación, personalidad y trasfondo diferente: 
 
 - Por un lado, tenemos a Steve: este joven pingüino ha tenido un sueño desde muy pequeño: ser el mejor pingüino volador de Pinguinea. Para conseguirlo, armado de determinación, se unió a la Academia Pingüino para lograr sus sueños. 
-![armin](https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png)
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
 
 - Otro de nuestros protagonistas es Armin: devoró todos los libros que pudo sobre la historia de los pingüinos voladores y es un acérrimo fan del famoso general Jack. Después de reunir suficiente coraje para unirse a la academia, está decido a hacer realidad por sí mismo lo que ha estudiado en los libros de la aleta de su héroe. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
 
 - Es siguiente en la lista es Bob: Bob tiene las cosas muy claras: no es muy listo, no es muy atlético, pero hay una cosa que desde luego es: cabezota, y cuando se le mete algo entre ceja y ceja no para hasta conseguirlo. Y lo único que tiene ahora entre las aletas este afable pero constante pingüino es ser el mejor volador de Pinguinea. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
 
-- Y por último, pero no menos importante, está Karta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+- Y por último, pero no menos importante, está Kurta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
 
 ##### 5.2.2. Personajes no jugables
 
-Este es el Sargento, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+
 
 #### 5.3. Entornos y lugares
 
@@ -270,16 +274,72 @@ Como bien se ha indicado en el apartado anterior, el juego cuenta con una estét
 
 #### 6.3. Concept Art
 
+- Personajes:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
+Steve
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
+Armin
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
+Bob
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+Kurta
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+Sargento Jack
+
+- Power Ups:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
+Caja Marrón
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/GreenPU.png" width="125">
+Caja Verde
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
+Caja Lila
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBox.png" width="125">
+Caja Verde Vista Frontal
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBoxShine.png" width="125">
+Caja brillando
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Shield.png" width="125">
+Escudo
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/ShieldShine.png" width="125">
+Escudo Brillando
+
+- Pantallas
+
+- Packs de Navidad
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Shop/Christmas%20Pack/Pack.png" width="125">
+
+
+
 #### 6.4. Animación 
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterBob.gif" width="125">
+Armin
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
+Bob
 
 ### 7. Animación 
 
-#### 7.1. Escenario 
+En el juego solo existe animaciones por parte de los personajes jugables y algunas trampas que el jugador se encontrará a lo largo del mapa. Para futuras actualizaciones, habrá enemigos que disparen o se avalancen sobre el jugador, así como más power ups y trampas animadas. 
 
-#### 7.2. Animaciones 
+#### 7.1. Personajes 
 
-#### 7.3. Personajes 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterBob.gif" width="125">
+Armin
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
+Bob
+
+#### 7.2. Objetos 
 
 
 ### 8. Sonido 
