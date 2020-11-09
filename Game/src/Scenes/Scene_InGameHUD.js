@@ -1,41 +1,50 @@
 //Global variables
 let powerUpTime;
+let raceTimeCount = 30;
 
 class Scene_InGameHUD extends Phaser.Scene {
     constructor() {
         super("InGameHUD");
-        //this.movementBarText = 0;
     }
 
     create() {
-        //Create score
-        // this.movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
-        //     fontFamily: 'Gelato',
-        //     fontStyle: 'Italic',
-        //     fontSize: '32px',
-        //     fill: '#ffffff'
-        // });
+
+        //Times
+        this.raceTime = this.add.text(game.config.width / 2, 0, '', {
+            fontFamily: 'Gelato',
+            fontStyle: 'Italic',
+            fontSize: '128px',
+            fill: '#000000'
+        }).setText(raceTimeCount).setOrigin(0.5, 0);
+
         powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
             fontFamily: 'Gelato',
             fontStyle: 'Italic',
             fontSize: '64px',
             fill: '#000000'
         });
+
+        //Movement bar
         this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'bar');
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
         this.ghostBarMark = this.add.sprite(-500, -500, 'blueMark');
-        // this.barMark.body.setAllowGravity(false)
-        // this.barMark.body.setDrag(40, 0);
 
         //Initialize bar
         player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
         player.movementBar.setIsRunning(true);
+        this.StartCountdown();
+
+        //Race bar
+        this.raceBar = this.add.sprite(60, 600, 'raceBar');
+        this.playerMark = this.add.sprite(45, 985, 'playerMark');
+
     }
 
     update() {
         if (player.controllable) {
             player.movementBar.update();
-            //this.movementBarText.text = 'JUMP BAR VALUE: ' + player.movementBar.movementBarValue;
+            console.log("MARK Y: " + this.playerMark.y);
+            this.playerMark.y = (this.raceBar.y + this.raceBar.height / 2) - Phaser.Math.Clamp( this.raceBar.height * (1 - ((player.y / level_01_Height))), 0, this.raceBar.height);
         }
 
         //Update sprite positions
@@ -47,15 +56,11 @@ class Scene_InGameHUD extends Phaser.Scene {
                 0,
                 player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth
             );
-        //movementBarValue += 0.5 * movementBarIncrement;
-        //this.movementBarText.text = 'JUMP BAR VALUE: ' + movementBarValue;
-        //this.barMark.body.velocity.x += 1.5 * movementBarIncrement;
-        //this.movementBarText.text = 'JUMP BAR VALUE: ' + this.registry.get('movementBarVal');
     }
 
-    movementBarPressed(movementBarValue, tier){
+    movementBarPressed(movementBarValue, tier) {
         let sprite;
-        if(!player.canDash) {
+        if (!player.canDash) {
             switch (tier) {
                 case 0:
                     sprite = 'redMark';
@@ -67,7 +72,7 @@ class Scene_InGameHUD extends Phaser.Scene {
                     sprite = 'greenMark';
                     break;
             }
-        }else{
+        } else {
             sprite = 'greenMark';
         }
 
@@ -80,5 +85,23 @@ class Scene_InGameHUD extends Phaser.Scene {
 
         this.barMark.destroy();
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
+    }
+
+    StartCountdown() {
+        //While the player has not finished the race, count the time it is taking
+        let thisRaceTime = this.raceTime; //Reference for the change of scope
+
+        this.raceTimer = this.time.addEvent({ //Blink immunity effect
+            delay: 1000,
+            loop: true,
+            callback: function () {
+                raceTimeCount -= 1;
+                thisRaceTime.setText(raceTimeCount);
+            }
+        });
+    }
+
+    FinishRace() {
+
     }
 }

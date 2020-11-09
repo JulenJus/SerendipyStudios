@@ -89,6 +89,10 @@ class Scene_Preload extends Phaser.Scene {
         this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
         this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
+        //UI assets
+        this.load.image('raceBar', '../assets/Sprites/RaceBar.png');
+        this.load.image('playerMark', '../assets/Sprites/PlayerMark.png');
+
         //Aux assets
         this.load.image('winLine','../assets/Sprites/limit.png');
 

@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/PlayerMark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/RaceBar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_LeftPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +54,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
   </component>
@@ -106,6 +109,7 @@
       <workItem from="1604506798062" duration="6571000" />
       <workItem from="1604569361137" duration="7463000" />
       <workItem from="1604833853964" duration="19819000" />
+      <workItem from="1604914924523" duration="10351000" />
     </task>
     <servers />
   </component>
@@ -133,14 +137,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603300324630" />
-    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603212052281">
+    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604918651446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603212052281" />
+    <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604918651446" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1603212114379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603212114379" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1604923120064">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604923120064" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602844039261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
