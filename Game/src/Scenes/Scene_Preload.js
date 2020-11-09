@@ -72,26 +72,29 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Player assets
-        this.load.image('player', '../assets/Sprites/Empollon.png');
+        this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
-        //Bar assets
-        this.load.image('bar', '../assets/Sprites/barra.png');
-        this.load.image('blueMark', '../assets/Sprites/hieloazul.png');
-        this.load.image('greenMark', '../assets/Sprites/hieloverde.png');
-        this.load.image('yellowMark', '../assets/Sprites/hieloamarillo.png');
-        this.load.image('redMark', '../assets/Sprites/hielorojo.png');
+        //GUI assets
+        this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
+        this.load.image('blueMark', '../assets/Sprites/UI/hieloazul.png');
+        this.load.image('greenMark', '../assets/Sprites/UI/hieloverde.png');
+        this.load.image('yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
+        this.load.image('redMark', '../assets/Sprites//UI/hielorojo.png');
+
+        this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
+        this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
+
+        //Power up assets
+        this.load.image('powerUpBox', '../assets/Sprites/Powerups/PowerUpBox.png');
+        this.load.image('shield', '../assets/Sprites/Powerups/EscudoCortado.png');
 
         //Map assets
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
-        this.load.image('powerUpBox', '../assets/Sprites/cajapowerup.png');
-        this.load.image('shield', '../assets/Sprites/Shield.png');
         this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
         this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
-        this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
-        //UI assets
-        this.load.image('raceBar', '../assets/Sprites/RaceBar.png');
-        this.load.image('playerMark', '../assets/Sprites/PlayerMark.png');
+        //Animations assets
+        this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
         //Aux assets
         this.load.image('winLine','../assets/Sprites/limit.png');

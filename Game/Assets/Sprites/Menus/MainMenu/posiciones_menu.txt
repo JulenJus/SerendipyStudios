@@ -1,0 +1,25 @@
+Posiciones siempre en pixeles
+
+Logo:        Anchura 35
+	Altura: 133
+
+Boton jugar
+anch: 106
+alt 460
+
+Boton como jugar:
+anch 117
+alt 702
+
+Boton controles:
+anch 117
+alt 862
+
+Boton creditos
+anch 117
+alt 1019
+
+Boton salir
+anch 117
+alt 1176 - 1179
+
