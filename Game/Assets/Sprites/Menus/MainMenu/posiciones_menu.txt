@@ -8,18 +8,14 @@ anch: 106
 alt 460
 
 Boton como jugar:
-anch 117
+anch 114
 alt 702
 
-Boton controles:
-anch 117
-alt 862
-
 Boton creditos
-anch 117
-alt 1019
+anch 114
+alt 878
 
 Boton salir
-anch 117
-alt 1176 - 1179
+anch 114
+alt 1059
 
