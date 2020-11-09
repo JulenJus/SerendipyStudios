@@ -20,53 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Steve/Steve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/Pantallas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/Potenciadores.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/Tutorial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/level1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/level2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Level Design/level3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Steve/pinguino.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/BackgroundBrowserTry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Background_Platform.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Barra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/BarraAdjusted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/BotonJugar copia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/BotonJugar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Como Jugar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Como Jugar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Controles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Controles2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Créditos.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Créditos2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Empollon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/PlayerMark.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/PlayerMark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/RaceBar.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/RaceBar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Salir.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Salir2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Shield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/barra.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/barra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/cajapowerup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/fondo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/hieloAzul.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/hieloamarillo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/hieloamarillo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/hieloazul.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/hieloazul.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/hielorojo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/hielorojo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/hieloverde.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/UI/hieloverde.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/limit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/penguins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/pinguino2_resize2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/posiciones_menu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/tileset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/tutorial.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/tutorial_colliders.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._Marcas.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba._walls.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/Tilemap_prueba2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Tilemaps/tutorial_colliders.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Animations/Armin/ArminAleteo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/Armin/FlutterBob.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Animations/Bob/AleteoBob.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Armin/Armin.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Armin/Armin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Bob/Bob.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Bob/Bob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Bob/BobGreet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Bob/BobGreet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Kurta/Kurta.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Kurta/Kurta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Pingu/PinguHalloween.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Pingu/PinguHalloween.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Pingu/PinguMele.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Pingu/PinguMele.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Pingu/PinguPresentacion.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Pingu/PinguHappy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Pingu/PinguTurnaroundPNG.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Pingu/PinguTurnaroundPNG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Sargento/Sargento.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Sergeant Jack/Sergeant.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Sargento/SargentoColores.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Sergeant Jack/SergeantColors.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Characters/Steve/Steve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/EscudoBrillo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/ShieldShine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/EscudoCortado.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/Shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/PowerUpBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/PowerUpBox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/PowerUpBoxBrillo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/PowerUpBoxShine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/cajapowerupdMarron.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/BrownPU.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/cajapowerupdMorada.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/PurplePU.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Powerups/cajapowerupdVerde.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic PowerUps/GreenPU.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Shop/Christmas Pack/PackSuelto.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Shop/Christmas Pack/Pack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Steve/Steve.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Basic Characters/Steve/Steve.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +134,7 @@
       <workItem from="1604506798062" duration="6571000" />
       <workItem from="1604569361137" duration="7463000" />
       <workItem from="1604833853964" duration="19819000" />
-      <workItem from="1604914924523" duration="15022000" />
+      <workItem from="1604914924523" duration="15698000" />
     </task>
     <servers />
   </component>

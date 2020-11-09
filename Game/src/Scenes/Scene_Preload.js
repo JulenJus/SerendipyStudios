@@ -85,8 +85,8 @@ class Scene_Preload extends Phaser.Scene {
         this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
 
         //Power up assets
-        this.load.image('powerUpBox', '../assets/Sprites/Powerups/PowerUpBox.png');
-        this.load.image('shield', '../assets/Sprites/Powerups/EscudoCortado.png');
+        this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
+        this.load.image('shield', '../assets/Sprites/Basic PowerUps/EscudoCortado.png');
 
         //Map assets
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
@@ -94,10 +94,10 @@ class Scene_Preload extends Phaser.Scene {
         this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
 
         //Animations assets
-        this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
+        //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
         //Aux assets
-        this.load.image('winLine','../assets/Sprites/limit.png');
+        //this.load.image('winLine','../assets/Sprites/limit.png');
 
     }
     create(){
