@@ -241,17 +241,22 @@ La historia se desarrolla en la Academia Pingüino, institución encargada de en
 Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en la Academia Pingüino, cada uno de ellos tiene una motivación, personalidad y trasfondo diferente: 
 
 - Por un lado, tenemos a Steve: este joven pingüino ha tenido un sueño desde muy pequeño: ser el mejor pingüino volador de Pinguinea. Para conseguirlo, armado de determinación, se unió a la Academia Pingüino para lograr sus sueños. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="100">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
 
 - Otro de nuestros protagonistas es Armin: devoró todos los libros que pudo sobre la historia de los pingüinos voladores y es un acérrimo fan del famoso general Jack. Después de reunir suficiente coraje para unirse a la academia, está decido a hacer realidad por sí mismo lo que ha estudiado en los libros de la aleta de su héroe. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
 
 - Es siguiente en la lista es Bob: Bob tiene las cosas muy claras: no es muy listo, no es muy atlético, pero hay una cosa que desde luego es: cabezota, y cuando se le mete algo entre ceja y ceja no para hasta conseguirlo. Y lo único que tiene ahora entre las aletas este afable pero constante pingüino es ser el mejor volador de Pinguinea. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
 
-- Y por último, pero no menos importante, está Karta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+- Y por último, pero no menos importante, está Kurta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
 
 ##### 5.2.2. Personajes no jugables
 
 Este es el Sargento, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+
 
 #### 5.3. Entornos y lugares
 
