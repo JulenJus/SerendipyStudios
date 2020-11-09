@@ -121,3 +121,17 @@ Flyguins está pensado para jugar con amigos y fastidiarse los unos a los otros.
 El público objetivo al que se busca llegar es principalmente joven, entre 10 y 40 años, ya que son los que más tiempo libre suelen tener y mayor movimiento por las redes sociales, aunque alguien mayor podría jugarlos y disfrutarlo igual, puesto que las mecánicas son sencillas, y el estilo visual tan amable del juego invita a jugar a cualquier persona. 
 
 En cuanto a las plataformas en la que el videojuego será lanzado, serán PC y Android, puesto que al ser un party game, de esta forma nos aseguramos de que todo el mundo puede jugarlo, ya que la persona media tiene de seguro un dispositivo móvil. 
+
+
+### 2. Monetización y modelo de negocio
+
+#### 2.1. Tipo de modelo de monetización
+
+El juego será freemium, encontrándose dentro del juego algunas micro transacciones para obtener skins diferentes que de base el jugador medio no posee. También se podrá comprar un dlc en el que vengan más mapas. Se ha decidido este modelo de negocio para que el juego sea más accesible para todo el mundo, fomentando la divulgación del mismo. 
+
+| Producto | Precio |
+| ------------- | ------------- |
+| Pack Skins | 0.99€/pack |
+| Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
+| DLC de mapas + skins exclusivas | 4.99€ |
+
