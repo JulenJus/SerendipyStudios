@@ -14,7 +14,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         //Util variables
         this.movementBarValue = 0;
         this.movementBarIncrement = 1;
-        this.movementBarVelocity = 1;
+        this.movementBarVelocity = 50;
 
         //Pressed event
         this.onMovementBarPressed = new Phaser.Events.EventEmitter();
@@ -35,7 +35,8 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         if (this.movementBarValue <= 0) {
             this.movementBarIncrement = 1;   //True -> Increment
         }
-        this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement);// * game.time.physicsElapsed;
+        //this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement);// * game.time.physicsElapsed;
+        this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement) * GetDeltaTime();// * game.time.physicsElapsed;
     }
 
     //Methods
