@@ -33,6 +33,10 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
         this.destroy();
     }
 
+    Respawn(){
+        //[HERE] Respawn the box
+    }
+
     // GetDashPowerUp(){
     //     player.numDashes = 3;
     //     //bar.tint = bar.tint = 0x00FF00;

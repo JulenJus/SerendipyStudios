@@ -1,10 +1,10 @@
-class Controls extends Phaser.Input.InputPlugin {
+class Controls /*extends Phaser.Input.InputPlugin */{
     //Constructor
     constructor(scene, player) {
-        super(scene);
+        //super(scene);
         this.player = player;
         this.scene = scene;
-        this.impulsePercentage = 0;
+        //this.impulsePercentage = 0;
         this.keyboardInput = scene.input.keyboard.addKeys({
             'up': Phaser.Input.Keyboard.KeyCodes.W,
             'left': Phaser.Input.Keyboard.KeyCodes.Q,
