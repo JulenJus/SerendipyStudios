@@ -135,3 +135,83 @@ El juego será freemium, encontrándose dentro del juego algunas micro transacci
 | Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
 | DLC de mapas + skins exclusivas | 4.99€ |
 
+
+### 3. Planificación y Costes
+
+#### 3.1. El equipo humano
+
+El equipo estará compuesto por los siguientes integrantes con sus respectivos roles: 
+ 
+
+Julen Justo Neira: Compositor y Programador (aux). 
+
+Javier Morales López: Director y Productor. 
+
+Sergio López Serrano: Level Designer y Game Designer. 
+
+Clara Bartolomé Pereira: Programadora y Artista 2D. 
+
+David González Bella: Programador. 
+
+Alexandra Izquierdo Esteban: Artista 2D y Community Manager 
+
+#### 3.2. Estimación temporal del desarrollo
+
+Dado que es un juego sin historia, el desarrollo se centrará en definir y pulir las mecánicas, al mismo tiempo que se diseña e implementa nuevo contenido (expansiones y packs que se lanzarán más adelante). 
+
+Por lo tanto, estimamos que durará 2 meses. 
+
+#### 3.3. Costes asociados
+
+Cada programador cobrará 1400€ mensuales, por lo que 8400€. 
+
+El compositor cobrará 1200€ al mes, por lo que en total 2400€ 
+
+Cada artista cobrará 2000€ al mes, por lo que en total 8000€ 
+
+El level designer/game designer cobrará 2900€ al mes, por lo que en total 5800€ 
+
+El community manager ganará 1500€ al mes, por lo que en total 3000€ 
+
+El Director/productor ganará 7500€ al mes, por lo que en total 15000€ 
+
+Licencia de Clip Studio Paint Pro: 45€ 
+
+Ableton Live Standard: 350€  
+
+Webstorm: 120€ 
+
+#### En total: 43115€ 
+
+
+### 4. Mecánicas de Juego y Elementos de Juego (personajes (nº) y sus mecánicas, escenarios que hacen, número de assets que se necesitan para el escenario, módulos que se necesitan (esquinas, central, etcétera) 
+
+#### 4.1. Descripción detallada del concepto de juego
+
+El concepto de Flyguins se basa en ganar a tus rivales en una carrera vertical, haciendo uso de los diferentes objetos que el jugador irá encontrando a lo largo del mapa, al mismo tiempo que esquiva diferentes obstáculos y enemigos (NPCs). El jugador también podrá chocar a sus rivales, lanzándolos a los pinchos o haciendo que choquen con algún enemigo. 
+
+Al acabar la partida, los jugadores podrán ver un ranking, y decidir jugar de nuevo (no necesariamente en el mismo mapa) o salir.
+
+#### 4.2. Descripción detallada de las mecánicas de juego
+
+Las mecánicas varían mínimamente en la versión que se lanzará para Android con respecto a la de PC. 
+
+En la versión de PC, para poder impulsarse hacia arriba, el jugador verá una barra larga en la parte inferior de la pantalla, siendo esta recorrida por un marcador que se mueve horizontalmente a lo largo de toda la barra. El jugador deberá para ese marcador en una zona amarilla o verde (la verde impulsa al jugador con más potencia, pero es más difícil de parar el marcador en esa zona) para poder seguir avanzando, al mismo tiempo que se mueve horizontalmente. Si el jugador para el marcador en una zona roja no podrá avanzar hasta que tenga una nueva oportunidad para parar el marcador. Independientemente de la intensidad del salto, la cual es determinada por la barra previamente mencionada, la dirección dependerá de la tela pulsada por el jugador: ‘W’ para un salto completamente vertical, y ‘Q’ o ‘E’ para saltar en las diagonales izquierda o derecha, respectivamente. 
+
+Al coger un objeto (distribuidos estos en posiciones específicas a lo largo de los mapas), este objeto aparecerá en la caja de objetos, situada en la parte superior de la pantalla. El objeto no se usará solo, puesto que será el jugador el que decida cuando usarlo. En el caso de que el jugador haya cogido un objeto, pero no lo haya usado y se encuentre con otro objeto nuevo, el objeto nuevo no sustituirá al viejo, será el que tenga de antes el que prevalezca. 
+
+En la versión de Android se mantienen las mecánicas de movimiento horizontal, salvo que en lugar que realizar los saltos (en las diagonales o totalmente verticales), a falta de teclas, el usuario deberá presionar con el dedo en la zona de la pantalla correspondiente: la mitad de la pantalla para el salto vertical, y las zonas laterales para los saltos en diagonal. El uso de objetos también varía, pasando de pulsar una tecla en la versión de PC a pulsar en la caja del propio objeto en la versión de Android. 
+
+#### 4.3. Controles
+
+En la versión de PC, el jugador pulsará la tecla W para parar el marcador en una zona de la barra de abajo. Para moverse horizontalmente se usarán las teclas Q y E, que indican izquierda y derecha respectivamente. Para usar objetos se usa la tecla espacio. Al final el jugador solo usará las 3 primeras teclas, QWE, además de la barra espaciadora para hacer uso de todas las mecánicas del juego. 
+
+En la versión para Android, todo es táctil, por lo que basta con pulsar el lateral de la pantalla para indicar la diagonal a la que el jugador quiera dirigirse, así mismo como pulsar el centro de la pantalla para propulsarse solo hacia arriba. Para hacer uso del objeto recogido, debe de pulsar en el slot en donde se guarde el objeto recogido. 
+
+#### 4.4. Niveles y misiones
+
+Al ser un juego enteramente online en el que el objetivo principal es llegar a la meta antes que tus rivales, no existen misiones como tal, el jugador solo deberá centrarse en ser más rápido y hábil que sus rivales. 
+
+En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos y enemigos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más divertidos a la hora de competir con alguien, ya que será complicado avanzar si estar muy cerca de tus rivales. 
+
+También hay disponible un nivel tutorial, pensado para que los jugadores novatos se familiaricen con los controles y la mecánica del juego. Este tutorial contiene todos los tipos de enemigos y obstáculos que el jugador se encontrará en los otros mapas, distribuidos de tal forma que no sea demasiado complicado superar. 
