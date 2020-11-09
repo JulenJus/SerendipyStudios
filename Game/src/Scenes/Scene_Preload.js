@@ -86,12 +86,11 @@ class Scene_Preload extends Phaser.Scene {
 
         //Power up assets
         this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
-        this.load.image('shield', '../assets/Sprites/Basic PowerUps/EscudoCortado.png');
+        this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
 
         //Map assets
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
         this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
-        this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
 
         //Animations assets
         //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
