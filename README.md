@@ -106,4 +106,20 @@
 
 
 
-hola
+### 1. Introducción
+
+#### 1.1. Descripción breve del concepto
+
+Flyguins es un party game online en el que sus jugadores tendrán que competir entre ellos para ser el mejor entre los demás. Es un juego de carreras con scroll vertical, lleno de obstáculos y objetos, que podrán ser usados para obtener ventajas con respecto a los rivales o para fastidiar a los mismos.  
+
+#### 1.2. Descripción breve de la historia
+
+El jugador adopta el rol de uno de los pingüinos jugables, cada uno con su trasfondo y motivaciones, pero siendo todos ellos novatos en la Academia Pingüino. El objetivo común de todos ellos es mejorar como soldado, por lo que tendrán que pasar las duras pruebas que sus superiores le han puesto. Para ello, deberán recorrer los diferentes recorridos llenos de trampas al mismo tiempo que compiten con otros pingüinos de su promoción para ser el mejor de todos. 
+
+#### 1.3. Propósito, público objetivo y plataformas
+
+Flyguins está pensado para jugar con amigos y fastidiarse los unos a los otros. El juego no busca atraer a los usuarios por una buena historia o acercamiento con los personajes, sino más bien por las mecánicas y la jugabilidad, puesto que al ser un juego dinámico en el que cada escenario es diferente y con varios caminos por donde pasar, cada partida puede resultar una experiencia diferente. 
+
+El público objetivo al que se busca llegar es principalmente joven, entre 10 y 40 años, ya que son los que más tiempo libre suelen tener y mayor movimiento por las redes sociales, aunque alguien mayor podría jugarlos y disfrutarlo igual, puesto que las mecánicas son sencillas, y el estilo visual tan amable del juego invita a jugar a cualquier persona. 
+
+En cuanto a las plataformas en la que el videojuego será lanzado, serán PC y Android, puesto que al ser un party game, de esta forma nos aseguramos de que todo el mundo puede jugarlo, ya que la persona media tiene de seguro un dispositivo móvil. 
