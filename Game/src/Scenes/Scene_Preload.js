@@ -84,6 +84,13 @@ class Scene_Preload extends Phaser.Scene {
         this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
         this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
 
+        this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
+        this.load.image('shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
+        this.load.image('dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
+        this.load.image('dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
+        this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
+        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
+
         //Power up assets
         this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
         this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
