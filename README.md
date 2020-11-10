@@ -317,6 +317,8 @@ Escudo Brillando
 - Packs de Navidad
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Shop/Christmas%20Pack/Pack.png" width="125">
 
+- Tilesheet de mapas:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
 
 
 #### 6.4. Animación 
