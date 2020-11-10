@@ -6,7 +6,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
     constructor() {
         super("InGameHUD");
-      
+
         //Power up icons
         this.dashIcon = null;
         this.shieldIcon = null;
@@ -14,11 +14,12 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //console.log("Ingame hud constructor");
     }
 
-    init(player) {
-        this.player = player;
+    init(args) {
+        this.player = args.player;
+        this.level = args.level;
         //console.log("Ingame hud init");
     }
-  
+
     create() {
         //Show the scene
         //this.scene.start("InGameHUD");    //[HERE] YOU ARE SUCH AN ASSHOLE JULEN!
@@ -31,7 +32,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //     fontSize: '32px',
         //     fill: '#ffffff'
         // });
-      
+
         //Times
         this.raceTime = this.add.text(game.config.width / 2, 0, '', {
             fontFamily: 'Gelato',
@@ -39,7 +40,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             fontSize: '128px',
             fill: '#000000'
         }).setOrigin(0.5, 0);
-      
+
         powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
             fontFamily: 'Gelato',
             fontStyle: 'Italic',
@@ -55,9 +56,9 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //Initialize bar
         this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
         this.player.movementBar.setIsRunning(true);
-      
+
         //this.StartCountdown();
-      
+
         //PowerUp stuff
         this.powerUpBox = this.add.sprite(80, 80, 'powerUpEmpty').setScale(0.5);
         this.player.onPaintPowerUpIcon.on('onPaintPowerUpIcon', this.onPaintPowerUpIcon, this);
@@ -81,7 +82,12 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     update() {
         if (this.player.controllable) {
             this.player.movementBar.update();
-            this.playerMark.y = (this.raceBar.y + this.raceBar.height / 2) - Phaser.Math.Clamp( this.raceBar.height * (1 - ((player.y / level_01_Height))), 0, this.raceBar.height);
+            this.playerMark.y =
+                (this.raceBar.y + this.raceBar.height / 2)
+                - Phaser.Math.Clamp(
+                this.raceBar.height * (1 - ((this.player.y / this.level.levelHeight))),
+                0,
+                this.raceBar.height);
         }
 
         //Update sprite positions
@@ -121,27 +127,27 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
     }
 
-    onPaintPowerUpIcon(type, numDashes){
-        if(type == "dash") {
-            switch(numDashes){
+    onPaintPowerUpIcon(type, numDashes) {
+        if (type == "dash") {
+            switch (numDashes) {
                 case 0:
                     this.dashIcon.destroy();
                     this.dashIcon = null;
-                break;
+                    break;
                 case 1:
                     this.dashIcon.setTexture('dashPowerUp1').setScale(0.5);
-                break;
+                    break;
                 case 2:
                     this.dashIcon.setTexture('dashPowerUp2').setScale(0.5);
-                break;
+                    break;
                 case 3:
                     this.dashIcon = this.add.sprite(80, 60, 'dashPowerUp3').setScale(0.5);
-                break;
+                    break;
             }
-        }else{
-            if(this.shieldIcon == null) {
+        } else {
+            if (this.shieldIcon == null) {
                 this.shieldIcon = this.add.sprite(80, 65, 'shieldPowerUp').setScale(0.45);
-            }else{
+            } else {
                 this.shieldIcon.destroy();
                 this.shieldIcon = null;
             }
@@ -162,7 +168,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         });
     }
 
-    UpdateRacePosition(spot){
+    UpdateRacePosition(spot) {
         this.player.racePosition += spot;
         this.racePosition.setText(this.player.racePosition + "º");
     }

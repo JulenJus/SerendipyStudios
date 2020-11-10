@@ -43,25 +43,6 @@ class Scene_04_1_Level_01 extends Gen_Level {
         //     repeat: -1       //The animation loops infinitely
         // });
         // player.anims.play('idle', true);
-
-        //Power Ups
-        this.powerUpBoxes = this.physics.add.staticGroup();
-        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 300));
-        this.powerUpBoxes.add(new PowerUp_Box(this, player.x, player.y - 700));
-        this.powerUpBoxes.add(new PowerUp_Box(this, player.x - 200, player.y - 500));
-
-        //Physics and collisions (triggers)
-        //this.physics.add.overlap(player, zoomBlocks, overlapCallback, null, this);
-        //this.physics.add.overlap(player, this.backgroundLayer, null, null, this);       //[HERE] For what is used this overlap?
-        this.physics.add.collider(player, this.wallsLayer, null, null, this);
-        this.physics.add.overlap(player, this.backgroundLayer.finishLine, winCallback, null, this); //[HERE] it does not work!
-        this.physics.add.collider(player, this.obstaclesLayer, takeDamageCallback, null, this);
-        this.physics.add.overlap(player, this.powerUpBoxes, pickPowerUpCallback, null, this);
-
-        //Camera follow and bounds
-        this.physics.world.setBounds(0, 0, level_01_Width, level_01_Height);
-        this.cameras.main.setBounds(0, 0, level_01_Width, level_01_Height); //The camera will be able to move all around the map, and we'll change the size of the world and make zoom to vary the player/s FoV
-        this.cameras.main.startFollow(player);
     }
 
     update() {

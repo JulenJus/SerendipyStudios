@@ -2,8 +2,7 @@ class Gen_Level extends Phaser.Scene {
     constructor(name) {
         super(name);
 
-        this.nameF = name;
-        this.name = "";
+        this.name = name;
         this.levelWidth = 0;
         this.levelHeight = 0;
 
@@ -24,21 +23,21 @@ class Gen_Level extends Phaser.Scene {
         console.log("Gen_Level create")
 
         //Create tilemap
-        this.map = this.make.tilemap({key: 'tilemap' + this.name});
+        this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
         this.tiles = this.map.addTilesetImage
-        ('tilesheet' + this.name, 'tilesheet' + this.name, 64, 64, 1, 2);
+        ('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
 
         //Set level height and width according to the json's
         this.levelWidth = this.map.width * this.map.tileWidth;
         this.levelHeight = this.map.height * this.map.tileHeight;
 
         //Create layers from tilemap layers
-        this.backgroundLayer = this.map.createStaticLayer('background' + this.name, this.tiles, 0, 0);
-        this.map.createStaticLayer('decoration' + this.name, this.tiles, 0, 0);
-        this.wallsLayer = this.map.createStaticLayer('walls' + this.name, this.tiles, 0, 0);
-        this.obstaclesLayer = this.map.createStaticLayer('obstacles' + this.name, this.tiles, 0, 0);
+        this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
+        this.map.createStaticLayer('decoration', this.tiles, 0, 0);
+        this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
+        this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
-        //Enable collissions with layers
+        //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
         this.backgroundLayer.setCollisionByProperty({finishLine: true});
@@ -60,17 +59,17 @@ class Gen_Level extends Phaser.Scene {
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
-        this.physics.add.overlap(thisPlayer, this.backgroundLayer.finishLine, this.winCallback, null, this); //[HERE] it does not work!
+        let finishLineOverlap = this.physics.add.overlap(thisPlayer, this.backgroundLayer.finishLine, this.winCallback, null, this); //[HERE] it does not work!
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
 
+        console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
+        console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera
         if (controllable) {
-            //let hud = new Scene_04_0_InGameHUD(thisPlayer);  //[HERE]
-            //console.log("Level");
-            this.scene.run("InGameHUD", thisPlayer);
+            this.scene.run("InGameHUD", {player: thisPlayer, level: level});
             this.cameras.main.startFollow(thisPlayer);
         }
     }
