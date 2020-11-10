@@ -122,7 +122,7 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadCredits(){
-
+        this.load.image('credits_background','../assets/Sprites/Menus/Credits/mainscreen.png');
     }
 
     loadShop(){
