@@ -8,12 +8,13 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
 
         //General variables
         // this.player = player;
-        // this.icon = null;
+        //this.icon = null;
         // this.sprite = null;
         super(player);
 
         //Setup power up variables
         this.numDashes = 3;
+        this.onDasdPicked = new Phaser.Events.EventEmitter();
         this.dashImpulsePercentage = 1.0;
     }
 
@@ -24,24 +25,26 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
 
         //Display it in the box
         console.log("Power up: Dash.");
-        this.ShowIcon();
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", this.numDashes); //Show the icon in the powerU  up box
     }
 
-    ShowIcon(){
-        //[HERE] put the sprite on the box
-        switch(this.numDashes) {
-            case 0:
-                //this.icon.destroy();
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-        }
-
-    }
+    // ShowIcon(){
+    //     //[HERE] put the sprite on the box
+    //     switch(this.numDashes) {
+    //         case 0:
+    //             //this.icon.destroy();
+    //             break;
+    //         case 1:
+    //             //this.icon.setTexture('dashPowerUp1').setScale(0.5);
+    //             break;
+    //         case 2:
+    //             //this.icon.setTexture('dashPowerUp2').setScale(0.5);
+    //             break;
+    //         case 3:
+    //             RenderPowerUpIcon('dash');
+    //             break;
+    //     }
+    // }
 
     //This method is used to describe what the powerUp functionality
     Use(){
@@ -56,7 +59,8 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
         this.numDashes--;
 
         //Update the icon
-        this.ShowIcon();
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", this.numDashes);
+        //this.ShowIcon();
 
         //If all the uses have been used, destroy the object
         if(this.numDashes === 0)

@@ -24,7 +24,7 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
 
         //Display it in the box
         console.log("Power up: Shield.");
-        //[HERE] put the sprite on the box
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "shield");//Show the icon in the powerU  up box
 
     }
 
@@ -38,7 +38,8 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
 
         //Remove it from the box
         this.player.powerUpObject_Boxed = null;
-        delete this.icon;
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "shield");
+        //delete this.icon;
         //player.powerUpObject_Boxed.destroy();
         //this.icon.destroy();
 

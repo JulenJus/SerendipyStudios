@@ -35,6 +35,10 @@ class Player extends Phaser.GameObjects.Sprite{
         this.powerUpType = "none";
         this.powerUpObject_Boxed = null;
         this.powerUpObject_Used = null;
+        this.onPaintPowerUpIcon = new Phaser.Events.EventEmitter();
+
+        //Set race variables
+        this.racePosition = 1;
 
         //Set animations [HERE]
     }

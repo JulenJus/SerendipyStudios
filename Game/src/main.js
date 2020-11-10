@@ -34,6 +34,7 @@ window.onload = function () {
     game.global = {
         lastTime: new Date().getTime()
     };
+
     window.focus();
 
     //resizeScreen();
@@ -41,12 +42,11 @@ window.onload = function () {
 }
 
 function GetDeltaTime() {
-
     let time = new Date().getTime();
     let deltaTime = (time - game.global.lastTime);
     game.global.lastTime = time;
 
-    return deltaTime/1000;
+    return deltaTime / 1000;
 }
 
 /*

@@ -73,25 +73,38 @@ class Scene_Preload extends Phaser.Scene {
         });
 
         //Player assets
-        this.load.image('player', '../assets/Sprites/Empollon.png');
+        this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
-        //Bar assets
-        this.load.image('bar', '../assets/Sprites/barra.png');
-        this.load.image('blueMark', '../assets/Sprites/hieloazul.png');
-        this.load.image('greenMark', '../assets/Sprites/hieloverde.png');
-        this.load.image('yellowMark', '../assets/Sprites/hieloamarillo.png');
-        this.load.image('redMark', '../assets/Sprites/hielorojo.png');
+        //GUI assets
+        this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
+        this.load.image('blueMark', '../assets/Sprites/UI/hieloazul.png');
+        this.load.image('greenMark', '../assets/Sprites/UI/hieloverde.png');
+        this.load.image('yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
+        this.load.image('redMark', '../assets/Sprites//UI/hielorojo.png');
+
+        this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
+        this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
+
+        this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
+        this.load.image('shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
+        this.load.image('dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
+        this.load.image('dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
+        this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
+        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
+
+        //Power up assets
+        this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
+        this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
 
         //Map assets
         this.load.image('tilesheet', '../assets/Tilemaps/tilesheet.png');
-        this.load.image('powerUpBox', '../assets/Sprites/cajapowerup.png');
-        this.load.image('shield', '../assets/Sprites/Shield.png');
         this.load.tilemapTiledJSON('tilemap', '../assets/Tilemaps/tutorial.json');
-        this.load.json('shapes', '../assets/Tilemaps/tutorial_colliders.json');
-        this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
+
+        //Animations assets
+        //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
 
         //Aux assets
-        this.load.image('winLine','../assets/Sprites/limit.png');
+        //this.load.image('winLine','../assets/Sprites/limit.png');
 
     }
     create(){
