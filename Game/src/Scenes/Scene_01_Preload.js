@@ -49,7 +49,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
         //Event listeners
         this.load.on('progress', function (value) {
-            console.log(value);
+            //console.log(value);
 
             //Set percent text
             percentText.setText(parseInt(value * 100) + '%');
@@ -92,13 +92,25 @@ class Scene_01_Preload extends Phaser.Scene {
     }
     create(){
         //console.log("Preload");
-        this.scene.start("Level_01");
+        //this.scene.start("Level_01");
+        this.scene.start("MainMenu");
     }
 
     //<editor-fold desc="Load functions">
 
     loadMainMenu(){
-
+        this.load.image('mainMenu_background','../assets/Sprites/Menus/MainMenu/mainscreen.png');
+        this.load.image('mainMenu_title','../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
+        this.load.image('mainMenu_buttonPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png');
+        this.load.image('mainMenu_buttonPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png');
+        this.load.image('mainMenu_buttonHowToPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_static.png');
+        this.load.image('mainMenu_buttonHowToPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_over.png');
+        this.load.image('mainMenu_buttonCredits_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_static.png');
+        this.load.image('mainMenu_buttonCredits_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_over.png');
+        this.load.image('mainMenu_buttonExit_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_static.png');
+        this.load.image('mainMenu_buttonExit_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png');
+        this.load.image('mainMenu_buttonShop_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_static.png');
+        this.load.image('mainMenu_buttonShop_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_over.png');
     }
 
     loadHowToPlay(){
