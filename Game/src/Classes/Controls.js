@@ -1,10 +1,8 @@
-class Controls /*extends Phaser.Input.InputPlugin */ {
-    //Constructor
+class Controls {
     constructor(scene, player) {
-        //super(scene);
         this.player = player;
         this.scene = scene;
-        //this.impulsePercentage = 0;
+
         this.keyboardInput = scene.input.keyboard.addKeys({
             'up': Phaser.Input.Keyboard.KeyCodes.W,
             'left': Phaser.Input.Keyboard.KeyCodes.Q,
@@ -43,20 +41,17 @@ class Controls /*extends Phaser.Input.InputPlugin */ {
         //Movement
         this.scene.input.keyboard.on('keydown_W', function () {
             if (keyboardInput.up.isDown && !player.isDamaged) {
-                //this.impulsePercentage = player.movementBar.getImpulse();
                 player.Move("up");
             }
         });
         this.scene.input.keyboard.on('keydown_Q', function () {
             if (keyboardInput.left.isDown && !player.isDamaged) {
-                //this.impulsePercentage = player.movementBar.getImpulse();
                 player.Move("left");
             }
         });
 
         this.scene.input.keyboard.on('keydown_E', function () {
             if (keyboardInput.right.isDown && !player.isDamaged) {
-                //this.impulsePercentage = player.movementBar.getImpulse();
                 player.Move("right");
             }
         });
@@ -85,7 +80,7 @@ class Controls /*extends Phaser.Input.InputPlugin */ {
 
     setControlsMobile() {
         this.controlType = "Mobile";
-        let p = this.player;
+        let player = this.player;
         this.scene.input.on('pointerdown', function (pointer) {
             console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
 
@@ -100,9 +95,6 @@ class Controls /*extends Phaser.Input.InputPlugin */ {
                 } else { //Middle third of the screen
                     player.Move("up");
                 }
-                // this.impulsePercentage = p.movementBar.getImpulse();
-                // p.body.velocity.y = (-400 * this.impulsePercentage);
-                // p.body.velocity.x = (xVelocity * this.impulsePercentage);
             }
 
             //Use object
@@ -122,17 +114,4 @@ class Controls /*extends Phaser.Input.InputPlugin */ {
             }
         });
     }
-
-    // Jump(){
-    //     let impulsePercentage = this.player.movementBar.getImpulse();
-    //
-    //     //[HERE]
-    //     this.player.body.velocity.y = (-400 * impulsePercentage); //It's like an instant acceleration
-    //
-    //     if (this.keyboardInputs.left.isDown)
-    //         this.player.body.velocity.x = (-200 * impulsePercentage);
-    //
-    //     else if (this.keyboardInputs.right.isDown)
-    //         this.player.body.velocity.x = (200 * impulsePercentage);
-    //  }
 }

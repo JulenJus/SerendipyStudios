@@ -1,4 +1,4 @@
-class Scene_04_1_Level_01 extends Gen_Level {
+class Scene_Level_01 extends Gen_Level {
     constructor() {
         super("Level_01");
         console.log("Level_01 constructor");
