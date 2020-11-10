@@ -5,6 +5,8 @@ class Scene_01_Preload extends Phaser.Scene {
     }
     
     preload() {
+        //<editor-fold desc="Preload animation">
+
         //Set the progress vars
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
@@ -72,45 +74,113 @@ class Scene_01_Preload extends Phaser.Scene {
             assetText.destroy();
         });
 
-        //Player assets
-        this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
+        //</editor-fold>
 
-        //GUI assets
-        this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
-        this.load.image('blueMark', '../assets/Sprites/UI/hieloazul.png');
-        this.load.image('greenMark', '../assets/Sprites/UI/hieloverde.png');
-        this.load.image('yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
-        this.load.image('redMark', '../assets/Sprites//UI/hielorojo.png');
+        //<editor-fold desc="Load assets">
 
-        this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
-        this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
+        this.loadMainMenu();
+        this.loadHowToPlay();
+        this.loadTutorial();
+        this.loadCredits();
+        this.loadShop();
+        this.loadLobby();
+        this.loadLevels();
+        this.loadRanking();
 
-        this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
-        this.load.image('shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
-        this.load.image('dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
-        this.load.image('dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
-        this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
-        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
-
-        //Power up assets
-        this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
-        this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
-
-        //Map assets
-        this.load.image('tilesheet_Level_01', '../assets/Tilemaps/tilesheet.png');
-        this.load.tilemapTiledJSON('tilemap_Level_01', '../assets/Tilemaps/tutorial.json');
-
-        //Animations assets
-        //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
-
-        //Aux assets
-        //this.load.image('winLine','../assets/Sprites/limit.png');
+        //</editor-fold>
 
     }
     create(){
         //console.log("Preload");
         this.scene.start("Level_01");
     }
+
+    //<editor-fold desc="Load functions">
+
+    loadMainMenu(){
+
+    }
+
+    loadHowToPlay(){
+
+    }
+
+    loadTutorial(){
+
+    }
+
+    loadCredits(){
+
+    }
+
+    loadShop(){
+
+    }
+
+    loadLobby(){
+
+    }
+
+    loadLevels(){
+        this.loadGenLevel();
+        this.loadInGameHUD();
+        this.loadLevel01();
+        this.loadLevel02();
+    }
+
+    //<editor-fold desc="Level load functions">
+
+    loadGenLevel(){
+        //Player sprites
+        this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
+
+        //Player animations
+        //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
+
+        //Power up sprite assets
+        this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
+        this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
+    }
+
+    loadInGameHUD(){
+        //General UI
+        this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
+        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
+
+        //MovementBar UI
+        this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
+        this.load.image('blueMark', '../assets/Sprites/UI/hieloazul.png');
+        this.load.image('greenMark', '../assets/Sprites/UI/hieloverde.png');
+        this.load.image('yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
+        this.load.image('redMark', '../assets/Sprites//UI/hielorojo.png');
+
+        //Race progress UI
+        this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
+        this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
+
+        //Power ups
+        this.load.image('shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
+        this.load.image('dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
+        this.load.image('dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
+        this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
+    }
+
+    loadLevel01(){
+        this.load.image('tilesheet_Level_01', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Level_01', '../assets/Tilemaps/tutorial.json');
+    }
+
+    loadLevel02(){
+
+    }
+
+    //</editor-fold>
+
+    loadRanking(){
+
+    }
+
+    //</editor-fold>
 
 }
 
