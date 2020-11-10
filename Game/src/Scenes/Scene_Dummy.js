@@ -1,4 +1,4 @@
-class Scene_00_Dummy extends Phaser.Scene {
+class Scene_Dummy extends Phaser.Scene {
     constructor() {
         super("dummy");
     }

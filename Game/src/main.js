@@ -9,7 +9,7 @@ window.onload = function () {
         version: '1.0',
         pixelArt: false,
         scene: [
-            //Scene_00_Dummy,
+            //Scene_Dummy,
             Scene_Preload,
             //Scene_LeftPanel,
             Scene_Level_01,
