@@ -22,7 +22,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         //Info variables
         this.movementBarSections = [0.0, 10.0, 30.0, 40.0, 50.0, 60.0, 70.0, 90.0, 100.0];
         this.movementBarTiers = [1, 0, 1, 2, 2, 1, 0, 1];
-        this.movementBarImpulsePercentages = [0.2, 0.65, 1];
+        this.movementBarImpulsePercentages = [0.2, 0.63, 1];
     }
 
     update() {

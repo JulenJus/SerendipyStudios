@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
-    </list>
+    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

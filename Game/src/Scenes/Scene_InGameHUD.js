@@ -61,7 +61,7 @@ class Scene_InGameHUD extends Phaser.Scene {
     update() {
         if (player.controllable) {
             player.movementBar.update();
-            console.log("MARK Y: " + this.playerMark.y);
+            //console.log("MARK Y: " + this.playerMark.y);
             this.playerMark.y = (this.raceBar.y + this.raceBar.height / 2) - Phaser.Math.Clamp( this.raceBar.height * (1 - ((player.y / level_01_Height))), 0, this.raceBar.height);
         }
 

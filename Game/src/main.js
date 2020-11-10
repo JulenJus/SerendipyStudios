@@ -53,7 +53,7 @@ function GetDeltaTime() {
     let time = new Date().getTime();
     let deltaTime = (time - game.global.lastTime);
     game.global.lastTime = time;
-    console.log("DELTA TIME: " + deltaTime);
+    //console.log("DELTA TIME: " + deltaTime);
     return deltaTime / 1000;
 }
 
