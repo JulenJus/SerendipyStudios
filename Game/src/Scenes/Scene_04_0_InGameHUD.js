@@ -1,7 +1,7 @@
 //Global variables
 let powerUpTime;
 
-class Scene_040_InGameHUD extends Phaser.Scene {
+class Scene_04_0_InGameHUD extends Phaser.Scene {
 
     constructor() {
         super("InGameHUD");

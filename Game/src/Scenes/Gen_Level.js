@@ -39,9 +39,9 @@ class Gen_Level extends Phaser.Scene {
         this.obstaclesLayer = this.map.createStaticLayer('obstacles' + this.name, this.tiles, 0, 0);
 
         //Enable collissions with layers
-        this.wallsLayer.setCollisionByProperty({ collide: true });
-        this.obstaclesLayer.setCollisionByProperty({ collide_obstacle: true });
-        this.backgroundLayer.setCollisionByProperty({ finishLine: true });
+        this.wallsLayer.setCollisionByProperty({collide: true});
+        this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
+        this.backgroundLayer.setCollisionByProperty({finishLine: true});
 
         //Power Ups
         this.powerUpBoxes = this.physics.add.staticGroup();
@@ -58,21 +58,18 @@ class Gen_Level extends Phaser.Scene {
         let thisPlayer = new Player(level, id, controllable);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
-        console.log("Player ID: " + thisPlayer.serverId);
 
         //Initialize physics
         this.physics.add.overlap(thisPlayer, this.backgroundLayer.finishLine, this.winCallback, null, this); //[HERE] it does not work!
-        console.log(
-            this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this)
-        );
+        this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
 
 
         //Camera
         if (controllable) {
-            //let hud = new Scene_040_InGameHUD(thisPlayer);  //[HERE]
-            console.log("Level");
+            //let hud = new Scene_04_0_InGameHUD(thisPlayer);  //[HERE]
+            //console.log("Level");
             this.scene.run("InGameHUD", thisPlayer);
             this.cameras.main.startFollow(thisPlayer);
         }

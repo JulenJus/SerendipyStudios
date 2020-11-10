@@ -55,8 +55,8 @@ class MovementBar extends Phaser.GameObjects.Sprite {
     getImpulseTier(){
         for (let i = 0; i < this.movementBarSections.length - 1; i++) {
             if (this.movementBarValue >= this.movementBarSections[i] && this.movementBarValue < this.movementBarSections[i + 1]) { //Check the section
-                console.log("MovementBar value: " + this.movementBarValue);
-                console.log("Impulse grade: " + this.movementBarTiers[i]);
+                //console.log("MovementBar value: " + this.movementBarValue);
+                //console.log("Impulse grade: " + this.movementBarTiers[i]);
                 return this.movementBarTiers[i]; //Get the tier (color) of the section
             }
         }
