@@ -127,32 +127,36 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
     }
 
-    onPaintPowerUpIcon(type, numDashes) {
-        if (type == "dash") {
-            switch (numDashes) {
-                case 0:
-                    this.dashIcon.destroy();
-                    this.dashIcon = null;
-                    break;
-                case 1:
-                    this.dashIcon.setTexture('dashPowerUp1').setScale(0.5);
-                    break;
-                case 2:
-                    this.dashIcon.setTexture('dashPowerUp2').setScale(0.5);
-                    break;
-                case 3:
-                    this.dashIcon = this.add.sprite(80, 60, 'dashPowerUp3').setScale(0.5);
-                    break;
-            }
-        } else {
-            if (this.shieldIcon == null) {
-                this.shieldIcon = this.add.sprite(80, 65, 'shieldPowerUp').setScale(0.45);
-            } else {
-                this.shieldIcon.destroy();
-                this.shieldIcon = null;
-            }
+    onPaintPowerUpIcon(type, enable, args) {
+        switch (type) {
+            case "dash":
+                switch (args.numDashes) {
+                    case 0:
+                        this.dashIcon.destroy();
+                        this.dashIcon = null;
+                        break;
+                    case 1:
+                        this.dashIcon.setTexture('dashPowerUp1').setScale(0.5);
+                        break;
+                    case 2:
+                        this.dashIcon.setTexture('dashPowerUp2').setScale(0.5);
+                        break;
+                    case 3:
+                        this.dashIcon = this.add.sprite(80, 60, 'dashPowerUp3').setScale(0.5);
+                        break;
+                }
+                break;
+            case "shield":
+                if (enable) {
+                    this.shieldIcon = this.add.sprite(80, 65, 'shieldPowerUp').setScale(0.45);
+                } else {
+                    this.shieldIcon.destroy();
+                    this.shieldIcon = null;
+                }
+                break;
         }
     }
+
 
     StartCountdown() {
         //While the player has not finished the race, count the time it is taking
