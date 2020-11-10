@@ -1,6 +1,6 @@
 class MovementBar extends Phaser.GameObjects.Sprite {
     constructor(scene) {
-        super(scene, level_01_Width / 2, level_01_Height - 32, 'bar');
+        super(scene, scene.levelWidth / 2, scene.levelHeight - 32, 'bar');
 
         //Control variables
         this.isRunning = false;
@@ -30,12 +30,13 @@ class MovementBar extends Phaser.GameObjects.Sprite {
 
         //Movement bar
         if (this.movementBarValue >= 100) {  //The offset is added to prevent the mark to surpass the bar without making it wait
+            this.movementBarValue = 100;
             this.movementBarIncrement = -1;  //False -> Decrement
         }
         if (this.movementBarValue <= 0) {
+            this.movementBarValue = 0;
             this.movementBarIncrement = 1;   //True -> Increment
         }
-        //this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement);// * game.time.physicsElapsed;
         this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement) * GetDeltaTime();// * game.time.physicsElapsed;
     }
 
@@ -56,11 +57,13 @@ class MovementBar extends Phaser.GameObjects.Sprite {
     getImpulseTier(){
         for (let i = 0; i < this.movementBarSections.length - 1; i++) {
             if (this.movementBarValue >= this.movementBarSections[i] && this.movementBarValue < this.movementBarSections[i + 1]) { //Check the section
-                console.log("MovementBar value: " + this.movementBarValue);
-                console.log("Impulse grade: " + this.movementBarTiers[i]);
+                //console.log("MovementBar value: " + this.movementBarValue);
+                //console.log("Impulse grade: " + this.movementBarTiers[i]);
                 return this.movementBarTiers[i]; //Get the tier (color) of the section
             }
         }
+
+        return 0;
     }
 
     getImpulsePercentage(tier) {

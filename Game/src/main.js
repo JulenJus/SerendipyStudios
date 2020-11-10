@@ -5,7 +5,7 @@ window.onload = function () {
         type: Phaser.AUTO,
         width: 768,        //The FoV of our camera will be the width x height we write here
         height: 1365,
-        title: 'Fly penguin fly',
+        title: 'Flyguins',
         version: '1.0',
         pixelArt: false,
         scene: [
@@ -33,17 +33,9 @@ window.onload = function () {
     game = new Phaser.Game(config);
     game.global = {
         lastTime: new Date().getTime()
-    }
-    window.focus();
+    };
 
-    // game.events.on('hidden',function(){
-    //     console.log('hidden');
-    //     console.log(game.time.elapsedTime);
-    // },this);
-    //
-    // game.events.on('visible',function(){
-    //     console.log('visible');
-    // },this);
+    window.focus();
 
     //resizeScreen();
     //window.addEventListener("resize", resizeScreen);
@@ -53,7 +45,7 @@ function GetDeltaTime() {
     let time = new Date().getTime();
     let deltaTime = (time - game.global.lastTime);
     game.global.lastTime = time;
-    //console.log("DELTA TIME: " + deltaTime);
+
     return deltaTime / 1000;
 }
 

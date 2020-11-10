@@ -1,4 +1,4 @@
-class PowerUp_Shield extends PowerUp/*extends Phaser.GameObjects.Sprite*/ {
+class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
     //Constructor
     constructor(player, scene/*, posX, posY*/) {
         //super(scene, posX, posY, 'powerUpBox');

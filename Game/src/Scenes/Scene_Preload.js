@@ -1,6 +1,7 @@
 class Scene_Preload extends Phaser.Scene {
     constructor() {
         super("Preload");
+        console.log("Preload constructor");
     }
     
     preload() {
@@ -107,8 +108,8 @@ class Scene_Preload extends Phaser.Scene {
 
     }
     create(){
+        //console.log("Preload");
         this.scene.start("Level_01");
-        this.scene.start("InGameHUD");
     }
 
 }

@@ -25,7 +25,7 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
                     new PowerUp_Dash(player).Pick();
                     break;
                 default:
-                    console.log("An error has occurred when assigning PowerUp.");
+                    console.log("An error has occurred when assigning Gen_PowerUp.");
                     break;
             }
         }
