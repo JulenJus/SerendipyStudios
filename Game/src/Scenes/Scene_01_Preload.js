@@ -204,7 +204,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
     loadLevel01() {
         this.load.image('tilesheet_Level_01', '../assets/Tilemaps/tilesheet.png');
-        this.load.tilemapTiledJSON('tilemap_Level_01', '../assets/Tilemaps/tutorial.json');
+        this.load.tilemapTiledJSON('tilemap_Level_01', '../assets/Tilemaps/mapa1.json');
     }
 
     loadLevel02() {

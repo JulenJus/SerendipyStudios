@@ -53,6 +53,6 @@ class Scene_04_1_Level_01 extends Gen_Level {
 
     Exit(){
         this.scene.stop("InGameHUD")
-        this.scene.start("Lobby");
+        this.scene.start("MainMenu");
     }
 }
