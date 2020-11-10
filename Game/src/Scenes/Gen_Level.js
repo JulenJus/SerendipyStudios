@@ -24,8 +24,7 @@ class Gen_Level extends Phaser.Scene {
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
-        this.tiles = this.map.addTilesetImage
-        ('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
+        this.tiles = this.map.addTilesetImage('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
 
         //Set level height and width according to the json's
         this.levelWidth = this.map.width * this.map.tileWidth;
@@ -33,14 +32,15 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
+        this.finishLine = this.physics.add.staticSprite(0, 300, 'finishLine').setOrigin(0, 0).refreshBody(); //Create finish line
         this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
+
         //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
-        this.backgroundLayer.setCollisionByProperty({finishLine: true});
 
         //Power Ups
         this.powerUpBoxes = this.physics.add.staticGroup();
@@ -59,13 +59,14 @@ class Gen_Level extends Phaser.Scene {
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
-        let finishLineOverlap = this.physics.add.overlap(thisPlayer, this.backgroundLayer.finishLine, this.winCallback, null, this); //[HERE] it does not work!
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
-        this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
+        this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
+        this.physics.add.overlap(thisPlayer, this.finishLine, this.winCallback, null, this);
 
-        console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
-        console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
+
+        //console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
+        //console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera
         if (controllable) {
@@ -82,9 +83,9 @@ class Gen_Level extends Phaser.Scene {
     }
 
     //<editor-fold desc="Callbacks">
-
+    
     takeDamageCallback(player, dmgObject) {
-        player.TakeDamage();
+        player.TakeDamage(this.obstaclesLayerCollision);
     }
 
     pickPowerUpCallback(player, powerUpBox) {
