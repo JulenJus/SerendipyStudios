@@ -2,7 +2,7 @@
 let powerUpTime;
 let raceTimeCount = 30;
 
-class Scene_InGameHUD extends Phaser.Scene {
+class Scene_04_0_InGameHUD extends Phaser.Scene {
 
     constructor() {
         super("InGameHUD");

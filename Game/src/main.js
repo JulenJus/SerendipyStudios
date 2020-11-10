@@ -9,11 +9,11 @@ window.onload = function () {
         version: '1.0',
         pixelArt: false,
         scene: [
-            //Scene_Dummy,
-            Scene_Preload,
+            //Scene_00_Dummy,
+            Scene_01_Preload,
             //Scene_LeftPanel,
-            Scene_Level_01,
-            Scene_InGameHUD
+            Scene_04_1_Level_01,
+            Scene_04_0_InGameHUD
         ],
         physics: {
             default: 'arcade',

@@ -68,7 +68,7 @@ class Gen_Level extends Phaser.Scene {
 
         //Camera
         if (controllable) {
-            //let hud = new Scene_InGameHUD(thisPlayer);  //[HERE]
+            //let hud = new Scene_04_0_InGameHUD(thisPlayer);  //[HERE]
             //console.log("Level");
             this.scene.run("InGameHUD", thisPlayer);
             this.cameras.main.startFollow(thisPlayer);
