@@ -6,7 +6,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     create() {
         //Show the background
-        this.add.sprite(0, 0, 'mainMenu_background').setOrigin(0, 0).setInteractive();
+        this.add.sprite(0, 0, 'mainMenu_background').setOrigin(0, 0);
         this.add.sprite(35, 133, 'mainMenu_title').setOrigin(0, 0);
 
         //Show the buttons
@@ -15,7 +15,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.buttons.push(this.add.sprite(114, 702, 'mainMenu_buttonHowToPlay_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(114, 878, 'mainMenu_buttonCredits_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(114, 1059, 'mainMenu_buttonExit_static').setOrigin(0, 0).setInteractive());
-        this.buttons.push(this.add.sprite((game.config.width - 22) - 8, (game.config.height - 7) - 13, 'mainMenu_buttonShop_static').setOrigin(1, 1).setScale(0.4).setInteractive());
+        this.buttons.push(this.add.sprite(22, 13, 'mainMenu_buttonShop_static').setOrigin(0, 0).setScale(0.9).setInteractive());
+        //this.buttons.push(this.add.sprite((game.config.width - 22) - 8, (game.config.height - 7) - 13, 'mainMenu_buttonShop_static').setOrigin(1, 1).setScale(1).setInteractive());
 
         //Initialize button callbacks
         this.b_InitializeCallbacks();
@@ -26,11 +27,11 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     b_ChangeSprite(buttonIndex, mode) {
         switch (buttonIndex) {
             case 0:
-                console.log("Play change sprite: " + mode);
+                //console.log("Play change sprite: " + mode);
                 this.buttons[0].setTexture('mainMenu_buttonPlay_' + mode);
                 break;
             case 1:
-                console.log("HowToPlay change sprite: " + mode);
+                //console.log("HowToPlay change sprite: " + mode);
                 this.buttons[1].setTexture('mainMenu_buttonHowToPlay_' + mode);
                 break;
             case 2:
@@ -57,19 +58,19 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
-        console.log("Play");
+        this.scene.start("Lobby");
     }
 
     b_HowToPlay() {
-
+        this.scene.start("HowToPlay");
     }
 
     b_Credits() {
-
+        this.scene.start("Credits");
     }
 
     b_Exit() {
-
+        window.close();
     }
 
     //</editor-fold>

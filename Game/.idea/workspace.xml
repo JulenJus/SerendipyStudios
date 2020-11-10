@@ -24,7 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonShop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_4_Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_4_Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +105,7 @@
       <workItem from="1604581090724" duration="805000" />
       <workItem from="1604742040727" duration="5370000" />
       <workItem from="1604916711056" duration="21353000" />
-      <workItem from="1605017669762" duration="5561000" />
+      <workItem from="1605017669762" duration="7923000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
@@ -220,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1604927069020">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1605025897820">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604927069020" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605025897820" />
     <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1604489211975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

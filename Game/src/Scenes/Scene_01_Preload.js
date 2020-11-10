@@ -49,7 +49,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
         //Event listeners
         this.load.on('progress', function (value) {
-            console.log(value);
+            //console.log(value);
 
             //Set percent text
             percentText.setText(parseInt(value * 100) + '%');
@@ -109,7 +109,8 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('mainMenu_buttonCredits_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_over.png');
         this.load.image('mainMenu_buttonExit_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_static.png');
         this.load.image('mainMenu_buttonExit_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png');
-        this.load.image('mainMenu_shop','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop.png');
+        this.load.image('mainMenu_buttonShop_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_static.png');
+        this.load.image('mainMenu_buttonShop_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_over.png');
     }
 
     loadHowToPlay(){
