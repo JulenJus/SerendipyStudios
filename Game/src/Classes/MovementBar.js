@@ -30,9 +30,11 @@ class MovementBar extends Phaser.GameObjects.Sprite {
 
         //Movement bar
         if (this.movementBarValue >= 100) {  //The offset is added to prevent the mark to surpass the bar without making it wait
+            this.movementBarValue = 100;
             this.movementBarIncrement = -1;  //False -> Decrement
         }
         if (this.movementBarValue <= 0) {
+            this.movementBarValue = 0;
             this.movementBarIncrement = 1;   //True -> Increment
         }
         this.movementBarValue += (this.movementBarVelocity * this.movementBarIncrement) * GetDeltaTime();// * game.time.physicsElapsed;
@@ -60,6 +62,8 @@ class MovementBar extends Phaser.GameObjects.Sprite {
                 return this.movementBarTiers[i]; //Get the tier (color) of the section
             }
         }
+
+        return 0;
     }
 
     getImpulsePercentage(tier) {

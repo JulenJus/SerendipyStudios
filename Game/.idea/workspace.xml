@@ -23,20 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02.0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02.1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02.2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02.3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02.4_Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_4_Shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_03.0_Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04.0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04.1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04.2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_05.0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
