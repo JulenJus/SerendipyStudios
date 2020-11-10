@@ -23,15 +23,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_mobile2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_mobile3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_mobile6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_pc9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/howToPlay_sgtoJack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/HowToPlay/posicionesControles.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Credits/credits_buttonTw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Credits/credits_screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Credits/mainscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_buttonBack2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_buttonBack2_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_buttonNext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_buttonNext_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_mobile2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_mobile3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_mobile6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_pc9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/howToPlay_sgtoJack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Controls/posicionesControles.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tilemaps/tutorial.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Controls/Controls_InGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controls/Controls_InGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

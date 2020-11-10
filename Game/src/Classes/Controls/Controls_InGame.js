@@ -73,7 +73,7 @@ class Controls_InGame {
 
         this.scene.input.on('pointerdown', function (pointer) {
             if (pointer.y < 125 && pointer.x > 650) {
-                console.log("Escape");
+                this.scene.Exit();
             }
         });
     }
@@ -85,7 +85,7 @@ class Controls_InGame {
             console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
 
             //Movement
-            if (pointer.y >= 550 && !p.isDamaged) {
+            if (pointer.y >= 550 && !player.isDamaged) {
                 if (pointer.x <= game.config.width / 3) { //Left third of the screen
                     player.Move("left");
                 } else if (pointer.x >= (game.config.width / 3) * 2) { //Right third of the screen
@@ -108,7 +108,7 @@ class Controls_InGame {
 
             //Escape
             if (pointer.y < 125 && pointer.x > 650) {
-                console.log("Escape");
+                this.scene.Exit();
             }
         });
     }

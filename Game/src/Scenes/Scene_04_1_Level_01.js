@@ -51,4 +51,8 @@ class Scene_04_1_Level_01 extends Gen_Level {
     }
     //</editor-fold>
 
+    Exit(){
+        this.scene.stop("InGameHUD")
+        this.scene.start("Lobby");
+    }
 }
