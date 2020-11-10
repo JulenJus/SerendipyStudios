@@ -1,13 +1,24 @@
 //Global variables
 let powerUpTime;
 
-class Scene_InGameHUD extends Phaser.Scene {
+class Scene_040_InGameHUD extends Phaser.Scene {
+
     constructor() {
         super("InGameHUD");
+        //console.log("Ingame hud constructor");
         //this.movementBarText = 0;
     }
 
+    init(player) {
+        this.player = player;
+        //console.log("Ingame hud init");
+    }
+
     create() {
+        //Show the scene
+        //this.scene.start("InGameHUD");    //[HERE] YOU ARE SUCH AN ASSHOLE JULEN!
+        //console.log("Ingame hud create");
+
         //Create score
         // this.movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
         //     fontFamily: 'Gelato',
@@ -28,24 +39,24 @@ class Scene_InGameHUD extends Phaser.Scene {
         // this.barMark.body.setDrag(40, 0);
 
         //Initialize bar
-        player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
-        player.movementBar.setIsRunning(true);
+        this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
+        this.player.movementBar.setIsRunning(true);
     }
 
     update() {
-        if (player.controllable) {
-            player.movementBar.update();
+        if (this.player.controllable) {
+            this.player.movementBar.update();
             //this.movementBarText.text = 'JUMP BAR VALUE: ' + player.movementBar.movementBarValue;
         }
 
         //Update sprite positions
         this.barMark.x =
             this.bar.x                                                                          //Center the sprite
-            - (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) / 2 +    //Put it at the beginning
+            - (this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth) / 2 +    //Put it at the beginning
             Phaser.Math.Clamp(                                                                  //Update the position depending on the barValue
-                (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) * (player.movementBar.movementBarValue / 100),
+                (this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth) * (this.player.movementBar.movementBarValue / 100),
                 0,
-                player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth
+                this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth
             );
         //movementBarValue += 0.5 * movementBarIncrement;
         //this.movementBarText.text = 'JUMP BAR VALUE: ' + movementBarValue;
@@ -53,28 +64,25 @@ class Scene_InGameHUD extends Phaser.Scene {
         //this.movementBarText.text = 'JUMP BAR VALUE: ' + this.registry.get('movementBarVal');
     }
 
-    movementBarPressed(movementBarValue, tier){
+    movementBarPressed(movementBarValue, tier) {
         let sprite;
-        if(!player.canDash) {
-            switch (tier) {
-                case 0:
-                    sprite = 'redMark';
-                    break;
-                case 1:
-                    sprite = 'yellowMark';
-                    break;
-                case 2:
-                    sprite = 'greenMark';
-                    break;
-            }
-        }else{
-            sprite = 'greenMark';
+
+        switch (tier) {
+            case 0:
+                sprite = 'redMark';
+                break;
+            case 1:
+                sprite = 'yellowMark';
+                break;
+            case 2:
+                sprite = 'greenMark';
+                break;
         }
 
         this.ghostBarMark.destroy();
         this.ghostBarMark = this.add.sprite(
-            this.bar.x - (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) / 2 +
-            (player.movementBar.barSpriteWidth - player.movementBar.markSpriteWidth) * (movementBarValue / 100),
+            this.bar.x - (this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth) / 2 +
+            (this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth) * (movementBarValue / 100),
             game.config.height - 77.5,
             sprite);
 

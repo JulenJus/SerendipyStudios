@@ -23,10 +23,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change afterPath="$PROJECT_DIR$/Level Design/touch controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classes/PowerUps/Gen_PowerUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_00_Dummy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02.0_MainMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02.1_HowToPlay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02.2_Tutorial.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02.3_Credits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02.4_Shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_03.0_Lobby.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_04.0_InGameHUD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_04.1_Level_01.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_04.2_Level_02.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_05.0_Ranking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Shield.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Shield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Dummy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_InGameHUD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_LeftPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Level_01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_Preload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +86,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Scenes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,6 +94,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes\PowerUps" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Scenes" />
     </key>
   </component>
   <component name="RunManager">
@@ -93,7 +122,7 @@
       <workItem from="1604580075377" duration="611000" />
       <workItem from="1604581090724" duration="805000" />
       <workItem from="1604742040727" duration="5370000" />
-      <workItem from="1604916711056" duration="1220000" />
+      <workItem from="1604916711056" duration="21353000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
@@ -137,14 +166,78 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="967" y="251" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1603214198044" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604863908603">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604969803677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604863908603" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604969803677" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603221324801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603221324801" />
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.2.bottom" timestamp="1604945502762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502762" />
+    <state width="1899" height="348" key="GridCell.Tab.2.center" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.2.left" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.2.right" timestamp="1604945502761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502761" />
+    <state width="1899" height="348" key="GridCell.Tab.3.bottom" timestamp="1604945502762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502762" />
+    <state width="1899" height="348" key="GridCell.Tab.3.center" timestamp="1604945502762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502762" />
+    <state width="1899" height="348" key="GridCell.Tab.3.left" timestamp="1604945502762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502762" />
+    <state width="1899" height="348" key="GridCell.Tab.3.right" timestamp="1604945502762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604945502762" />
     <state x="738" y="116" key="SettingsEditor" timestamp="1603214199748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -153,6 +246,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1604927069020">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604927069020" />
     <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1604489211975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

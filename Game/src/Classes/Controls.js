@@ -1,4 +1,4 @@
-class Controls /*extends Phaser.Input.InputPlugin */{
+class Controls /*extends Phaser.Input.InputPlugin */ {
     //Constructor
     constructor(scene, player) {
         //super(scene);
