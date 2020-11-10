@@ -5,7 +5,7 @@ window.onload = function () {
         type: Phaser.AUTO,
         width: 768,        //The FoV of our camera will be the width x height we write here
         height: 1365,
-        title: 'Fly penguin fly',
+        title: 'Flyguins',
         version: '1.0',
         pixelArt: false,
         scene: [
@@ -35,15 +35,6 @@ window.onload = function () {
         lastTime: new Date().getTime()
     };
     window.focus();
-
-    // game.events.on('hidden',function(){
-    //     console.log('hidden');
-    //     console.log(game.time.elapsedTime);
-    // },this);
-    //
-    // game.events.on('visible',function(){
-    //     console.log('visible');
-    // },this);
 
     //resizeScreen();
     //window.addEventListener("resize", resizeScreen);

@@ -6,7 +6,6 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     constructor() {
         super("InGameHUD");
         //console.log("Ingame hud constructor");
-        //this.movementBarText = 0;
     }
 
     init(player) {
@@ -35,8 +34,6 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'bar');
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
         this.ghostBarMark = this.add.sprite(-500, -500, 'blueMark');
-        // this.barMark.body.setAllowGravity(false)
-        // this.barMark.body.setDrag(40, 0);
 
         //Initialize bar
         this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
@@ -46,7 +43,6 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     update() {
         if (this.player.controllable) {
             this.player.movementBar.update();
-            //this.movementBarText.text = 'JUMP BAR VALUE: ' + player.movementBar.movementBarValue;
         }
 
         //Update sprite positions
@@ -58,10 +54,6 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
                 0,
                 this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth
             );
-        //movementBarValue += 0.5 * movementBarIncrement;
-        //this.movementBarText.text = 'JUMP BAR VALUE: ' + movementBarValue;
-        //this.barMark.body.velocity.x += 1.5 * movementBarIncrement;
-        //this.movementBarText.text = 'JUMP BAR VALUE: ' + this.registry.get('movementBarVal');
     }
 
     movementBarPressed(movementBarValue, tier) {
