@@ -78,6 +78,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
         //<editor-fold desc="Load assets">
 
+        this.loadGen();
         this.loadMainMenu();
         this.loadHowToPlay();
         this.loadTutorial();
@@ -98,8 +99,13 @@ class Scene_01_Preload extends Phaser.Scene {
 
     //<editor-fold desc="Load functions">
 
+    loadGen(){
+        this.load.image('gen_mainscreen','../assets/Sprites/Menus/Gen/gen_mainscreen.png');
+        this.load.image('gen_buttonExit_static','../assets/Sprites/Menus/Gen/gen_buttonExit_static.png');
+        this.load.image('gen_buttonExit_over','../assets/Sprites/Menus/Gen/gen_buttonExit_over.png');
+    }
+
     loadMainMenu(){
-        this.load.image('mainMenu_background','../assets/Sprites/Menus/MainMenu/mainscreen.png');
         this.load.image('mainMenu_title','../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
         this.load.image('mainMenu_buttonPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png');
         this.load.image('mainMenu_buttonPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png');
@@ -122,7 +128,8 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadCredits(){
-
+        this.load.image('credits_logs','../assets/Sprites/Menus/Credits/credits_logs.png');
+        this.load.image('credits_buttonTwitter','../assets/Sprites/Menus/Credits/credits_buttonTwitter.png');
     }
 
     loadShop(){
