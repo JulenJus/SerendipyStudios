@@ -10,7 +10,7 @@ window.onload = function () {
         pixelArt: false,
         scene: [
             //Scene_00_Dummy,
-            Scene_01_Preload,
+            Scene_Preload,
             //Scene_LeftPanel,
             Scene_Level_01,
             Scene_InGameHUD

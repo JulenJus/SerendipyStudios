@@ -1,4 +1,4 @@
-class Scene_01_Preload extends Phaser.Scene {
+class Scene_Preload extends Phaser.Scene {
     constructor() {
         super("Preload");
         console.log("Preload constructor");
