@@ -1,8 +1,13 @@
 class Player extends Phaser.GameObjects.Sprite{
     //Constructor
-    constructor(scene, controllable){
-        super(scene, level_01_Width / 2, level_01_Height - 252, 'player');
-        this.thisScene = scene;
+    constructor(scene, id, controllable){
+        super(scene, scene.levelWidth / 2, scene.levelHeight - 300, 'player');
+
+        console.log("Player constructor")
+
+        //Set object variables
+        this.scene = scene;
+        this.serverId = id;
 
         //Set physics
         scene.add.existing(this);
@@ -14,8 +19,8 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set controls
         this.controllable = controllable;
         if(this.controllable) {
-            this.movementBar = new MovementBar(this.thisScene);
-            this.controls = new Controls(this.thisScene, this);
+            this.movementBar = new MovementBar(this.scene);
+            this.controls = new Controls(this.scene, this);
         }
 
         //Set appearance variables
@@ -35,14 +40,8 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set race variables
         this.racePosition = 1;
 
-        //this.powerUp_shield = null;
-        //this.powerUp_dash = 0;
+        //Set animations [HERE]
     }
-
-    // NormalizeBar(){
-    //     bar.clearTint();
-    //     powerUpTime.setText('');
-    // }
 
     //<editor-fold desc="Methods">
 
@@ -69,7 +68,7 @@ class Player extends Phaser.GameObjects.Sprite{
         this.body.velocity.y = (-400 * impulsePercentage);
     }
 
-    TakeDamage(obstacles){
+    TakeDamage(){
         if(this.isShielded) {
             this.powerUpObject_Used.Destroy();
             return;
@@ -81,11 +80,10 @@ class Player extends Phaser.GameObjects.Sprite{
         //Change to "damaged" state
         this.tint = 0xff0000;
         this.isDamaged = true;
-        obstacles.active = false;
 
         let thisPlayer = this; //Reference for the change of scope
 
-        this.thisScene.time.addEvent({ //Blink immunity effect
+        this.scene.time.addEvent({ //Blink immunity effect
             delay: 150,
             repeat: 5,
             loop: false,
@@ -94,14 +92,13 @@ class Player extends Phaser.GameObjects.Sprite{
             }
         });
         //Return to normal state
-        this.thisScene.time.addEvent({
+        this.scene.time.addEvent({
             delay: 750,
             loop: false,
             callback: function(){
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
-                obstacles.active = true;
             }
         });
     };
