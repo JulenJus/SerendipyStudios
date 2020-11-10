@@ -12,6 +12,7 @@ window.onload = function () {
             //Scene_00_Dummy,
             Scene_01_Preload,
             Scene_02_0_MainMenu,
+            Scene_02_4_Shop, //[HERE] remove!!
             //Scene_LeftPanel,
             Scene_04_1_Level_01,
             Scene_04_0_InGameHUD
