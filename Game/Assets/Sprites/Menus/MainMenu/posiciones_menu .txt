@@ -19,3 +19,7 @@ Boton salir
 anch 114
 alt 1059
 
+Boton tienda
+anch 22
+alt 13
+
