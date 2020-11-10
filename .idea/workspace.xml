@@ -21,11 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/Gen_PowerUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/Gen_PowerUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Dash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_InGameHUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

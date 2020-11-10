@@ -1,4 +1,4 @@
-class PowerUp_Dash extends PowerUp/*extends Phaser.GameObjects.Sprite*/{
+class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
     //Constructor
     constructor(player/*, scene, posX, posY*/){
         //super(scene, posX, posY, 'powerUpBox');
@@ -25,7 +25,7 @@ class PowerUp_Dash extends PowerUp/*extends Phaser.GameObjects.Sprite*/{
 
         //Display it in the box
         console.log("Power up: Dash.");
-        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", this.numDashes); //Show the icon in the powerU  up box
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", null, {numDashes: this.numDashes}); //Show the icon in the powerU  up box
     }
 
     // ShowIcon(){
@@ -59,7 +59,7 @@ class PowerUp_Dash extends PowerUp/*extends Phaser.GameObjects.Sprite*/{
         this.numDashes--;
 
         //Update the icon
-        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", this.numDashes);
+        this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "dash", null, {numDashes: this.numDashes});
         //this.ShowIcon();
 
         //If all the uses have been used, destroy the object

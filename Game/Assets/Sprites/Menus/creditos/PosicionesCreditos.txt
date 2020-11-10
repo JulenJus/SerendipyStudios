@@ -1,0 +1,9 @@
+ButtonBack:
+
+	Anchura: 54
+	Altura: 1155
+
+ButtonTw:
+
+	Anchura: 274
+	Altura: 1159

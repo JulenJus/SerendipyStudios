@@ -1,0 +1,84 @@
+POSICIONES MEDIDAS EN PX
+MAINSCREEN SE REUTILIZA
+BUTTONBACK SE REUTILIZA
+LOS TEXTOS SE REUTILIZAN PARA LOS CONTROLES, SOLO CAMBIAN EL DOS, EL TRES Y EL SEIS
+
+ButtonBack1:
+
+	Anchura: 54
+	Altura: 1155
+
+ButtonBack2:
+
+	Anchura: 54
+	Altura: 1155
+
+ButtonNext:
+
+	Anchura: 556
+	Altura: 1166
+
+HowToPlay_sgtoJack
+
+	Anchura: 0
+	Altura: 0
+
+HowToPlay_PC1
+
+	Anchura: 27
+	Altura: 863
+
+HowToPlay_PC2
+
+	Anchura: 30
+	Altura: 67
+
+HowToPlay_PC3
+
+	Anchura: 38
+	Altura: 110
+
+HowToPlay_PC4
+
+	Anchura: 44
+	Altura: 116
+
+HowToPlay_PC5
+
+	Anchura: 15
+	Altura: 116
+
+HowToPlay_PC6
+
+	Anchura: 60
+	Altura: 102
+
+HowToPlay_PC7
+
+	Anchura: 16
+	Altura: 102
+
+HowToPlay_PC8
+
+	Anchura: 39
+	Altura: 102
+
+HowToPlay_PC9
+
+	Anchura: 26
+	Altura: 854
+
+howToPlay_mobile2
+
+	Anchura: 31
+	Altura: 77
+
+howToPlay_mobile3
+
+	Anchura: 20
+	Altura: 116
+
+howToPlay_mobile6
+
+	Anchura: 11
+	Altura: 102

@@ -17,7 +17,7 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
         //     this.GetShieldPowerUp();
 
         if (player.powerUpObject_Boxed === null) {
-            switch (Phaser.Math.Between(0, 1)) {
+            switch (/*Phaser.Math.Between(0, 1)*/ 0) {
                 case 0:
                     new PowerUp_Shield(player, this.scene).Pick();
                     break;
@@ -25,7 +25,7 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
                     new PowerUp_Dash(player).Pick();
                     break;
                 default:
-                    console.log("An error has occurred when assigning PowerUp.");
+                    console.log("An error has occurred when assigning Gen_PowerUp.");
                     break;
             }
         }
