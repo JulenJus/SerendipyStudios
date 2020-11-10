@@ -20,7 +20,6 @@ class Scene_02_0_MainMenu extends Phaser.Scene{
         this.buttonPlay.on('pointerover', () => this.b_ChangeSprite("Play", "over"));
         this.buttonPlay.on('pointerout', () => this.b_ChangeSprite("Play", "static"));
         this.buttonPlay.on('pointerup', () => this.b_Play());
-
     }
 
     //<editor-fold desc="Callbacks">

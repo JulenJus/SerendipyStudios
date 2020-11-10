@@ -93,14 +93,14 @@ class Scene_01_Preload extends Phaser.Scene {
     create(){
         //console.log("Preload");
         //this.scene.start("Level_01");
-        this.scene.start("MainMenu");
-        //this.scene.start("Shop");
+        //this.scene.start("MainMenu");
+        this.scene.start("Shop");
     }
 
     //<editor-fold desc="Load functions">
 
     loadMainMenu(){
-        this.load.image('mainMenu_background','../assets/Sprites/Menus/MainMenu/mainscreen.png');
+        this.load.image('mainMenu_background','../assets/Sprites/Menus/MainMenu/mainScreen.png');
         this.load.image('mainMenu_title','../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
         this.load.image('mainMenu_buttonPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png');
         this.load.image('mainMenu_buttonPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png');
@@ -126,9 +126,13 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadShop(){
-        this.load.image('shop_background','../assets/Sprites/Menus/MainMenu/mainscreen.png');
-        this.load.image('shop_title','../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
+        this.load.image('shop_background','../assets/Sprites/Menus/Shop/shop_background.png');
+        this.load.image('shop_buttonMaps_static','../assets/Sprites/Menus/Shop/shop_buttonMaps_static.png');
+        this.load.image('shop_buttonMaps_over','../assets/Sprites/Menus/Shop/shop_buttonMaps_over.png');
+        this.load.image('shop_buttonSkins_static','../assets/Sprites/Menus/Shop/shop_buttonSkins_static.png');
+        this.load.image('shop_buttonSkins_over','../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
         this.load.image('shop_buttonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
+        this.load.image('shop_buttonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }
 
     loadLobby(){
@@ -159,7 +163,7 @@ class Scene_01_Preload extends Phaser.Scene {
     loadInGameHUD(){
         //General UI
         this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
-        this.load.image('exitButtonUI', '../assets/Sprites/UI/shop_buttonExit_static.png');
+        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
 
         //MovementBar UI
         this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
