@@ -6,7 +6,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     create() {
         //Show the background
-        this.add.sprite(0, 0, 'mainMenu_background').setOrigin(0, 0);
+        this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
         this.add.sprite(35, 133, 'mainMenu_title').setOrigin(0, 0);
 
         //Show the buttons
@@ -53,8 +53,13 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
             //console.log(this.buttons[i])
             this.buttons[i].on('pointerover', () => this.b_ChangeSprite(i, "over"));
             this.buttons[i].on('pointerout', () => this.b_ChangeSprite(i, "static"));
-            this.buttons[i].on('pointerup', () => this.b_Play());
         }
+
+        this.buttons[0].on('pointerup', () => this.b_Play());
+        this.buttons[1].on('pointerup', () => this.b_HowToPlay());
+        this.buttons[2].on('pointerup', () => this.b_Credits());
+        this.buttons[3].on('pointerup', () => this.b_Exit());
+        this.buttons[4].on('pointerup', () => this.b_Shop());
     }
 
     b_Play() {
@@ -71,6 +76,10 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     b_Exit() {
         window.close();
+    }
+
+    b_Shop(){
+        this.scene.start("Shop");
     }
 
     //</editor-fold>
