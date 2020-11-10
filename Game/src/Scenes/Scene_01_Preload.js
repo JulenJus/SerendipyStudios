@@ -3,7 +3,7 @@ class Scene_01_Preload extends Phaser.Scene {
         super("Preload");
         console.log("Preload constructor");
     }
-    
+
     preload() {
         //<editor-fold desc="Preload animation">
 
@@ -11,7 +11,7 @@ class Scene_01_Preload extends Phaser.Scene {
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
-        progressBox.fillRect(game.config.width/2 - 320/2, game.config.height/2 - 50/2, 320, 50);
+        progressBox.fillRect(game.config.width / 2 - 320 / 2, game.config.height / 2 - 50 / 2, 320, 50);
 
         //Set texts
         let loadingText = this.make.text({
@@ -57,7 +57,7 @@ class Scene_01_Preload extends Phaser.Scene {
             //Set progress bar
             progressBar.clear();
             progressBar.fillStyle(0xffffff, 1);
-            progressBar.fillRect(game.config.width/2 - 300/2, game.config.height/2 - 30/2, 300 * value, 30);
+            progressBar.fillRect(game.config.width / 2 - 300 / 2, game.config.height / 2 - 30 / 2, 300 * value, 30);
         });
 
         this.load.on('fileprogress', function (file) {
@@ -91,7 +91,8 @@ class Scene_01_Preload extends Phaser.Scene {
         //</editor-fold>
 
     }
-    create(){
+
+    create() {
         //console.log("Preload");
         //this.scene.start("Level_01");
         this.scene.start("MainMenu");
@@ -99,48 +100,65 @@ class Scene_01_Preload extends Phaser.Scene {
 
     //<editor-fold desc="Load functions">
 
-    loadGen(){
-        this.load.image('gen_mainscreen','../assets/Sprites/Menus/Gen/gen_mainscreen.png');
-        this.load.image('gen_buttonExit_static','../assets/Sprites/Menus/Gen/gen_buttonExit_static.png');
-        this.load.image('gen_buttonExit_over','../assets/Sprites/Menus/Gen/gen_buttonExit_over.png');
+    loadGen() {
+        this.load.image('gen_mainscreen', '../assets/Sprites/Menus/Gen/gen_mainscreen.png');
+        this.load.image('gen_buttonExit_static', '../assets/Sprites/Menus/Gen/gen_buttonExit_static.png');
+        this.load.image('gen_buttonExit_over', '../assets/Sprites/Menus/Gen/gen_buttonExit_over.png');
     }
 
-    loadMainMenu(){
-        this.load.image('mainMenu_title','../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
-        this.load.image('mainMenu_buttonPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png');
-        this.load.image('mainMenu_buttonPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png');
-        this.load.image('mainMenu_buttonHowToPlay_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_static.png');
-        this.load.image('mainMenu_buttonHowToPlay_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_over.png');
-        this.load.image('mainMenu_buttonCredits_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_static.png');
-        this.load.image('mainMenu_buttonCredits_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_over.png');
-        this.load.image('mainMenu_buttonExit_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_static.png');
-        this.load.image('mainMenu_buttonExit_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png');
-        this.load.image('mainMenu_buttonShop_static','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_static.png');
-        this.load.image('mainMenu_buttonShop_over','../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_over.png');
+    loadMainMenu() {
+        this.load.image('mainMenu_title', '../assets/Sprites/Menus/MainMenu/mainMenu_title.png');
+        this.load.image('mainMenu_buttonPlay_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png');
+        this.load.image('mainMenu_buttonPlay_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png');
+        this.load.image('mainMenu_buttonHowToPlay_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_static.png');
+        this.load.image('mainMenu_buttonHowToPlay_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_over.png');
+        this.load.image('mainMenu_buttonCredits_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_static.png');
+        this.load.image('mainMenu_buttonCredits_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_over.png');
+        this.load.image('mainMenu_buttonExit_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_static.png');
+        this.load.image('mainMenu_buttonExit_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png');
+        this.load.image('mainMenu_buttonShop_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_static.png');
+        this.load.image('mainMenu_buttonShop_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_over.png');
     }
 
-    loadHowToPlay(){
+    loadHowToPlay() {
+        this.load.image('howToPlay_buttonBack_static', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonBack_static.png');
+        this.load.image('howToPlay_buttonBack_over', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonBack_over.png');
+        this.load.image('howToPlay_buttonNext_static', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonNext_static.png');
+        this.load.image('howToPlay_buttonNext_over', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonNext_over.png');
+        this.load.image('howToPlay_buttonPrevious_static', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonPrevious_static.png');
+        this.load.image('howToPlay_buttonPrevious_over', '../assets/Sprites/Menus/HowToPlay/howToPlay_buttonPrevious_over.png');
+
+        this.load.image('howToPlay_sgtoJack', '../assets/Sprites/Menus/HowToPlay/howToPlay_sgtoJack.png');
+
+        //Tips
+        for (let i = 1; i < 10; i++) {
+            this.load.image('howToPlay_pc' + i, '../assets/Sprites/Menus/HowToPlay/howToPlay_pc' + i + '.png');
+        }
+
+        this.load.image('howToPlay_mobile2', '../assets/Sprites/Menus/HowToPlay/howToPlay_mobile2.png');
+        this.load.image('howToPlay_mobile3', '../assets/Sprites/Menus/HowToPlay/howToPlay_mobile3.png');
+        this.load.image('howToPlay_mobile6', '../assets/Sprites/Menus/HowToPlay/howToPlay_mobile6.png');
+    }
+
+    loadTutorial() {
+        this.load.image('tilesheet_Tutorial', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Tutorial', '../assets/Tilemaps/tutorial.json');
+    }
+
+    loadCredits() {
+        this.load.image('credits_logs', '../assets/Sprites/Menus/Credits/credits_logs.png');
+        this.load.image('credits_buttonTwitter', '../assets/Sprites/Menus/Credits/credits_buttonTwitter.png');
+    }
+
+    loadShop() {
 
     }
 
-    loadTutorial(){
+    loadLobby() {
 
     }
 
-    loadCredits(){
-        this.load.image('credits_logs','../assets/Sprites/Menus/Credits/credits_logs.png');
-        this.load.image('credits_buttonTwitter','../assets/Sprites/Menus/Credits/credits_buttonTwitter.png');
-    }
-
-    loadShop(){
-
-    }
-
-    loadLobby(){
-
-    }
-
-    loadLevels(){
+    loadLevels() {
         this.loadGenLevel();
         this.loadInGameHUD();
         this.loadLevel01();
@@ -149,7 +167,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
     //<editor-fold desc="Level load functions">
 
-    loadGenLevel(){
+    loadGenLevel() {
         //Player sprites
         this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
@@ -161,7 +179,7 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
     }
 
-    loadInGameHUD(){
+    loadInGameHUD() {
         //General UI
         this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
         this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
@@ -184,18 +202,18 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
     }
 
-    loadLevel01(){
+    loadLevel01() {
         this.load.image('tilesheet_Level_01', '../assets/Tilemaps/tilesheet.png');
         this.load.tilemapTiledJSON('tilemap_Level_01', '../assets/Tilemaps/tutorial.json');
     }
 
-    loadLevel02(){
+    loadLevel02() {
 
     }
 
     //</editor-fold>
 
-    loadRanking(){
+    loadRanking() {
 
     }
 
