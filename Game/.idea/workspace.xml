@@ -23,8 +23,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_over.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_over.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_over.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay_static.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonCredits2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonExit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonExit2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonHowToPlay2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/MainMenu/mainMenu_buttonPlay2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
