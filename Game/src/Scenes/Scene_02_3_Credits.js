@@ -12,7 +12,7 @@ class Scene_02_3_Credits extends Phaser.Scene {
 
         //Show the buttons
         this.buttons = [];
-        this.buttons.push(this.add.sprite(274, 1159, 'credits_buttonTwitter').setOrigin(0, 0).setInteractive());
+        this.buttons.push(this.add.sprite(274, 1159, 'credits_buttonTwitter_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(54, 1155, 'gen_buttonExit_static').setOrigin(0, 0).setInteractive());
 
         //Initialize button callbacks
@@ -26,7 +26,7 @@ class Scene_02_3_Credits extends Phaser.Scene {
             case 0:
                 //[HERE] Set the over texture
                 //console.log("Play change sprite: " + mode);
-                //this.buttons[0].setTexture('mainMenu_buttonPlay_' + mode);
+                //this.buttons[0].setTexture('credits_buttonTwitter_' + mode);
                 break;
             case 1:
                 //console.log("HowToPlay change sprite: " + mode);
