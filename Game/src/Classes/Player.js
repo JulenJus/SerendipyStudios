@@ -20,7 +20,7 @@ class Player extends Phaser.GameObjects.Sprite{
         this.controllable = controllable;
         if(this.controllable) {
             this.movementBar = new MovementBar(this.scene);
-            this.controls = new Controls(this.scene, this);
+            this.controls = new Controls_InGame(this.scene, this);
         }
 
         //Set appearance variables

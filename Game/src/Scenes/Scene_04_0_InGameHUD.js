@@ -15,6 +15,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     }
 
     init(args) {
+        console.log("HUD");
         this.player = args.player;
         this.level = args.level;
         //console.log("Ingame hud init");
