@@ -93,9 +93,9 @@ class Gen_Level extends Phaser.Scene {
     }
 
     winCallback(player, raceLine) {
-        console.log("You win");
-        console.log("POS X: " + player.body.position.x);
-        console.log("POS Y: " + player.body.position.y);
+        // console.log("You win");
+        // console.log("POS X: " + player.body.position.x);
+        // console.log("POS Y: " + player.body.position.y);
     }
 
     endRace(){

@@ -24,9 +24,8 @@ class Scene_02_3_Credits extends Phaser.Scene {
     b_ChangeSprite(buttonIndex, mode) {
         switch (buttonIndex) {
             case 0:
-                //[HERE] Set the over texture
-                //console.log("Play change sprite: " + mode);
-                //this.buttons[0].setTexture('credits_buttonTwitter_' + mode);
+                //console.log("Tw change sprite: " + mode);
+                this.buttons[0].setTexture('credits_buttonTwitter_' + mode);
                 break;
             case 1:
                 //console.log("HowToPlay change sprite: " + mode);

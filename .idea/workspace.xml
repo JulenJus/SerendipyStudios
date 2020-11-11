@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Shop/shop_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Shop/shop_buttonExit_over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Shop/shop_buttonExit_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Shop/shop_mapsScreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Shop/shop_skinsScreen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Assets/Tilemaps/tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Tilemaps/tutorial.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Menus/Credits/credits_buttonTw.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Credits/credits_buttonTwitter_over.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Menus/Credits/credits_buttonTwitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Menus/Credits/credits_buttonTwitter_static.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Menus/Shop/shop_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_4_Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_4_Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,23 +56,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/assets/Sprites/Menus/Shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/assets/Sprites/Menus/Credits" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Credits" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Shop" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Shop" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Shop" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Browser" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\MainMenu" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Characters\Steve" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Shop" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Shop" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\Assets\Sprites" />
     </key>
   </component>
   <component name="RunManager">
