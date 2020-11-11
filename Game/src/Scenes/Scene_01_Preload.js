@@ -95,8 +95,7 @@ class Scene_01_Preload extends Phaser.Scene {
     create() {
         //console.log("Preload");
         //this.scene.start("Level_01");
-        //this.scene.start("MainMenu");
-        this.scene.start("Shop");
+        this.scene.start("MainMenu");
     }
 
     //<editor-fold desc="Load functions">
@@ -148,7 +147,8 @@ class Scene_01_Preload extends Phaser.Scene {
 
     loadCredits() {
         this.load.image('credits_logs', '../assets/Sprites/Menus/Credits/credits_logs.png');
-        this.load.image('credits_buttonTwitter', '../assets/Sprites/Menus/Credits/credits_buttonTwitter.png');
+        this.load.image('credits_buttonTwitter_static', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_static.png');
+        this.load.image('credits_buttonTwitter_over', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_over.png');
     }
 
     loadShop() {
@@ -159,6 +159,10 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('shop_buttonSkins_over','../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
         this.load.image('shop_buttonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_buttonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
+        this.load.image('shop_mapsScreen','../assets/Sprites/Menus/Shop/shop_mapsScreen.png');
+        this.load.image('shop_skinsScreen','../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
+        this.load.image('shop_screensButtonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
+        this.load.image('shop_screensButtonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }
 
     loadLobby() {
