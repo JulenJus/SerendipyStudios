@@ -23,4 +23,8 @@ Boton tienda
 anch: 10
 alt 4
 
+Boton tienda
+anch: 578
+alt 4
+
 
