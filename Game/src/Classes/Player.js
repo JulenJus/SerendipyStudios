@@ -68,7 +68,7 @@ class Player extends Phaser.GameObjects.Sprite{
         this.body.velocity.y = (-400 * impulsePercentage);
     }
 
-    TakeDamage(){
+    TakeDamage(obstaclesCollide){
         if(this.isShielded) {
             this.powerUpObject_Used.Destroy();
             return;
@@ -80,6 +80,7 @@ class Player extends Phaser.GameObjects.Sprite{
         //Change to "damaged" state
         this.tint = 0xff0000;
         this.isDamaged = true;
+        obstaclesCollide.active = false;
 
         let thisPlayer = this; //Reference for the change of scope
 
@@ -99,6 +100,7 @@ class Player extends Phaser.GameObjects.Sprite{
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
+                obstaclesCollide.active = true;
             }
         });
     };

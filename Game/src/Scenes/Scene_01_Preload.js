@@ -195,6 +195,10 @@ class Scene_01_Preload extends Phaser.Scene {
         //Power up sprite assets
         this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
         this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
+      
+        //RaceLine
+        //this.load.image('genLevel_finishLine', '../assets/Sprites/UI/finishLine.png'); //Turn all the assets to this nommenclature
+        this.load.image('finishLine', '../assets/Sprites/UI/finishLine.png');
     }
 
     loadInGameHUD() {
