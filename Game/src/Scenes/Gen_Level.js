@@ -64,8 +64,8 @@ class Gen_Level extends Phaser.Scene {
         this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
 
-        console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
-        console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
+        //console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
+        //console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera
         if (controllable) {
