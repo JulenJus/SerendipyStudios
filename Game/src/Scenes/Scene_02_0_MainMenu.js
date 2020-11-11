@@ -63,7 +63,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
-        this.scene.start("Level_01");
+        this.scene.start("Lobby", {pjId: 0, color: "Red"});
     }
 
     b_HowToPlay() {
