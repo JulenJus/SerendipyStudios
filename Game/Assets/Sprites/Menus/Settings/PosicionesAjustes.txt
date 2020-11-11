@@ -1,0 +1,24 @@
+ButtonBack1:
+
+	Anchura: 54
+	Altura: 1155
+
+barraMusica:
+
+	Anchura: 97
+	Altura: 469
+
+barraSonido:
+
+	Anchura: 97
+	Altura: 721
+
+settings_littleIce1:
+
+	Anchura: 97
+	Altura: 456
+
+settings_littleIce2:
+
+	Anchura: 97
+	Altura: 708
