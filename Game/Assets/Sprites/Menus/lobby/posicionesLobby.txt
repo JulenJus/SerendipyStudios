@@ -1,0 +1,65 @@
+POSICIONES EN PX DESDE LA ESQUINA SUPERIOR IZDA DEL FONDO A LA ESQUINA SUPERIOR IZDA DEL SPRITE
+
+BotonSelBack
+Anchura: 13
+Altura: 33
+
+BotonSeleccion
+Anchura: 137
+Altura: 29
+
+BotonSelNext
+Anchura: 655
+Altura: 31
+
+BigTick:
+Anchura: 469
+Altura: 198
+
+LittleTick1:
+Anchura: 704
+Altura: 196
+
+LittleTick2:
+Anchura: 704
+Altura: 355
+
+LittleTick3:
+Anchura: 704
+Altura: 515
+
+ButtonSkinBack:
+Anchura: 85
+Altura: 572
+
+ButtonSkinAccept:
+Anchura: 240
+Altura: 568
+
+ButtonSkinNext:
+Anchura: 397
+Altura: 570
+
+SeleccionGrande:
+Anchura: 0
+Altura: 194
+
+SeleccionChikito1:
+Anchura: 575
+Altura: 194
+
+SeleccionChikito2:
+Anchura: 575
+Altura: 354
+
+SeleccionChikito3:
+Anchura: 575
+Altura: 514
+
+BotonSalir
+Anchura: 36
+Altura: 1218
+
+BotonJugar
+Anchura: 230
+Altura: 1200
