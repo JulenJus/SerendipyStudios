@@ -23,11 +23,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonAccept_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonAccept_Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonAccept_Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonAccept_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBack_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBack_Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBack_Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBack_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBigSel_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBigSel_Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBigSel_Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonBigSel_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonExit_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonJugar_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonNext_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonNext_Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonNext_Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonNext_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonPlay_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonSalir_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonSelBack_static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sprites/Menus/Lobby/lobby_buttonSelNext_static.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Tilemaps/mapa1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tilemaps/mapa1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonAcceptBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonAcceptGreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonAcceptOrange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonAcceptRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBackBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBackGreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBackOrange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBigSelBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBigSelGreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBigSelOrange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonBigSelRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonExit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonJugar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonLittleSelOrange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonLittleSelRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonNextBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonNextGreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonNextOrange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonNextRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonPlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonSalir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonSelBack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/lobby/lobby_buttonSelNext.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,10 +272,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1605025897820">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1605052848989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605025897820" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605052848989" />
     <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1604489211975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
