@@ -95,7 +95,8 @@ class Scene_01_Preload extends Phaser.Scene {
     create() {
         //console.log("Preload");
         //this.scene.start("Level_01");
-        this.scene.start("MainMenu");
+        //this.scene.start("MainMenu");
+        this.scene.start("Shop");
     }
 
     //<editor-fold desc="Load functions">
@@ -151,7 +152,13 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadShop() {
-
+        this.load.image('shop_background','../assets/Sprites/Menus/Shop/shop_background.png');
+        this.load.image('shop_buttonMaps_static','../assets/Sprites/Menus/Shop/shop_buttonMaps_static.png');
+        this.load.image('shop_buttonMaps_over','../assets/Sprites/Menus/Shop/shop_buttonMaps_over.png');
+        this.load.image('shop_buttonSkins_static','../assets/Sprites/Menus/Shop/shop_buttonSkins_static.png');
+        this.load.image('shop_buttonSkins_over','../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
+        this.load.image('shop_buttonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
+        this.load.image('shop_buttonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }
 
     loadLobby() {
