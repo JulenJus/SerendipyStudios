@@ -97,6 +97,10 @@ class Gen_Level extends Phaser.Scene {
         console.log("POS Y: " + player.body.position.y);
     }
 
+    endRace(){
+        this.scene.start("Ranking");
+    }
+
     //Camera zoom (not used)
     // cameraZoomCallback() {
     //     if (player.body.velocity.y < 0) {

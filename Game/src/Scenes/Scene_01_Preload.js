@@ -232,7 +232,8 @@ class Scene_01_Preload extends Phaser.Scene {
     //</editor-fold>
 
     loadRanking() {
-
+        this.load.image('tilesheet_Ranking', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Ranking', '../assets/Tilemaps/ranking.json');
     }
 
     //</editor-fold>
