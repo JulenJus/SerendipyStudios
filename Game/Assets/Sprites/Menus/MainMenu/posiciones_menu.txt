@@ -20,6 +20,7 @@ anch 114
 alt 1059
 
 Boton tienda
-anch 22
-alt 13
+anch: 10
+alt 4
+
 
