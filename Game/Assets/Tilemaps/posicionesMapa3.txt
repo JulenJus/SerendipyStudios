@@ -1,0 +1,11 @@
+POWERUPS POSITIONS
+
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 19776 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1152 , 16128 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1152 , 12992 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 9856 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 6272 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 2048 ));
+
+
+SIERRAS POSITIONS
