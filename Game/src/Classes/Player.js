@@ -1,4 +1,4 @@
-class Player extends Phaser.GameObjects.Sprite{
+class Player extends Phaser.Physics.Arcade.Sprite{
     //Constructor
     constructor(scene, id, controllable){
         super(scene, scene.levelWidth / 2, scene.levelHeight - 300, 'player');
@@ -40,7 +40,13 @@ class Player extends Phaser.GameObjects.Sprite{
         //Set race variables
         this.racePosition = 1;
 
-        //Set animations [HERE]
+        //Player Animations
+        this.scene.anims.create({
+            key: 'ArminAnimation_Idle',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('ArminAnimation_Idle', {start: 0, end: 14}),
+            frameRate: 25,
+            repeat: -1       //The animation loops infinitely
+        });
     }
 
     //<editor-fold desc="Methods">
@@ -68,7 +74,7 @@ class Player extends Phaser.GameObjects.Sprite{
         this.body.velocity.y = (-400 * impulsePercentage);
     }
 
-    TakeDamage(){
+    TakeDamage(obstaclesCollide){
         if(this.isShielded) {
             this.powerUpObject_Used.Destroy();
             return;
@@ -80,6 +86,7 @@ class Player extends Phaser.GameObjects.Sprite{
         //Change to "damaged" state
         this.tint = 0xff0000;
         this.isDamaged = true;
+        obstaclesCollide.active = false;
 
         let thisPlayer = this; //Reference for the change of scope
 
@@ -99,6 +106,7 @@ class Player extends Phaser.GameObjects.Sprite{
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
+                obstaclesCollide.active = true;
             }
         });
     };

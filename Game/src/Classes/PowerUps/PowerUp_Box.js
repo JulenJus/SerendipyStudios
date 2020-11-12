@@ -1,4 +1,4 @@
-class PowerUp_Box extends Phaser.GameObjects.Sprite {
+class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     //Constructor
     constructor(scene, posX, posY) {
         super(scene, posX, posY, 'powerUpBox');
@@ -7,6 +7,14 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
 
         scene.add.existing(this);
         this.setScale(0.3, 0.3);
+
+        //Power ups animations
+        this.scene.anims.create({ //Shaking animation
+            key: 'powerUpBoxAnimation_Idle',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('powerUpBoxAnimation_Idle', {start: 0, end: 17}),
+            frameRate: 20,
+            repeat: -1       //The animation loops infinitely
+        });
     }
 
     //Methods
@@ -17,7 +25,7 @@ class PowerUp_Box extends Phaser.GameObjects.Sprite {
         //     this.GetShieldPowerUp();
 
         if (player.powerUpObject_Boxed === null) {
-            switch (/*Phaser.Math.Between(0, 1)*/ 0) {
+            switch (Phaser.Math.Between(0, 1)) {
                 case 0:
                     new PowerUp_Shield(player, this.scene).Pick();
                     break;

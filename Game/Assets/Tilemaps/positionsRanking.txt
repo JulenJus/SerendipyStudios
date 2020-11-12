@@ -1,0 +1,17 @@
+
+
+FirstPosition
+	Anchura: 192
+	Altura: 896
+
+SecondPosition
+	Anchura: 320
+	Altura: 960
+
+ThirdPosition
+	Anchura: 448
+	Altura: 1024
+
+FourthPosition
+	Anchura: 576
+	Altura: 1088
