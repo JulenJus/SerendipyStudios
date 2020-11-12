@@ -200,12 +200,18 @@ class Scene_01_Preload extends Phaser.Scene {
         //Player sprites
         this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
-        //Player animations
-        //this.load.spritesheet('penguin', '../assets/Sprites/penguins.png', {frameWidth: 370, frameHeight: 368});
+        //Players animations
+        this.load.spritesheet('ArminAnimation_Idle', '../assets/Sprites/Animations/Armin/ArminAnimation_Idle.png', {frameWidth: 141, frameHeight: 119});
+        this.load.spritesheet('SteveAnimation_Idle', '../assets/Sprites/Animations/Steve/SteveAnimation_Idle.png', {frameWidth: 128.8, frameHeight: 119});
+        this.load.spritesheet('BobAnimation_Idle', '../assets/Sprites/Animations/Bob/BobAnimation_Idle.png', {frameWidth: 153.74, frameHeight: 119});
+        this.load.spritesheet('KartaAnimation_Idle', '../assets/Sprites/Animations/Karta/KartaAnimation_Idle.png', {frameWidth: 123.56, frameHeight: 119});
 
         //Power up sprite assets
         this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
         this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
+
+        //Power up box animations
+        this.load.spritesheet('powerUpBoxAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/BoxSheet.png', {frameWidth: 400, frameHeight: 198});
       
         //RaceLine
         //this.load.image('genLevel_finishLine', '../assets/Sprites/UI/finishLine.png'); //Turn all the assets to this nommenclature

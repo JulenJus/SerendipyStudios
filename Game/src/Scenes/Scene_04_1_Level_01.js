@@ -15,6 +15,11 @@ class Scene_04_1_Level_01 extends Gen_Level {
         this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
         this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
 
+        //Play power up boxes animation
+        Phaser.Actions.Call(this.powerUpBoxes.getChildren(), child => {
+            child.anims.play('powerUpBoxAnimation_Idle');
+        });
+
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
@@ -50,6 +55,10 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.update();
     }
     //</editor-fold>
+
+    winCallback(){
+        this.scene.start("MainMenu");
+    }
 
     Exit(){
         this.scene.stop("InGameHUD")

@@ -15,6 +15,11 @@ class Scene_02_2_Tutorial extends Gen_Level {
         this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
         this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
 
+        //Play power up boxes animation
+        Phaser.Actions.Call(this.powerUpBoxes.getChildren(), child => {
+            child.anims.play('powerUpBoxAnimation_Idle');
+        });
+
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
@@ -34,15 +39,6 @@ class Scene_02_2_Tutorial extends Gen_Level {
         //Create zoom blocks
         //this.zoomBlocks = this.physics.add.staticGroup();
         //this.zoomBlocks.create(skySpr.width / 2 * scaledW, game.config.height * 12, 'platform').setScale(game.config.width * 2 / 400, 1).refreshBody();
-
-        //Penguin animation
-        // this.anims.create({
-        //     key: 'idle',     //Animation alias
-        //     frames: this.anims.generateFrameNumbers('penguin', {start: 0, end: 25}),
-        //     frameRate: 10,
-        //     repeat: -1       //The animation loops infinitely
-        // });
-        // player.anims.play('idle', true);
     }
 
     update() {

@@ -32,11 +32,10 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.finishLine = this.physics.add.staticSprite(0, 300, 'finishLine').setOrigin(0, 0).refreshBody(); //Create finish line
+        this.finishLine = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'finishLine'); //Create finish line
         this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
-
 
         //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
@@ -55,15 +54,21 @@ class Gen_Level extends Phaser.Scene {
     createPlayer(level, id, controllable) {
         //Create player
         let thisPlayer = new Player(level, id, controllable);
+
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
+
+        //Play Idle animation
+        thisPlayer.anims.play('ArminAnimation_Idle');
+
+        //Set hitbox size
+        thisPlayer.setSize(104, 119, true);
 
         //Initialize physics
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.finishLine, this.winCallback, null, this);
-
 
         //console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
         //console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
