@@ -1,0 +1,7 @@
+POWERUPS POSITIONS
+
+this.powerUpBoxes.add(new PowerUp_Box(this, 2496 , 15424 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 3328 , 13760 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 2944 , 8128 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 3328 , 4928 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 3328 , 2688 ));
