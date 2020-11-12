@@ -285,7 +285,7 @@ Armin
 Bob
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
-Kurta
+Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 Sargento Jack
@@ -342,7 +342,7 @@ Armin
 Bob
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/Assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
-Kurta
+Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
 Steve
@@ -375,7 +375,7 @@ En la parte inferior de la pantalla aparecerá una barra horizontal que indica l
 
 #### 9.1. Diseños básicos de los menús 
 
-Todos los menús tienen una estética de lugar helado, por lo que todos los botones son trozos de hielo. El menú de la tienda está a cargo de Karta, hermana de Kurta, por lo que se refuerza más el hecho de que sea una tienda. En el menú de cómo jugar, Jack estará a cargo de enseñar a los jugadores los controles básicos y los distintos elementos, por lo que el jugador podrá sentir que alguien veterano le está enseñando a jugar.
+Todos los menús tienen una estética de lugar helado, por lo que todos los botones son trozos de hielo. El menú de la tienda está a cargo de Kurta, hermana de Karta, por lo que se refuerza más el hecho de que sea una tienda. En el menú de cómo jugar, Jack estará a cargo de enseñar a los jugadores los controles básicos y los distintos elementos, por lo que el jugador podrá sentir que alguien veterano le está enseñando a jugar.
 
 #### 9.2. Diagrama de flujo 
 
