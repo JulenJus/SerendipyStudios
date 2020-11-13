@@ -247,8 +247,8 @@ Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en 
 - Es siguiente en la lista es Bob: Bob tiene las cosas muy claras: no es muy listo, no es muy atlético, pero hay una cosa que desde luego es: cabezota, y cuando se le mete algo entre ceja y ceja no para hasta conseguirlo. Y lo único que tiene ahora entre las aletas este afable pero constante pingüino es ser el mejor volador de Pinguinea. 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
 
-- Y por último, pero no menos importante, está Kurta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+- Y por último, pero no menos importante, está Karta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Karta/Karta.png" width="125">
 
 ##### 5.2.2. Personajes no jugables
 
@@ -284,7 +284,7 @@ Armin
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Karta/Karta.png" width="125">
 Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
@@ -300,13 +300,13 @@ Caja Verde
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
 Caja Lila
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBox.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/gen_powerUpBox_sprite.png" width="125">
 Caja Verde Vista Frontal
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBoxShine.png" width="125">
 Caja brillando
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Shield.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/gen_powerUp_shield_sprite.png" width="125">
 Escudo
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/ShieldShine.png" width="125">
@@ -314,8 +314,6 @@ Escudo Brillando
 
 - Pantallas
 
-- Packs de Navidad
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Shop/Christmas%20Pack/Pack.png" width="125">
 
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
@@ -323,11 +321,17 @@ Escudo Brillando
 
 #### 6.4. Animación 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterBob.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterArmin.gif" width="125">
 Armin
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
 Bob
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
+Karta
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
+Steve
 
 ### 7. Animación 
 
@@ -335,13 +339,13 @@ En el juego solo existe animaciones por parte de los personajes jugables y algun
 
 #### 7.1. Personajes 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterBob.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterArmin.gif" width="125">
 Armin
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/Assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
 Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
@@ -352,7 +356,7 @@ Steve
 
 ### 8. Sonido 
 
-Tanto la música como los efectos de sonido de Flyguins está pensada para crear un ambiente animado y caótico, dando así al jugador la sensación de que todo está en caos en todo momento. 
+Tanto la música como los efectos de sonido de Flyguins está pensada para crear un ambiente animado y caótico, dando así al jugador la sensación de que todo está en caos en todo momento. Todos estos assets de sonido son de un sitio web externo de libre uso, aunque algunos han sido modificados. En el punto 8.3. se mostrará el link de la funte externa de dichos assets.
 
 #### 8.1. Sonido ambiente y música 
 
