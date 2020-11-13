@@ -259,6 +259,23 @@ Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel t
 
 #### 5.3. Entornos y lugares
 
+Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cada nivel se caracteriza por su forma, siendo el nombre de cada uno una pista que indica al jugador lo que se va a encontrar. Tenemos:
+
+- Diagonales Dolorosas:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa1.png" width="125">
+
+- Simetría Sinuosa:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa2.png" width="125">
+
+- Trayecto Torturoso:
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa3.png" width="125">
+
+- Tutorial:
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/tutorial.png" width="125">
+
+A parte de estos mapas, hay otros dos mapas diseñados que serán lanzados como DLCs. Estos son:
+
 
 ### 6. Arte
 
