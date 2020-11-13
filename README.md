@@ -270,7 +270,7 @@ Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cad
 - Trayecto Torturoso:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa3.png" width="125">
 
--Tutorial:
+- Tutorial:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/tutorial.png" width="125">
 
