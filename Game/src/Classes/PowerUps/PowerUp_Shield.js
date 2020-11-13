@@ -46,7 +46,7 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
         this.player.powerUpObject_Used = this;
 
         //Display it on screen
-        powerUpTime.setText(this.gen_powerUp_shield_spriteTime);
+        //powerUpTime.setText(this.gen_powerUp_shield_spriteTime);
 
         //Create the gen_powerUp_shield_sprite
         this.player.isgen_powerUp_shield_spriteed = true;
@@ -65,7 +65,7 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
             loop: false,
             callback: function () {
                 if (thisgen_powerUp_shield_spriteTime > 1) {
-                    powerUpTime.setText(--thisgen_powerUp_shield_spriteTime);
+                    //powerUpTime.setText(--thisgen_powerUp_shield_spriteTime);
                 } else {
                     if (thisObj.isActive)
                         thisObj.Destroy();
@@ -83,7 +83,7 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
     Destroy() {
         this.isActive = false;
 
-        powerUpTime.setText('');
+        //powerUpTime.setText('');
         this.player.isgen_powerUp_shield_spriteed = false;
         this.sprite.destroy();
 

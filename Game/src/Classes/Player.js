@@ -1,6 +1,6 @@
-class Player extends Phaser.Physics.Arcade.Sprite{
+class Player extends Phaser.Physics.Arcade.Sprite {
     //Constructor
-    constructor(scene, id, controllable, initPos){
+    constructor(scene, id, controllable, initPos) {
         super(scene, initPos.x, initPos.y, 'gen_player');
 
         console.log("Player constructor")
@@ -18,7 +18,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         //Set controls
         this.controllable = controllable;
-        if(this.controllable) {
+        if (this.controllable) {
             this.movementBar = new MovementBar(this.scene);
             this.controls = new Controls_InGame(this.scene, this);
         }
@@ -36,7 +36,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.powerUpObject_Boxed = null;
         this.powerUpObject_Used = null;
         this.onPaintPowerUpIcon = new Phaser.Events.EventEmitter();
-        this.dashPowerUpAnimation = new Phaser.Physics.Arcade.Sprite(scene, initPos.x, initPos.y, '');
+        this.dashPowerUpAnimation =
+            new Phaser.Physics.Arcade.Sprite(scene, initPos.x - 50, initPos.y - 1500, '')
+                .setScale(1.5, 1.5);
         this.dashPowerUpAnimation.visible = false;
         scene.add.existing(this.dashPowerUpAnimation);
 
@@ -48,13 +50,21 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.racePosition = 1;
 
         //Player Animations //[HERE] Make it general
+        this.on('animationcomplete', this.animComplete, this);
+
         this.scene.anims.create({
             key: 'gen_player_animation_Idle_Armin',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
-            frameRate: 32,
-            repeat: -1       //The animation loops infinitely
+            frameRate: 96,
+            repeat: 1       //The animation loops infinitely
         });
-        this.anims.play('gen_player_animation_Idle_Armin');
+
+        this.scene.anims.create({
+            key: 'gen_player_animation_Dash_Armin',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
+            frameRate: 128,
+            repeat: 4       //The animation loops infinitely
+        });
 
         this.scene.anims.create({
             key: 'gen_powerUp_dash_animation',     //Animation alias
@@ -64,15 +74,28 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         });
 
         //Set hitbox size
+        this.anims.play('gen_player_animation_Idle_Armin');
+        this.anims.stop();
         this.setSize(104, 119, true);
     }
 
     //<editor-fold desc="Methods">
 
-    Move(direction){
+    //Animation methods
+
+    animComplete(animation, frame) {
+        if (animation.key === 'gen_player_animation_Idle_Armin') {
+            //console.log("Player Idle animation finished");
+        }
+    }
+
+    //Functional methods
+
+    Move(direction) {
         if (!this.isDamaged) {
+            this.anims.play('gen_player_animation_Idle_Armin');
             let impulsePercentage = this.movementBar.getImpulse();
-            switch(direction){
+            switch (direction) {
                 case "up":
                     this.body.velocity.y = (-400 * impulsePercentage);
                     break;
@@ -88,28 +111,32 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         }
     }
 
-    Dash(impulsePercentage){
+    Dash(impulsePercentage) {
         this.body.velocity.y = (-400 * impulsePercentage);
+
+        this.anims.play('gen_player_animation_Dash_Armin');
+
         this.dashPowerUpAnimation.visible = true;
         this.dashPowerUpAnimation.anims.play('gen_powerUp_dash_animation');
         let thisDash = this.dashPowerUpAnimation; //Variable for the change of scope
+
         this.scene.time.addEvent({
             delay: 1000,
             loop: false,
-            callback: function(){
+            callback: function () {
                 thisDash.visible = false;
                 thisDash.anims.pause();
             }
         });
     }
 
-    DashPowerUpFollow(){
+    DashPowerUpFollow() {
         this.dashPowerUpAnimation.x = this.x;
         this.dashPowerUpAnimation.y = this.y + 60;
     }
 
-    TakeDamage(obstaclesCollider, sawCollider){
-        if(this.isgen_powerUp_shield_spriteed) {
+    TakeDamage(obstaclesCollider, sawCollider) {
+        if (this.isgen_powerUp_shield_spriteed) {
             this.powerUpObject_Used.Destroy();
             return;
         }
@@ -129,7 +156,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             delay: 150,
             repeat: 5,
             loop: false,
-            callback: function(){
+            callback: function () {
                 thisPlayer.visible = !thisPlayer.visible;
             }
         });
@@ -137,7 +164,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.scene.time.addEvent({
             delay: 750,
             loop: false,
-            callback: function(){
+            callback: function () {
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
@@ -147,16 +174,16 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         });
     };
 
-    UsePowerUp(){
+    UsePowerUp() {
         console.log("Power up");
 
         //Use the power up if you have one
-        if(this.powerUpObject_Boxed !== null){
+        if (this.powerUpObject_Boxed !== null) {
             this.powerUpObject_Boxed.Use();
         }
     }
 
-    Squawk(){
+    Squawk() {
         console.log("squawk");
 
         //Reproduce squawk audio depending on your skin [HERE]

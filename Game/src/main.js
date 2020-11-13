@@ -51,7 +51,8 @@ window.onload = function () {
 
     game = new Phaser.Game(config);
     game.global = {
-        lastTime: new Date().getTime()
+        lastTime: new Date().getTime(),
+        deltaTime: 0
     };
 
     window.focus();
@@ -60,12 +61,15 @@ window.onload = function () {
     //window.addEventListener("resize", resizeScreen);
 }
 
-function GetDeltaTime() {
+function SetDeltaTime() {
     let time = new Date().getTime();
-    let deltaTime = (time - game.global.lastTime);
+    let deltaTime = (time - game.global.lastTime) / 1000;
     game.global.lastTime = time;
+    game.global.deltaTime = deltaTime;
+}
 
-    return deltaTime / 1000;
+function GetDeltaTime(){
+    return game.global.deltaTime;
 }
 
 /*

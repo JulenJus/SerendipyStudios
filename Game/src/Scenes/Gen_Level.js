@@ -19,6 +19,8 @@ class Gen_Level extends Phaser.Scene {
     }
 
     create() {
+        SetDeltaTime();
+
         //<editor-fold desc="Configure the map">
         console.log("Gen_Level create")
 
@@ -42,7 +44,11 @@ class Gen_Level extends Phaser.Scene {
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
         //Enemies
-        this.gen_saw_sprites = this.physics.add.staticGroup();
+        this.gen_saw_sprites = this.physics.add.group({
+            //immovable: true,
+            allowGravity: false,
+            runChildUpdate: true
+        });
 
         //Power Ups
         this.gen_powerUpBox_sprites = this.physics.add.staticGroup();
@@ -56,7 +62,7 @@ class Gen_Level extends Phaser.Scene {
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable, {x:this.levelWidth / 2, y: this.levelHeight - 300});
+        let thisPlayer = new Player(level, id, controllable, {x: this.levelWidth / 2, y: this.levelHeight - 300});
 
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
@@ -79,6 +85,8 @@ class Gen_Level extends Phaser.Scene {
     }
 
     update() {
+        SetDeltaTime();
+
         for (let i = 0; i < this.players.length; i++) {
             if (this.players[i].powerUpObject_Used !== null)
                 this.players[i].powerUpObject_Used.Render();
@@ -87,7 +95,7 @@ class Gen_Level extends Phaser.Scene {
     }
 
     //<editor-fold desc="Callbacks">
-    
+
     takeDamageCallback(player, dmgObject) {
         player.TakeDamage(this.obstaclesLayerCollision, this.sawLayerCollision);
     }
@@ -101,12 +109,12 @@ class Gen_Level extends Phaser.Scene {
         this.scene.start("Ranking");
     }
 
-    endRace(){
+    endRace() {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking");
     }
 
-    Exit(){
+    Exit() {
         this.winCallback();
         //this.scene.stop("InGameHUD")
 
