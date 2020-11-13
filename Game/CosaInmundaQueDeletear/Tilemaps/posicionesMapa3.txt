@@ -1,11 +1,11 @@
 POWERUPS POSITIONS
 
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1536 , 19776 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1152 , 16128 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1152 , 12992 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1536 , 9856 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1536 , 6272 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 1536 , 2048 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 19776 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1152 , 16128 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1152 , 12992 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 9856 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 6272 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 2048 ));
 
 
 SIERRAS POSITIONS

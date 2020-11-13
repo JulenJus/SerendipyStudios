@@ -25,7 +25,6 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
         //Display it in the box
         console.log("Power up: gen_powerUp_shield_sprite.");
         this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "shield", true, null);//Show the icon in the powerU  up box
-
     }
 
     Use() {
@@ -52,6 +51,9 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
         //Create the gen_powerUp_shield_sprite
         this.player.isgen_powerUp_shield_spriteed = true;
         this.sprite = this.scene.add.sprite(this.player.x, this.player.y, 'gen_powerUp_shield_sprite').setScale(0.1);
+
+        //Set the sield's sprite sort
+        this.sprite.depth = 3;
 
         //Set the timer
         let thisObj = this;

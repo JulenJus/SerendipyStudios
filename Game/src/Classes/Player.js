@@ -1,7 +1,7 @@
 class Player extends Phaser.Physics.Arcade.Sprite{
     //Constructor
     constructor(scene, id, controllable, initPos){
-        super(scene, initPos.x, initPos.y, 'player');
+        super(scene, initPos.x, initPos.y, 'gen_player');
 
         console.log("Player constructor")
 
@@ -36,17 +36,35 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.powerUpObject_Boxed = null;
         this.powerUpObject_Used = null;
         this.onPaintPowerUpIcon = new Phaser.Events.EventEmitter();
+        this.dashPowerUpAnimation = new Phaser.Physics.Arcade.Sprite(scene, initPos.x, initPos.y + 20, '');
+        this.dashPowerUpAnimation.visible = false;
+        scene.add.existing(this.dashPowerUpAnimation);
+
+        //Set sprites sort
+        this.depth = 2;
+        this.dashPowerUpAnimation.depth = 1;
 
         //Set race variables
         this.racePosition = 1;
 
         //Player Animations //[HERE] Make it general
         this.scene.anims.create({
-            key: 'gen_player_animation_Idle_Armin',     //Animation alias
+            key: 'Idle',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
+            frameRate: 32,
+            repeat: -1       //The animation loops infinitely
+        });
+        this.anims.play('Idle');
+
+        this.scene.anims.create({
+            key: 'Dash',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_powerUp_dash_animation', {start: 0, end: 14}),
             frameRate: 25,
             repeat: -1       //The animation loops infinitely
         });
+
+        //Set hitbox size
+        this.setSize(104, 119, true);
     }
 
     //<editor-fold desc="Methods">
@@ -72,9 +90,25 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     Dash(impulsePercentage){
         this.body.velocity.y = (-400 * impulsePercentage);
+        this.dashPowerUpAnimation.visible = true;
+        this.dashPowerUpAnimation.anims.play('Dash');
+        let thisDash = this.dashPowerUpAnimation; //Variable for the change of scope
+        this.scene.time.addEvent({
+            delay: 500,
+            loop: false,
+            callback: function(){
+                thisDash.visible = false;
+                thisDash.anims.pause();
+            }
+        });
     }
 
-    TakeDamage(obstaclesCollide){
+    DashPowerUpFollow(){
+        this.dashPowerUpAnimation.x = this.x;
+        this.dashPowerUpAnimation.y = this.y + 60;
+    }
+
+    TakeDamage(obstaclesCollider, sawCollider){
         if(this.isgen_powerUp_shield_spriteed) {
             this.powerUpObject_Used.Destroy();
             return;
@@ -86,7 +120,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         //Change to "damaged" state
         this.tint = 0xff0000;
         this.isDamaged = true;
-        obstaclesCollide.active = false;
+        obstaclesCollider.active = false;
+        sawCollider.active = false;
 
         let thisPlayer = this; //Reference for the change of scope
 
@@ -106,7 +141,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
-                obstaclesCollide.active = true;
+                obstaclesCollider.active = true;
+                sawCollider.active = true;
             }
         });
     };
