@@ -1,7 +1,7 @@
 class Player extends Phaser.Physics.Arcade.Sprite{
     //Constructor
-    constructor(scene, id, controllable){
-        super(scene, scene.levelWidth / 2, scene.levelHeight - 300, 'player');
+    constructor(scene, id, controllable, initPos){
+        super(scene, initPos.x, initPos.y, 'player');
 
         console.log("Player constructor")
 
