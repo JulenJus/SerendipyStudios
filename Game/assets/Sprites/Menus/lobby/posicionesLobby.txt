@@ -66,16 +66,16 @@ Altura: 1200
 
 BigPenguin:
 Anchura: 136
-Altura: 247
+Altura: 250
 
 LittlePenguin1:
 Anchura: 607
-Altura: 196
+Altura: 212
 
 LittlePenguin2:
 Anchura: 607
-Altura: 355
+Altura: 371
 
 LittlePenguin3:
 Anchura: 607
-Altura: 515
+Altura: 530

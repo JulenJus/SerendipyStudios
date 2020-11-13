@@ -4,8 +4,9 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         console.log("Lobby constructor");
 
         this.LEVELS = [
-            "Level_01",
-            "Level_02"
+            "Nvl 1: Diagonales dolorosas",
+            "Nvl 2: Simetría sinuosa",
+            "Nvl 3: Trayecto tortuoso"
         ]
 
         this.CHARS = [
@@ -42,8 +43,13 @@ class Scene_03_0_Lobby extends Phaser.Scene {
             {
                 fontFamily: 'Stencil',
                 fontStyle: 'Bold',
-                fontSize: '48px',
-                fill: '#000000'
+                fontSize: '24px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5);
 
         //Selection backgrounds
@@ -83,11 +89,11 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         //Characters
         this.pjsSkinTexs = [];
         this.pjsSkinTexs.push(
-            this.add.sprite(0, 194, 'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[0]]] + 'Big')
+            this.add.sprite(136, 250, 'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[0]]] + 'Big')
                 .setOrigin(0, 0));
         for (let i = 1; i < 4; i++) {
             this.pjsSkinTexs.push(
-                this.add.sprite(575, 194 + (160 * (i - 1)),
+                this.add.sprite(607, 212 + (159 * (i - 1)),
                     'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[i]]] + 'Mini')
                     .setOrigin(0, 0));
         }
@@ -198,7 +204,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
 
     b_Play() {
         if(this.numPlayers === this.readyPlayers)
-            this.scene.start(this.levelName);
+            this.scene.start("Level_0" + (this.level+1).toString());
     }
 
     b_Exit() {
