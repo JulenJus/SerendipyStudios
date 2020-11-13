@@ -8,7 +8,7 @@ class Gen_Level extends Phaser.Scene {
 
         this.players = [];
 
-        this.gen_powerUpBox_spritees = null;
+        this.gen_powerUpBox_sprites = null;
 
         //Layers
         this.backgroundLayer = null;    //Back
@@ -41,8 +41,11 @@ class Gen_Level extends Phaser.Scene {
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
+        //Enemies
+        this.gen_saw_sprites = this.physics.add.staticGroup();
+
         //Power Ups
-        this.gen_powerUpBox_spritees = this.physics.add.staticGroup();
+        this.gen_powerUpBox_sprites = this.physics.add.staticGroup();
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, this.levelWidth, this.levelHeight);
@@ -61,7 +64,8 @@ class Gen_Level extends Phaser.Scene {
         //Initialize physics
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
-        this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_spritees, this.pickPowerUpCallback, null, this);
+        this.sawLayerCollision = this.physics.add.collider(thisPlayer, this.this.gen_saw_sprites, this.takeDamageCallback, null, this);
+        this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_sprites, this.pickPowerUpCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_finishLine_sprite, this.winCallback, null, this);
 
         //console.log(this.backgroundLayer.gen_finishLine_sprite);   //[HERE] The gen_finishLine_sprite is undefined
@@ -85,7 +89,7 @@ class Gen_Level extends Phaser.Scene {
     //<editor-fold desc="Callbacks">
     
     takeDamageCallback(player, dmgObject) {
-        player.TakeDamage(this.obstaclesLayerCollision);
+        player.TakeDamage(this.obstaclesLayerCollision, this.sawLayerCollision);
     }
 
     pickPowerUpCallback(player, gen_powerUpBox_sprite) {

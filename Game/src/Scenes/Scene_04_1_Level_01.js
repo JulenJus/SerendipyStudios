@@ -10,13 +10,16 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.create();
         super.createPlayer(this, 0, true);
 
+        //Add enemies
+        this.gen_saw_sprites.add(new Saw(this, {x: initPosx, y: initPosy}, {x: endPosx, y: endPosy}));
+
         //Add power ups
-        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
-        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
-        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
 
         //Play power up boxes animation
-        Phaser.Actions.Call(this.gen_powerUpBox_spritees.getChildren(), child => {
+        Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
             child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
         });
 
