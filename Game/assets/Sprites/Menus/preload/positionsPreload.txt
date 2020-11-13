@@ -1,11 +1,11 @@
 Texto1(Pintando pinchos)
-	Anchura: 259
+	Anchura: 264
 	Altura: 1010
 Texto2 (Colocando sierras)
-	Anchura: 233
+	Anchura: 241
 	Altura: 1010
 Texto3 (Llamando Unidades)
-	Anchura: 236
+	Anchura: 251
 	Altura: 1010
 
 preload_bar:
