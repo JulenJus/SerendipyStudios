@@ -7,6 +7,8 @@ class Scene_01_Preload extends Phaser.Scene {
     preload() {
         //<editor-fold desc="Preload animation">
 
+        /*
+
         //Set the progress vars
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
@@ -73,8 +75,15 @@ class Scene_01_Preload extends Phaser.Scene {
             percentText.destroy();
             assetText.destroy();
         });
+*/
 
         //</editor-fold>
+
+        //Pass preload progress info to charge scene
+        let thisScene = this.scene;
+        this.load.on('progress', function (value) {
+            thisScene.get('Charge').setProgress(value);//console.log(value);
+        });
 
         //<editor-fold desc="Load assets">
 
@@ -89,13 +98,16 @@ class Scene_01_Preload extends Phaser.Scene {
         this.loadRanking();
 
         //</editor-fold>
+        //console.log("I'm here");
 
     }
 
     create() {
-        //console.log("Preload");
+        console.log("Create preload");
         //this.scene.start("Level_01");
-        this.scene.start("MainMenu");
+
+        // this.scene.stop("Charge");
+        // this.scene.start("MainMenu");
     }
 
     //<editor-fold desc="Load functions">
@@ -153,17 +165,17 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadShop() {
-        this.load.image('shop_background','../assets/Sprites/Menus/Shop/shop_background.png');
-        this.load.image('shop_buttonMaps_static','../assets/Sprites/Menus/Shop/shop_buttonMaps_static.png');
-        this.load.image('shop_buttonMaps_over','../assets/Sprites/Menus/Shop/shop_buttonMaps_over.png');
-        this.load.image('shop_buttonSkins_static','../assets/Sprites/Menus/Shop/shop_buttonSkins_static.png');
-        this.load.image('shop_buttonSkins_over','../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
-        this.load.image('shop_buttonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
-        this.load.image('shop_buttonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
-        this.load.image('shop_mapsScreen','../assets/Sprites/Menus/Shop/shop_mapsScreen.png');
-        this.load.image('shop_skinsScreen','../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
-        this.load.image('shop_screensButtonExit_static','../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
-        this.load.image('shop_screensButtonExit_over','../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
+        this.load.image('shop_background', '../assets/Sprites/Menus/Shop/shop_background.png');
+        this.load.image('shop_buttonMaps_static', '../assets/Sprites/Menus/Shop/shop_buttonMaps_static.png');
+        this.load.image('shop_buttonMaps_over', '../assets/Sprites/Menus/Shop/shop_buttonMaps_over.png');
+        this.load.image('shop_buttonSkins_static', '../assets/Sprites/Menus/Shop/shop_buttonSkins_static.png');
+        this.load.image('shop_buttonSkins_over', '../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
+        this.load.image('shop_buttonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
+        this.load.image('shop_buttonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
+        this.load.image('shop_mapsScreen', '../assets/Sprites/Menus/Shop/shop_mapsScreen.png');
+        this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
+        this.load.image('shop_screensButtonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
+        this.load.image('shop_screensButtonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }
 
     loadLobby() {
@@ -224,13 +236,28 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('gen_player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
         //Player animations
-        this.load.spritesheet('gen_player_animation_Idle_Armin', '../assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png', {frameWidth: 141, frameHeight: 119});
-        this.load.spritesheet('gen_player_animation_Idle_Bob', '../assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png', {frameWidth: 153.74, frameHeight: 119});
-        this.load.spritesheet('gen_player_animation_Idle_Karta', '../assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png', {frameWidth: 123.56, frameHeight: 119});
-        this.load.spritesheet('gen_player_animation_Idle_Steve', '../assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png', {frameWidth: 128.8, frameHeight: 119});
+        this.load.spritesheet('gen_player_animation_Idle_Armin', '../assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png', {
+            frameWidth: 141,
+            frameHeight: 119
+        });
+        this.load.spritesheet('gen_player_animation_Idle_Bob', '../assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png', {
+            frameWidth: 153.74,
+            frameHeight: 119
+        });
+        this.load.spritesheet('gen_player_animation_Idle_Karta', '../assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png', {
+            frameWidth: 123.56,
+            frameHeight: 119
+        });
+        this.load.spritesheet('gen_player_animation_Idle_Steve', '../assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png', {
+            frameWidth: 128.8,
+            frameHeight: 119
+        });
 
         //Enemies animations
-        this.load.spritesheet('gen_saw_animation', '../assets/Sprites/Animations/Enemies/gen_saw_animation.png', {frameWidth: 128, frameHeight: 128});
+        this.load.spritesheet('gen_saw_animation', '../assets/Sprites/Animations/Enemies/gen_saw_animation.png', {
+            frameWidth: 128,
+            frameHeight: 128
+        });
         this.load.image('gen_saw_path', '../assets/Sprites/Animations/Enemies/gen_saw_path.png');
 
         //Power up sprite assets
@@ -238,11 +265,17 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('gen_powerUp_shield_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUp_shield_sprite.png');
 
         //Power ups animations
-        this.load.spritesheet('gen_powerUp_dash_animation', '../assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png', {frameWidth: 65, frameHeight: 100});
+        this.load.spritesheet('gen_powerUp_dash_animation', '../assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png', {
+            frameWidth: 65,
+            frameHeight: 100
+        });
 
         //Power up box animations
-        this.load.spritesheet('gen_powerUpBox_spriteAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png', {frameWidth: 400, frameHeight: 198});
-      
+        this.load.spritesheet('gen_powerUpBox_spriteAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png', {
+            frameWidth: 400,
+            frameHeight: 198
+        });
+
         //RaceLine
         //this.load.image('genLevel_gen_finishLine_sprite', '../assets/Sprites/UI/gen_finishLine_sprite.png'); //Turn all the assets to this nommenclature
         this.load.image('gen_finishLine_sprite', '../assets/Sprites/UI/gen_finishLine_sprite.png');
