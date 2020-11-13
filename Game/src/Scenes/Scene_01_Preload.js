@@ -148,7 +148,7 @@ class Scene_01_Preload extends Phaser.Scene {
     loadCredits() {
         this.load.image('credits_logs', '../assets/Sprites/Menus/Credits/credits_logs.png');
         this.load.image('credits_buttonTwitter_static', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_static.png');
-        this.load.image('credits_buttonTwitter_over', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_over.png');
+        this.load.image('credits_buttonTwitter_over', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_over_2.png');
     }
 
     loadShop() {
