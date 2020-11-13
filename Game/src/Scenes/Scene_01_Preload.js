@@ -106,8 +106,8 @@ class Scene_01_Preload extends Phaser.Scene {
         console.log("Create preload");
         //this.scene.start("Level_01");
 
-        // this.scene.stop("Charge");
-        // this.scene.start("MainMenu");
+        this.scene.stop("Charge");
+        this.scene.start("MainMenu");
     }
 
     //<editor-fold desc="Load functions">
