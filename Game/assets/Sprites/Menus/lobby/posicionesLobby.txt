@@ -63,3 +63,19 @@ Altura: 1218
 BotonJugar
 Anchura: 230
 Altura: 1200
+
+BigPenguin:
+Anchura: 136
+Altura: 247
+
+LittlePenguin1:
+Anchura: 607
+Altura: 196
+
+LittlePenguin2:
+Anchura: 607
+Altura: 355
+
+LittlePenguin3:
+Anchura: 607
+Altura: 515
