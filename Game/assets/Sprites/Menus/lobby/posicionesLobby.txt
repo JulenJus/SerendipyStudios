@@ -66,34 +66,16 @@ Altura: 1200
 
 BigPenguin:
 Anchura: 136
-Altura: 247
+Altura: 250
 
 LittlePenguin1:
 Anchura: 607
-Altura: 196
+Altura: 212
 
 LittlePenguin2:
 Anchura: 607
-Altura: 355
+Altura: 371
 
 LittlePenguin3:
 Anchura: 607
-Altura: 515
-
-BigKarta:
-Anchura: 87
-Altura: 515
-
-LittleKarta:
-Anchura: 599
-Altura: 196
-
-BigBob:
-Anchura: 123
-Altura: 258
-
-LittleBob:
-Anchura: 535
-Altura: 608
-
-
+Altura: 530

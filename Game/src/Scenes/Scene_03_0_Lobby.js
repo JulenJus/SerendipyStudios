@@ -4,31 +4,55 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         console.log("Lobby constructor");
 
         this.LEVELS = [
-            "Level_01",
-            "Level_02"
+            "Nvl 1: Diagonales dolorosas",
+            "Nvl 2: Simetría sinuosa",
+            "Nvl 3: Trayecto tortuoso"
         ]
 
-        this.SKINS = [
-            "Steve",
-            "Joe",
-            "Rurtha"
-        ]
+        this.CHARS = [
+            "armin",
+            "bob",
+            "karta",
+            "steve"
+        ];
     }
 
     init(args) {
+        this.numPlayers = 4;
+        this.readyPlayers = 3;  //[HERE] Configure this for the online!
+
         this.pjId = args.pjId;
         this.ready = false;
 
         this.color = args.color;
         this.level = 0;
 
-        this.pjsSkin = [0, 0, 0, 0]
+        this.pjsIds = [0, 3, 1, 2]      //Different players may contain different orders
+        this.pjsSkin = [3, 3, 3, 3]
+
     }
 
     create() {
         this.add.sprite(0, 0, 'lobby_background').setOrigin(0, 0);
         this.add.sprite(0, 194, 'lobby_buttonBigSel_' + this.color).setOrigin(0, 0);
 
+        //Level
+        this.levelName = this.LEVELS[this.level];
+        this.levelNameDisplay = this.add.text(this.game.config.width / 2, 85,
+            this.levelName,
+            {
+                fontFamily: 'Stencil',
+                fontStyle: 'Bold',
+                fontSize: '24px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
+            }).setOrigin(0.5, 0.5);
+
+        //Selection backgrounds
         let numInstantiatedLittleSel = 0;
         let colors = ["Blue", "Green", "Orange", "Red"];
         let cursedIndex = colors.find((value) => value === this.color);
@@ -54,7 +78,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         this.buttonsUI.push(this.add.sprite(13, 33, 'lobby_buttonSelBack_static').setOrigin(0, 0).setInteractive());
         this.buttonsUI.push(this.add.sprite(655, 33, 'lobby_buttonSelNext_static').setOrigin(0, 0).setInteractive());
         this.buttonsUI.push(this.add.sprite(36, 1200, 'lobby_buttonSalir_static').setOrigin(0, 0).setInteractive());
-        this.buttonsUI.push(this.add.sprite(230, 1200, 'lobby_buttonJugar_static').setOrigin(0, 0).setInteractive());
+        this.buttonsUI.push(this.add.sprite(230, 1200, 'lobby_buttonJugar_deactivated').setOrigin(0, 0).setInteractive());
 
         //Colors
         this.buttonsColors = [];
@@ -62,8 +86,33 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         this.buttonsColors.push(this.add.sprite(240, 572, 'lobby_buttonAccept_' + this.color).setOrigin(0, 0).setInteractive());
         this.buttonsColors.push(this.add.sprite(397, 572, 'lobby_buttonNext_' + this.color).setOrigin(0, 0).setInteractive());
 
-        //Level
-        this.levelName = this.LEVELS[this.level];
+        //Characters
+        this.pjsSkinTexs = [];
+        this.pjsSkinTexs.push(
+            this.add.sprite(136, 250, 'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[0]]] + 'Big')
+                .setOrigin(0, 0));
+        for (let i = 1; i < 4; i++) {
+            this.pjsSkinTexs.push(
+                this.add.sprite(607, 212 + (159 * (i - 1)),
+                    'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[i]]] + 'Mini')
+                    .setOrigin(0, 0));
+        }
+
+        //Ticks
+        this.pjsTicks = [];
+        this.pjsTicks.push(
+            this.add.sprite(469, 198, 'lobby_ready_bigTick')
+                .setOrigin(0, 0));
+        for (let i = 1; i < 4; i++) {
+            this.pjsTicks.push(
+                this.add.sprite(704, 196 + (159 * (i - 1)),
+                    'lobby_ready_littleTick')
+                    .setOrigin(0, 0));
+        }
+
+        for (let i = 0; i < 4; i++) {
+            this.pjsTicks[i].visible = false;
+        }
 
         //Init callbacks
         this.b_InitializeCallbacks();
@@ -74,17 +123,18 @@ class Scene_03_0_Lobby extends Phaser.Scene {
             switch (buttonIndex) {
                 case 0:
                     //console.log("Play change sprite: " + mode);
-                    //this.buttons[0].setTexture('lobby_buttonSelBack_' + mode);
+                    this.buttonsUI[0].setTexture('lobby_buttonSelBack_' + mode);
                     break;
                 case 1:
                     //console.log("HowToPlay change sprite: " + mode);
-                    //this.buttons[1].setTexture('lobby_buttonSelNext_' + mode);
+                    this.buttonsUI[1].setTexture('lobby_buttonSelNext_' + mode);
                     break;
                 case 2:
-                    //this.buttons[2].setTexture('lobby_buttonSalir_' + mode);
+                    this.buttonsUI[2].setTexture('lobby_buttonSalir_' + mode);
                     break;
                 case 3:
-                    //this.buttons[3].setTexture('lobby_buttonJugar_' + mode);
+                    if(this.numPlayers === this.readyPlayers)
+                        this.buttonsUI[3].setTexture('lobby_buttonJugar_' + mode);
                     break;
                 default:
                     break;
@@ -94,14 +144,14 @@ class Scene_03_0_Lobby extends Phaser.Scene {
             switch (buttonIndex) {
                 case 0:
                     //console.log("Play change sprite: " + mode);
-                    this.buttons[0].setTexture('lobby_buttonSelBack_' + mode);
+                    this.buttonsColors[0].setTexture('lobby_buttonSelBack_' + mode);
                     break;
                 case 1:
                     //console.log("HowToPlay change sprite: " + mode);
-                    this.buttons[1].setTexture('lobby_buttonSelNext_' + mode);
+                    this.buttonsColors[1].setTexture('lobby_buttonSelNext_' + mode);
                     break;
                 case 2:
-                    this.buttons[2].setTexture('lobby_buttonSalir_' + mode);
+                    this.buttonsColors[2].setTexture('lobby_buttonSalir_' + mode);
                     break;
                 default:
                     break;
@@ -148,11 +198,13 @@ class Scene_03_0_Lobby extends Phaser.Scene {
             }
         }
 
+        this.levelNameDisplay.setText(this.levelName);
         console.log(this.levelName);
     }
 
     b_Play() {
-        this.scene.start(this.levelName);
+        if(this.numPlayers === this.readyPlayers)
+            this.scene.start("Level_0" + (this.level+1).toString());
     }
 
     b_Exit() {
@@ -162,10 +214,10 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     //Colors callbacks
 
     b_PreviousSkin() {
-        if(this.ready) return;
+        if (this.ready) return;
 
         console.log("Previous skin")
-        this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === 0 ? this.SKINS.length - 1 : this.pjsSkin[this.pjId] - 1;
+        this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === 0 ? this.CHARS.length - 1 : this.pjsSkin[this.pjId] - 1;
         this.ShowSkin(this.pjId);
     }
 
@@ -174,20 +226,45 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         console.log("Skin selected: " + this.ready);
 
         //[HERE] Show the mark
-
+        this.ShowMark(this.pjId, this.ready);
     }
 
     b_NextSkin() {
-        if(this.ready) return;
+        if (this.ready) return;
 
         console.log("Next skin");
-        this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === this.SKINS.length - 1 ? 0 : this.pjsSkin[this.pjId] + 1;
+        this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === this.CHARS.length - 1 ? 0 : this.pjsSkin[this.pjId] + 1;
         this.ShowSkin(this.pjId);
     }
 
     ShowSkin(pjId) {
         //Change the texture of the pj
-        console.log("Player " + pjId + ": Skin " + this.SKINS[this.pjsSkin[pjId]]);
+        let pjLocalIndex = this.pjsIds.find((ele) => ele === pjId);
+        if (pjLocalIndex === 0) {
+            this.pjsSkinTexs[pjLocalIndex].setTexture(
+                'lobby_char_' + this.CHARS[this.pjsSkin[pjLocalIndex]] + 'Big'
+            );
+        } else {
+            this.pjsSkinTexs[pjLocalIndex].setTexture(
+                'lobby_char_' + this.CHARS[this.pjsSkin[pjLocalIndex]] + 'Mini'
+            );
+        }
+    }
+
+    ShowMark(pjId, isEnabled) {
+        //Enable/disable the mark
+        let pjLocalIndex = this.pjsIds.find((ele) => ele === pjId);
+        this.pjsTicks[pjLocalIndex].visible = isEnabled;
+
+        if(isEnabled)
+            this.readyPlayers++;
+        else
+            this.readyPlayers--;
+
+        if(this.numPlayers !== this.readyPlayers)
+            this.buttonsUI[3].setTexture('lobby_buttonJugar_deactivated');
+        else
+            this.buttonsUI[3].setTexture('lobby_buttonJugar_static');
     }
 
 }
