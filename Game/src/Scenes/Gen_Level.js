@@ -53,7 +53,7 @@ class Gen_Level extends Phaser.Scene {
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable);
+        let thisPlayer = new Player(level, id, controllable, {x:scene.levelWidth / 2, y: scene.levelHeight - 300});
 
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
