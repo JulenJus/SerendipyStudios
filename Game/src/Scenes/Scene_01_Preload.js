@@ -210,6 +210,9 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('gen_powerUpBox_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUpBox_sprite.png');
         this.load.image('gen_powerUp_shield_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUp_shield_sprite.png');
 
+        //Power ups animations
+        this.load.spritesheet('gen_powerUp_dash_animation', '../assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png', {frameWidth: 65, frameHeight: 100});
+
         //Power up box animations
         this.load.spritesheet('gen_powerUpBox_spriteAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png', {frameWidth: 400, frameHeight: 198});
       
