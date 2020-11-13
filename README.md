@@ -356,7 +356,7 @@ Steve
 
 ### 8. Sonido 
 
-Tanto la música como los efectos de sonido de Flyguins está pensada para crear un ambiente animado y caótico, dando así al jugador la sensación de que todo está en caos en todo momento. 
+Tanto la música como los efectos de sonido de Flyguins está pensada para crear un ambiente animado y caótico, dando así al jugador la sensación de que todo está en caos en todo momento. Todos estos assets de sonido son de un sitio web externo de libre uso, aunque algunos han sido modificados. En el punto 8.3. se mostrará el link de la funte externa de dichos assets.
 
 #### 8.1. Sonido ambiente y música 
 
