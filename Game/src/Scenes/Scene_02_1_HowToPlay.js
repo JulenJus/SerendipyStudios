@@ -6,7 +6,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
 
     create() {
         //Show the background
-        this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
+        this.add.sprite(0, 0, 'gen_mainscreen_simple').setOrigin(0, 0);
         this.add.sprite(0, 0, 'howToPlay_sgtoJack').setOrigin(0, 0);
 
         //Init the tips

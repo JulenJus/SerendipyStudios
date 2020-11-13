@@ -6,7 +6,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     create() {
         //Show the background
-        this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
+        this.add.sprite(0, 0, 'gen_mainscreen_simple').setOrigin(0, 0);
         this.add.sprite(35, 133, 'mainMenu_title').setOrigin(0, 0);
 
         //Show the buttons
