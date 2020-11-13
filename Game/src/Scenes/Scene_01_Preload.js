@@ -173,9 +173,14 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('lobby_buttonExit_static', '../assets/Sprites/Menus/Lobby/lobby_buttonExit_static.png');
         this.load.image('lobby_buttonPlay_static', '../assets/Sprites/Menus/Lobby/lobby_buttonPlay_static.png');
         this.load.image('lobby_buttonSalir_static', '../assets/Sprites/Menus/Lobby/lobby_buttonSalir_static.png');
+        this.load.image('lobby_buttonSalir_over', '../assets/Sprites/Menus/Lobby/lobby_buttonSalir_over.png');
         this.load.image('lobby_buttonJugar_static', '../assets/Sprites/Menus/Lobby/lobby_buttonJugar_static.png');
+        this.load.image('lobby_buttonJugar_over', '../assets/Sprites/Menus/Lobby/lobby_buttonJugar_over.png');
+        this.load.image('lobby_buttonJugar_deactivated', '../assets/Sprites/Menus/Lobby/lobby_buttonJugar_deactivated.png');
         this.load.image('lobby_buttonSelBack_static', '../assets/Sprites/Menus/Lobby/lobby_buttonSelBack_static.png');
+        this.load.image('lobby_buttonSelBack_over', '../assets/Sprites/Menus/Lobby/lobby_buttonSelBack_over.png');
         this.load.image('lobby_buttonSelNext_static', '../assets/Sprites/Menus/Lobby/lobby_buttonSelNext_static.png');
+        this.load.image('lobby_buttonSelNext_over', '../assets/Sprites/Menus/Lobby/lobby_buttonSelNext_over.png');
 
         //Colors
         let colors = ["Blue", "Green", "Orange", "Red"];
@@ -186,6 +191,23 @@ class Scene_01_Preload extends Phaser.Scene {
             this.load.image('lobby_buttonLittleSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_' + colors[i] + '.png');
             this.load.image('lobby_buttonNext_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '.png');
         }
+
+        //Characters
+        let chars = [
+            "armin",
+            "bob",
+            "karta",
+            "steve"
+        ];
+        for (let i = 0; i < chars.length; i++) {
+            this.load.image('lobby_char_' + chars[i] + 'Big', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Big.png');
+            this.load.image('lobby_char_' + chars[i] + 'Mini', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Mini.png');
+        }
+
+        //Done ticks
+        this.load.image('lobby_ready_bigTick', '../assets/Sprites/Menus/Lobby/lobby_ready_bigTick.png');
+        this.load.image('lobby_ready_littleTick', '../assets/Sprites/Menus/Lobby/lobby_ready_littleTick.png');
+
     }
 
     loadLevels() {
