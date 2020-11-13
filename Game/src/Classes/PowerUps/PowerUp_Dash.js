@@ -52,7 +52,7 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
         //this.player.powerUpObject_Used = this;
 
         //Display it on screen
-        powerUpTime.setText(this.numDashes);
+        //powerUpTime.setText(this.numDashes);
 
         //Use one charge of the powerUp
         this.player.Dash(this.dashImpulsePercentage);
@@ -74,7 +74,7 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
 
     //This method is used to cleanly destroy the power up.
     Destroy(){
-        powerUpTime.setText('');
+        //powerUpTime.setText('');
         this.player.powerUpObject_Boxed = null;
         //this.player.powerUpObject_Used = null;
         delete this;

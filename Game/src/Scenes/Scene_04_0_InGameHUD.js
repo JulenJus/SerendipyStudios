@@ -1,5 +1,5 @@
 //Global variables
-let powerUpTime;
+//let powerUpTime;
 let raceTimeCount = 30;
 
 class Scene_04_0_InGameHUD extends Phaser.Scene {
@@ -42,12 +42,12 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             fill: '#000000'
         }).setOrigin(0.5, 0);
 
-        powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
-            fontFamily: 'Gelato',
-            fontStyle: 'Italic',
-            fontSize: '64px',
-            fill: '#000000'
-        });
+        // powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
+        //     fontFamily: 'Gelato',
+        //     fontStyle: 'Italic',
+        //     fontSize: '64px',
+        //     fill: '#000000'
+        // });
 
         //Movement bar
         this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'UI_bar');
