@@ -198,13 +198,16 @@ class Scene_01_Preload extends Phaser.Scene {
 
     loadGenLevel() {
         //Player sprites
-        this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
+        this.load.image('gen_player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
-        //Players animations
+        //Player animations
         this.load.spritesheet('gen_player_animation_Idle_Armin', '../assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png', {frameWidth: 141, frameHeight: 119});
         this.load.spritesheet('gen_player_animation_Idle_Bob', '../assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png', {frameWidth: 153.74, frameHeight: 119});
         this.load.spritesheet('gen_player_animation_Idle_Karta', '../assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png', {frameWidth: 123.56, frameHeight: 119});
         this.load.spritesheet('gen_player_animation_Idle_Steve', '../assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png', {frameWidth: 128.8, frameHeight: 119});
+
+        //Enemies animations
+        this.load.spritesheet('gen_saw_animation', '../assets/Sprites/Animations/Enemies/gen_saw_animation.png', {frameWidth: 65, frameHeight: 100});
 
         //Power up sprite assets
         this.load.image('gen_powerUpBox_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUpBox_sprite.png');

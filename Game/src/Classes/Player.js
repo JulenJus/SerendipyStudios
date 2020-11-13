@@ -1,7 +1,7 @@
 class Player extends Phaser.Physics.Arcade.Sprite{
     //Constructor
     constructor(scene, id, controllable, initPos){
-        super(scene, initPos.x, initPos.y, 'player');
+        super(scene, initPos.x, initPos.y, 'gen_player');
 
         console.log("Player constructor")
 
@@ -74,7 +74,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.body.velocity.y = (-400 * impulsePercentage);
     }
 
-    TakeDamage(obstaclesCollide){
+    TakeDamage(obstaclesCollider, sawCollider){
         if(this.isgen_powerUp_shield_spriteed) {
             this.powerUpObject_Used.Destroy();
             return;
@@ -86,7 +86,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         //Change to "damaged" state
         this.tint = 0xff0000;
         this.isDamaged = true;
-        obstaclesCollide.active = false;
+        obstaclesCollider.active = false;
+        sawCollider.active = false;
 
         let thisPlayer = this; //Reference for the change of scope
 
@@ -106,7 +107,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 //Return to normal state
                 thisPlayer.clearTint();
                 thisPlayer.isDamaged = false;
-                obstaclesCollide.active = true;
+                obstaclesCollider.active = true;
+                sawCollider.active = true;
             }
         });
     };
