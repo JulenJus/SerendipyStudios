@@ -315,6 +315,8 @@ Escudo Brillando
 - Pantallas
 
 
+
+
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
 
@@ -352,6 +354,15 @@ Karta
 Steve
 
 #### 7.2. Objetos 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Box/Box.gif" width="125">
+Caja
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Dash/dashGif.gif" width="125">
+Dash
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Enemies/gen_saw_animation.gif" width="125">
+Cuchillas
 
 
 ### 8. Sonido 
