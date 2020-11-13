@@ -285,7 +285,7 @@ Armin
 Bob
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
-Kurta
+Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 Sargento Jack
@@ -341,21 +341,41 @@ Armin
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
 Bob
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/Assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
+Karta
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
+Steve
+
 #### 7.2. Objetos 
 
 
 ### 8. Sonido 
 
+Tanto la música como los efectos de sonido de Flyguins está pensada para crear un ambiente animado y caótico, dando así al jugador la sensación de que todo está en caos en todo momento. 
+
 #### 8.1. Sonido ambiente y música 
 
+Habrá dos pistas de música en el juego: la de las pantallas del menú, créditos, controles... y la del propio juego en sí, es decir, una vez se encuentre el jugador en uno de los niveles. Para todos los niveles habrá la misma pista de audio, puesto que el fuerte del juego no es la variadad de música que puede llegar a haber, sino el gameplay, por lo que se ha centrado todo en tener una sola pista que haga que el jugador se sumerja en la dimanicidad de la acción de los niveles.
+
 #### 8.2. Efectos sonoros 
+
+Los efectos de sonido, a diferencia de la música de fondo, son más minimalistas y simples, puesto que, al haber tantos efectos de sonido (calisiones con las paredes, suelo, ocn otros pingüinos, con objetos, el aleteo...), podría ser estresante para el jugador escuchar efectos muy elaborados. También tendrán un volumen más bajo que la música de fondo, para que el jugador no se canse de escucharlo (por ejemplo, el pingüino estará aleteando constantemente, por lo que se ha escogido un sonido sencillo y simplista para no molestar al usuario).
 
 #### 8.3. Lista de sonidos 
 
 
 ### 9. Interfaz 
 
+La interfaz de juego es sencilla, intentando ocupar lo menos posible, teniendo en cuenta que el usuario necesitará ver lo máximo que pueda, ya que tiene que tener en cuenta varios elementos del juego en todo momento. La disposición de los distintos elementos de la interfaz es la siguiente:
+
+En la parte inferior de la pantalla aparecerá una barra horizontal que indica la intensidad con la que el pringüino se propulsará, y una barra vertical más pequeña recorrido la barra horizontal. Estas dos barras serán las que determinen la intensidad con la que se propulsará el pingüino. En la parte izquierda, se encuentra una barra vertical que indica el progreso del pingüino a lo largo de todo el mapa. En la parte superior, encontramos dos elementos: en la esquina izquierda, está el hueco en el que se almacenará el objeto que coja el pingüino, listo para consumir. En la esquina derecha, está el botón de salir.
+
+
+
 #### 9.1. Diseños básicos de los menús 
+
+Todos los menús tienen una estética de lugar helado, por lo que todos los botones son trozos de hielo. El menú de la tienda está a cargo de Kurta, hermana de Karta, por lo que se refuerza más el hecho de que sea una tienda. En el menú de cómo jugar, Jack estará a cargo de enseñar a los jugadores los controles básicos y los distintos elementos, por lo que el jugador podrá sentir que alguien veterano le está enseñando a jugar.
 
 #### 9.2. Diagrama de flujo 
 

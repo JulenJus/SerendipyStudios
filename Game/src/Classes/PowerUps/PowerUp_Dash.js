@@ -1,7 +1,7 @@
 class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
     //Constructor
     constructor(player/*, scene, posX, posY*/){
-        //super(scene, posX, posY, 'powerUpBox');
+        //super(scene, posX, posY, 'gen_powerUpBox_sprite');
         //this.thisScene = scene;
 
         //scene.add.existing(this);
@@ -35,10 +35,10 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
     //             //this.icon.destroy();
     //             break;
     //         case 1:
-    //             //this.icon.setTexture('dashPowerUp1').setScale(0.5);
+    //             //this.icon.setTexture('UI_dashPowerUp1').setScale(0.5);
     //             break;
     //         case 2:
-    //             //this.icon.setTexture('dashPowerUp2').setScale(0.5);
+    //             //this.icon.setTexture('UI_dashPowerUp2').setScale(0.5);
     //             break;
     //         case 3:
     //             RenderPowerUpIcon('dash');
