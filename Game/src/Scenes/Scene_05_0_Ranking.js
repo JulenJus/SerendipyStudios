@@ -18,13 +18,11 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     create() {
-        console.log("Ranking create")
+        console.log("Ranking create");
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
-        this.tiles = this.map.addTilesetImage
-        ('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
-
+        this.tiles = this.map.addTilesetImage('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
 
         //Set level height and width according to the json's
         this.levelWidth = this.map.width * this.map.tileWidth;
@@ -37,7 +35,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
         //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
-        this.backgroundLayer.setCollisionByProperty({finishLine: true});
+        this.backgroundLayer.setCollisionByProperty({collide: true});
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, this.levelWidth, this.levelHeight);
@@ -61,13 +59,14 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable);
+        let thisPlayer = new Player(level, id, controllable, { x:this.levelWidth / 2, y: this.levelHeight - 500});
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
-        console.log(this.physics.add.overlap(thisPlayer, this.backgroundLayer, this.collideCallback(), null, this));
-        console.log(this.physics.add.overlap(thisPlayer, this.wallsLayer, this.collideCallback(), null, this));
+        //Set collisions between player and layers
+        this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
+        this.physics.add.collider(thisPlayer,  this.backgroundLayer, null, null, this);
 
         //Camera
         if (controllable) {
@@ -77,6 +76,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     collideCallback() {
-        console.log("Collision")
+        console.log("Collision");
     }
 }

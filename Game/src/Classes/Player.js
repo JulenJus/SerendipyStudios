@@ -1,7 +1,7 @@
 class Player extends Phaser.Physics.Arcade.Sprite{
     //Constructor
-    constructor(scene, id, controllable){
-        super(scene, scene.levelWidth / 2, scene.levelHeight - 300, 'player');
+    constructor(scene, id, controllable, initPos){
+        super(scene, initPos.x, initPos.y, 'player');
 
         console.log("Player constructor")
 
@@ -29,7 +29,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         //Set state variables
         this.isDamaged = false;
-        this.isShielded = false;
+        this.isgen_powerUp_shield_spriteed = false;
 
         //Set power up variables
         this.powerUpType = "none";
@@ -40,10 +40,10 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         //Set race variables
         this.racePosition = 1;
 
-        //Player Animations
+        //Player Animations //[HERE] Make it general
         this.scene.anims.create({
-            key: 'ArminAnimation_Idle',     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('ArminAnimation_Idle', {start: 0, end: 14}),
+            key: 'gen_player_animation_Idle_Armin',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
             frameRate: 25,
             repeat: -1       //The animation loops infinitely
         });
@@ -75,7 +75,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
 
     TakeDamage(obstaclesCollide){
-        if(this.isShielded) {
+        if(this.isgen_powerUp_shield_spriteed) {
             this.powerUpObject_Used.Destroy();
             return;
         }
