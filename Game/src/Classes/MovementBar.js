@@ -1,6 +1,6 @@
 class MovementBar extends Phaser.GameObjects.Sprite {
     constructor(scene) {
-        super(scene, scene.levelWidth / 2, scene.levelHeight - 32, 'bar');
+        super(scene, scene.levelWidth / 2, scene.levelHeight - 32, 'UI_bar');
 
         //Control variables
         this.isRunning = false;

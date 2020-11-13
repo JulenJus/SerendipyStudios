@@ -24,11 +24,22 @@
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Tilemaps/ranking.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tilemaps/ranking.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Armin/FlutterBob.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic PowerUps/PowerUpBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic PowerUps/Shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Tilemaps/mapa1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Tilemaps/mapa1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/MovementBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MovementBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Shield.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Shield.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +112,7 @@
       <workItem from="1604742040727" duration="5370000" />
       <workItem from="1604916711056" duration="21353000" />
       <workItem from="1605017669762" duration="7923000" />
+      <workItem from="1605258430652" duration="2951000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
@@ -224,10 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602234167541" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1605052848989">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1605259532079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605052848989" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605259532079" />
     <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1604489211975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

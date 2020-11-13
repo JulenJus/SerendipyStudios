@@ -18,7 +18,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     create() {
-        console.log("Ranking create")
+        console.log("Ranking create");
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -77,6 +77,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     collideCallback() {
-        console.log("Collision")
+        console.log("Collision");
     }
 }

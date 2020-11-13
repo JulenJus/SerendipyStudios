@@ -201,44 +201,44 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('player', '../assets/Sprites/Characters/Armin/ArminScaled.png');
 
         //Players animations
-        this.load.spritesheet('ArminAnimation_Idle', '../assets/Sprites/Animations/Armin/ArminAnimation_Idle.png', {frameWidth: 141, frameHeight: 119});
-        this.load.spritesheet('SteveAnimation_Idle', '../assets/Sprites/Animations/Steve/SteveAnimation_Idle.png', {frameWidth: 128.8, frameHeight: 119});
-        this.load.spritesheet('BobAnimation_Idle', '../assets/Sprites/Animations/Bob/BobAnimation_Idle.png', {frameWidth: 153.74, frameHeight: 119});
-        this.load.spritesheet('KartaAnimation_Idle', '../assets/Sprites/Animations/Karta/KartaAnimation_Idle.png', {frameWidth: 123.56, frameHeight: 119});
+        this.load.spritesheet('gen_player_animation_Idle_Armin', '../assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png', {frameWidth: 141, frameHeight: 119});
+        this.load.spritesheet('gen_player_animation_Idle_Bob', '../assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png', {frameWidth: 153.74, frameHeight: 119});
+        this.load.spritesheet('gen_player_animation_Idle_Karta', '../assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png', {frameWidth: 123.56, frameHeight: 119});
+        this.load.spritesheet('gen_player_animation_Idle_Steve', '../assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png', {frameWidth: 128.8, frameHeight: 119});
 
         //Power up sprite assets
-        this.load.image('powerUpBox', '../assets/Sprites/Basic PowerUps/PowerUpBox.png');
-        this.load.image('shield', '../assets/Sprites/Basic PowerUps/Shield.png');
+        this.load.image('gen_powerUpBox_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUpBox_sprite.png');
+        this.load.image('gen_powerUp_shield_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUp_shield_sprite.png');
 
         //Power up box animations
-        this.load.spritesheet('powerUpBoxAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/BoxSheet.png', {frameWidth: 400, frameHeight: 198});
+        this.load.spritesheet('gen_powerUpBox_spriteAnimation_Idle', '../assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png', {frameWidth: 400, frameHeight: 198});
       
         //RaceLine
-        //this.load.image('genLevel_finishLine', '../assets/Sprites/UI/finishLine.png'); //Turn all the assets to this nommenclature
-        this.load.image('finishLine', '../assets/Sprites/UI/finishLine.png');
+        //this.load.image('genLevel_gen_finishLine_sprite', '../assets/Sprites/UI/gen_finishLine_sprite.png'); //Turn all the assets to this nommenclature
+        this.load.image('gen_finishLine_sprite', '../assets/Sprites/UI/gen_finishLine_sprite.png');
     }
 
     loadInGameHUD() {
         //General UI
-        this.load.image('powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
-        this.load.image('exitButtonUI', '../assets/Sprites/UI/inGame_buttonExit.png');
+        this.load.image('UI_powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
+        this.load.image('UI_exitButton', '../assets/Sprites/UI/inGame_buttonExit.png');
 
         //MovementBar UI
-        this.load.image('bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
-        this.load.image('blueMark', '../assets/Sprites/UI/hieloazul.png');
-        this.load.image('greenMark', '../assets/Sprites/UI/hieloverde.png');
-        this.load.image('yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
-        this.load.image('redMark', '../assets/Sprites//UI/hielorojo.png');
+        this.load.image('UI_bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
+        this.load.image('UI_blueMark', '../assets/Sprites/UI/hieloazul.png');
+        this.load.image('UI_greenMark', '../assets/Sprites/UI/hieloverde.png');
+        this.load.image('UI_yellowMark', '../assets/Sprites/UI/hieloamarillo.png');
+        this.load.image('UI_redMark', '../assets/Sprites//UI/hielorojo.png');
 
         //Race progress UI
-        this.load.image('raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
-        this.load.image('playerMark', '../assets/Sprites/UI/PlayerMark.png');
+        this.load.image('UI_raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
+        this.load.image('UI_playerMark', '../assets/Sprites/UI/PlayerMark.png');
 
         //Power ups
-        this.load.image('shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
-        this.load.image('dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
-        this.load.image('dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
-        this.load.image('dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
+        this.load.image('UI_shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');
+        this.load.image('UI_dashPowerUp1', '../assets/Sprites/UI/inGame_boostVel1.png');//Buttons assets
+        this.load.image('UI_dashPowerUp2', '../assets/Sprites/UI/inGame_boostVel2.png');
+        this.load.image('UI_dashPowerUp3', '../assets/Sprites/UI/inGame_boostVel3.png');
     }
 
     loadLevel01() {

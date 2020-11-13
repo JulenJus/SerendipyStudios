@@ -1,7 +1,7 @@
-class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
+class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
     //Constructor
     constructor(player, scene/*, posX, posY*/) {
-        //super(scene, posX, posY, 'powerUpBox');
+        //super(scene, posX, posY, 'gen_powerUpBox_sprite');
         super(player);
         this.scene = scene;
 
@@ -14,7 +14,7 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
         // this.sprite = null;
 
         //Setup power up variables
-        this.shieldTime = 5; //Time to control the power up's duration
+        this.gen_powerUp_shield_spriteTime = 5; //Time to control the power up's duration
         this.isActive = false; //Variable used to control whether the timer should or not destroy the sprite.
     }
 
@@ -23,7 +23,7 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
         this.player.powerUpObject_Boxed = this;
 
         //Display it in the box
-        console.log("Power up: Shield.");
+        console.log("Power up: gen_powerUp_shield_sprite.");
         this.player.onPaintPowerUpIcon.emit('onPaintPowerUpIcon', "shield", true, null);//Show the icon in the powerU  up box
 
     }
@@ -31,8 +31,8 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
     Use() {
         this.isActive = true;
 
-        //If you already have a shield, then destroy it and create a new one
-        if (this.player.isShielded) {
+        //If you already have a gen_powerUp_shield_sprite, then destroy it and create a new one
+        if (this.player.isgen_powerUp_shield_spriteed) {
             this.player.powerUpObject_Used.Destroy();
         }
 
@@ -47,23 +47,23 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
         this.player.powerUpObject_Used = this;
 
         //Display it on screen
-        powerUpTime.setText(this.shieldTime);
+        powerUpTime.setText(this.gen_powerUp_shield_spriteTime);
 
-        //Create the shield
-        this.player.isShielded = true;
-        this.sprite = this.scene.add.sprite(this.player.x, this.player.y, 'shield').setScale(0.1);
+        //Create the gen_powerUp_shield_sprite
+        this.player.isgen_powerUp_shield_spriteed = true;
+        this.sprite = this.scene.add.sprite(this.player.x, this.player.y, 'gen_powerUp_shield_sprite').setScale(0.1);
 
         //Set the timer
         let thisObj = this;
-        let thisShieldTime = this.shieldTime;
+        let thisgen_powerUp_shield_spriteTime = this.gen_powerUp_shield_spriteTime;
 
         this.scene.time.addEvent({
             delay: 1000,
             repeat: 5,
             loop: false,
             callback: function () {
-                if (thisShieldTime > 1) {
-                    powerUpTime.setText(--thisShieldTime);
+                if (thisgen_powerUp_shield_spriteTime > 1) {
+                    powerUpTime.setText(--thisgen_powerUp_shield_spriteTime);
                 } else {
                     if (thisObj.isActive)
                         thisObj.Destroy();
@@ -82,7 +82,7 @@ class PowerUp_Shield extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/ {
         this.isActive = false;
 
         powerUpTime.setText('');
-        this.player.isShielded = false;
+        this.player.isgen_powerUp_shield_spriteed = false;
         this.sprite.destroy();
 
         this.player.powerUpObject_Used = null;
