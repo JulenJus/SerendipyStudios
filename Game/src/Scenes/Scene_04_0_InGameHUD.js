@@ -9,7 +9,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
         //Power up icons
         this.dashIcon = null;
-        this.shieldIcon = null;
+        this.gen_powerUp_shield_spritIcon = null;
 
         //console.log("Ingame hud constructor");
     }
@@ -50,9 +50,9 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         });
 
         //Movement bar
-        this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'bar');
-        this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
-        this.ghostBarMark = this.add.sprite(-500, -500, 'blueMark');
+        this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'UI_bar');
+        this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'UI_blueMark');
+        this.ghostBarMark = this.add.sprite(-500, -500, 'UI_blueMark');
 
         //Initialize bar
         this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
@@ -61,12 +61,12 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //this.StartCountdown();
 
         //PowerUp stuff
-        this.powerUpBox = this.add.sprite(80, 80, 'powerUpEmpty').setScale(0.5);
+        this.gen_powerUpBox_sprite = this.add.sprite(80, 80, 'UI_powerUpEmpty').setScale(0.5);
         this.player.onPaintPowerUpIcon.on('onPaintPowerUpIcon', this.onPaintPowerUpIcon, this);
 
         //Race bar
-        this.raceBar = this.add.sprite(60, 700, 'raceBar');
-        this.playerMark = this.add.sprite(45, 1085, 'playerMark');
+        this.raceBar = this.add.sprite(60, 700, 'UI_raceBar');
+        this.playerMark = this.add.sprite(45, 1085, 'UI_playerMark');
 
         //Race position
         this.racePosition = this.add.text(60, 230, '1st', {
@@ -77,7 +77,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }).setOrigin(0.5, 0);
 
         //Exit button
-        this.add.sprite(700, 70, 'exitButtonUI').setScale(0.6);
+        this.add.sprite(700, 70, 'UI_exitButton').setScale(0.6);
     }
 
     update() {
@@ -107,13 +107,13 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
         switch (tier) {
             case 0:
-                sprite = 'redMark';
+                sprite = 'UI_redMark';
                 break;
             case 1:
-                sprite = 'yellowMark';
+                sprite = 'UI_yellowMark';
                 break;
             case 2:
-                sprite = 'greenMark';
+                sprite = 'UI_greenMark';
                 break;
         }
 
@@ -125,7 +125,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             sprite);
 
         this.barMark.destroy();
-        this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'blueMark');
+        this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'UI_blueMark');
     }
 
     onPaintPowerUpIcon(type, enable, args) {
@@ -137,22 +137,22 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
                         this.dashIcon = null;
                         break;
                     case 1:
-                        this.dashIcon.setTexture('dashPowerUp1').setScale(0.5);
+                        this.dashIcon.setTexture('UI_dashPowerUp1').setScale(0.5);
                         break;
                     case 2:
-                        this.dashIcon.setTexture('dashPowerUp2').setScale(0.5);
+                        this.dashIcon.setTexture('UI_dashPowerUp2').setScale(0.5);
                         break;
                     case 3:
-                        this.dashIcon = this.add.sprite(80, 60, 'dashPowerUp3').setScale(0.5);
+                        this.dashIcon = this.add.sprite(80, 60, 'UI_dashPowerUp3').setScale(0.5);
                         break;
                 }
                 break;
             case "shield":
                 if (enable) {
-                    this.shieldIcon = this.add.sprite(80, 65, 'shieldPowerUp').setScale(0.45);
+                    this.gen_powerUp_shield_spritIcon = this.add.sprite(80, 65, 'UI_shieldPowerUp').setScale(0.45);
                 } else {
-                    this.shieldIcon.destroy();
-                    this.shieldIcon = null;
+                    this.gen_powerUp_shield_spritIcon.destroy();
+                    this.gen_powerUp_shield_spritIcon = null;
                 }
                 break;
         }

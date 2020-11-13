@@ -1,0 +1,3 @@
+POWERUPS POSITIONS
+
+this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 448 , 2816 ));

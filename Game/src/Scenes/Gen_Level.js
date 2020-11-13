@@ -8,7 +8,7 @@ class Gen_Level extends Phaser.Scene {
 
         this.players = [];
 
-        this.powerUpBoxes = null;
+        this.gen_powerUpBox_spritees = null;
 
         //Layers
         this.backgroundLayer = null;    //Back
@@ -32,7 +32,7 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.finishLine = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'finishLine'); //Create finish line
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
         this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -42,7 +42,7 @@ class Gen_Level extends Phaser.Scene {
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
         //Power Ups
-        this.powerUpBoxes = this.physics.add.staticGroup();
+        this.gen_powerUpBox_spritees = this.physics.add.staticGroup();
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, this.levelWidth, this.levelHeight);
@@ -59,7 +59,7 @@ class Gen_Level extends Phaser.Scene {
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Play Idle animation
-        thisPlayer.anims.play('ArminAnimation_Idle');
+        thisPlayer.anims.play('gen_player_animation_Idle_Armin');
 
         //Set hitbox size
         thisPlayer.setSize(104, 119, true);
@@ -67,11 +67,11 @@ class Gen_Level extends Phaser.Scene {
         //Initialize physics
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
-        this.physics.add.overlap(thisPlayer, this.powerUpBoxes, this.pickPowerUpCallback, null, this);
-        this.physics.add.overlap(thisPlayer, this.finishLine, this.winCallback, null, this);
+        this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_spritees, this.pickPowerUpCallback, null, this);
+        this.physics.add.overlap(thisPlayer, this.gen_finishLine_sprite, this.winCallback, null, this);
 
-        //console.log(this.backgroundLayer.finishLine);   //[HERE] The finishLine is undefined
-        //console.log(finishLineOverlap); //[HERE] As you can see, the object2 is undefined
+        //console.log(this.backgroundLayer.gen_finishLine_sprite);   //[HERE] The gen_finishLine_sprite is undefined
+        //console.log(gen_finishLine_spriteOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera
         if (controllable) {
@@ -93,18 +93,26 @@ class Gen_Level extends Phaser.Scene {
         player.TakeDamage(this.obstaclesLayerCollision);
     }
 
-    pickPowerUpCallback(player, powerUpBox) {
-        powerUpBox.PickBox(player);
+    pickPowerUpCallback(player, gen_powerUpBox_sprite) {
+        gen_powerUpBox_sprite.PickBox(player);
     }
 
     winCallback(player, raceLine) {
-        // console.log("You win");
-        // console.log("POS X: " + player.body.position.x);
-        // console.log("POS Y: " + player.body.position.y);
+        this.scene.stop("InGameHUD");
+        this.scene.start("Ranking");
     }
 
     endRace(){
+        this.scene.stop("InGameHUD");
         this.scene.start("Ranking");
+    }
+
+    Exit(){
+        this.winCallback();
+        //this.scene.stop("InGameHUD")
+
+        //this.endRace();
+        //this.scene.start("MainMenu");
     }
 
     //Camera zoom (not used)

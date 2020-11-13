@@ -1,17 +1,17 @@
 class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     //Constructor
     constructor(scene, posX, posY) {
-        super(scene, posX, posY, 'powerUpBox');
+        super(scene, posX, posY, 'gen_powerUpBox_sprite');
         this.scene = scene;
-        //this.shieldTime = 5; //Time to control the power up's duration
+        //this.gen_powerUp_shield_spriteTime = 5; //Time to control the power up's duration
 
         scene.add.existing(this);
         this.setScale(0.3, 0.3);
 
         //Power ups animations
         this.scene.anims.create({ //Shaking animation
-            key: 'powerUpBoxAnimation_Idle',     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('powerUpBoxAnimation_Idle', {start: 0, end: 17}),
+            key: 'gen_powerUpBox_spriteAnimation_Idle',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_powerUpBox_spriteAnimation_Idle', {start: 0, end: 17}),
             frameRate: 20,
             repeat: -1       //The animation loops infinitely
         });
@@ -21,13 +21,13 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     PickBox(player) {
         //Give the player a random power Up [HERE]
         //this.GetDashPowerUp();
-        // if(!player.isShielded)
-        //     this.GetShieldPowerUp();
+        // if(!player.isgen_powerUp_shield_spriteed)
+        //     this.Getgen_powerUp_shield_spritePowerUp();
 
         if (player.powerUpObject_Boxed === null) {
             switch (Phaser.Math.Between(0, 1)) {
                 case 0:
-                    new PowerUp_Shield(player, this.scene).Pick();
+                    new PowerUp_gen_powerUp_shield_sprite(player, this.scene).Pick();
                     break;
                 case 1:
                     new PowerUp_Dash(player).Pick();
@@ -51,22 +51,22 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     //     powerUpTime.setText(player.numDashes);
     // }
 
-    // GetShieldPowerUp(){
+    // Getgen_powerUp_shield_spritePowerUp(){
     //     //Set the object
     //     player.powerUpObject = this;
     //
     //     //Show it on screen
-    //     powerUpTime.setText(this.shieldTime);
+    //     powerUpTime.setText(this.gen_powerUp_shield_spriteTime);
     //
-    //     //Create the shield
-    //     player.isShielded = true;
-    //     player.powerUp_shield = this.thisScene.add.sprite(player.x, player.y, 'shield').setScale(0.1);
+    //     //Create the gen_powerUp_shield_sprite
+    //     player.isgen_powerUp_shield_spriteed = true;
+    //     player.powerUp_gen_powerUp_shield_sprite = this.thisScene.add.sprite(player.x, player.y, 'gen_powerUp_shield_sprite').setScale(0.1);
     //
     //     //Disable damages
     //     //obstacles.active = false;
     //
     //     //Reference for the change of scope
-    //     let thisShieldTime = this.shieldTime;
+    //     let thisgen_powerUp_shield_spriteTime = this.gen_powerUp_shield_spriteTime;
     //
     //     this.thisScene.time.addEvent({
     //         delay: 1000,
@@ -74,16 +74,16 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     //         loop: false,
     //         callback: function(){
     //
-    //             if(thisShieldTime > 1){
-    //                 powerUpTime.setText(--thisShieldTime);
+    //             if(thisgen_powerUp_shield_spriteTime > 1){
+    //                 powerUpTime.setText(--thisgen_powerUp_shield_spriteTime);
     //             }else{
-    //                 if(player.isShielded)
-    //                     this.DestroyShieldPowerUp();
+    //                 if(player.isgen_powerUp_shield_spriteed)
+    //                     this.Destroygen_powerUp_shield_spritePowerUp();
     //                 /*
-    //                 //Destroy shield
+    //                 //Destroy gen_powerUp_shield_sprite
     //                 powerUpTime.setText('');
-    //                 player.isShielded = false;
-    //                 player.powerUp_shield.destroy();
+    //                 player.isgen_powerUp_shield_spriteed = false;
+    //                 player.powerUp_gen_powerUp_shield_sprite.destroy();
     //
     //                 //Reactive damage
     //                 obstacles.active = true;
@@ -93,9 +93,9 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
     //     });
     // }
     //
-    // DestroyShieldPowerUp(){
+    // Destroygen_powerUp_shield_spritePowerUp(){
     //     powerUpTime.setText('');
-    //     player.isShielded = false;
-    //     player.powerUp_shield.destroy();
+    //     player.isgen_powerUp_shield_spriteed = false;
+    //     player.powerUp_gen_powerUp_shield_sprite.destroy();
     // }
 }

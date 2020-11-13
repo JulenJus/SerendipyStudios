@@ -11,13 +11,13 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.createPlayer(this, 0, true);
 
         //Add power ups
-        this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
-        this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
-        this.powerUpBoxes.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
+        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
+        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
+        this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
 
         //Play power up boxes animation
-        Phaser.Actions.Call(this.powerUpBoxes.getChildren(), child => {
-            child.anims.play('powerUpBoxAnimation_Idle');
+        Phaser.Actions.Call(this.gen_powerUpBox_spritees.getChildren(), child => {
+            child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
         });
 
         //<editor-fold desc="Tilemap visual debugging">
@@ -55,15 +55,4 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.update();
     }
     //</editor-fold>
-
-    winCallback(){
-        this.scene.start("MainMenu");
-    }
-
-    Exit(){
-        this.scene.stop("InGameHUD")
-
-        //this.endRace();
-        this.scene.start("MainMenu");
-    }
 }

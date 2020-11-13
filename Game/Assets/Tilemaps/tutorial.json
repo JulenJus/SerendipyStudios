@@ -134,7 +134,7 @@
                  "id":12,
                  "properties":[
                         {
-                         "name":"finishLine",
+                         "name":"gen_finishLine_sprite",
                          "type":"bool",
                          "value":true
                         }]
