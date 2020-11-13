@@ -1,7 +1,7 @@
 POWERUPS POSITIONS
 
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 2496 , 15424 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 3328 , 13760 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 2944 , 8128 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 3328 , 4928 ));
-this.gen_powerUpBox_spritees.add(new PowerUp_Box(this, 3328 , 2688 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2496 , 15424 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 13760 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2944 , 8128 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 4928 ));
+this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 2688 ));
