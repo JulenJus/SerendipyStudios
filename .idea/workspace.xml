@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Assets/Sprites/Animations/PowerUps/Dash/dashGif.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Assets/Sprites/Animations/PowerUps/Dash/dashGif.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation_original.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation_original.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Speed/dashGif.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Speed/dashGif.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Speed/gen_powerUp_dash_animation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/PowerUps/Speed/gen_powerUp_dash_animation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Screens/BaseBackGround.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Menus/Gen/gen_mainscreen_simple.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +62,11 @@
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Gen" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\PowerUps\Dash" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\Bob" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\Karta" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\PowerUps\Box" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\Steve" />
     </key>
   </component>
   <component name="RunManager">

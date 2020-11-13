@@ -36,7 +36,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.powerUpObject_Boxed = null;
         this.powerUpObject_Used = null;
         this.onPaintPowerUpIcon = new Phaser.Events.EventEmitter();
-        this.dashPowerUpAnimation = new Phaser.Physics.Arcade.Sprite(scene, initPos.x, initPos.y + 20, '');
+        this.dashPowerUpAnimation = new Phaser.Physics.Arcade.Sprite(scene, initPos.x, initPos.y, '');
         this.dashPowerUpAnimation.visible = false;
         scene.add.existing(this.dashPowerUpAnimation);
 
@@ -94,7 +94,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.dashPowerUpAnimation.anims.play('gen_powerUp_dash_animation');
         let thisDash = this.dashPowerUpAnimation; //Variable for the change of scope
         this.scene.time.addEvent({
-            delay: 500,
+            delay: 1000,
             loop: false,
             callback: function(){
                 thisDash.visible = false;

@@ -102,6 +102,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
     loadGen() {
         this.load.image('gen_mainscreen', '../assets/Sprites/Menus/Gen/gen_mainscreen.png');
+        this.load.image('gen_mainscreen_simple', '../assets/Sprites/Menus/Gen/gen_mainscreen_simple.png');
         this.load.image('gen_buttonExit_static', '../assets/Sprites/Menus/Gen/gen_buttonExit_static.png');
         this.load.image('gen_buttonExit_over', '../assets/Sprites/Menus/Gen/gen_buttonExit_over.png');
     }
