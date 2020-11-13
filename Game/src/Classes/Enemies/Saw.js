@@ -1,9 +1,11 @@
 class Saw extends Phaser.Physics.Arcade.Sprite{
     constructor(scene, initPos, endPos) {
         super(scene, initPos.x, initPos.y, '');
-        this.setSize('50','50', true);  //[HERE] Adjust the size in function of the sprite size
 
         this.scene = scene;
+        scene.add.existing(this);
+        scene.physics.world.enableBody(this);
+        this.body.allowGravity = false;
 
         this.minPoint = initPos;
         this.range = {x:endPos.x - initPos.x, y:endPos.y - initPos.y};
@@ -11,7 +13,17 @@ class Saw extends Phaser.Physics.Arcade.Sprite{
         //Progress variables
         this.movementValue = 0;
         this.movementIncrement = 1;
-        this.movementVelocity = 50;
+        this.movementVelocity = 20;
+
+        //Create animation
+        this.scene.anims.create({
+            key: 'gen_saw_animation_Idle',     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_saw_animation', {start: 0, end: 2}),
+            frameRate: 20,
+            repeat: -1       //The animation loops infinitely
+        });
+        this.anims.play("gen_saw_animation_Idle");
+        this.setSize('128','128', true);  //[HERE] Adjust the size in function of the sprite size
     }
 
     update() {
@@ -29,5 +41,8 @@ class Saw extends Phaser.Physics.Arcade.Sprite{
         //Set position
         this.body.position.x = this.minPoint.x + range.x * this.movementValue;
         this.body.position.y = this.minPoint.y + range.y * this.movementValue;
+
+        console.log("Saw mv: " + this.movementValue);
+        console.log("Saw pos: " + this.body.position);
     }
 }

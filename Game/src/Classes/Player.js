@@ -49,15 +49,15 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         //Player Animations //[HERE] Make it general
         this.scene.anims.create({
-            key: 'Idle',     //Animation alias
+            key: 'gen_player_animation_Idle_Armin',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
             frameRate: 32,
             repeat: -1       //The animation loops infinitely
         });
-        this.anims.play('Idle');
+        this.anims.play('gen_player_animation_Idle_Armin');
 
         this.scene.anims.create({
-            key: 'Dash',     //Animation alias
+            key: 'gen_powerUp_dash_animation',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_powerUp_dash_animation', {start: 0, end: 14}),
             frameRate: 25,
             repeat: -1       //The animation loops infinitely
@@ -91,7 +91,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     Dash(impulsePercentage){
         this.body.velocity.y = (-400 * impulsePercentage);
         this.dashPowerUpAnimation.visible = true;
-        this.dashPowerUpAnimation.anims.play('Dash');
+        this.dashPowerUpAnimation.anims.play('gen_powerUp_dash_animation');
         let thisDash = this.dashPowerUpAnimation; //Variable for the change of scope
         this.scene.time.addEvent({
             delay: 500,

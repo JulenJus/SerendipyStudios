@@ -207,7 +207,7 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.spritesheet('gen_player_animation_Idle_Steve', '../assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png', {frameWidth: 128.8, frameHeight: 119});
 
         //Enemies animations
-        this.load.spritesheet('gen_saw_animation', '../assets/Sprites/Animations/Enemies/gen_saw_animation.png', {frameWidth: 65, frameHeight: 100});
+        this.load.spritesheet('gen_saw_animation', '../assets/Sprites/Animations/Enemies/gen_saw_animation.png', {frameWidth: 128, frameHeight: 128});
 
         //Power up sprite assets
         this.load.image('gen_powerUpBox_sprite', '../assets/Sprites/Basic PowerUps/gen_powerUpBox_sprite.png');

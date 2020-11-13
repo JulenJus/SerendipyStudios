@@ -10,6 +10,9 @@ class Scene_02_2_Tutorial extends Gen_Level {
         super.create();
         super.createPlayer(this, 0, true);
 
+        //Add enemies
+        this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 960 }, {x: 1472 , y: 1600 }));
+
         //Add power ups
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));

@@ -64,11 +64,11 @@ class Gen_Level extends Phaser.Scene {
         //Initialize physics
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
         this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
-        this.sawLayerCollision = this.physics.add.collider(thisPlayer, this.this.gen_saw_sprites, this.takeDamageCallback, null, this);
+        this.sawLayerCollision = this.physics.add.collider(thisPlayer, this.gen_saw_sprites, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_sprites, this.pickPowerUpCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_finishLine_sprite, this.winCallback, null, this);
 
-        //console.log(this.backgroundLayer.gen_finishLine_sprite);   //[HERE] The gen_finishLine_sprite is undefined
+        console.log(this.sawLayerCollision);   //[HERE] The gen_finishLine_sprite is undefined
         //console.log(gen_finishLine_spriteOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera

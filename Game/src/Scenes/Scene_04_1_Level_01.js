@@ -11,7 +11,7 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.createPlayer(this, 0, true);
 
         //Add enemies
-        this.gen_saw_sprites.add(new Saw(this, {x: initPosx, y: initPosy}, {x: endPosx, y: endPosy}));
+        //this.gen_saw_sprites.add(new Saw(this, {x: initPosx, y: initPosy}, {x: endPosx, y: endPosy}));
 
         //Add power ups
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
