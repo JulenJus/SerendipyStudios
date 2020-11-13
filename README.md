@@ -271,6 +271,7 @@ Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cad
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa3.png" width="125">
 
 -Tutorial:
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/tutorial.png" width="125">
 
 A parte de estos mapas, hay otros dos mapas diseñados que serán lanzados como DLCs. Estos son:
