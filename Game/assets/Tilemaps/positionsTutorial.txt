@@ -1,3 +1,8 @@
 POWERUPS POSITIONS
 
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 448 , 2816 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 448 , 2816 ));
+
+SIERRAS POSITIONS
+
+this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 960 }, {x: 1472 , y: 1600 }));
+

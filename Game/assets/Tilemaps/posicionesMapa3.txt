@@ -1,11 +1,27 @@
 POWERUPS POSITIONS
 
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 19776 ));
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1152 , 16128 ));
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1152 , 12992 ));
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 9856 ));
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 6272 ));
-this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 2048 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 19776 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1152 , 16128 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1152 , 12992 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 9856 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 6272 ));
+this.powerUpBoxes.add(new PowerUp_Box(this, 1536 , 2048 ));
 
 
 SIERRAS POSITIONS
+
+this.gen_saw_sprites.add(new Saw(this, {x: 1088 , y: 20480 }, {x: 1088 , y: 20928 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1728 , y: 19904 }, {x: 1728 , y: 20480 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1152 , y: 16640 }, {x: 1152 , y: 17536 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1792 , y: 9408 }, {x: 1792 , y: 17152 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1280 , y: 13376 }, {x: 1280 , y: 13568 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 2240 , y: 11712 }, {x: 2240 , y: 12096 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 2368 , y: 7360 }, {x: 2368 , y: 7808 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 512 , y: 11456 }, {x: 512 , y: 11840 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 9216 }, {x: 1472 , y: 9792 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 896 , y: 6848 }, {x: 896 , y: 8000 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 2048 , y: 6848 }, {x: 2048 , y: 8064 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1152 , y: 5760 }, {x: 1152 , y: 6272 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 4992 }, {x: 1472 , y: 5120 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 2432 }, {x: 1472 , y: 4096 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 384 }, {x: 1472 , y: 384 }));
