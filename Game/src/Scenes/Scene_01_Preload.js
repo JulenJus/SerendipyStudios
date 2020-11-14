@@ -197,11 +197,14 @@ class Scene_01_Preload extends Phaser.Scene {
         //Colors
         let colors = ["Blue", "Green", "Orange", "Red"];
         for (let i = 0; i < colors.length; i++) {
-            this.load.image('lobby_buttonAccept_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '.png');
-            this.load.image('lobby_buttonBack_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '.png');
+            this.load.image('lobby_buttonAccept_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_static.png');
+            this.load.image('lobby_buttonAccept_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_over.png');
+            this.load.image('lobby_buttonBack_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_static.png');
+            this.load.image('lobby_buttonBack_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_over.png');
             this.load.image('lobby_buttonBigSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonBigSel_' + colors[i] + '.png');
             this.load.image('lobby_buttonLittleSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_' + colors[i] + '.png');
-            this.load.image('lobby_buttonNext_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '.png');
+            this.load.image('lobby_buttonNext_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_static.png');
+            this.load.image('lobby_buttonNext_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_over.png');
         }
 
         //Characters

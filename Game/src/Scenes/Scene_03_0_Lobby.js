@@ -82,9 +82,9 @@ class Scene_03_0_Lobby extends Phaser.Scene {
 
         //Colors
         this.buttonsColors = [];
-        this.buttonsColors.push(this.add.sprite(85, 572, 'lobby_buttonBack_' + this.color).setOrigin(0, 0).setInteractive());
-        this.buttonsColors.push(this.add.sprite(240, 572, 'lobby_buttonAccept_' + this.color).setOrigin(0, 0).setInteractive());
-        this.buttonsColors.push(this.add.sprite(397, 572, 'lobby_buttonNext_' + this.color).setOrigin(0, 0).setInteractive());
+        this.buttonsColors.push(this.add.sprite(85, 572, 'lobby_buttonBack_' + this.color + "_static").setOrigin(0, 0).setInteractive());
+        this.buttonsColors.push(this.add.sprite(240, 572, 'lobby_buttonAccept_' + this.color + "_static").setOrigin(0, 0).setInteractive());
+        this.buttonsColors.push(this.add.sprite(397, 572, 'lobby_buttonNext_' + this.color + "_static").setOrigin(0, 0).setInteractive());
 
         //Characters
         this.pjsSkinTexs = [];
@@ -139,24 +139,22 @@ class Scene_03_0_Lobby extends Phaser.Scene {
                 default:
                     break;
             }
-        } else {
-            /*
+        } else { //For Color buttons
             switch (buttonIndex) {
                 case 0:
                     //console.log("Play change sprite: " + mode);
-                    this.buttonsColors[0].setTexture('lobby_buttonSelBack_' + mode);
+                    this.buttonsColors[0].setTexture('lobby_buttonBack_' + this.color + "_" + mode);
                     break;
                 case 1:
                     //console.log("HowToPlay change sprite: " + mode);
-                    this.buttonsColors[1].setTexture('lobby_buttonSelNext_' + mode);
+                    this.buttonsColors[1].setTexture('lobby_buttonAccept_' + this.color + "_" + mode);
                     break;
                 case 2:
-                    this.buttonsColors[2].setTexture('lobby_buttonSalir_' + mode);
+                    this.buttonsColors[2].setTexture('lobby_buttonNext_' + this.color + "_" + mode);
                     break;
                 default:
                     break;
             }
-             */
         }
     }
 

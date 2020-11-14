@@ -56,14 +56,14 @@ class Player extends Phaser.Physics.Arcade.Sprite {
             key: 'gen_player_animation_Idle_Armin',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
             frameRate: 96,
-            repeat: 1       //The animation loops infinitely
+            repeat: 1       //The animation repeats 1 time
         });
 
         this.scene.anims.create({
             key: 'gen_player_animation_Dash_Armin',     //Animation alias
             frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
             frameRate: 128,
-            repeat: 4       //The animation loops infinitely
+            repeat: 4       //The animation repeats 4 times
         });
 
         this.scene.anims.create({
