@@ -1,0 +1,7 @@
+buttonOnePlayer.
+	anchura: 113
+	altura: 339
+
+buttonMultiplayer
+	anchura: 113
+	altura: 636
