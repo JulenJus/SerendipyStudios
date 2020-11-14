@@ -106,15 +106,15 @@
 
 #### 1.1. Descripción breve del concepto
 
-Flyguins es un party game online en el que sus jugadores tendrán que competir entre ellos para ser el mejor entre los demás. Es un juego de carreras con scroll vertical, lleno de obstáculos y objetos, que podrán ser usados para obtener ventajas con respecto a los rivales o para fastidiar a los mismos.  
+Flyguins es un juego de carreras en el que el jugador tendrá que completar el recorrido en el menor tiempo posible. Es un juego de carreras con scroll vertical, lleno de obstáculos y objetos, que podrán ser usados para obtener ventajas con respecto a las trampas.  
 
 #### 1.2. Descripción breve de la historia
 
-El jugador adopta el rol de uno de los pingüinos jugables, cada uno con su trasfondo y motivaciones, pero siendo todos ellos novatos en la Academia Pingüino. El objetivo común de todos ellos es mejorar como soldado, por lo que tendrán que pasar las duras pruebas que sus superiores le han puesto. Para ello, deberán recorrer los diferentes recorridos llenos de trampas al mismo tiempo que compiten con otros pingüinos de su promoción para ser el mejor de todos. 
+El jugador adopta el rol de uno de los pingüinos jugables, cada uno con su trasfondo y motivaciones, pero siendo todos ellos novatos en la Academia Pingüino. El objetivo común de todos ellos es mejorar como soldado, por lo que tendrán que pasar las duras pruebas que sus superiores le han puesto. Para ello, deberán recorrer los diferentes recorridos llenos de trampas al mismo tiempo que compiten con otros pingüinos de su promoción en completar todo en el menor tiempo posible para ser el mejor de todos. 
 
 #### 1.3. Propósito, público objetivo y plataformas
 
-Flyguins está pensado para jugar con amigos y fastidiarse los unos a los otros. El juego no busca atraer a los usuarios por una buena historia o acercamiento con los personajes, sino más bien por las mecánicas y la jugabilidad, puesto que al ser un juego dinámico en el que cada escenario es diferente y con varios caminos por donde pasar, cada partida puede resultar una experiencia diferente. 
+Flyguins está pensado para jugar tanto solo como con amigos, ya que el jugador puede autoimponerse retos (pasarse todo en menos de un minuto, pasarse todo sin recibir daño por los obstáculos...), al mismo tiempo que puede intentar superar el tiempo record de sus amigos. El juego no busca atraer a los usuarios por una buena historia o acercamiento con los personajes, sino más bien por las mecánicas y la jugabilidad, puesto que al ser un juego dinámico en el que cada escenario es diferente y con varios caminos por donde pasar, cada partida puede resultar una experiencia diferente. 
 
 El público objetivo al que se busca llegar es principalmente joven, entre 10 y 40 años, ya que son los que más tiempo libre suelen tener y mayor movimiento por las redes sociales, aunque alguien mayor podría jugarlos y disfrutarlo igual, puesto que las mecánicas son sencillas, y el estilo visual tan amable del juego invita a jugar a cualquier persona. 
 
@@ -186,9 +186,9 @@ Webstorm: 120€
 
 #### 4.1. Descripción detallada del concepto de juego
 
-El concepto de Flyguins se basa en ganar a tus rivales en una carrera vertical, haciendo uso de los diferentes objetos que el jugador irá encontrando a lo largo del mapa, al mismo tiempo que esquiva diferentes obstáculos. El jugador también podrá chocar a sus rivales, lanzándolos a los pinchos o haciendo que choquen con alguna sierra mecánica. 
+El concepto de Flyguins se basa en completar un mapa en una carrera vertical contrarreloj, haciendo uso de los diferentes objetos que el jugador irá encontrando a lo largo del mapa, al mismo tiempo que esquiva diferentes obstáculos.
 
-Al acabar la partida, los jugadores podrán ver un ranking, y decidir jugar de nuevo (no necesariamente en el mismo mapa) o salir.
+Al acabar la partida, el jugador podrá ver un ranking, y decidir jugar de nuevo (no necesariamente en el mismo mapa) o salir.
 
 #### 4.2. Descripción detallada de las mecánicas de juego
 
@@ -208,9 +208,9 @@ En la versión para Android, todo es táctil, por lo que basta con pulsar el lat
 
 #### 4.4. Niveles y misiones
 
-Al ser un juego enteramente online en el que el objetivo principal es llegar a la meta antes que tus rivales, no existen misiones como tal, el jugador solo deberá centrarse en ser más rápido y hábil que sus rivales. 
+Al ser un juego basado en carreras contrarreloj llenas de obstáculos, no existen misiones como tal, el jugador solo deberá centrarse en ser lo más rápido y hábil que pueda. 
 
-En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más divertidos a la hora de competir con alguien, ya que será complicado avanzar si estar muy cerca de tus rivales. 
+En cuanto a niveles, actualmente hay 3 niveles disponibles, siendo dichos niveles muy diferentes entre sí: en el nivel 1 el camino es más lineal, con solo una bifurcación, aunque bastante corta, puesto que el nivel está pensado para que el jugador se familiarice con los diferentes elementos del mapa. En el nivel 2 es donde predominan las bifurcaciones, siendo el recorrido por cada una de las mismas muy diferentes entre sí, por lo que cada partida será única al escoger diferentes caminos, estando todos ellos balanceados (es decir, si el jugador escoge el camino más largo, se encontrará menos obstáculos que si escoge el camino más corto). El nivel 3 es el que más juego da, ya que es el único en el que hay obstáculos animados, y, por tanto, la dificultad se ve incrementada, al mismo tiempo que el número de bifurcaciones disminuye, lo que hace de este nivel uno de los más difíciles a la hora de ir rápido, ya que será complicado avanzar si hay más obstáculos que bifurcaciones. 
 
 También hay disponible un nivel tutorial, pensado para que los jugadores novatos se familiaricen con los controles y la mecánica del juego. Este tutorial contiene todos los obstáculos que el jugador se encontrará en los otros mapas, distribuidos de tal forma que no sea demasiado complicado superar. 
 
@@ -276,12 +276,17 @@ Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cad
 
 A parte de estos mapas, hay otros dos mapas diseñados que serán lanzados como DLCs. Estos son:
 
+- Paraiso Pincho
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/paraisopincho.png" width="125">
+
+- Sierras Salvajes
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/sierrassalvajes.png" width="125">
 
 ### 6. Arte
 
 #### 6.1. Estética general del juego
 
-La estética general el juego es una muy amable y family friendly, pensada para atraer a un espectro grande de público.  Se ha optado por un estilo sencillo, puesto que al ser un party game, no se busca sobrecargar al jugador con demasiados elementos en pantalla o diseños muy elaborados; el objetivo es que se entienda todo lo que pasa en pantalla en todo momento, por lo que el juego se ha desarrollado con una estética simple y homogénea. 
+La estética general el juego es una muy amable y family friendly, pensada para atraer a un espectro grande de público.  Se ha optado por un estilo sencillo, puesto que al ser un juego de carreras contrarreloj, no se busca sobrecargar al jugador con demasiados elementos en pantalla o diseños muy elaborados; el objetivo es que se entienda todo lo que pasa en pantalla en todo momento, por lo que el juego se ha desarrollado con una estética simple y homogénea. 
 
 En cuanto al concepto general, el juego se desarrolla en la Academia Pingüino, por lo que van a abundar los colores fríos, estando presentes en todos momentos aquellos elementos como pueden ser hielo o nieve. Cada nivel se desarrolla en un lugar diferente (en la propia academia, en una cueva...), pero todos ellos comparten una característica: es una zona helada. 
 
@@ -392,7 +397,7 @@ Habrá dos pistas de música en el juego: la de las pantallas del menú, crédit
 
 #### 8.2. Efectos sonoros 
 
-Los efectos de sonido, a diferencia de la música de fondo, son más minimalistas y simples, puesto que, al haber tantos efectos de sonido (calisiones con las paredes, suelo, ocn otros pingüinos, con objetos, el aleteo...), podría ser estresante para el jugador escuchar efectos muy elaborados. También tendrán un volumen más bajo que la música de fondo, para que el jugador no se canse de escucharlo (por ejemplo, el pingüino estará aleteando constantemente, por lo que se ha escogido un sonido sencillo y simplista para no molestar al usuario).
+Los efectos de sonido, a diferencia de la música de fondo, son más minimalistas y simples, puesto que, al haber tantos efectos de sonido (calisiones con las paredes, suelo, con objetos, el aleteo...), podría ser estresante para el jugador escuchar efectos muy elaborados. También tendrán un volumen más bajo que la música de fondo, para que el jugador no se canse de escucharlo (por ejemplo, el pingüino estará aleteando constantemente, por lo que se ha escogido un sonido sencillo y simplista para no molestar al usuario).
 
 #### 8.3. Lista de sonidos 
 
@@ -421,3 +426,5 @@ Todos los menús tienen una estética de lugar helado, por lo que todos los boto
 #### 10.3. Hito 3 
 
 #### 10.4. Fecha de lanzamiento
+
+La fecha de lanzamiento del juego será el 19/11/2020, aunque se lanzarán más DLCs a lo largo del tiempo.

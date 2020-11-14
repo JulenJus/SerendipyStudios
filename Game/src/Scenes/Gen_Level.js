@@ -18,6 +18,10 @@ class Gen_Level extends Phaser.Scene {
         console.log("Gen_Level constructor");
     }
 
+    init(args) {
+        this.playerSkin = args.skin
+    }
+
     create() {
         SetDeltaTime();
 
@@ -62,8 +66,10 @@ class Gen_Level extends Phaser.Scene {
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable, {x: this.levelWidth / 2, y: this.levelHeight - 300});
-
+        let thisPlayer = new Player(level, id, controllable, {
+                x: this.levelWidth / 2,
+                y: this.levelHeight - 300
+            }, this.playerSkin);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
@@ -106,12 +112,12 @@ class Gen_Level extends Phaser.Scene {
 
     winCallback(player, raceLine) {
         this.scene.stop("InGameHUD");
-        this.scene.start("Ranking");
+        this.scene.start("Ranking", {skin: this.playerSkin});
     }
 
     endRace() {
         this.scene.stop("InGameHUD");
-        this.scene.start("Ranking");
+        this.scene.start("Ranking", {skin: this.playerSkin});
     }
 
     Exit() {

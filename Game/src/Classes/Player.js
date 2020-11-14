@@ -1,6 +1,6 @@
 class Player extends Phaser.Physics.Arcade.Sprite {
     //Constructor
-    constructor(scene, id, controllable, initPos) {
+    constructor(scene, id, controllable, initPos, skin) {
         super(scene, initPos.x, initPos.y, 'gen_player');
 
         console.log("Player constructor")
@@ -8,6 +8,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
         //Set object variables
         this.scene = scene;
         this.serverId = id;
+        this.skin = skin;
 
         //Set physics
         scene.add.existing(this);
@@ -53,17 +54,17 @@ class Player extends Phaser.Physics.Arcade.Sprite {
         this.on('animationcomplete', this.animComplete, this);
 
         this.scene.anims.create({
-            key: 'gen_player_animation_Idle_Armin',     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
+            key: 'gen_player_animation_Idle_' + this.skin,     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {start: 0, end: 14}),
             frameRate: 96,
-            repeat: 1       //The animation loops infinitely
+            repeat: 1       //The animation repeats 1 time
         });
 
         this.scene.anims.create({
-            key: 'gen_player_animation_Dash_Armin',     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_Armin', {start: 0, end: 14}),
+            key: 'gen_player_animation_Dash_' + this.skin,     //Animation alias
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {start: 0, end: 14}),
             frameRate: 128,
-            repeat: 4       //The animation loops infinitely
+            repeat: 4       //The animation repeats 4 times
         });
 
         this.scene.anims.create({
@@ -74,7 +75,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
         });
 
         //Set hitbox size
-        this.anims.play('gen_player_animation_Idle_Armin');
+        this.anims.play('gen_player_animation_Idle_' + this.skin);
         this.anims.stop();
         this.setSize(104, 119, true);
     }
@@ -84,7 +85,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     //Animation methods
 
     animComplete(animation, frame) {
-        if (animation.key === 'gen_player_animation_Idle_Armin') {
+        if (animation.key === 'gen_player_animation_Idle_' + this.skin) {
             //console.log("Player Idle animation finished");
         }
     }
@@ -93,7 +94,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
     Move(direction) {
         if (!this.isDamaged) {
-            this.anims.play('gen_player_animation_Idle_Armin');
+            this.anims.play('gen_player_animation_Idle_' + this.skin);
             let impulsePercentage = this.movementBar.getImpulse();
             switch (direction) {
                 case "up":
@@ -114,7 +115,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     Dash(impulsePercentage) {
         this.body.velocity.y = (-400 * impulsePercentage);
 
-        this.anims.play('gen_player_animation_Dash_Armin');
+        this.anims.play('gen_player_animation_Dash_' + this.skin);
 
         this.dashPowerUpAnimation.visible = true;
         this.dashPowerUpAnimation.anims.play('gen_powerUp_dash_animation');

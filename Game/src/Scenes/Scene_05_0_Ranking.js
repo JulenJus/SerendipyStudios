@@ -17,6 +17,10 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         console.log("Ranking constructor");
     }
 
+    init(args) {
+        this.playerSkin = args.skin
+    }
+
     create() {
         console.log("Ranking create");
 
@@ -52,14 +56,15 @@ class Scene_05_0_Ranking extends Phaser.Scene {
             callback: function () {
                 //Go back to the lobby
                 thisSceneManager.stop("InGameHUD");
-                thisSceneManager.start("Lobby");
+                //thisSceneManager.start("Lobby");
+                thisSceneManager.start("MainMenu");
             }
         });
     }
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable, { x:this.levelWidth / 2, y: this.levelHeight - 500});
+        let thisPlayer = new Player(level, id, controllable, { x:this.levelWidth / 2, y: this.levelHeight - 500}, this.playerSkin);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
