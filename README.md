@@ -350,7 +350,7 @@ Escudo Brillando
 Pack de verano
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack.png" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png" width="125">
 Pack de navidad
 
 
