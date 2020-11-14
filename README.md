@@ -278,10 +278,10 @@ Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cad
 A parte de estos mapas, hay otros dos mapas diseñados que serán lanzados como DLCs. Estos son:
 
 - Paraiso Pincho
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/paraisopincho.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/maps/paraisopincho.png" width="125">
 
 - Sierras Salvajes
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/sierrassalvajes.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/maps/sierrassalvajes.png" width="125">
 
 ### 6. Arte
 
@@ -342,6 +342,17 @@ Escudo Brillando
 
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
+
+- Packs
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Summer%20Pack/PackSummer.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Summer%20Pack/SteveSummer.png" width="125">
+Pack de verano
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png">
+Pack de navidad
+
 
 
 #### 6.4. Animación 
