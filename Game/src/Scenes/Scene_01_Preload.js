@@ -209,10 +209,10 @@ class Scene_01_Preload extends Phaser.Scene {
 
         //Characters
         let chars = [
-            "armin",
-            "bob",
-            "karta",
-            "steve"
+            "Armin",
+            "Bob",
+            "Karta",
+            "Steve"
         ];
         for (let i = 0; i < chars.length; i++) {
             this.load.image('lobby_char_' + chars[i] + 'Big', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Big.png');
