@@ -10,10 +10,10 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         ]
 
         this.CHARS = [
-            "armin",
-            "bob",
-            "karta",
-            "steve"
+            "Armin",
+            "Bob",
+            "Karta",
+            "Steve"
         ];
     }
 
@@ -202,7 +202,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
 
     b_Play() {
         if(this.numPlayers === this.readyPlayers)
-            this.scene.start("Level_0" + (this.level+1).toString());
+            this.scene.start("Level_0" + (this.level+1).toString(), {skin: this.CHARS[this.pjsSkin[this.pjId]]});
     }
 
     b_Exit() {
