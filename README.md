@@ -132,6 +132,7 @@ El juego será freemium, encontrándose dentro del juego algunas micro transacci
 | Pack Skins | 0.99€/pack |
 | Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
 | DLC de mapas + skins exclusivas | 4.99€ |
+| DLC mapas solo | 0.99€/unidad |
 
 
 ### 3. Planificación y Costes
