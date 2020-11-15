@@ -3,6 +3,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         super("Ranking");
 
         this.name = "Ranking";
+        this.bestTime = 0;
 
         this.levelWidth = 0;
         this.levelHeight = 0;
@@ -23,6 +24,9 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     create() {
         console.log("Ranking create");
+
+        // this.bestTime = parseInt(localStorage.getItem('time'));
+        // console.log("TIME: " + this.bestTime);
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -64,14 +68,17 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     createPlayer(level, id, controllable) {
         //Create player
-        let thisPlayer = new Player(level, id, controllable, { x:this.levelWidth / 2, y: this.levelHeight - 500}, this.playerSkin);
+        let thisPlayer = new Player(level, id, controllable, {
+            x: this.levelWidth / 2,
+            y: this.levelHeight - 500
+        }, this.playerSkin);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
         //Set collisions between player and layers
         this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
-        this.physics.add.collider(thisPlayer,  this.backgroundLayer, null, null, this);
+        this.physics.add.collider(thisPlayer, this.backgroundLayer, null, null, this);
 
         //Camera
         if (controllable) {

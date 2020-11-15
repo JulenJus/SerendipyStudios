@@ -25,7 +25,7 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
         //     this.Getgen_powerUp_shield_spritePowerUp();
 
         if (player.powerUpObject_Boxed === null) {
-            switch (Phaser.Math.Between(1, 1)) {
+            switch (Phaser.Math.Between(0, 1)) {
                 case 0:
                     new PowerUp_gen_powerUp_shield_sprite(player, this.scene).Pick();
                     break;

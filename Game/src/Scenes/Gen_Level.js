@@ -3,11 +3,13 @@ class Gen_Level extends Phaser.Scene {
         super(name);
 
         this.name = name;
+        this.bestTime = 50;
         this.levelWidth = 0;
         this.levelHeight = 0;
 
         this.players = [];
 
+        this.gen_saw_sprites = null;
         this.gen_powerUpBox_sprites = null;
 
         //Layers
@@ -26,7 +28,7 @@ class Gen_Level extends Phaser.Scene {
         SetDeltaTime();
 
         //<editor-fold desc="Configure the map">
-        console.log("Gen_Level create")
+        console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -39,15 +41,36 @@ class Gen_Level extends Phaser.Scene {
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
         this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        this.map.createStaticLayer('decoration', this.tiles, 0, 0);
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
+
+        //Send walls layer to the front (saws will be seen behind them)
+        this.wallsLayer.depth = 2;
 
         //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
-        //Enemies
+        //<editor-fold desc="Tilemap visual debugging">
+        const debugWalls = this.add.graphics().setAlpha(0.7);
+        this.wallsLayer.renderDebug(debugWalls, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        });
+
+        const debugObstacles = this.add.graphics().setAlpha(0.7);
+        this.obstaclesLayer.renderDebug(debugObstacles, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        });
+        //</editor-fold>
+
+
+        //Saws
         this.gen_saw_sprites = this.physics.add.group({
             //immovable: true,
             allowGravity: false,
@@ -67,9 +90,9 @@ class Gen_Level extends Phaser.Scene {
     createPlayer(level, id, controllable) {
         //Create player
         let thisPlayer = new Player(level, id, controllable, {
-                x: this.levelWidth / 2,
-                y: this.levelHeight - 300
-            }, this.playerSkin);
+            x: this.levelWidth / 2,
+            y: this.levelHeight - 300
+        }, this.playerSkin);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
@@ -113,11 +136,13 @@ class Gen_Level extends Phaser.Scene {
     winCallback(player, raceLine) {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+        //this.SaveTime();
     }
 
     endRace() {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+        //this.SaveTime();
     }
 
     Exit() {
@@ -127,6 +152,10 @@ class Gen_Level extends Phaser.Scene {
         //this.endRace();
         //this.scene.start("MainMenu");
     }
+
+    // SaveTime() {
+    //     localStorage.setItem('time', this.bestTime);
+    // }
 
     //Camera zoom (not used)
     // cameraZoomCallback() {
