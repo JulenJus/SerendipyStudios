@@ -253,9 +253,12 @@ Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en 
 
 ##### 5.2.2. Personajes no jugables
 
-Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
+- Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+
+- Esta es Kurta, la hermana gemela de Karta. A diferencia de su hermana, no le interesa ascender como soldado, sino vender su mercancía, por lo que es la encargada de la tienda de los DLCs.
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
 
 
 #### 5.3. Entornos y lugares
@@ -318,6 +321,9 @@ Karta
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 Sargento Jack
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+Kurta
+
 - Power Ups:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
 Caja Marrón
@@ -347,6 +353,16 @@ Escudo Brillando
 
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
+
+- Obstáculos:
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="25"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_left.png" width="125">  <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_up.png" width="25"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="25">
+
+Pinchos
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra1.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra2.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra3.png" width="125">
+
+Sierras
 
 - Packs
 
