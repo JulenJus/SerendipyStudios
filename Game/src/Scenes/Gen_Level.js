@@ -3,7 +3,8 @@ class Gen_Level extends Phaser.Scene {
         super(name);
 
         this.name = name;
-        this.bestTime = 50;
+        this.bestTime = 31;
+        this.auxCount = 0;
         this.levelWidth = 0;
         this.levelHeight = 0;
 
@@ -30,6 +31,8 @@ class Gen_Level extends Phaser.Scene {
         //<editor-fold desc="Configure the map">
         console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
+        this.SetUpRanking(); //Setup ranking in case that it doesnt exist yet
+
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
         this.tiles = this.map.addTilesetImage('tilesheet' + "_" + this.name, 'tilesheet' + "_" + this.name, 64, 64, 1, 2);
@@ -40,8 +43,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -54,19 +57,19 @@ class Gen_Level extends Phaser.Scene {
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
         //<editor-fold desc="Tilemap visual debugging">
-        const debugWalls = this.add.graphics().setAlpha(0.7);
-        this.wallsLayer.renderDebug(debugWalls, {
-            tileColor: null,
-            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        });
-
-        const debugObstacles = this.add.graphics().setAlpha(0.7);
-        this.obstaclesLayer.renderDebug(debugObstacles, {
-            tileColor: null,
-            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        });
+        // const debugWalls = this.add.graphics().setAlpha(0.7);
+        // this.wallsLayer.renderDebug(debugWalls, {
+        //     tileColor: null,
+        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        // });
+        //
+        // const debugObstacles = this.add.graphics().setAlpha(0.7);
+        // this.obstaclesLayer.renderDebug(debugObstacles, {
+        //     tileColor: null,
+        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        // });
         //</editor-fold>
 
 
@@ -136,13 +139,13 @@ class Gen_Level extends Phaser.Scene {
     winCallback(player, raceLine) {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
-        //this.SaveTime();
+        this.SaveTime();
     }
 
     endRace() {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
-        //this.SaveTime();
+        this.SaveTime();
     }
 
     Exit() {
@@ -153,9 +156,40 @@ class Gen_Level extends Phaser.Scene {
         //this.scene.start("MainMenu");
     }
 
-    // SaveTime() {
-    //     localStorage.setItem('time', this.bestTime);
-    // }
+    SetUpRanking(){
+        //Prepare ranking board in case that it does not exist
+        if (localStorage.getItem('timeCount') == null) {
+            localStorage.setItem('timeCount', this.auxCount.toString());
+            for (let i = 0; i < 5; i++) {
+                localStorage.setItem('time_' + i, '-- : --');
+            }
+        }
+    }
+
+    SaveTime() {
+        //localStorage.clear();
+        this.auxCount = -1;
+        for (let i = 0; i < 5; i++) {
+            if (this.bestTime < parseInt(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
+                if (localStorage.getItem('time_' + i) === '-- : --') {
+                    this.auxCount = i;
+                    break;
+                } else {
+                    this.MoveAllTimesDown(i)
+                    this.auxCount = i;
+                    break;
+                }
+            }
+        }
+        if (this.auxCount !== -1)
+            localStorage.setItem('time_' + this.auxCount, this.bestTime);
+    }
+
+    MoveAllTimesDown(start) {
+        for (let i = 4; i > start; i--) {
+            localStorage.setItem('time_' + i, localStorage.getItem('time_' + (i - 1)));
+        }
+    }
 
     //Camera zoom (not used)
     // cameraZoomCallback() {
