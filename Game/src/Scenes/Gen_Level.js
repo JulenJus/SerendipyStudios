@@ -8,6 +8,7 @@ class Gen_Level extends Phaser.Scene {
 
         this.players = [];
 
+        this.gen_saw_sprites = null;
         this.gen_powerUpBox_sprites = null;
 
         //Layers
@@ -26,7 +27,7 @@ class Gen_Level extends Phaser.Scene {
         SetDeltaTime();
 
         //<editor-fold desc="Configure the map">
-        console.log("Gen_Level create")
+        console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -39,7 +40,7 @@ class Gen_Level extends Phaser.Scene {
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
         this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        this.map.createStaticLayer('decoration', this.tiles, 0, 0);
+        //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
@@ -47,7 +48,24 @@ class Gen_Level extends Phaser.Scene {
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
-        //Enemies
+        //<editor-fold desc="Tilemap visual debugging">
+        const debugWalls = this.add.graphics().setAlpha(0.7);
+        this.wallsLayer.renderDebug(debugWalls, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        });
+
+        const debugObstacles = this.add.graphics().setAlpha(0.7);
+        this.obstaclesLayer.renderDebug(debugObstacles, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        });
+        //</editor-fold>
+
+
+        //Saws
         this.gen_saw_sprites = this.physics.add.group({
             //immovable: true,
             allowGravity: false,

@@ -230,6 +230,7 @@ class Scene_01_Preload extends Phaser.Scene {
         this.loadInGameHUD();
         this.loadLevel01();
         this.loadLevel02();
+        this.loadLevel03();
     }
 
     //<editor-fold desc="Level load functions">
@@ -313,7 +314,13 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadLevel02() {
+        this.load.image('tilesheet_Level_02', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Level_02', '../assets/Tilemaps/mapa2.json');
+    }
 
+    loadLevel03() {
+        this.load.image('tilesheet_Level_03', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Level_03', '../assets/Tilemaps/mapa3.json');
     }
 
     //</editor-fold>
