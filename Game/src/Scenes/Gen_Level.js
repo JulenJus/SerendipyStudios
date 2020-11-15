@@ -3,6 +3,7 @@ class Gen_Level extends Phaser.Scene {
         super(name);
 
         this.name = name;
+        this.bestTime = 50;
         this.levelWidth = 0;
         this.levelHeight = 0;
 
@@ -40,9 +41,13 @@ class Gen_Level extends Phaser.Scene {
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
         this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
+
+        //Send walls layer to the front (saws will be seen behind them)
+        this.wallsLayer.depth = 2;
 
         //Enable collisions with layers
         this.wallsLayer.setCollisionByProperty({collide: true});
@@ -85,9 +90,9 @@ class Gen_Level extends Phaser.Scene {
     createPlayer(level, id, controllable) {
         //Create player
         let thisPlayer = new Player(level, id, controllable, {
-                x: this.levelWidth / 2,
-                y: this.levelHeight - 300
-            }, this.playerSkin);
+            x: this.levelWidth / 2,
+            y: this.levelHeight - 300
+        }, this.playerSkin);
         this.players.push(thisPlayer);
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
@@ -131,11 +136,13 @@ class Gen_Level extends Phaser.Scene {
     winCallback(player, raceLine) {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+        //this.SaveTime();
     }
 
     endRace() {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+        //this.SaveTime();
     }
 
     Exit() {
@@ -145,6 +152,10 @@ class Gen_Level extends Phaser.Scene {
         //this.endRace();
         //this.scene.start("MainMenu");
     }
+
+    // SaveTime() {
+    //     localStorage.setItem('time', this.bestTime);
+    // }
 
     //Camera zoom (not used)
     // cameraZoomCallback() {

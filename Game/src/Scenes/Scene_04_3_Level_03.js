@@ -14,14 +14,14 @@ class Scene_04_3_Level_03 extends Gen_Level {
         this.gen_saw_sprites.add(new Saw(this, {x: 1216 , y: 20608 }, {x: 1216 , y: 21056 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1856 , y: 20032 }, {x: 1856 , y: 20608 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1280 , y: 16768 }, {x: 1280 , y: 17664 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 1920 , y: 9536 }, {x: 1920 , y: 17280 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 1920 , y: 9536 }, {x: 1920 , y: 9856 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1408 , y: 13504 }, {x: 1408 , y: 13696 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 2368 , y: 11840 }, {x: 2368 , y: 12224 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 2496 , y: 7488 }, {x: 2496 , y: 7936 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 640 , y: 11584 }, {x: 640 , y: 11968 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1600 , y: 9344 }, {x: 1600 , y: 9920 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1024 , y: 6976 }, {x: 1024 , y: 8128 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 2176 , y: 6976 }, {x: 2176 , y: 8192 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 2176 , y: 6976 }, {x: 2176 , y: 8128 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1280 , y: 5888 }, {x: 1280 , y: 6400 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1600 , y: 5120 }, {x: 1600 , y: 5248 }));
         this.gen_saw_sprites.add(new Saw(this, {x: 1600 , y: 2560 }, {x: 1600 , y: 4224 }));

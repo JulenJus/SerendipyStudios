@@ -11,16 +11,16 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.createPlayer(this, 0, true);
 
         //Add saws
-        this.gen_saw_sprites.add(new Saw(this, {x: 2304 , y: 15168 }, {x: 2304 , y: 15616 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 2688 , y: 16000 }, {x: 2688 , y: 16320 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3456 , y: 13696 }, {x: 3456 , y: 14080 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3456 , y: 17536 }, {x: 3456 , y: 11520 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3072 , y: 17536 }, {x: 3072 , y: 11520 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3136 , y: 5888 }, {x: 3136 , y: 6208 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3264 , y: 3712 }, {x: 3264 , y: 4096 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3072 , y: 1664 }, {x: 3072 , y: 2176 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3456 , y: 1024 }, {x: 3456 , y: 1664 }));
-        this.gen_saw_sprites.add(new Saw(this, {x: 3072 , y: 704 }, {x: 3072 , y: 1024 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 2432 , y: 15296 }, {x: 2432 , y: 15744 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 2816 , y: 16128 }, {x: 2816 , y: 16448 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3648 , y: 13824 }, {x: 3648 , y: 14208 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3648 , y: 11200 }, {x: 3648 , y: 11648 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3008 , y: 11200 }, {x: 3008 , y: 11648 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3264 , y: 6016 }, {x: 3264 , y: 6336 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3392 , y: 3840 }, {x: 3392 , y: 4224 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3200 , y: 1792 }, {x: 3200 , y: 2304 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3584 , y: 1152 }, {x: 3584 , y: 1792 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3136 , y: 832 }, {x: 3136 , y: 1152 }));
 
         //Add power ups
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2496 , 15424 ));

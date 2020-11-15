@@ -108,6 +108,7 @@ class Scene_01_Preload extends Phaser.Scene {
 
         this.scene.stop("Charge");
         this.scene.start("MainMenu");
+
     }
 
     //<editor-fold desc="Load functions">
