@@ -10,20 +10,31 @@ class Scene_04_1_Level_01 extends Gen_Level {
         super.create();
         super.createPlayer(this, 0, true);
 
-        //Add enemies
-        //this.gen_saw_sprites.add(new Saw(this, {x: initPosx, y: initPosy}, {x: endPosx, y: endPosy}));
+        //Add saws
+        this.gen_saw_sprites.add(new Saw(this, {x: 2432 , y: 15296 }, {x: 2432 , y: 15744 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 2816 , y: 16128 }, {x: 2816 , y: 16448 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3648 , y: 13824 }, {x: 3648 , y: 14208 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3648 , y: 11200 }, {x: 3648 , y: 11648 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3008 , y: 11200 }, {x: 3008 , y: 11648 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3264 , y: 6016 }, {x: 3264 , y: 6336 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3392 , y: 3840 }, {x: 3392 , y: 4224 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3200 , y: 1792 }, {x: 3200 , y: 2304 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3584 , y: 1152 }, {x: 3584 , y: 1792 }));
+        this.gen_saw_sprites.add(new Saw(this, {x: 3136 , y: 832 }, {x: 3136 , y: 1152 }));
 
         //Add power ups
-        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 500));
-        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2, this.levelHeight - 1200));
-        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, this.levelWidth/2 - 200, this.levelHeight - 800));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2496 , 15424 ));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 13760 ));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2944 , 8128 ));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 4928 ));
+        this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 2688 ));
 
         //Play power up boxes animation
         Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
             child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
         });
 
-        //<editor-fold desc="Tilemap visual debugging">
+        // //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);
         // wallsLayer.renderDebug(debugWalls, {
         //    tileColor: null,
@@ -37,7 +48,7 @@ class Scene_04_1_Level_01 extends Gen_Level {
         //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
         //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
         // });
-        //</editor-fold>
+        // //</editor-fold>
 
         //Create zoom blocks
         //this.zoomBlocks = this.physics.add.staticGroup();
