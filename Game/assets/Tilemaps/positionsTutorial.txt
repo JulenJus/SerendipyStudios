@@ -4,5 +4,6 @@ this.powerUpBoxes.add(new PowerUp_Box(this, 448 , 2816 ));
 
 SIERRAS POSITIONS
 
-this.gen_saw_sprites.add(new Saw(this, {x: 1472 , y: 960 }, {x: 1472 , y: 1600 }));
+this.gen_saw_sprites.add(new Saw(this, {x: 1600 , y: 1088 }, {x: 1600 , y: 1728 }));
+
 
