@@ -296,6 +296,7 @@ En cuanto al concepto general, el juego se desarrolla en la Academia Pingüino, 
 Como bien se ha indicado en el apartado anterior, el juego cuenta con una estética simple y homogénea. El estilo de dibujo es uno muy limpio, compuesto mayoritariamente por líneas no demasiado gruesas, y un sombreado plano. De esta forma, el jugador no se sentirá agobiado por el diseño, y podrá distinguir de una forma muy sencilla qué está ocurriendo en la pantalla, identificando y reconociendo cada uno de los elementos. 
 
 También se ha usado la siguiente paleta de colores para todos los mapas:
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/gamaColorButtons.png" width="125">
 
 
