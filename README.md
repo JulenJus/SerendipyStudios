@@ -353,10 +353,14 @@ Escudo Brillando
 
 - Obstáculos:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_left.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_up.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_left.png" width="125"> 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_up.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="125">
+
 Pinchos
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra1.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra2.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra3.png" width="125">
+
 Sierras
 
 - Packs
