@@ -162,25 +162,29 @@ Por lo tanto, estimamos que durará 2 meses.
 
 #### 3.3. Costes asociados
 
-Cada programador cobrará 1400€ mensuales, por lo que 8400€. 
+Se van a estimar costes de cara a tener un equipo trabajando durante dos años, siendo uno de esos años gratis de licencia, por ser alumnos (ya que el año que viene nos graduamos).
 
-El compositor cobrará 1200€ al mes, por lo que en total 2400€ 
+Cada programador cobrará 1400€ mensuales, por lo que en total 33600€. 
 
-Cada artista cobrará 2000€ al mes, por lo que en total 8000€ 
+El compositor cobrará 1200€ al mes, por lo que en total 28800€ 
 
-El level designer/game designer cobrará 2900€ al mes, por lo que en total 5800€ 
+Cada artista cobrará 2000€ al mes, por lo que en total 48000€ 
 
-El community manager ganará 1500€ al mes, por lo que en total 3000€ 
+El level designer/game designer cobrará 1500€ al mes, por lo que en total 36000€ 
 
-El Director/productor ganará 7500€ al mes, por lo que en total 15000€ 
+El community manager ganará 1500€ al mes, por lo que en total 36000€ 
+
+El Director/productor ganará 7500€ al mes, por lo que en total 48000€ 
 
 Licencia de Clip Studio Paint Pro: 45€ 
 
 Ableton Live Standard: 350€  
 
-Webstorm: 120€ 
+Webstorm: 129€
 
-#### En total: 43115€ 
+Adobe Animate: 290.28€
+
+#### En total: 231214.28€ 
 
 
 ### 4. Mecánicas de Juego y Elementos de Juego (personajes (nº) y sus mecánicas, escenarios que hacen, número de assets que se necesitan para el escenario, módulos que se necesitan (esquinas, central, etcétera) 
