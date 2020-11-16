@@ -1,5 +1,4 @@
 //Global variables
-//let powerUpTime;
 let raceTimeCount = 30;
 
 class Scene_04_0_InGameHUD extends Phaser.Scene {
@@ -34,23 +33,13 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //     fill: '#ffffff'
         // });
 
-        //Times
-        this.raceTime = this.add.text(game.config.width / 2, 100, '00.00', {
-            fontFamily: 'Stencil',
-            fontStyle: 'Bold',
-            fontSize: '64px',
-            stroke: "#143675",
-            strokeThickness: 9,
-            align: "center",
-            fill: '#ffffff'
-        }).setOrigin(0.5, 0).depth = 1;
-
         // powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
         //     fontFamily: 'Gelato',
         //     fontStyle: 'Italic',
         //     fontSize: '64px',
         //     fill: '#000000'
         // });
+
 
         //Movement bar
         this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'UI_bar');
@@ -71,6 +60,20 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.raceBar = this.add.sprite(60, 700, 'UI_raceBar');
         this.playerMark = this.add.sprite(45, 1085, 'UI_playerMark');
 
+        //Texts
+        //Race time
+        this.raceTime = this.add.text(game.config.width / 2, 100, '', {
+            fontFamily: 'Stencil',
+            fontStyle: 'Bold',
+            fontSize: '64px',
+            stroke: "#143675",
+            strokeThickness: 9,
+            align: "center",
+            fill: '#ffffff'
+        }).setOrigin(0.5, 0);
+
+        //raceTime.setText('aaaa'/*thisScene.registry.get('timer')*/);
+
         //Race position
         this.racePosition = this.add.text(60, 230, '1st', {
             fontFamily: 'Gelato',
@@ -84,6 +87,8 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     }
 
     update() {
+        this.raceTime.setText(`${(this.registry.get('timer')).toFixed(2)}`); //Update the text every time the 'timer' variable from the registry changes
+
         if (this.player.controllable) {
             this.player.movementBar.update();
             this.playerMark.y =

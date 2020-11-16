@@ -3,7 +3,7 @@ class Gen_Level extends Phaser.Scene {
         super(name);
 
         this.name = name;
-        this.bestTime = 31;
+        this.timer = 0;
         this.auxCount = 0;
         this.levelWidth = 0;
         this.levelHeight = 0;
@@ -23,15 +23,29 @@ class Gen_Level extends Phaser.Scene {
 
     init(args) {
         this.playerSkin = args.skin
+        this.timer = 0;
     }
 
     create() {
         SetDeltaTime();
-
         //<editor-fold desc="Configure the map">
         console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
+        this.registry.set('timer', this.timer); //Registry (update) the timer in the game registry
+
         this.SetUpRanking(); //Setup ranking in case that it doesnt exist yet
+
+        //Start timer
+        let thisScene = this; //Variable for the change of scope
+        this.time.addEvent({
+            delay: 1,
+            loop: true,
+            callback: function () {
+                //Update timer
+                thisScene.timer += 0.01;
+                thisScene.registry.set('timer', thisScene.timer); //We have to update the registy variable constantly for the HUD
+            }
+        });
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -118,7 +132,6 @@ class Gen_Level extends Phaser.Scene {
 
     update() {
         SetDeltaTime();
-
         for (let i = 0; i < this.players.length; i++) {
             if (this.players[i].powerUpObject_Used !== null)
                 this.players[i].powerUpObject_Used.Render();
@@ -136,20 +149,24 @@ class Gen_Level extends Phaser.Scene {
         gen_powerUpBox_sprite.PickBox(player);
     }
 
-    winCallback(player, raceLine) {
+    goToRanking(){
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+    }
+
+    winCallback(player, raceLine) {
+        this.goToRanking();
         this.SaveTime();
     }
 
     endRace() {
-        this.scene.stop("InGameHUD");
-        this.scene.start("Ranking", {skin: this.playerSkin});
-        this.SaveTime();
+        this.goToRanking();
+        //this.SaveTime();
     }
 
     Exit() {
-        this.winCallback();
+        this.endRace();
+        //this.winCallback();
         //this.scene.stop("InGameHUD")
 
         //this.endRace();
@@ -170,7 +187,7 @@ class Gen_Level extends Phaser.Scene {
         //localStorage.clear();
         this.auxCount = -1;
         for (let i = 0; i < 5; i++) {
-            if (this.bestTime < parseInt(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
+            if (this.timer < parseInt(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
                 if (localStorage.getItem('time_' + i) === '-- : --') {
                     this.auxCount = i;
                     break;
@@ -182,7 +199,7 @@ class Gen_Level extends Phaser.Scene {
             }
         }
         if (this.auxCount !== -1)
-            localStorage.setItem('time_' + this.auxCount, this.bestTime);
+            localStorage.setItem('time_' + this.auxCount, `${this.timer.toFixed(2)}`);
     }
 
     MoveAllTimesDown(start) {
