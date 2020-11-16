@@ -3,7 +3,8 @@ class Gen_Level extends Phaser.Scene {
         super(name);
 
         this.name = name;
-        this.bestTime = 50;
+        this.timer = 0;
+        this.auxCount = 0;
         this.levelWidth = 0;
         this.levelHeight = 0;
 
@@ -22,13 +23,29 @@ class Gen_Level extends Phaser.Scene {
 
     init(args) {
         this.playerSkin = args.skin
+        this.timer = 0;
     }
 
     create() {
         SetDeltaTime();
-
         //<editor-fold desc="Configure the map">
         console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
+
+        this.registry.set('timer', this.timer); //Registry (update) the timer in the game registry
+
+        this.SetUpRanking(); //Setup ranking in case that it doesnt exist yet
+
+        //Start timer
+        let thisScene = this; //Variable for the change of scope
+        this.time.addEvent({
+            delay: 1,
+            loop: true,
+            callback: function () {
+                //Update timer
+                thisScene.timer += 0.01;
+                thisScene.registry.set('timer', thisScene.timer); //We have to update the registy variable constantly for the HUD
+            }
+        });
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -40,8 +57,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -54,19 +71,19 @@ class Gen_Level extends Phaser.Scene {
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
         //<editor-fold desc="Tilemap visual debugging">
-        const debugWalls = this.add.graphics().setAlpha(0.7);
-        this.wallsLayer.renderDebug(debugWalls, {
-            tileColor: null,
-            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        });
-
-        const debugObstacles = this.add.graphics().setAlpha(0.7);
-        this.obstaclesLayer.renderDebug(debugObstacles, {
-            tileColor: null,
-            collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-            faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        });
+        // const debugWalls = this.add.graphics().setAlpha(0.7);
+        // this.wallsLayer.renderDebug(debugWalls, {
+        //     tileColor: null,
+        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        // });
+        //
+        // const debugObstacles = this.add.graphics().setAlpha(0.7);
+        // this.obstaclesLayer.renderDebug(debugObstacles, {
+        //     tileColor: null,
+        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
+        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
+        // });
         //</editor-fold>
 
 
@@ -115,7 +132,6 @@ class Gen_Level extends Phaser.Scene {
 
     update() {
         SetDeltaTime();
-
         for (let i = 0; i < this.players.length; i++) {
             if (this.players[i].powerUpObject_Used !== null)
                 this.players[i].powerUpObject_Used.Render();
@@ -133,29 +149,64 @@ class Gen_Level extends Phaser.Scene {
         gen_powerUpBox_sprite.PickBox(player);
     }
 
-    winCallback(player, raceLine) {
+    goToRanking(){
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
-        //this.SaveTime();
+    }
+
+    winCallback(player, raceLine) {
+        this.goToRanking();
+        this.SaveTime();
     }
 
     endRace() {
-        this.scene.stop("InGameHUD");
-        this.scene.start("Ranking", {skin: this.playerSkin});
+        this.goToRanking();
         //this.SaveTime();
     }
 
     Exit() {
-        this.winCallback();
+        this.endRace();
+        //this.winCallback();
         //this.scene.stop("InGameHUD")
 
         //this.endRace();
         //this.scene.start("MainMenu");
     }
 
-    // SaveTime() {
-    //     localStorage.setItem('time', this.bestTime);
-    // }
+    SetUpRanking(){
+        //Prepare ranking board in case that it does not exist
+        if (localStorage.getItem('timeCount') == null) {
+            localStorage.setItem('timeCount', this.auxCount.toString());
+            for (let i = 0; i < 5; i++) {
+                localStorage.setItem('time_' + i, '-- : --');
+            }
+        }
+    }
+
+    SaveTime() {
+        //localStorage.clear();
+        this.auxCount = -1;
+        for (let i = 0; i < 5; i++) {
+            if (this.timer < parseInt(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
+                if (localStorage.getItem('time_' + i) === '-- : --') {
+                    this.auxCount = i;
+                    break;
+                } else {
+                    this.MoveAllTimesDown(i)
+                    this.auxCount = i;
+                    break;
+                }
+            }
+        }
+        if (this.auxCount !== -1)
+            localStorage.setItem('time_' + this.auxCount, `${this.timer.toFixed(2)}`);
+    }
+
+    MoveAllTimesDown(start) {
+        for (let i = 4; i > start; i--) {
+            localStorage.setItem('time_' + i, localStorage.getItem('time_' + (i - 1)));
+        }
+    }
 
     //Camera zoom (not used)
     // cameraZoomCallback() {

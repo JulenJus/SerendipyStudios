@@ -4,6 +4,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
         this.name = "Ranking";
         this.bestTime = 0;
+        this.allScoresText = '';
 
         this.levelWidth = 0;
         this.levelHeight = 0;
@@ -20,13 +21,16 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     init(args) {
         this.playerSkin = args.skin
+        this.allScoresText = ''; //Whenever we enter the ranking we reset the scores in order to load them all from the start
     }
 
     create() {
         console.log("Ranking create");
+        let newScore = '';
+        for (let i = 0; i < 5; i++) {
 
-        // this.bestTime = parseInt(localStorage.getItem('time'));
-        // console.log("TIME: " + this.bestTime);
+            this.allScoresText += localStorage.getItem('time_' + i) + '\n';
+        }
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -35,6 +39,37 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         //Set level height and width according to the json's
         this.levelWidth = this.map.width * this.map.tileWidth;
         this.levelHeight = this.map.height * this.map.tileHeight;
+
+        //Texts
+        //Ranking title
+        this.rankingTitle = this.add.text(this.levelWidth / 2, 170,
+            '-Ranking-',
+            {
+                fontFamily: 'Stencil',
+                fontStyle: 'Bold',
+                fontSize: '64px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
+            }).setOrigin(0.5, 0.5).depth = 1;
+
+        //Scores display
+        this.scoresDisplay = this.add.text(this.levelWidth / 2, 400,
+            this.allScoresText,
+            {
+                fontFamily: 'Stencil',
+                fontStyle: 'Bold',
+                fontSize: '48px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
+            }).setOrigin(0.5, 0.5).depth = 1;
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
