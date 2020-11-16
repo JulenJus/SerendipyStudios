@@ -260,6 +260,10 @@ Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en 
 - Esta es Kurta, la hermana gemela de Karta. A diferencia de su hermana, no le interesa ascender como soldado, sino vender su mercancía, por lo que es la encargada de la tienda de los DLCs.
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
 
+- Por otro lado, están los Pingus, crías de pingüino que desean crecer y algún día poder alistarse en la Academia Pingüino.
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
+
+
 
 #### 5.3. Entornos y lugares
 
@@ -390,6 +394,10 @@ Karta
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
 Steve
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
+Pingu
+
 ### 7. Animación 
 
 En el juego solo existe animaciones por parte de los personajes jugables y algunas trampas que el jugador se encontrará a lo largo del mapa. Para futuras actualizaciones, habrá enemigos que disparen o se avalancen sobre el jugador, así como más power ups y trampas animadas. 
@@ -407,6 +415,10 @@ Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
 Steve
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
+Pingu
 
 #### 7.2. Objetos 
 
