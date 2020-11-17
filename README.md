@@ -129,10 +129,8 @@ El juego será freemium, encontrándose dentro del juego algunas micro transacci
 
 | Producto | Precio |
 | ------------- | ------------- |
-| Pack Skins | 0.99€/pack |
 | Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
-| DLC de mapas + skins exclusivas | 4.99€ |
-| DLC mapas solo | 0.99€/unidad |
+| DLC mapas | 0.99€/unidad |
 
 
 ### 3. Planificación y Costes
@@ -378,7 +376,7 @@ Sierras
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Summer%20Pack/SteveSummer.png" width="125">
 Pack de verano
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack%20Christmas.png" width="125">
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png" width="125">
 Pack de navidad
 
