@@ -40,6 +40,9 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //     fill: '#000000'
         // });
 
+        //Event Listeners
+        this.player.onPaintPowerUpIcon.on('onPaintPowerUpIcon', this.onPaintPowerUpIcon, this);
+        this.player.controls.onExitLevel.on('onExitLevel', this.onExitLevel, this);
 
         //Movement bar
         this.bar = this.add.sprite(game.config.width / 2, game.config.height - 70, 'UI_bar');
@@ -50,11 +53,25 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
         this.player.movementBar.setIsRunning(true);
 
-        //this.StartCountdown();
-
         //PowerUp stuff
         this.gen_powerUpBox_sprite = this.add.sprite(80, 80, 'UI_powerUpEmpty').setScale(0.5);
-        this.player.onPaintPowerUpIcon.on('onPaintPowerUpIcon', this.onPaintPowerUpIcon, this);
+
+        //Exit confirmation screen
+        this.mapsScreen = this.add.sprite(0, 0, "UI_exitConfirmationScreen").setOrigin(0, 0);
+        this.mapsScreen.depth = 2;
+        this.mapsScreen.visible = false;
+
+        //Buttons
+        this.buttons = [];
+        this.buttons.push(this.add.sprite(156, 476, 'UI_exitConfirmationScreen_NoButton_static').setOrigin(0, 0));
+        this.buttons.push(this.add.sprite(459, 476, 'UI_exitConfirmationScreen_YesButton_static').setOrigin(0, 0));
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].depth = 3
+            this.buttons[i].visible = false;
+        }
+
+        //Initialize button callbacks
+        this.b_InitializeCallbacks();
 
         //Race bar
         this.raceBar = this.add.sprite(60, 700, 'UI_raceBar');
@@ -71,8 +88,6 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             align: "center",
             fill: '#ffffff'
         }).setOrigin(0.5, 0);
-
-        //raceTime.setText('aaaa'/*thisScene.registry.get('timer')*/);
 
         //Race position
         this.racePosition = this.add.text(60, 230, '1st', {
@@ -136,6 +151,15 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         this.barMark = this.add.sprite(game.config.width / 2 - 238, game.config.height - 77.5, 'UI_blueMark');
     }
 
+    onExitLevel() {
+        this.mapsScreen.visible = true;
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].visible = true;
+            this.buttons[i].setInteractive();
+        }
+        game.scene.pause('Level_0' + currentScene);
+    }
+
     onPaintPowerUpIcon(type, enable, args) {
         switch (type) {
             case "dash":
@@ -166,6 +190,36 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }
     }
 
+    b_InitializeCallbacks() {
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].on('pointerover', () => this.b_ChangeSprite(i, "over"));
+            this.buttons[i].on('pointerout', () => this.b_ChangeSprite(i, "static"));
+        }
+
+        this.buttons[0].on('pointerup', () => this.resumeGame());
+        this.buttons[1].on('pointerup', () => this.goToRanking());
+    }
+
+    b_ChangeSprite(buttonIndex, mode) {
+        if (buttonIndex === 0) {
+            this.buttons[0].setTexture('UI_exitConfirmationScreen_NoButton_' + mode);
+        } else {
+            this.buttons[1].setTexture('UI_exitConfirmationScreen_YesButton_' + mode);
+        }
+    }
+
+    goToRanking(){
+        this.scene.get('Level_0' + currentScene).goToRanking();
+    }
+
+    resumeGame(){
+        this.mapsScreen.visible = false;
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].visible = false;
+            this.buttons[i].disableInteractive();
+        }
+        game.scene.resume('Level_0' + currentScene);
+    }
 
     StartCountdown() {
         //While the player has not finished the race, count the time it is taking

@@ -2,6 +2,7 @@ class Controls_InGame {
     constructor(scene, player) {
         this.player = player;
         this.scene = scene;
+        this.onExitLevel = new Phaser.Events.EventEmitter();
 
         this.keyboardInput = scene.input.keyboard.addKeys({
             'up': Phaser.Input.Keyboard.KeyCodes.W,
@@ -37,6 +38,7 @@ class Controls_InGame {
         this.controlType = "Pc";
         let player = this.player;
         let keyboardInput = this.keyboardInput;
+        let exitLevelEvent = this.onExitLevel;
 
         //Movement
         this.scene.input.keyboard.on('keydown_W', function () {
@@ -73,7 +75,8 @@ class Controls_InGame {
 
         this.scene.input.on('pointerdown', function (pointer) {
             if (pointer.y < 125 && pointer.x > 650) {
-                this.scene.Exit();
+                exitLevelEvent.emit('onExitLevel');
+                //this.scene.Exit();
             }
         });
     }
@@ -81,6 +84,7 @@ class Controls_InGame {
     setControlsMobile() {
         this.controlType = "Mobile";
         let player = this.player;
+        let exitLevelEvent = this.onExitLevel;
         this.scene.input.on('pointerdown', function (pointer) {
             console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
 
@@ -108,7 +112,8 @@ class Controls_InGame {
 
             //Escape
             if (pointer.y < 125 && pointer.x > 650) {
-                this.scene.Exit();
+                exitLevelEvent.emit('onExitLevel');
+                //this.scene.Exit();
             }
         });
     }
