@@ -119,16 +119,8 @@ sello:
 Anchura: 438
 Altura: 247
 
-character_bob:
-Anchura: 232
-Altura: 247
-
-character_karta:
+characters:
 Anchura: 220
-Altura: 247
-
-character_steve/armin:
-Anchura: 259
 Altura: 247
 
 
