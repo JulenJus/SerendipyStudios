@@ -22,19 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/Colocando sierras.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/Llamando unidades.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/Pintando Pinchos.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/preloadBar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/preloadBarRelleno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/preload/preloadFondo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_00_Dummy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_00_Charge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
