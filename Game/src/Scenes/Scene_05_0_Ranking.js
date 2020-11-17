@@ -26,10 +26,8 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     create() {
         console.log("Ranking create");
-        let newScore = '';
         for (let i = 0; i < 5; i++) {
-
-            this.allScoresText += localStorage.getItem('time_' + i) + '\n';
+            this.allScoresText += localStorage.getItem('time_' + i) + '\n'; //Write all scores
         }
 
         //Create tilemap
@@ -87,6 +85,11 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         //Simulate the joinning of a player
         this.createPlayer(this, 0, true);
 
+        //Create cheerpenguins
+        this.cheerPenguins = this.physics.add.staticGroup();
+        this.cheerPenguins.add(new CheerPenguin(this, 'Glove_Left', {x: this.levelWidth / 2 + 130, y: this.levelHeight - 285}));
+        this.cheerPenguins.add(new CheerPenguin(this, 'Glove_Right',{x: this.levelWidth / 2 , y: this.levelHeight - 345}));
+
         //StartCountdown
         let thisSceneManager = this.scene;
         this.time.addEvent({
@@ -104,7 +107,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     createPlayer(level, id, controllable) {
         //Create player
         let thisPlayer = new Player(level, id, controllable, {
-            x: this.levelWidth / 2,
+            x: this.levelWidth / 2 - 120,
             y: this.levelHeight - 500
         }, this.playerSkin);
         this.players.push(thisPlayer);

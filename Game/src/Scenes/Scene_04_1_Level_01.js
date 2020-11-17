@@ -9,6 +9,7 @@ class Scene_04_1_Level_01 extends Gen_Level {
         console.log("Level_01 create");
         super.create();
         super.createPlayer(this, 0, true);
+        currentScene = 1;
 
         //Add saws
         this.gen_saw_sprites.add(new Saw(this, {x: 2432 , y: 15296 }, {x: 2432 , y: 15744 }));
@@ -28,6 +29,9 @@ class Scene_04_1_Level_01 extends Gen_Level {
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 2944 , 8128 ));
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 4928 ));
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 3328 , 2688 ));
+
+        //Add cheer penguins
+        this.gen_cheerPenguins.add(new CheerPenguin(this, 'Pompoms',{x: this.levelWidth / 2 + 255 , y: this.levelHeight - 1025}));
 
         //Play power up boxes animation
         Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {

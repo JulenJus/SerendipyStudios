@@ -1,3 +1,5 @@
+let currentScene = 0;
+
 class Gen_Level extends Phaser.Scene {
     constructor(name) {
         super(name);
@@ -12,6 +14,7 @@ class Gen_Level extends Phaser.Scene {
 
         this.gen_saw_sprites = null;
         this.gen_powerUpBox_sprites = null;
+        this.gen_cheerPenguins = null;
 
         //Layers
         this.backgroundLayer = null;    //Back
@@ -57,8 +60,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -96,6 +99,9 @@ class Gen_Level extends Phaser.Scene {
 
         //Power Ups
         this.gen_powerUpBox_sprites = this.physics.add.staticGroup();
+
+        //Cheer penguins
+        this.gen_cheerPenguins = this.physics.add.staticGroup();
 
         //Camera follow and bounds
         this.physics.world.setBounds(0, 0, this.levelWidth, this.levelHeight);
@@ -159,19 +165,19 @@ class Gen_Level extends Phaser.Scene {
         this.SaveTime();
     }
 
-    endRace() {
-        this.goToRanking();
-        //this.SaveTime();
-    }
+    // endRace() {
+    //     this.goToRanking();
+    //     //this.SaveTime();
+    // }
 
-    Exit() {
-        this.endRace();
-        //this.winCallback();
-        //this.scene.stop("InGameHUD")
-
-        //this.endRace();
-        //this.scene.start("MainMenu");
-    }
+    // Exit() {
+    //     this.endRace();
+    //     //this.winCallback();
+    //     //this.scene.stop("InGameHUD")
+    //
+    //     //this.endRace();
+    //     //this.scene.start("MainMenu");
+    // }
 
     SetUpRanking(){
         //Prepare ranking board in case that it does not exist

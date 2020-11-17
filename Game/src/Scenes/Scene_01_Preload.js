@@ -290,6 +290,11 @@ class Scene_01_Preload extends Phaser.Scene {
         //General UI
         this.load.image('UI_powerUpEmpty', '../assets/Sprites/UI/inGame_boostBase.png');
         this.load.image('UI_exitButton', '../assets/Sprites/UI/inGame_buttonExit.png');
+        this.load.image('UI_exitConfirmationScreen', '../assets/Sprites/Menus/preexit/preexit_background.png');
+        this.load.image('UI_exitConfirmationScreen_NoButton_over', '../assets/Sprites/Menus/preexit/preexit_buttonNo_over.png');
+        this.load.image('UI_exitConfirmationScreen_NoButton_static', '../assets/Sprites/Menus/preexit/preexit_buttonNo_static.png');
+        this.load.image('UI_exitConfirmationScreen_YesButton_over', '../assets/Sprites/Menus/preexit/preexit_buttonYes_over.png');
+        this.load.image('UI_exitConfirmationScreen_YesButton_static', '../assets/Sprites/Menus/preexit/preexit_buttonYes_static.png');
 
         //MovementBar UI
         this.load.image('UI_bar', '../assets/Sprites/UI/barra.png'); //Jumping bar assets
@@ -327,6 +332,19 @@ class Scene_01_Preload extends Phaser.Scene {
     //</editor-fold>
 
     loadRanking() {
+        //Cheer penguins animations
+        this.load.spritesheet('cheerPenguin_animation_Glove_Left', '../assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Left.png', {
+            frameWidth: 82.533,
+            frameHeight: 60
+        });
+        this.load.spritesheet('cheerPenguin_animation_Glove_Right', '../assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Right.png', {
+            frameWidth: 82.533,
+            frameHeight: 60
+        });
+        this.load.spritesheet('cheerPenguin_animation_Pompoms', '../assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Pompoms.png', {
+            frameWidth: 94.944,
+            frameHeight: 60
+        });
         this.load.image('tilesheet_Ranking', '../assets/Tilemaps/tilesheet.png');
         this.load.tilemapTiledJSON('tilemap_Ranking', '../assets/Tilemaps/ranking.json');
     }
