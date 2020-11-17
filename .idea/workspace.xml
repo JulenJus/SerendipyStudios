@@ -20,22 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Pompoms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/src/Classes/CheerPenguin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_5_ChooseMode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Controls/Controls_InGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Controls/Controls_InGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/assets/Sprites/Menus/prelobby/prelobby_buttonSinglePlayer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/assets/Sprites/Menus/prelobby/prelobby_buttonSinglePlayer_static.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_Preload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

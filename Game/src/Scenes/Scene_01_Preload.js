@@ -91,6 +91,7 @@ class Scene_01_Preload extends Phaser.Scene {
         this.loadMainMenu();
         this.loadHowToPlay();
         this.loadTutorial();
+        this.loadChooseMode();
         this.loadCredits();
         this.loadShop();
         this.loadLobby();
@@ -159,6 +160,12 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.tilemapTiledJSON('tilemap_Tutorial', '../assets/Tilemaps/tutorial.json');
     }
 
+    loadChooseMode(){
+        this.load.image('chooseMode_buttonSinglePlayer_static', '../assets/Sprites/Menus/prelobby/prelobby_buttonSinglePlayer_static.png');
+        this.load.image('chooseMode_buttonSinglePlayer_over', '../assets/Sprites/Menus/prelobby/prelobby_buttonSinglePlayer_over.png');
+        this.load.image('chooseMode_buttonMultiplayer', '../assets/Sprites/Menus/prelobby/prelobby_buttonMultiplayer.png');
+    }
+
     loadCredits() {
         this.load.image('credits_logs', '../assets/Sprites/Menus/Credits/credits_logs.png');
         this.load.image('credits_buttonTwitter_static', '../assets/Sprites/Menus/Credits/credits_buttonTwitter_static.png');
@@ -173,8 +180,8 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('shop_buttonSkins_over', '../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
         this.load.image('shop_buttonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_buttonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
-        this.load.image('shop_mapsScreen', '../assets/Sprites/Menus/Shop/shop_mapsScreen.png');
-        this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
+        this.load.image('shop_mapsScreen', '../assets/Sprites/Menus/Shop/shop_mapsScreen2.png');
+        this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen2.png');
         this.load.image('shop_screensButtonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_screensButtonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }

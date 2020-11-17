@@ -41,7 +41,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         //Texts
         //Ranking title
         this.rankingTitle = this.add.text(this.levelWidth / 2, 170,
-            '-Ranking-',
+            'Ranking',
             {
                 fontFamily: 'Stencil',
                 fontStyle: 'Bold',
