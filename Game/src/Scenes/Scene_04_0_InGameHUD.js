@@ -90,12 +90,12 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }).setOrigin(0.5, 0);
 
         //Race position
-        this.racePosition = this.add.text(60, 230, '1st', {
-            fontFamily: 'Gelato',
-            fontStyle: 'Italic',
-            fontSize: '48px',
-            fill: '#000000'
-        }).setOrigin(0.5, 0);
+        // this.racePosition = this.add.text(60, 230, '1st', {
+        //     fontFamily: 'Gelato',
+        //     fontStyle: 'Italic',
+        //     fontSize: '48px',
+        //     fill: '#000000'
+        // }).setOrigin(0.5, 0);
 
         //Exit button
         this.add.sprite(700, 70, 'UI_exitButton').setScale(0.6);
@@ -157,7 +157,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             this.buttons[i].visible = true;
             this.buttons[i].setInteractive();
         }
-        game.scene.pause('Level_0' + currentScene);
+        game.scene.pause('Level_' + currentScene);
     }
 
     onPaintPowerUpIcon(type, enable, args) {
@@ -209,7 +209,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     }
 
     goToRanking(){
-        this.scene.get('Level_0' + currentScene).goToRanking();
+        this.scene.get('Level_' + currentScene).goToRanking();
     }
 
     resumeGame(){
@@ -218,7 +218,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             this.buttons[i].visible = false;
             this.buttons[i].disableInteractive();
         }
-        game.scene.resume('Level_0' + currentScene);
+        game.scene.resume('Level_' + currentScene);
     }
 
     StartCountdown() {

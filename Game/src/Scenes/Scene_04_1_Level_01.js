@@ -9,7 +9,7 @@ class Scene_04_1_Level_01 extends Gen_Level {
         console.log("Level_01 create");
         super.create();
         super.createPlayer(this, 0, true);
-        currentScene = 1;
+        currentScene = '01';
 
         //Add saws
         this.gen_saw_sprites.add(new Saw(this, {x: 2432 , y: 15296 }, {x: 2432 , y: 15744 }));
