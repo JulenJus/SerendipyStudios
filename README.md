@@ -129,10 +129,8 @@ El juego será freemium, encontrándose dentro del juego algunas micro transacci
 
 | Producto | Precio |
 | ------------- | ------------- |
-| Pack Skins | 0.99€/pack |
 | Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
-| DLC de mapas + skins exclusivas | 4.99€ |
-| DLC mapas solo | 0.99€/unidad |
+| DLC mapas | 0.99€/unidad |
 
 
 ### 3. Planificación y Costes
@@ -162,25 +160,29 @@ Por lo tanto, estimamos que durará 2 meses.
 
 #### 3.3. Costes asociados
 
-Cada programador cobrará 1400€ mensuales, por lo que 8400€. 
+Se van a estimar costes de cara a tener un equipo trabajando durante dos años, siendo uno de esos años gratis de licencia, por ser alumnos (ya que el año que viene nos graduamos).
 
-El compositor cobrará 1200€ al mes, por lo que en total 2400€ 
+Cada programador cobrará 800€ mensuales, por lo que en total 19200€. 
 
-Cada artista cobrará 2000€ al mes, por lo que en total 8000€ 
+El compositor cobrará 650€ al mes, por lo que en total 15600€ 
 
-El level designer/game designer cobrará 2900€ al mes, por lo que en total 5800€ 
+Cada artista cobrará 800€ al mes, por lo que en total 19200€ 
 
-El community manager ganará 1500€ al mes, por lo que en total 3000€ 
+El level designer/game designer cobrará 800€ al mes, por lo que en total 19200€ 
 
-El Director/productor ganará 7500€ al mes, por lo que en total 15000€ 
+El community manager ganará 750€ al mes, por lo que en total 18000€ 
+
+El Director/productor ganará 800€ al mes, por lo que en total 19200€ 
 
 Licencia de Clip Studio Paint Pro: 45€ 
 
 Ableton Live Standard: 350€  
 
-Webstorm: 120€ 
+Webstorm: 129€
 
-#### En total: 43115€ 
+Adobe Animate: 290.28€
+
+#### En total: 111214.28€ 
 
 
 ### 4. Mecánicas de Juego y Elementos de Juego (personajes (nº) y sus mecánicas, escenarios que hacen, número de assets que se necesitan para el escenario, módulos que se necesitan (esquinas, central, etcétera) 
@@ -374,7 +376,7 @@ Sierras
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Summer%20Pack/SteveSummer.png" width="125">
 Pack de verano
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/Pack%20Christmas.png" width="125">
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png" width="125">
 Pack de navidad
 
