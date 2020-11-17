@@ -2,104 +2,6 @@
  
 ## Flyguins
 
-
-## Índice: 
-
-### 1. Introducción 
-
-#### 1.1 Descripción breve del concepto 
-
-#### 1.2. Descripción breve de la historia y personajes 
-
-#### 1.3. Propósito, público objetivo y plataformas 
-
- 
-### 2. Monetización y modelo de negocio 
-
-#### 2.1. Tipo de modelo de monetización 
-
-#### 2.2. Tablas de productos y precios 
- 
-
-### 3. Planificación y Costes 
-
-#### 3.1. El equipo humano 
-
-#### 3.2. Estimación temporal del desarrollo 
-
-#### 3.3. Costes asociados 
-
- 
-### 4. Mecánicas de Juego y Elementos de Juego (personajes (nº) y sus mecánicas, escenarios que hacen, número de assets que se necesitan para el escenario, módulos que se necesitan (esquinas, central, etcétera) 
-
-#### 4.1. Descripción detallada del concepto de juego 
-
-#### 4.2. Descripción detallada de las mecánicas de juego 
-
-#### 4.3. Controles 
-
-#### 4.4. Niveles y misiones 
-
-#### 4.5. Objetos, armas y power ups 
-
-#### 4.6. Arquitectura del software 
-
-
-### 5. Trasfondo 
-
-#### 5.1. Descripción detallada de la historia y la trama 
-
-#### 5.2. Personajes 
-
-#### 5.3. Entornos y lugares 
-
- 
-### 6. Arte 
-
-#### 6.1. Estética general del juego 
-
-#### 6.2. Apartado visual 
-
-#### 6.3. Concept Art 
-
-#### 6.4. Animación 
-
-
-### 7. Animación 
-
-#### 7.1. Personajes 
-
-#### 7.2. Objetos
-
-
-### 8. Sonido 
-
-#### 8.1. Sonido ambiente y música 
-
-#### 8.2. Efectos sonoros 
-
-#### 8.3. Lista de sonidos 
-
-
-### 9. Interfaz 
-
-#### 9.1. Diseños básicos de los menús 
-
-#### 9.2. Diagrama de flujo 
-
- 
-### 10. Hoja de ruta del desarrollo 
-
-#### 10.1. Hito 1 
-
-#### 10.2. Hito 2 
-
-#### 10.3. Hito 3 
-
-#### 10.4. Fecha de lanzamiento 
-  
-  
-
   
   
 ### 1. Introducción
@@ -382,24 +284,6 @@ Pack de navidad
 
 
 
-#### 6.4. Animación 
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterArmin.gif" width="125">
-Armin
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
-Bob
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
-Karta
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
-Steve
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
-Pingu
-
 ### 7. Animación 
 
 En el juego solo existe animaciones por parte de los personajes jugables y algunas trampas que el jugador se encontrará a lo largo del mapa. Para futuras actualizaciones, habrá enemigos que disparen o se avalancen sobre el jugador, así como más power ups y trampas animadas. 
@@ -448,6 +332,16 @@ Los efectos de sonido, a diferencia de la música de fondo, son más minimalista
 
 #### 8.3. Lista de sonidos 
 
+Si bien la mayoría de efectos musicales han sido modificados, todos han sido extraidos de una página de uso libre (FreeSound, concretamente). Por lo tanto, en cada sonido se indicará el link del cual procede el sonido originalmente.
+
+- Efecto de aleteo: https://freesound.org/people/InspectorJ/sounds/404553/
+- Efecto de click en cualquier botón: https://freesound.org/people/timbreknight/sounds/342546/
+- Efecto de coger una caja: https://freesound.org/people/lartti/sounds/527580/
+- Efecto de colisión con los obstáculos: https://freesound.org/people/newagesoup/sounds/348244/
+
+- Música del menú: https://freesound.org/people/fmceretta/sounds/426701/
+- Música de la pantalla de jugar: https://freesound.org/people/Timbre/sounds/151171/
+
 
 ### 9. Interfaz 
 
@@ -461,17 +355,6 @@ En la parte inferior de la pantalla aparecerá una barra horizontal que indica l
 
 Todos los menús tienen una estética de lugar helado, por lo que todos los botones son trozos de hielo. El menú de la tienda está a cargo de Kurta, hermana de Karta, por lo que se refuerza más el hecho de que sea una tienda. En el menú de cómo jugar, Jack estará a cargo de enseñar a los jugadores los controles básicos y los distintos elementos, por lo que el jugador podrá sentir que alguien veterano le está enseñando a jugar.
 
-#### 9.2. Diagrama de flujo 
-
  
-### 10. Hoja de ruta del desarrollo 
-
-#### 10.1. Hito 1 
-
-#### 10.2. Hito 2 
-
-#### 10.3. Hito 3 
-
-#### 10.4. Fecha de lanzamiento
-
+### 10. Fecha de lanzamiento
 La fecha de lanzamiento del juego será el 19/11/2020, aunque se lanzarán más DLCs a lo largo del tiempo.
