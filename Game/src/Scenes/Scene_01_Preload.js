@@ -156,8 +156,8 @@ class Scene_01_Preload extends Phaser.Scene {
     }
 
     loadTutorial() {
-        this.load.image('tilesheet_Tutorial', '../assets/Tilemaps/tilesheet.png');
-        this.load.tilemapTiledJSON('tilemap_Tutorial', '../assets/Tilemaps/tutorial.json');
+        this.load.image('tilesheet_Level_Tutorial', '../assets/Tilemaps/tilesheet.png');
+        this.load.tilemapTiledJSON('tilemap_Level_Tutorial', '../assets/Tilemaps/tutorial.json');
     }
 
     loadChooseMode(){
@@ -180,8 +180,8 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('shop_buttonSkins_over', '../assets/Sprites/Menus/Shop/shop_buttonSkins_over.png');
         this.load.image('shop_buttonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_buttonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
-        this.load.image('shop_mapsScreen', '../assets/Sprites/Menus/Shop/shop_mapsScreen2.png');
-        this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen2.png');
+        this.load.image('shop_mapsScreen', '../assets/Sprites/Menus/Shop/shop_mapsScreen.png');
+        this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
         this.load.image('shop_screensButtonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_screensButtonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
     }
@@ -203,17 +203,25 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('lobby_buttonSelNext_over', '../assets/Sprites/Menus/Lobby/lobby_buttonSelNext_over.png');
 
         //Colors
-        let colors = ["Blue", "Green", "Orange", "Red"];
-        for (let i = 0; i < colors.length; i++) {
-            this.load.image('lobby_buttonAccept_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_static.png');
-            this.load.image('lobby_buttonAccept_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_over.png');
-            this.load.image('lobby_buttonBack_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_static.png');
-            this.load.image('lobby_buttonBack_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_over.png');
-            this.load.image('lobby_buttonBigSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonBigSel_' + colors[i] + '.png');
-            this.load.image('lobby_buttonLittleSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_' + colors[i] + '.png');
-            this.load.image('lobby_buttonNext_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_static.png');
-            this.load.image('lobby_buttonNext_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_over.png');
-        }
+        // let colors = ["Blue", "Green", "Orange", "Red"];
+        // for (let i = 0; i < colors.length; i++) {
+        //     this.load.image('lobby_buttonAccept_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_static.png');
+        //     this.load.image('lobby_buttonAccept_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_over.png');
+        //     this.load.image('lobby_buttonBack_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_static.png');
+        //     this.load.image('lobby_buttonBack_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_over.png');
+        //     this.load.image('lobby_buttonBigSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonBigSel_' + colors[i] + '.png');
+        //     this.load.image('lobby_buttonLittleSel_' + colors[i], '../assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_' + colors[i] + '.png');
+        //     this.load.image('lobby_buttonNext_' + colors[i] + '_static', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_static.png');
+        //     this.load.image('lobby_buttonNext_' + colors[i] + '_over', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_over.png');
+        // }
+
+        this.load.image('lobby_buttonBigSel_Blue', '../assets/Sprites/Menus/Lobby/lobby_buttonsingleBigSelBlue.png');
+        this.load.image('lobby_buttonAccept_Blue_static', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_Blue_static.png');
+        this.load.image('lobby_buttonAccept_Blue_over', '../assets/Sprites/Menus/Lobby/lobby_buttonAccept_Blue_over.png');
+        this.load.image('lobby_buttonBack_Blue_static', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_Blue_static.png');
+        this.load.image('lobby_buttonBack_Blue_over', '../assets/Sprites/Menus/Lobby/lobby_buttonBack_Blue_over.png');
+        this.load.image('lobby_buttonNext_Blue_static', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_Blue_static.png');
+        this.load.image('lobby_buttonNext_Blue_over', '../assets/Sprites/Menus/Lobby/lobby_buttonNext_Blue_over.png');
 
         //Characters
         let chars = [
@@ -224,13 +232,13 @@ class Scene_01_Preload extends Phaser.Scene {
         ];
         for (let i = 0; i < chars.length; i++) {
             this.load.image('lobby_char_' + chars[i] + 'Big', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Big.png');
-            this.load.image('lobby_char_' + chars[i] + 'Mini', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Mini.png');
+            //this.load.image('lobby_char_' + chars[i] + 'Mini', '../assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Mini.png');
+            this.load.image(chars[i] +'Plush', '../assets/Sprites/Menus/lobby/Plushes/' + chars[i] + 'Plush.png'); //Sofa penguins
         }
 
         //Done ticks
         this.load.image('lobby_ready_bigTick', '../assets/Sprites/Menus/Lobby/lobby_ready_bigTick.png');
         this.load.image('lobby_ready_littleTick', '../assets/Sprites/Menus/Lobby/lobby_ready_littleTick.png');
-
     }
 
     loadLevels() {
@@ -311,8 +319,8 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('UI_redMark', '../assets/Sprites//UI/hielorojo.png');
 
         //Race progress UI
-        this.load.image('UI_raceBar', '../assets/Sprites/UI/RaceBar.png'); //Race bar assets
-        this.load.image('UI_playerMark', '../assets/Sprites/UI/PlayerMark.png');
+        this.load.image('UI_raceBar', '../assets/Sprites/UI/RaceBar1.png'); //Race bar assets
+        this.load.image('UI_playerMark', '../assets/Sprites/UI/PlayerMark2.png');
 
         //Power ups
         this.load.image('UI_shieldPowerUp', '../assets/Sprites/UI/inGame_boostShield.png');

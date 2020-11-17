@@ -52,7 +52,7 @@ class Scene_02_5_ChooseMode extends Phaser.Scene {
     }
 
     goToLobby() {
-        this.scene.start("Lobby", {pjId: 0, color: "Red"});
+        this.scene.start("Lobby", {pjId: 0/*, color: "Blue"*/});
     }
 
     b_Exit() {

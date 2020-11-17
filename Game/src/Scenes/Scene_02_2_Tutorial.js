@@ -1,6 +1,6 @@
 class Scene_02_2_Tutorial extends Gen_Level {
     constructor() {
-        super("Tutorial");
+        super("Level_Tutorial");
         console.log("Tutorial constructor");
     }
 
@@ -9,6 +9,7 @@ class Scene_02_2_Tutorial extends Gen_Level {
         console.log("Tutorial create");
         super.create();
         super.createPlayer(this, 0, true);
+        currentScene = 'Tutorial';
 
         //Add saws
         this.gen_saw_sprites.add(new Saw(this, {x: 1600 , y: 1088 }, {x: 1600 , y: 1728 }));
