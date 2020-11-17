@@ -66,16 +66,70 @@ Altura: 1200
 
 BigPenguin:
 Anchura: 136
-Altura: 250
+Altura: 247
 
 LittlePenguin1:
 Anchura: 607
-Altura: 212
+Altura: 196
 
 LittlePenguin2:
 Anchura: 607
-Altura: 371
+Altura: 355
 
 LittlePenguin3:
 Anchura: 607
-Altura: 530
+Altura: 515
+
+BigKarta:
+Anchura: 87
+Altura: 515
+
+LittleKarta:
+Anchura: 599
+Altura: 196
+
+BigBob:
+Anchura: 123
+Altura: 258
+
+LittleBob:
+Anchura: 535
+Altura: 608
+
+
+SINGLEPLAYER:
+
+Seleccion
+Anchura: 96
+Altura: 194
+
+button_back:
+Anchura: 181
+Altura: 572
+
+button_accept:
+Anchura: 336
+Altura: 562
+
+button_accept:
+Anchura: 493
+Altura: 570
+
+sello:
+Anchura: 438
+Altura: 247
+
+character_bob:
+Anchura: 232
+Altura: 247
+
+character_karta:
+Anchura: 220
+Altura: 247
+
+character_steve/armin:
+Anchura: 259
+Altura: 247
+
+
+
