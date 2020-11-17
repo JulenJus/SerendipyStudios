@@ -1,0 +1,7 @@
+ButtonYes:
+	Anchura: 156
+	Altura: 476
+
+ButtonNo:
+	Anchura: 459
+	Altura: 476
