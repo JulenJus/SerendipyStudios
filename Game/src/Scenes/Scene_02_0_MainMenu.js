@@ -63,7 +63,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
-        this.scene.start("Lobby", {pjId: 0, color: "Red"});
+        //this.scene.start("Lobby", {pjId: 0, color: "Red"});
+        this.scene.start("ChooseMode");
     }
 
     b_HowToPlay() {

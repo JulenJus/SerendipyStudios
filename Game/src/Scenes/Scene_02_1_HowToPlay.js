@@ -121,7 +121,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                         break;
                 }
             } else {
-                this.scene.start("Tutorial");
+                this.scene.start("Tutorial", {skin: "Steve"});
             }
         } else {
             console.log("Pc")
@@ -130,7 +130,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 this.tipsPc[this.currentTip - 1].visible = true;
                 this.tipsPc[this.currentTip - 2].visible = false;
             } else {
-                this.scene.start("Tutorial");
+                this.scene.start("Tutorial", {skin: "Steve"});
             }
         }
     }
