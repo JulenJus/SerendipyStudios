@@ -5,6 +5,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     create() {
+        this.scene.get("MusicManager").music_play_MainMenu();
+
         //Show the background
         this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
         this.add.sprite(35, 133, 'mainMenu_title').setOrigin(0, 0);
@@ -52,7 +54,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_InitializeCallbacks() {
-        for(let i=0; i<this.buttons.length; i++){
+        for (let i = 0; i < this.buttons.length; i++) {
             //console.log(this.buttons[i])
             this.buttons[i].on('pointerover', () => this.b_ChangeSprite(i, "over"));
             this.buttons[i].on('pointerout', () => this.b_ChangeSprite(i, "static"));
@@ -67,27 +69,33 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
+        this.scene.get("MusicManager").sfx_play_button();
         //this.scene.start("Lobby", {pjId: 0, color: "Red"});
         this.scene.start("ChooseMode");
     }
 
     b_HowToPlay() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("HowToPlay");
     }
 
     b_Credits() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Credits");
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         window.close();
     }
 
-    b_Shop(){
+    b_Shop() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Shop");
     }
 
-    b_Settings(){
+    b_Settings() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Settings");
     }
 

@@ -23,16 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_6_Settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/mainMenu_buttonSettings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/posiciones_menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sprites/Menus/MainMenu/posiciones_menu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Settings/settings_barFilling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSketch_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Player/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Player/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PowerUps/PowerUp_Dash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Gen_Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_1_MusicManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_1_MusicManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_4_Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_4_Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_5_ChooseMode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_5_ChooseMode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_02_6_Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_02_6_Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_03_0_Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +77,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Scenes" />
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes\Npcs" />
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes/Player" />
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Player" />
+      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes\Player" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Scenes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes\Controls" />
-      <recent name="E:\Universidad\Curso 4\Semestre 1\[JWRS] Juegos para web y redes sociales\Juego\SerendipyStudios\Game\src\Classes\PowerUps" />
     </key>
   </component>
   <component name="RunManager">
@@ -110,6 +118,7 @@
       <workItem from="1605281683026" duration="19620000" />
       <workItem from="1605657577020" duration="4600000" />
       <workItem from="1605691780726" duration="4532000" />
+      <workItem from="1605710171344" duration="11490000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>

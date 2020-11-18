@@ -244,10 +244,13 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
     }
 
     goToRanking(){
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.get('Level_' + currentScene).goToRanking();
+        this.scene.get("MusicManager").music_stop_InGame();
     }
 
     resumeGame(){
+        this.scene.get("MusicManager").sfx_play_button();
         this.mapsScreen.visible = false;
         for (let i = 0; i < this.buttons.length; i++) {
             this.buttons[i].visible = false;

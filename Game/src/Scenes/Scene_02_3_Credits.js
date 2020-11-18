@@ -48,11 +48,14 @@ class Scene_02_3_Credits extends Phaser.Scene {
     }
 
     b_Twitter() {
+        this.scene.get("MusicManager").sfx_play_button();
+
         //Create a tab with twitter account url
         window.open("https://twitter.com/SerendipyStudio");
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 

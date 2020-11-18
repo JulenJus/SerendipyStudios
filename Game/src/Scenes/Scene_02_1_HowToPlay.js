@@ -81,10 +81,12 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 
     b_Next() {
+        this.scene.get("MusicManager").sfx_play_button();
         if (this.sys.game.device.os.android ||
             this.sys.game.device.os.iPad) {
             console.log("Mobile")
@@ -122,6 +124,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 }
             } else {
                 this.scene.start("Level_Tutorial", {skin: "Steve"});
+                this.scene.get("MusicManager").music_stop_MainMenu();
             }
         } else {
             console.log("Pc")
@@ -131,11 +134,13 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 this.tipsPc[this.currentTip - 2].visible = false;
             } else {
                 this.scene.start("Level_Tutorial", {skin: "Steve"});
+                this.scene.get("MusicManager").music_stop_MainMenu();
             }
         }
     }
 
     b_Back() {
+        this.scene.get("MusicManager").sfx_play_button();
         if (this.sys.game.device.os.android ||
             this.sys.game.device.os.iPad) {
             console.log("Mobile")

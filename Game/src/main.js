@@ -9,8 +9,9 @@ window.onload = function () {
         version: '1.0',
         pixelArt: false,
         scene: [
-            Scene_00_Charge,
-            Scene_01_Preload,
+            Scene_00_0_Charge,
+            Scene_01_0_Preload,
+            Scene_01_1_MusicManager,
             Scene_02_0_MainMenu,
             Scene_02_1_HowToPlay,
             Scene_02_2_Tutorial,
