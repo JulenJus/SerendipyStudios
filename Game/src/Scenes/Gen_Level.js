@@ -12,6 +12,7 @@ class Gen_Level extends Phaser.Scene {
 
         this.players = [];
 
+        this.rankingScores = 10;
         this.gen_saw_sprites = null;
         this.gen_powerUpBox_sprites = null;
         this.gen_cheerPenguins = null;
@@ -49,8 +50,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -213,7 +214,7 @@ class Gen_Level extends Phaser.Scene {
         //Prepare ranking board in case that it does not exist
         if (localStorage.getItem('timeCount') == null) {
             localStorage.setItem('timeCount', this.auxCount.toString());
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < this.rankingScores; i++) {
                 localStorage.setItem('time_' + i, '-- : --');
             }
         }
@@ -222,8 +223,8 @@ class Gen_Level extends Phaser.Scene {
     SaveTime() {
         //localStorage.clear();
         this.auxCount = -1;
-        for (let i = 0; i < 5; i++) {
-            if (this.timer < parseInt(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
+        for (let i = 0; i < this.rankingScores; i++) {
+            if (parseFloat(`${this.timer.toFixed(2)}`.toString()) < parseFloat(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
                 if (localStorage.getItem('time_' + i) === '-- : --') {
                     this.auxCount = i;
                     break;
@@ -236,10 +237,10 @@ class Gen_Level extends Phaser.Scene {
         }
         if (this.auxCount !== -1)
             localStorage.setItem('time_' + this.auxCount, `${this.timer.toFixed(2)}`);
-    }
+     }
 
     MoveAllTimesDown(start) {
-        for (let i = 4; i > start; i--) {
+        for (let i = this.rankingScores - 1; i > start; i--) {
             localStorage.setItem('time_' + i, localStorage.getItem('time_' + (i - 1)));
         }
     }

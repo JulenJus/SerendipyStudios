@@ -1,7 +1,7 @@
 class Scene_05_0_Ranking extends Phaser.Scene {
     constructor() {
         super("Ranking");
-        this.numStoredTimes = 5;
+        this.numStoredTimes = 10;
 
         this.name = "Ranking";
         this.bestTime = 0;
@@ -56,12 +56,12 @@ class Scene_05_0_Ranking extends Phaser.Scene {
             }).setOrigin(0.5, 0.5).depth = 1;
 
         //Scores display
-        this.scoresDisplay = this.add.text(this.levelWidth / 2, 400,
+        this.scoresDisplay = this.add.text(this.levelWidth / 2, 500,
             this.allScoresText,
             {
                 fontFamily: 'Stencil',
                 fontStyle: 'Bold',
-                fontSize: '48px',
+                fontSize: '38px',
                 stroke: "#143675",
                 strokeThickness: 9,
                 align: "center",
