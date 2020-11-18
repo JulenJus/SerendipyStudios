@@ -259,6 +259,9 @@ Escudo
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/ShieldShine.png" width="125">
 Escudo Brillando
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Speed.png" width="125">
+Velocidad
+
 - Pantallas
 
 
