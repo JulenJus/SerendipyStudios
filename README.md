@@ -282,8 +282,40 @@ Escudo Brillando
 Velocidad
 
 - Pantallas
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Ajustes_Screenshot.PNG" width="125">
+Ajustes
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Credits_Screenshot.PNG" width="125">
+Creditos
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Lobby_Screenshot.PNG" width="125">
+Lobby
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/MainMenu_Screenshot.PNG" width="125">
+Menú Principal
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/ModoDeJuego_Screenshot.PNG" width="125">
+Modo de Juego
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/NivelJugable_Screenshot.PNG" width="125">
+Nivel jugable
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Ranking_Screenshot.PNG" width="125">
+Ranking
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Salir_Screenshot.PNG" width="125">
+Menú de Salir
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_1_Screenshot.PNG" width="125">
+<img src="hhtps://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_2_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_3_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_4_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_5_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_6_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_7_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_8_Screenshot.PNG" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Tutorial_9_Screenshot.PNG" width="125">
+Pantallas de Tutorial
 
 
 - Tilesheet de mapas:
