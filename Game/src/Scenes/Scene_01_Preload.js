@@ -94,6 +94,7 @@ class Scene_01_Preload extends Phaser.Scene {
         this.loadChooseMode();
         this.loadCredits();
         this.loadShop();
+        this.loadSettings();
         this.loadLobby();
         this.loadLevels();
         this.loadRanking();
@@ -133,6 +134,9 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('mainMenu_buttonExit_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonExit_over.png');
         this.load.image('mainMenu_buttonShop_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_static.png');
         this.load.image('mainMenu_buttonShop_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonShop_over.png');
+
+        this.load.image('mainMenu_buttonSettings_static', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonSettings_static.png');
+        this.load.image('mainMenu_buttonSettings_over', '../assets/Sprites/Menus/MainMenu/mainMenu_buttonSettings_over.png');
     }
 
     loadHowToPlay() {
@@ -184,6 +188,13 @@ class Scene_01_Preload extends Phaser.Scene {
         this.load.image('shop_skinsScreen', '../assets/Sprites/Menus/Shop/shop_skinsScreen.png');
         this.load.image('shop_screensButtonExit_static', '../assets/Sprites/Menus/Shop/shop_buttonExit_static.png');
         this.load.image('shop_screensButtonExit_over', '../assets/Sprites/Menus/Shop/shop_buttonExit_over.png');
+    }
+
+    loadSettings(){
+        this.load.image('settings_background', '../assets/Sprites/Menus/Settings/settings_background.png');
+        this.load.image('settings_barEdge', '../assets/Sprites/Menus/Settings/settings_barEdge.png');
+        this.load.image('settings_barFill', '../assets/Sprites/Menus/Settings/settings_barFill.png');
+        this.load.image('settings_littleIce', '../assets/Sprites/Menus/Settings/settings_littleIce.png');
     }
 
     loadLobby() {

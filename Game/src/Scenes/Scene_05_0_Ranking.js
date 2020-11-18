@@ -1,6 +1,7 @@
 class Scene_05_0_Ranking extends Phaser.Scene {
     constructor() {
         super("Ranking");
+        this.numStoredTimes = 5;
 
         this.name = "Ranking";
         this.bestTime = 0;
@@ -26,7 +27,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
     create() {
         console.log("Ranking create");
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < this.numStoredTimes; i++) {
             this.allScoresText += localStorage.getItem('time_' + i) + '\n'; //Write all scores
         }
 
@@ -89,19 +90,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         this.cheerPenguins = this.physics.add.staticGroup();
         this.cheerPenguins.add(new CheerPenguin(this, 'Glove_Left', {x: this.levelWidth / 2 + 130, y: this.levelHeight - 285}));
         this.cheerPenguins.add(new CheerPenguin(this, 'Glove_Right',{x: this.levelWidth / 2 , y: this.levelHeight - 345}));
-
-        //StartCountdown
-        let thisSceneManager = this.scene;
-        this.time.addEvent({
-            delay: 5000,
-            loop: false,
-            callback: function () {
-                //Go back to the lobby
-                thisSceneManager.stop("InGameHUD");
-                //thisSceneManager.start("Lobby");
-                thisSceneManager.start("MainMenu");
-            }
-        });
     }
 
     createPlayer(level, id, controllable) {
@@ -123,6 +111,23 @@ class Scene_05_0_Ranking extends Phaser.Scene {
             this.scene.run("InGameHUD", {player: thisPlayer, level: level});
             //this.cameras.main.startFollow(thisPlayer);
         }
+    }
+
+    setPlayerReady(){
+        this.isRaceStarted = true;
+
+        //StartCountdown
+        let thisSceneManager = this.scene;
+        this.time.addEvent({
+            delay: 5000,
+            loop: false,
+            callback: function () {
+                //Go back to the lobby
+                thisSceneManager.stop("InGameHUD");
+                //thisSceneManager.start("Lobby");
+                thisSceneManager.start("MainMenu");
+            }
+        });
     }
 
     collideCallback() {

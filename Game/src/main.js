@@ -17,6 +17,7 @@ window.onload = function () {
             Scene_02_3_Credits,
             Scene_02_4_Shop,
             Scene_02_5_ChooseMode,
+            Scene_02_6_Settings,
             Scene_03_0_Lobby,
             Scene_04_1_Level_01,
             Scene_04_2_Level_02,

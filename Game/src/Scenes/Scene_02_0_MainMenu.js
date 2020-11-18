@@ -15,8 +15,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.buttons.push(this.add.sprite(114, 702, 'mainMenu_buttonHowToPlay_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(114, 878, 'mainMenu_buttonCredits_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(114, 1059, 'mainMenu_buttonExit_static').setOrigin(0, 0).setInteractive());
-        this.buttons.push(this.add.sprite(22, 13, 'mainMenu_buttonShop_static').setOrigin(0, 0).setScale(0.9).setInteractive());
-        //this.buttons.push(this.add.sprite((game.config.width - 22) - 8, (game.config.height - 7) - 13, 'mainMenu_buttonShop_static').setOrigin(1, 1).setScale(1).setInteractive());
+        this.buttons.push(this.add.sprite(25, 13, 'mainMenu_buttonShop_static').setOrigin(0, 0).setScale(0.9).setInteractive());
+        this.buttons.push(this.add.sprite(640, 13, 'mainMenu_buttonSettings_static').setOrigin(0, 0).setScale(0.65).setInteractive());
 
         //Initialize button callbacks
         this.b_InitializeCallbacks();
@@ -43,6 +43,9 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
             case 4:
                 this.buttons[4].setTexture('mainMenu_buttonShop_' + mode);
                 break;
+            case 5:
+                this.buttons[5].setTexture('mainMenu_buttonSettings_' + mode);
+                break;
             default:
                 break;
         }
@@ -60,6 +63,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.buttons[2].on('pointerup', () => this.b_Credits());
         this.buttons[3].on('pointerup', () => this.b_Exit());
         this.buttons[4].on('pointerup', () => this.b_Shop());
+        this.buttons[5].on('pointerup', () => this.b_Settings());
     }
 
     b_Play() {
@@ -81,6 +85,10 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     b_Shop(){
         this.scene.start("Shop");
+    }
+
+    b_Settings(){
+        this.scene.start("Settings");
     }
 
     //</editor-fold>
