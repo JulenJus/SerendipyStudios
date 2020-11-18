@@ -245,6 +245,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
     goToRanking(){
         this.scene.get('Level_' + currentScene).goToRanking();
+        this.scene.get("MusicManager").stop_InGameMusic();
     }
 
     resumeGame(){

@@ -122,6 +122,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 }
             } else {
                 this.scene.start("Level_Tutorial", {skin: "Steve"});
+                this.scene.get("MusicManager").stop_MainMenuMusic();
             }
         } else {
             console.log("Pc")
@@ -131,6 +132,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 this.tipsPc[this.currentTip - 2].visible = false;
             } else {
                 this.scene.start("Level_Tutorial", {skin: "Steve"});
+                this.scene.get("MusicManager").stop_MainMenuMusic();
             }
         }
     }

@@ -27,6 +27,15 @@ class Scene_02_6_Settings extends Phaser.Scene {
 
         //Initialize button callbacks
         this.b_InitializeCallbacks();
+
+        //Update the sound buttons' position accordingly to the volume values
+        let musicVolume = this.scene.get("MusicManager").getMusicVolume();
+        this.musicSlider.x = this.musicFill.x + musicVolume * 498;
+        this.b_changeProgress(this.musicFill, musicVolume);
+
+        let sfxVolume = this.scene.get("MusicManager").getSfxVolume();
+        this.sfxSlider.x = this.sfxFill.x + sfxVolume * 498;
+        this.b_changeProgress(this.sfxFill, sfxVolume);
     }
 
     //<editor-fold desc="Callbacks">
@@ -69,14 +78,16 @@ class Scene_02_6_Settings extends Phaser.Scene {
     b_updateBar(slider, pointer, dragX){
         slider.x = Phaser.Math.Clamp(dragX, this.musicFill.x, this.musicFill.x + 498);
 
+        let progress = (slider.x - this.musicFill.x)/498;
+
         switch(slider){
             case this.musicSlider:
-                this.b_changeProgress(this.musicFill, (slider.x - this.musicFill.x)/498);
-                this.setupMusicVolume();
+                this.b_changeProgress(this.musicFill, progress);
+                this.scene.get("MusicManager").setMusicVolume(progress);
                 break;
             case this.sfxSlider:
-                this.b_changeProgress(this.sfxFill, (slider.x - this.sfxFill.x)/498);
-                this.setupSfxVolume();
+                this.b_changeProgress(this.sfxFill, progress);
+                this.scene.get("MusicManager").setSfxVolume(progress);
                 break;
         }
     }
@@ -87,14 +98,6 @@ class Scene_02_6_Settings extends Phaser.Scene {
         bar.setCrop(0, 0, 498 * progress, 50);
 
         return;
-
-    }
-
-    setupMusicVolume(){
-
-    }
-
-    setupSfxVolume(){
 
     }
 

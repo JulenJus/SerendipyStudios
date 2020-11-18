@@ -32,6 +32,8 @@ class Gen_Level extends Phaser.Scene {
 
     create() {
         SetDeltaTime();
+        this.scene.get("MusicManager").play_InGameMusic();
+
         //<editor-fold desc="Configure the map">
         console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
@@ -188,6 +190,7 @@ class Gen_Level extends Phaser.Scene {
     goToRanking(){
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
+        this.scene.get("MusicManager").stop_InGameMusic();
     }
 
     winCallback(player, raceLine) {

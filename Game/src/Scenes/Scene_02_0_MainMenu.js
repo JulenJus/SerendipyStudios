@@ -5,6 +5,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     create() {
+        this.scene.get("MusicManager").play_MainMenuMusic();
+
         //Show the background
         this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
         this.add.sprite(35, 133, 'mainMenu_title').setOrigin(0, 0);
@@ -17,6 +19,9 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.buttons.push(this.add.sprite(114, 1059, 'mainMenu_buttonExit_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(25, 13, 'mainMenu_buttonShop_static').setOrigin(0, 0).setScale(0.9).setInteractive());
         this.buttons.push(this.add.sprite(640, 13, 'mainMenu_buttonSettings_static').setOrigin(0, 0).setScale(0.65).setInteractive());
+
+        //Init the sfx
+        this.sfx_button = this.sound.add('sfx_gen_button', {loop: false});
 
         //Initialize button callbacks
         this.b_InitializeCallbacks();
@@ -52,7 +57,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_InitializeCallbacks() {
-        for(let i=0; i<this.buttons.length; i++){
+        for (let i = 0; i < this.buttons.length; i++) {
             //console.log(this.buttons[i])
             this.buttons[i].on('pointerover', () => this.b_ChangeSprite(i, "over"));
             this.buttons[i].on('pointerout', () => this.b_ChangeSprite(i, "static"));
@@ -67,27 +72,34 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
+        this.sfx_button.play();
         //this.scene.start("Lobby", {pjId: 0, color: "Red"});
         this.scene.start("ChooseMode");
     }
 
     b_HowToPlay() {
+        this.sfx_button.play();
         this.scene.start("HowToPlay");
     }
 
     b_Credits() {
+        this.sfx_button.play();
+        this.music_mainMenu.stop();
         this.scene.start("Credits");
     }
 
     b_Exit() {
+        this.sfx_button.play();
         window.close();
     }
 
-    b_Shop(){
+    b_Shop() {
+        this.sfx_button.play();
         this.scene.start("Shop");
     }
 
-    b_Settings(){
+    b_Settings() {
+        this.sfx_button.play();
         this.scene.start("Settings");
     }
 
