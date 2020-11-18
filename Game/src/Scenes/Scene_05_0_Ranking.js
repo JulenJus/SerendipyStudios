@@ -26,6 +26,8 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     create() {
+        this.scene.get("MusicManager").music_play_Ranking();
+
         console.log("Ranking create");
         for (let i = 0; i < this.numStoredTimes; i++) {
             this.allScoresText += localStorage.getItem('time_' + i) + '\n'; //Write all scores
@@ -126,6 +128,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
                 thisSceneManager.stop("InGameHUD");
                 //thisSceneManager.start("Lobby");
                 thisSceneManager.start("MainMenu");
+                thisSceneManager.get("MusicManager").music_stop_Ranking();
             }
         });
     }

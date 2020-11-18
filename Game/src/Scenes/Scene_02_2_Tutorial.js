@@ -53,7 +53,7 @@ class Scene_02_2_Tutorial extends Gen_Level {
     winCallback(){
         this.scene.stop("InGameHUD");
         this.scene.start("MainMenu");
-        this.scene.get("MusicManager").stop_InGameMusic();
+        this.scene.get("MusicManager").music_stop_InGame();
     }
 
     Exit(){

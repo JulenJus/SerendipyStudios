@@ -5,7 +5,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     create() {
-        this.scene.get("MusicManager").play_MainMenuMusic();
+        this.scene.get("MusicManager").music_play_MainMenu();
 
         //Show the background
         this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
@@ -19,9 +19,6 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.buttons.push(this.add.sprite(114, 1059, 'mainMenu_buttonExit_static').setOrigin(0, 0).setInteractive());
         this.buttons.push(this.add.sprite(25, 13, 'mainMenu_buttonShop_static').setOrigin(0, 0).setScale(0.9).setInteractive());
         this.buttons.push(this.add.sprite(640, 13, 'mainMenu_buttonSettings_static').setOrigin(0, 0).setScale(0.65).setInteractive());
-
-        //Init the sfx
-        this.sfx_button = this.sound.add('sfx_gen_button', {loop: false});
 
         //Initialize button callbacks
         this.b_InitializeCallbacks();
@@ -72,34 +69,34 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     }
 
     b_Play() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         //this.scene.start("Lobby", {pjId: 0, color: "Red"});
         this.scene.start("ChooseMode");
     }
 
     b_HowToPlay() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("HowToPlay");
     }
 
     b_Credits() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         this.music_mainMenu.stop();
         this.scene.start("Credits");
     }
 
     b_Exit() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         window.close();
     }
 
     b_Shop() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Shop");
     }
 
     b_Settings() {
-        this.sfx_button.play();
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Settings");
     }
 
