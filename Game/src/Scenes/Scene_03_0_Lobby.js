@@ -204,6 +204,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     //UI callbacks
 
     b_changeLevel(isNext) {
+        this.scene.get("MusicManager").sfx_play_button();
         if (!isNext) {
             if (this.level != 0) {
                 this.level--;
@@ -222,12 +223,14 @@ class Scene_03_0_Lobby extends Phaser.Scene {
 
     b_Play() {
         if (this.numPlayers === this.readyPlayers){
+            this.scene.get("MusicManager").sfx_play_button();
             this.scene.start("Level_0" + (this.level + 1).toString(), {skin: this.CHARS[this.pjsSkin[this.pjId]]});
             this.scene.get("MusicManager").music_stop_MainMenu();
         }
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 
@@ -236,6 +239,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     b_PreviousSkin() {
         if (this.ready) return;
 
+        this.scene.get("MusicManager").sfx_play_button();
         console.log("Previous skin")
         this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === 0 ? this.CHARS.length - 1 : this.pjsSkin[this.pjId] - 1;
         this.pjSkinSofa = this.pjSkinSofa === 0 ? this.CHARS.length - 1 : this.pjSkinSofa - 1;
@@ -243,6 +247,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     }
 
     b_SelectSkin() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.ready = !this.ready;
         console.log("Skin selected: " + this.ready);
 
@@ -254,6 +259,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     b_NextSkin() {
         if (this.ready) return;
 
+        this.scene.get("MusicManager").sfx_play_button();
         console.log("Next skin");
         this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === this.CHARS.length - 1 ? 0 : this.pjsSkin[this.pjId] + 1;
         this.pjSkinSofa = this.pjSkinSofa === this.CHARS.length - 1 ? 0 : this.pjSkinSofa + 1;

@@ -111,7 +111,7 @@ class Gen_Level extends Phaser.Scene {
         //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
-        this.physics.add.collider(thisPlayer, this.wallsLayer, null, null, this);
+        this.physics.add.collider(thisPlayer, this.wallsLayer, this.collision, null, this);
         this.obstaclesLayerCollision = this.physics.add.collider(thisPlayer, this.obstaclesLayer, this.takeDamageCallback, null, this);
         this.sawLayerCollision = this.physics.add.collider(thisPlayer, this.gen_saw_sprites, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_sprites, this.pickPowerUpCallback, null, this);
@@ -137,12 +137,12 @@ class Gen_Level extends Phaser.Scene {
     }
 
     //<editor-fold desc="Callbacks">
-    setPlayerReady(){
+    setPlayerReady() {
         //[HERE] In the multiplayer mode, this method would wait until all the players have joined the race
         this.initRace()
     }
 
-    initRace(){
+    initRace() {
         //Set up text
         let countdown = 3;
         this.scene.get("InGameHUD").setCountdown(countdown);
@@ -157,7 +157,7 @@ class Gen_Level extends Phaser.Scene {
                 countdown--;
                 thisObj.scene.get("InGameHUD").setCountdown(countdown);
 
-                if(countdown === 0){
+                if (countdown === 0) {
                     thisObj.isRaceStarted = true;
                     thisObj.startRaceChrono();
                 }
@@ -165,7 +165,7 @@ class Gen_Level extends Phaser.Scene {
         });
     }
 
-    startRaceChrono(){
+    startRaceChrono() {
         //Start timer
         let thisScene = this; //Variable for the change of scope
         this.time.addEvent({
@@ -179,6 +179,13 @@ class Gen_Level extends Phaser.Scene {
         });
     }
 
+    collision(player, object) {
+        if (!this.isRaceStarted) return;
+        if (object.faceTop) return;
+
+        this.scene.get("MusicManager").sfx_play_collision();
+    }
+
     takeDamageCallback(player, dmgObject) {
         player.TakeDamage(this.obstaclesLayerCollision, this.sawLayerCollision);
     }
@@ -187,13 +194,14 @@ class Gen_Level extends Phaser.Scene {
         gen_powerUpBox_sprite.PickBox(player);
     }
 
-    goToRanking(){
+    goToRanking() {
         this.scene.stop("InGameHUD");
         this.scene.start("Ranking", {skin: this.playerSkin});
         this.scene.get("MusicManager").music_stop_InGame();
     }
 
     winCallback(player, raceLine) {
+        this.scene.get("MusicManager").sfx_play_goal();
         this.goToRanking();
         this.SaveTime();
     }
@@ -212,7 +220,7 @@ class Gen_Level extends Phaser.Scene {
     //     //this.scene.start("MainMenu");
     // }
 
-    SetUpRanking(){
+    SetUpRanking() {
         //Prepare ranking board in case that it does not exist
         if (localStorage.getItem('timeCount') == null) {
             localStorage.setItem('timeCount', this.auxCount.toString());

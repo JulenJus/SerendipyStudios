@@ -56,7 +56,7 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
     music_stop_MainMenu(){
         if(this.music_mainMenu.isPlaying) {
             this.music_mainMenu.stop();
-            this.playingAudios.delete(this.music_mainMenu);
+            this.playingAudios.splice(this.playingAudios.indexOf(this.music_mainMenu), 1);
         }
     }
 
@@ -71,7 +71,7 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
     music_stop_InGame(){
         if(this.music_inGame.isPlaying) {
             this.music_inGame.stop();
-            this.playingAudios.delete(this.music_inGame);
+            this.playingAudios.splice(this.playingAudios.indexOf(this.music_inGame), 1);
         }
     }
 
@@ -86,32 +86,38 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
     music_stop_Ranking(){
         if(this.music_ranking.isPlaying) {
             this.music_ranking.stop();
-            this.playingAudios.delete(this.music_ranking);
+            this.playingAudios.splice(this.playingAudios.indexOf(this.music_ranking), 1);
         }
     }
 
     //Sfx methods
     sfx_play_button(){
         this.sfx_button.play();
+        this.sfx_button.setVolume(this.volume_sfx);
     }
 
     sfx_play_box(){
-        this.sfx_button.play();
+        this.sfx_box.play();
+        this.sfx_box.setVolume(this.volume_sfx);
     }
 
     sfx_play_collision(){
-        this.sfx_button.play();
+        this.sfx_collision.play();
+        this.sfx_collision.setVolume(this.volume_sfx);
     }
 
     sfx_play_flap(){
-        this.sfx_button.play();
+        this.sfx_flap.play();
+        this.sfx_flap.setVolume(this.volume_sfx);
     }
 
     sfx_play_goal(){
-        this.sfx_button.play();
+        this.sfx_goal.play();
+        this.sfx_goal.setVolume(this.volume_sfx);
     }
 
     sfx_play_squawk(){
-        this.sfx_button.play();
+        this.sfx_squawk.play();
+        this.sfx_squawk.setVolume(this.volume_sfx);
     }
 }

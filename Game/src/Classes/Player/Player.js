@@ -55,14 +55,20 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.scene.anims.create({
             key: 'gen_player_animation_Idle_' + this.skin,     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {start: 0, end: 14}),
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {
+                start: 0,
+                end: 14
+            }),
             frameRate: 96,
             repeat: 1       //The animation repeats 1 time
         });
 
         this.scene.anims.create({
             key: 'gen_player_animation_Dash_' + this.skin,     //Animation alias
-            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {start: 0, end: 14}),
+            frames: this.scene.anims.generateFrameNumbers('gen_player_animation_Idle_' + this.skin, {
+                start: 0,
+                end: 14
+            }),
             frameRate: 128,
             repeat: 4       //The animation repeats 4 times
         });
@@ -94,28 +100,32 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
     Move(direction) {
         if (!this.scene.isRaceStarted) return;
+        if (this.isDamaged) return;
 
-        if (!this.isDamaged) {
-            this.anims.play('gen_player_animation_Idle_' + this.skin);
-            let impulsePercentage = this.movementBar.getImpulse();
-            switch (direction) {
-                case "up":
-                    this.body.velocity.y = (-400 * impulsePercentage);
-                    break;
-                case "left":
-                    this.body.velocity.y = (-400 * impulsePercentage);
-                    this.body.velocity.x = (-200 * impulsePercentage);
-                    break;
-                case "right":
-                    this.body.velocity.y = (-400 * impulsePercentage);
-                    this.body.velocity.x = (200 * impulsePercentage);
-                    break;
-            }
+        this.scene.scene.get("MusicManager").sfx_play_flap();
+
+        this.anims.play('gen_player_animation_Idle_' + this.skin);
+        let impulsePercentage = this.movementBar.getImpulse();
+        switch (direction) {
+            case "up":
+                this.body.velocity.y = (-400 * impulsePercentage);
+                break;
+            case "left":
+                this.body.velocity.y = (-400 * impulsePercentage);
+                this.body.velocity.x = (-200 * impulsePercentage);
+                break;
+            case "right":
+                this.body.velocity.y = (-400 * impulsePercentage);
+                this.body.velocity.x = (200 * impulsePercentage);
+                break;
         }
     }
 
     Dash(impulsePercentage) {
         if (!this.scene.isRaceStarted) return;
+        if (this.isDamaged) return;
+
+        this.scene.scene.get("MusicManager").sfx_play_flap();
 
         this.body.velocity.y = (-400 * impulsePercentage);
 
@@ -193,7 +203,8 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     Squawk() {
         console.log("squawk");
 
-        //Reproduce squawk audio depending on your skin [HERE]
+        //Reproduce squawk audio depending on your skin
+        this.scene.scene.get("MusicManager").sfx_play_squawk();
     }
 
     //</editor-fold>

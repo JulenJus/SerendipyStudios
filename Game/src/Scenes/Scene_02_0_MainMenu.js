@@ -81,7 +81,6 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     b_Credits() {
         this.scene.get("MusicManager").sfx_play_button();
-        this.music_mainMenu.stop();
         this.scene.start("Credits");
     }
 

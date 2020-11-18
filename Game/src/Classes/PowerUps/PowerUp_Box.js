@@ -24,6 +24,8 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
         // if(!player.isgen_powerUp_shield_spriteed)
         //     this.Getgen_powerUp_shield_spritePowerUp();
 
+        this.scene.scene.get("MusicManager").sfx_play_box();
+
         if (player.powerUpObject_Boxed === null) {
             switch (Phaser.Math.Between(0, 1)) {
                 case 0:

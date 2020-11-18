@@ -68,6 +68,8 @@ class Scene_02_6_Settings extends Phaser.Scene {
 
         //Interactivity
         this.buttons[0].on('pointerup', () => this.b_Exit());
+        this.buttons[1].on('pointerup', () => this.scene.get("MusicManager").sfx_play_button());
+        this.buttons[2].on('pointerup', () => this.scene.get("MusicManager").sfx_play_button());
 
         //Sliders
         this.musicSlider.on('drag', (pointer, dragX) => this.b_updateBar(this.musicSlider, pointer, dragX));
@@ -102,6 +104,7 @@ class Scene_02_6_Settings extends Phaser.Scene {
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 

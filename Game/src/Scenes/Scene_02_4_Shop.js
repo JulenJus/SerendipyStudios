@@ -59,16 +59,19 @@ class Scene_02_4_Shop extends Phaser.Scene{
     }
 
     b_ShowMaps(){
+        this.scene.get("MusicManager").sfx_play_button();
         this.mapsScreen.visible = true;
         this.manageInteractiveButtons(false);
     }
 
     b_ShowSkins(){
+        this.scene.get("MusicManager").sfx_play_button();
         this.skinsScreen.visible = true;
         this.manageInteractiveButtons(false);
     }
 
     b_CloseScreen(){
+        this.scene.get("MusicManager").sfx_play_button();
         if(this.skinsScreen.visible){
             this.skinsScreen.visible = false;
         }else{
@@ -78,6 +81,7 @@ class Scene_02_4_Shop extends Phaser.Scene{
     }
 
     b_Exit(){
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 

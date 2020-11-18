@@ -52,10 +52,12 @@ class Scene_02_5_ChooseMode extends Phaser.Scene {
     }
 
     goToLobby() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Lobby", {pjId: 0/*, color: "Blue"*/});
     }
 
     b_Exit() {
+        this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
 }

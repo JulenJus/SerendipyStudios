@@ -51,6 +51,7 @@ class Scene_02_2_Tutorial extends Gen_Level {
     //</editor-fold>
 
     winCallback(){
+        this.scene.get("MusicManager").sfx_play_goal();
         this.scene.stop("InGameHUD");
         this.scene.start("MainMenu");
         this.scene.get("MusicManager").music_stop_InGame();
