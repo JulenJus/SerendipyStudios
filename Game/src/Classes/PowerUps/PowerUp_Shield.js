@@ -29,6 +29,7 @@ class PowerUp_gen_powerUp_shield_sprite extends Gen_PowerUp/*extends Phaser.Game
 
     Use() {
         this.isActive = true;
+        this.player.scene.scene.get("MusicManager").sfx_play_powerUp_shield();
 
         //If you already have a gen_powerUp_shield_sprite, then destroy it and create a new one
         if (this.player.isgen_powerUp_shield_spriteed) {

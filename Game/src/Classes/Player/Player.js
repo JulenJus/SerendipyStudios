@@ -153,8 +153,11 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     TakeDamage(obstaclesCollider, sawCollider) {
         if (this.isgen_powerUp_shield_spriteed) {
             this.powerUpObject_Used.Destroy();
+            this.scene.scene.get("MusicManager").sfx_play_powerUp_shield_broken();
             return;
         }
+
+        this.scene.scene.get("MusicManager").sfx_play_damage();
 
         //Get a little bit slowed
         this.body.velocity.y = (-400 * this.movementBar.movementBarImpulsePercentages[0]);

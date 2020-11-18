@@ -17,10 +17,16 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
         //Sfx
         this.sfx_button = this.sound.add('sfx_gen_button', {loop: false});
         this.sfx_box = this.sound.add('sfx_genLvl_box', {loop: false});
+        this.sfx_powerUp_shield = this.sound.add('sfx_genLvl_powerUp_shield', {loop: false});
+        this.sfx_powerUp_shield_broken = this.sound.add('sfx_genLvl_powerUp_shield_broken', {loop: false});
+        this.sfx_powerUp_dash = this.sound.add('sfx_genLvl_powerUp_dash', {loop: false});
         this.sfx_collision = this.sound.add('sfx_genLvl_collision', {loop: false});
         this.sfx_flap = this.sound.add('sfx_genLvl_flap', {loop: false});
         this.sfx_goal = this.sound.add('sfx_genLvl_goal', {loop: false});
         this.sfx_squawk = this.sound.add('sfx_genLvl_squawk', {loop: false});
+        this.sfx_damage = this.sound.add('sfx_genLvl_damage', {loop: false});
+        this.sfx_countdown_short = this.sound.add('sfx_genLvl_countdown_short', {loop: false});
+        this.sfx_countdown_long = this.sound.add('sfx_genLvl_countdown_long', {loop: false});
     }
 
     //Getters & setters
@@ -119,5 +125,35 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
     sfx_play_squawk(){
         this.sfx_squawk.play();
         this.sfx_squawk.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_damage(){
+        this.sfx_damage.play();
+        this.sfx_damage.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_countdown_short(){
+        this.sfx_countdown_short.play();
+        this.sfx_countdown_short.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_countdown_long(){
+        this.sfx_countdown_long.play();
+        this.sfx_countdown_long.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_powerUp_shield(){
+        this.sfx_powerUp_shield.play();
+        this.sfx_powerUp_shield.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_powerUp_shield_broken(){
+        this.sfx_powerUp_shield_broken.play();
+        this.sfx_powerUp_shield_broken.setVolume(this.volume_sfx);
+    }
+
+    sfx_play_powerUp_dash(){
+        this.sfx_powerUp_dash.play();
+        this.sfx_powerUp_dash.setVolume(this.volume_sfx);
     }
 }

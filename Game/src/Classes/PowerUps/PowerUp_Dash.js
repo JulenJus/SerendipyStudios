@@ -49,6 +49,9 @@ class PowerUp_Dash extends Gen_PowerUp/*extends Phaser.GameObjects.Sprite*/{
     //This method is used to describe what the powerUp functionality
     Use(){
         if(this.player.isDamaged) return;
+
+        this.player.scene.scene.get("MusicManager").sfx_play_powerUp_dash();
+
         //Set the object
         //this.player.powerUpObject_Used = this;
 

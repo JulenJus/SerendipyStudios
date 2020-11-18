@@ -322,10 +322,16 @@ class Scene_01_0_Preload extends Phaser.Scene {
 
         //Audio
         this.load.audio('sfx_genLvl_box','../assets/Sounds/SFX/genLvl_box.wav');
+        this.load.audio('sfx_genLvl_powerUp_shield','../assets/Sounds/SFX/genLvl_powerUp_shield.wav');
+        this.load.audio('sfx_genLvl_powerUp_shield_broken','../assets/Sounds/SFX/genLvl_powerUp_shield_broken.wav');
+        this.load.audio('sfx_genLvl_powerUp_dash','../assets/Sounds/SFX/genLvl_powerUp_dash.wav');
         this.load.audio('sfx_genLvl_collision','../assets/Sounds/SFX/genLvl_collision.wav');
         this.load.audio('sfx_genLvl_squawk','../assets/Sounds/SFX/genLvl_squawk.wav');
         this.load.audio('sfx_genLvl_flap','../assets/Sounds/SFX/genLvl_flap.wav');
         this.load.audio('sfx_genLvl_goal','../assets/Sounds/SFX/genLvl_goal.wav');
+        this.load.audio('sfx_genLvl_damage','../assets/Sounds/SFX/genLvl_damage.wav');
+        this.load.audio('sfx_genLvl_countdown_short','../assets/Sounds/SFX/genLvl_countdown_short.wav');
+        this.load.audio('sfx_genLvl_countdown_long','../assets/Sounds/SFX/genLvl_countdown_long.wav');
     }
 
     loadInGameHUD() {

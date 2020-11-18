@@ -147,12 +147,13 @@ class Gen_Level extends Phaser.Scene {
         //Set up text
         let countdown = 3;
         this.scene.get("InGameHUD").setCountdown(countdown);
+        this.scene.get("MusicManager").sfx_play_countdown_short();
 
         //When the timer's out, give control to the players
         let thisObj = this;
         this.time.addEvent({
             delay: 1000,
-            repeat: 3,
+            repeat: 2,
             loop: false,
             callback: function () {
                 countdown--;
@@ -161,6 +162,9 @@ class Gen_Level extends Phaser.Scene {
                 if (countdown === 0) {
                     thisObj.isRaceStarted = true;
                     thisObj.startRaceChrono();
+                    thisObj.scene.get("MusicManager").sfx_play_countdown_long();
+                }else{
+                    thisObj.scene.get("MusicManager").sfx_play_countdown_short();
                 }
             }
         });
