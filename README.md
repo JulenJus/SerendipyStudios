@@ -132,6 +132,25 @@ Los objetos y power ups que podrá obtener el jugador al recoger un objeto (prev
 
 #### 4.6. Arquitectura del software
 
+Flyguins ha sido desarrollado utilizando ‘Phaser 3’, un framework que dota al lenguaje de javascript de una serie de herramientas muy convenientes para el desarrollo de videojuegos web, con el único requisito de que el navegador soporte canvas. 
+
+Antes de entrar en los detalles del juego propiamente dicho, cabe destacar que, con el objetivo de eliminar los tiempos de carga in game al mínimo se ha creado una primera escena, ‘Preload’, en la cual se cargan todos los recursos, de modo que el jugador únicamente debe esperar una única vez: nada más ejecutar el juego (el estado de la carga se muestra mediante una intuitiva barra de progreso). 
+
+ 
+
+Así pues, una vez aclarado este primer punto, cabe destacar que Flyguins, haciendo uso de las muchas facilidades que Phaser ofrece, sigue una organización basada en escenas, tal que cada pantalla (menú principal, tienda, pantalla de juego, ranking, etc) es, efectivamente, una escena con sus propios métodos ‘init’, ‘create’ y ‘update’ a su disposición. Con esta idea en mente, y pensando en concreto en los distintos niveles jugables que conforman el gameplay, se ha creado una clase genérica, ‘Gen_Level’, de la cual todos los niveles heredan, para así poder agrupar todas las funcionalidades comunes.  
+
+ 
+
+En cuanto al propio jugador, se ha tratado de abstraer lo máximo posible las ‘componentes’ que forman a un personaje jugable. De este modo, se ha creado una clase 'Player’, en la cual se asigna tanto las físicas, como el sprite y las animaciones del mismo en base a una id, y, finalmente, se añade a la escena actual. Igualmente, de cara a los controles, un objeto de la clase ‘Player’ posee una instancia de la clase ‘Controls’ y ‘MovementBar’, de tal forma que sus mecánicas de movimiento quedan separadas de su faceta física y artística, logrando así una gran flexibilidad de cara a crear futuros personajes. 
+
+ 
+
+Pasando a los mapas, estos han sido diseñados con el editor 2D ‘Tiled’, gracias al cual, partiendo de un tileset se pueden elaborar niveles en dos dimensiones separados por capas, y asignando a cada una de estas de los atributos que se deseen. Es gracias a esta última característica que se han implementado los niveles en el juego, ya que, una vez exportado este en formato JSON, se pueden filtrar las capas en base a un atributo en concreto. Por poner un ejemplo, mediante el atributo ‘collided’ se ha podido diferenciar la capa en la cual se hallan todos las paredes de las demás, y así establecer la colisión entre el jugador y esta. 
+
+ 
+
+Finalmente, cabe destacar las interfaces gráficas, las cuales constan de numerosos botones, todos ellos colocados de la forma más consistente posible, tal que el jugador pueda encontrar siempre estos en el mismo lugar (como es el caso del botón de salir, el cual se halla situado siempre arriba a la derecha de la pantalla). Del mismo modo, cada botón de cada menú cambia su color al pasar el usuario el ratón por encima, ya que desde el equipo de desarrollo se cree que la retroalimentación es algo primordial para que el usuario sepa en todo momento que esperar del juego. 
 
 ### 5. Trasfondo
 
