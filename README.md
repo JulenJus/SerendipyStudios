@@ -60,7 +60,7 @@ Alexandra Izquierdo Esteban: Artista 2D y Community Manager
 
 Dado que es un juego sin historia, el desarrollo se centrará en definir y pulir las mecánicas, al mismo tiempo que se diseña e implementa nuevo contenido (expansiones y packs que se lanzarán más adelante). 
 
-Por lo tanto, estimamos que durará 2 meses. 
+Por lo tanto, estimamos que durará 2 meses. Dado que se plantea sacar nuevo contenido e ir actualizando el juego, se planea seguir con el desarrollo y mantenimiento del juego durante 2 años.
 
 #### 3.3. Costes asociados
 
