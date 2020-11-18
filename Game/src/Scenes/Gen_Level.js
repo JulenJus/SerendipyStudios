@@ -27,6 +27,7 @@ class Gen_Level extends Phaser.Scene {
     init(args) {
         this.playerSkin = args.skin
         this.timer = 0;
+        this.isRaceStarted = false;
     }
 
     create() {
@@ -37,18 +38,6 @@ class Gen_Level extends Phaser.Scene {
         this.registry.set('timer', this.timer); //Registry (update) the timer in the game registry
 
         this.SetUpRanking(); //Setup ranking in case that it doesnt exist yet
-
-        //Start timer
-        let thisScene = this; //Variable for the change of scope
-        this.time.addEvent({
-            delay: 1,
-            loop: true,
-            callback: function () {
-                //Update timer
-                thisScene.timer += 0.01;
-                thisScene.registry.set('timer', thisScene.timer); //We have to update the registy variable constantly for the HUD
-            }
-        });
 
         //Create tilemap
         this.map = this.make.tilemap({key: 'tilemap' + "_" + this.name});
@@ -146,6 +135,47 @@ class Gen_Level extends Phaser.Scene {
     }
 
     //<editor-fold desc="Callbacks">
+    setPlayerReady(){
+        //[HERE] In the multiplayer mode, this method would wait until all the players have joined the race
+        this.initRace()
+    }
+
+    initRace(){
+        //Set up text
+        let countdown = 3;
+        this.scene.get("InGameHUD").setCountdown(countdown);
+
+        //When the timer's out, give control to the players
+        let thisObj = this;
+        this.time.addEvent({
+            delay: 1000,
+            repeat: 3,
+            loop: false,
+            callback: function () {
+                countdown--;
+                thisObj.scene.get("InGameHUD").setCountdown(countdown);
+
+                if(countdown === 0){
+                    thisObj.isRaceStarted = true;
+                    thisObj.startRaceChrono();
+                }
+            }
+        });
+    }
+
+    startRaceChrono(){
+        //Start timer
+        let thisScene = this; //Variable for the change of scope
+        this.time.addEvent({
+            delay: 1,
+            loop: true,
+            callback: function () {
+                //Update timer
+                thisScene.timer += 0.01;
+                thisScene.registry.set('timer', thisScene.timer); //We have to update the registy variable constantly for the HUD
+            }
+        });
+    }
 
     takeDamageCallback(player, dmgObject) {
         player.TakeDamage(this.obstaclesLayerCollision, this.sawLayerCollision);

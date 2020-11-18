@@ -51,7 +51,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
         //Initialize bar
         this.player.movementBar.onMovementBarPressed.on('onMovementBarPressed', this.movementBarPressed, this);
-        this.player.movementBar.setIsRunning(true);
+        this.player.movementBar.setIsHudSetUp(true);
 
         //PowerUp stuff
         this.gen_powerUpBox_sprite = this.add.sprite(80, 80, 'UI_powerUpEmpty').setScale(0.5);
@@ -89,6 +89,20 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             fill: '#ffffff'
         }).setOrigin(0.5, 0);
 
+        this.countDownDisplay = this.add.text(game.config.width / 2, game.config.height / 2,
+            '',
+            {
+                fontFamily: 'Stencil',
+                fontStyle: 'Bold',
+                fontSize: '108px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
+            }).setOrigin(0.5, 0.5);
+
         //Race position
         // this.racePosition = this.add.text(60, 230, '1st', {
         //     fontFamily: 'Gelato',
@@ -99,6 +113,9 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
         //Exit button
         this.add.sprite(700, 70, 'UI_exitButton').setScale(0.6);
+
+        //Notify the level that all is ready to start
+        this.level.setPlayerReady();
     }
 
     update() {
@@ -123,6 +140,24 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
                 0,
                 this.player.movementBar.barSpriteWidth - this.player.movementBar.markSpriteWidth
             );
+    }
+
+    setCountdown(countdown){
+        this.countDownDisplay.setText(countdown);
+
+        if(countdown === 0){
+            this.countDownDisplay.setText("YA!");
+            let countdownDisplay = this.countDownDisplay;
+
+            this.time.addEvent({
+                delay: 1000,
+                repeat: 0,
+                loop: false,
+                callback: function () {
+                    countdownDisplay.visible = false;
+                }
+            });
+        }
     }
 
     movementBarPressed(movementBarValue, tier) {

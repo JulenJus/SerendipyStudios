@@ -3,7 +3,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         super(scene, scene.levelWidth / 2, scene.levelHeight - 32, 'UI_bar');
 
         //Control variables
-        this.isRunning = false;
+        this.isHudSetUp = false;
 
         //Sprite variables
         this.barSpriteWidth = 526;
@@ -26,7 +26,8 @@ class MovementBar extends Phaser.GameObjects.Sprite {
     }
 
     update() {
-        if (!this.isRunning) return;
+        if (!this.scene.isRaceStarted) return;
+        if (!this.isHudSetUp) return;
 
         //Movement bar
         if (this.movementBarValue >= 100) {  //The offset is added to prevent the mark to surpass the bar without making it wait
@@ -42,7 +43,8 @@ class MovementBar extends Phaser.GameObjects.Sprite {
 
     //Methods
     getImpulse() {
-        if (!this.isRunning) return 0;
+        if (!this.scene.isRaceStarted) return 0;
+        if (!this.isHudSetUp) return 0;
 
         let tier = this.getImpulseTier();
         let impulse = this.getImpulsePercentage(tier);
@@ -74,7 +76,7 @@ class MovementBar extends Phaser.GameObjects.Sprite {
         return "Bar value: " + this.movementBarValue.toString();
     }
 
-    setIsRunning(running){
-        this.isRunning = running;
+    setIsHudSetUp(isHudSetUp){
+        this.isHudSetUp = isHudSetUp;
     }
 }

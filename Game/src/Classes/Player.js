@@ -93,6 +93,8 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     //Functional methods
 
     Move(direction) {
+        if (!this.scene.isRaceStarted) return;
+
         if (!this.isDamaged) {
             this.anims.play('gen_player_animation_Idle_' + this.skin);
             let impulsePercentage = this.movementBar.getImpulse();
@@ -113,6 +115,8 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     }
 
     Dash(impulsePercentage) {
+        if (!this.scene.isRaceStarted) return;
+
         this.body.velocity.y = (-400 * impulsePercentage);
 
         this.anims.play('gen_player_animation_Dash_' + this.skin);
@@ -176,6 +180,8 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     };
 
     UsePowerUp() {
+        if (!this.scene.isRaceStarted) return;
+
         console.log("Power up");
 
         //Use the power up if you have one
