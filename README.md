@@ -29,6 +29,8 @@ En cuanto a las plataformas en la que el videojuego será lanzado, serán PC y A
 
 El juego será freemium, encontrándose dentro del juego algunas micro transacciones para obtener skins diferentes que de base el jugador medio no posee. También se podrá comprar un dlc en el que vengan más mapas. Se ha decidido este modelo de negocio para que el juego sea más accesible para todo el mundo, fomentando la divulgación del mismo. 
 
+
+#### 2.2 Tablas de productos y precios
 | Producto | Precio |
 | ------------- | ------------- |
 | Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
