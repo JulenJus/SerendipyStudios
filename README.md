@@ -339,7 +339,7 @@ Si bien la mayoría de efectos musicales han sido modificados, todos han sido ex
 - Efecto de coger una caja: https://freesound.org/people/lartti/sounds/527580/
 - Efecto de colisión con los obstáculos: https://freesound.org/people/newagesoup/sounds/348244/
 
-- Música del menú: https://freesound.org/people/fmceretta/sounds/426701/
+- Música del menú: https://freesound.org/people/v0idation/sounds/115144/
 - Música de la pantalla de jugar: https://freesound.org/people/Timbre/sounds/151171/
 
 
