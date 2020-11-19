@@ -192,7 +192,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             this.buttons[i].visible = true;
             this.buttons[i].setInteractive();
         }
-        game.scene.pause('Level_' + currentScene);
+        this.scene.pause(this.level.name);
     }
 
     onPaintPowerUpIcon(type, enable, args) {
@@ -245,7 +245,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
 
     goToRanking(){
         this.scene.get("MusicManager").sfx_play_button();
-        this.scene.get('Level_' + currentScene).goToRanking();
+        this.scene.get(this.level.name).goToRanking();
         this.scene.get("MusicManager").music_stop_InGame();
     }
 
@@ -256,7 +256,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
             this.buttons[i].visible = false;
             this.buttons[i].disableInteractive();
         }
-        game.scene.resume('Level_' + currentScene);
+        this.scene.resume(this.level.name);
     }
 
     StartCountdown() {

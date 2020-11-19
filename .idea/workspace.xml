@@ -21,13 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/assets/Sprites/Menus/Credits" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Game/index.html" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -72,7 +66,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="FirstSketch_main.html" type="JavascriptDebugType" uri="http://localhost:63342/SerendipyStudios/Game/src/FirstSketch_main.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" uri="http://localhost:63342/SerendipyStudios/Game/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
   </component>
@@ -143,10 +137,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604748455126">
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605788828298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604748455126" />
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605788828298" />
     <state x="714" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603300324630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,14 +149,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="982" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604918651446" />
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1603212114379">
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1605788818946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603212114379" />
-    <state x="1034" y="83" width="585" height="801" key="find.popup" timestamp="1605726141786">
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605788818946" />
+    <state x="1034" y="83" width="585" height="801" key="find.popup" timestamp="1605788490502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1034" y="83" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605726141786" />
+    <state x="1034" y="83" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605788490502" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602844039261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
