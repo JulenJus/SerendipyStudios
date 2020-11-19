@@ -70,7 +70,7 @@ class Controls_InGame {
 
         //Escape
         this.scene.input.keyboard.on("keydown_ESC", function () {
-            console.log("Escape");
+            exitLevelEvent.emit('onExitLevel');
         });
 
         this.scene.input.on('pointerdown', function (pointer) {
