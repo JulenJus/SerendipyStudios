@@ -21,7 +21,9 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     init(args) {
-        this.playerSkin = args.skin
+        this.playedLevel = args.level;
+        this.playedLevelName = args.levelName;
+        this.playerSkin = args.skin;
         this.allScoresText = ''; //Whenever we enter the ranking we reset the scores in order to load them all from the start
     }
 
@@ -30,7 +32,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
 
         console.log("Ranking create");
         for (let i = 0; i < this.numStoredTimes; i++) {
-            this.allScoresText += localStorage.getItem('time_' + i) + '\n'; //Write all scores
+            this.allScoresText += localStorage.getItem('time_' + i + '_' + this.playedLevel) + '\n'; //Write all scores
         }
 
         //Create tilemap
@@ -57,8 +59,23 @@ class Scene_05_0_Ranking extends Phaser.Scene {
                 //fill: '#db6a00'
             }).setOrigin(0.5, 0.5).depth = 1;
 
+        //Level name
+        this.rankingTitle = this.add.text(this.levelWidth / 2, 230,
+            this.playedLevelName,
+            {
+                fontFamily: 'Stencil',
+                fontStyle: 'Bold',
+                fontSize: '24px',
+                stroke: "#143675",
+                strokeThickness: 9,
+                align: "center",
+                fill: '#ffffff'
+                //fill: '#143675'
+                //fill: '#db6a00'
+            }).setOrigin(0.5, 0.5).depth = 1;
+
         //Scores display
-        this.scoresDisplay = this.add.text(this.levelWidth / 2, 500,
+        this.scoresDisplay = this.add.text(this.levelWidth / 2, 550,
             this.allScoresText,
             {
                 fontFamily: 'Stencil',

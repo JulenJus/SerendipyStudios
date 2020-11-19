@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +123,7 @@
       <workItem from="1605519150696" duration="5363000" />
       <workItem from="1605524757267" duration="5166000" />
       <workItem from="1605723824218" duration="2821000" />
+      <workItem from="1605779402847" duration="4739000" />
     </task>
     <servers />
   </component>

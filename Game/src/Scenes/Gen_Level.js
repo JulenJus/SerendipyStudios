@@ -1,5 +1,3 @@
-let currentScene = 0;
-
 class Gen_Level extends Phaser.Scene {
     constructor(name) {
         super(name);
@@ -33,6 +31,7 @@ class Gen_Level extends Phaser.Scene {
 
     create() {
         SetDeltaTime();
+
         this.scene.get("MusicManager").music_play_InGame();
 
         //<editor-fold desc="Configure the map">
@@ -52,8 +51,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
@@ -201,7 +200,7 @@ class Gen_Level extends Phaser.Scene {
 
     goToRanking() {
         this.scene.stop("InGameHUD");
-        this.scene.start("Ranking", {skin: this.playerSkin});
+        this.scene.start("Ranking", {level: this.name, levelName: this.levelName, skin: this.playerSkin});
         this.scene.get("MusicManager").music_stop_InGame();
     }
 
@@ -226,11 +225,12 @@ class Gen_Level extends Phaser.Scene {
     // }
 
     SetUpRanking() {
+        if(this.name == 'Level_Tutorial') return; //The tutorial is not take into account
         //Prepare ranking board in case that it does not exist
-        if (localStorage.getItem('timeCount') == null) {
-            localStorage.setItem('timeCount', this.auxCount.toString());
+        if (localStorage.getItem('initialized_' + this.name) == null) {
+            localStorage.setItem('initialized_' + this.name.toString(), 'true'); //This will be used as a flag, so that each ranking is initialized just once
             for (let i = 0; i < this.rankingScores; i++) {
-                localStorage.setItem('time_' + i, '-- : --');
+                localStorage.setItem('time_' + i + '_' + this.name, '-- : --');
             }
         }
     }
@@ -239,8 +239,9 @@ class Gen_Level extends Phaser.Scene {
         //localStorage.clear();
         this.auxCount = -1;
         for (let i = 0; i < this.rankingScores; i++) {
-            if (parseFloat(`${this.timer.toFixed(2)}`.toString()) < parseFloat(localStorage.getItem('time_' + i)) || localStorage.getItem('time_' + i) === '-- : --') {
-                if (localStorage.getItem('time_' + i) === '-- : --') {
+            if (parseFloat(`${this.timer.toFixed(2)}`.toString()) < parseFloat(localStorage.getItem('time_' + i + '_' + this.name))
+                || localStorage.getItem('time_' + i + '_' + this.name) === '-- : --') {
+                if (localStorage.getItem('time_' + i + '_' + this.name) === '-- : --') {
                     this.auxCount = i;
                     break;
                 } else {
@@ -251,12 +252,12 @@ class Gen_Level extends Phaser.Scene {
             }
         }
         if (this.auxCount !== -1)
-            localStorage.setItem('time_' + this.auxCount, `${this.timer.toFixed(2)}`);
+            localStorage.setItem('time_' + this.auxCount + '_' + this.name, `${this.timer.toFixed(2)}`);
      }
 
     MoveAllTimesDown(start) {
         for (let i = this.rankingScores - 1; i > start; i--) {
-            localStorage.setItem('time_' + i, localStorage.getItem('time_' + (i - 1)));
+            localStorage.setItem('time_' + i + '_' + this.name, localStorage.getItem('time_' + (i - 1) + '_' + this.name));
         }
     }
 
