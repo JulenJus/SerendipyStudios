@@ -15,6 +15,7 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
             frameRate: 20,
             repeat: -1       //The animation loops infinitely
         });
+        this.anims.play('gen_powerUpBox_spriteAnimation_Idle');
     }
 
     //Methods
