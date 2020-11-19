@@ -39,16 +39,16 @@ class Scene_00_0_Charge extends Phaser.Scene {
 
     loadPreload() {
         //Background
-        this.load.image('preload_background', '../assets/Sprites/Menus/Preload/preload_background.png');
+        this.load.image('preload_background', './assets/Sprites/Menus/Preload/preload_background.png');
 
         //Bar
-        this.load.image('preload_progressBar_empty', '../assets/Sprites/Menus/Preload/preload_progressBar_empty.png');
-        this.load.image('preload_progressBar_fill', '../assets/Sprites/Menus/Preload/preload_progressBar_fill.png');
+        this.load.image('preload_progressBar_empty', './assets/Sprites/Menus/Preload/preload_progressBar_empty.png');
+        this.load.image('preload_progressBar_fill', './assets/Sprites/Menus/Preload/preload_progressBar_fill.png');
 
         //Phrases
-        this.load.image('preload_phrase_Colocando sierras', '../assets/Sprites/Menus/Preload/preload_phrase_Colocando sierras.png');
-        this.load.image('preload_phrase_Llamando unidades', '../assets/Sprites/Menus/Preload/preload_phrase_Llamando unidades.png');
-        this.load.image('preload_phrase_Pintando pinchos', '../assets/Sprites/Menus/Preload/preload_phrase_Pintando pinchos.png');
+        this.load.image('preload_phrase_Colocando sierras', './assets/Sprites/Menus/Preload/preload_phrase_Colocando sierras.png');
+        this.load.image('preload_phrase_Llamando unidades', './assets/Sprites/Menus/Preload/preload_phrase_Llamando unidades.png');
+        this.load.image('preload_phrase_Pintando pinchos', './assets/Sprites/Menus/Preload/preload_phrase_Pintando pinchos.png');
     }
 
     setProgress = function (progress) {

@@ -33,7 +33,7 @@ El juego será freemium, encontrándose dentro del juego algunas micro transacci
 #### 2.2 Tablas de productos y precios
 | Producto | Precio |
 | ------------- | ------------- |
-| Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.49€/pack |
+| Nuevas Skins temáticas (pack Halloween, pack Navidad, etc.)  | 1.99€/pack |
 | DLC mapas | 0.99€/unidad |
 
 
@@ -46,15 +46,15 @@ El equipo estará compuesto por los siguientes integrantes con sus respectivos r
 
 Julen Justo Neira: Compositor y Programador (aux). 
 
-Javier Morales López: Director y Productor. 
+Javier Morales López: Director, Community Manager  y Productor. 
 
-Sergio López Serrano: Level Designer y Game Designer. 
+Sergio López Serrano: Level Designer, Community Manager  y Game Designer. 
 
 Clara Bartolomé Pereira: Programadora y Artista 2D. 
 
 David González Bella: Programador. 
 
-Alexandra Izquierdo Esteban: Artista 2D y Community Manager 
+Alexandra Izquierdo Esteban: Artista 2D, Animadora y Community Manager.
 
 #### 3.2. Estimación temporal del desarrollo
 
@@ -233,8 +233,58 @@ También se ha usado la siguiente paleta de colores para todos los mapas:
 
 
 #### 6.3. Concept Art
+- Fondos:
+
+<img src="Concepts/Concepts/RefScreens.jpg" width="125">
+Referencias para el paisaje de las pantallas 
+
+<img src="Concepts/Concepts/conceptmenu4.jpg" width="125">
+Boceto para el menú principal/cover 
+
+<img src="Concepts/Concepts/conceptmenu3.jpg" width="125">
+Boceto para el menú principal/cover
+
+<img src="Concepts/Concepts/conceptmenu2.jpg" width="125">
+Boceto para el menú principal/cover
+
+<img src="Concepts/Concepts/conceptmenu1.jpg" width="125">
+Boceto para el menú principal/cover 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mainscreen.png" width="125">
+Cover/Menú Principal/Créditos
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/baseScreen.png" width="125">
+Fondo base 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="250">
+Fondo para el navegador
 
 - Personajes:
+
+<img src="Concepts/Concepts/RefPenguis.jpg" width="225">
+Referencias de pingüinos 
+
+<img src="Concepts/Concepts/Penguins.jpg" width="225">
+Bocetos iniciales de pingüinos 
+
+<img src="Concepts/Concepts/pinguboceto2.jpg" width="225">
+Segundos bocetos de pingüinos 
+
+<img src="Concepts/Concepts/thumbnail.png" width="125">
+Concept para Steve 
+
+<img src="Concepts/Concepts/Sargento.jpg" width="225">
+Bocetos para el sargento 
+
+<img src="Concepts/Concepts/SargentoColores.png" width="225">
+Estudio de color para el Sargento Jack 
+
+<img src="Concepts/Concepts/PinguColores.png" width="225">
+Estudio de color para Pingu 
+
+<img src="Concepts/Concepts/PinguTurnaround.png" width="225">
+Turnaround de Pingu
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
 Steve
 
@@ -256,7 +306,27 @@ Kurta
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
 Pingu
 
+- Peluches de los personajes para el Lobby:
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/ArminPlush.png" width="125">
+Armin
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/BobPlush.png" width="125">
+Bob
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/KurtaPlush.png" width="125">
+Kurta
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/StevePlush.png" width="125">
+Steve
+
 - Power Ups:
+
+<img src="Concepts/Concepts/CajaPowerUpBoceto.jpg" width="225">
+Primeros bocetos de las cajas de los power ups 
+
+Estudio de colores para las cajas de power ups:
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
 Caja Marrón
 
@@ -264,10 +334,10 @@ Caja Marrón
 Caja Verde
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
-Caja Lila
+Caja Morada
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/gen_powerUpBox_sprite.png" width="125">
-Caja Verde Vista Frontal
+Caja Verde vista frontal
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBoxShine.png" width="125">
 Caja brillando
@@ -281,7 +351,19 @@ Escudo Brillando
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Speed.png" width="125">
 Velocidad
 
+<img src="Concepts/Concepts/speedcolores.png" width="125">
+Estudio de colores para el power up de velocidad
+
+- Eventos
+
+<img src="Concepts/Concepts/PinguHalloween.jpg" width="125">
+Evento Halloween 
+
 - Pantallas
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/MainMenu_Screenshot.PNG" width="125">
+Menú Principal
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Ajustes_Screenshot.PNG" width="125">
 Ajustes
 
@@ -290,9 +372,6 @@ Creditos
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Lobby_Screenshot.PNG" width="125">
 Lobby
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/MainMenu_Screenshot.PNG" width="125">
-Menú Principal
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/ModoDeJuego_Screenshot.PNG" width="125">
 Modo de Juego
@@ -341,7 +420,10 @@ Pack de verano
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png" width="125">
 Pack de navidad
 
+- Iconos:
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Icons/Shopsymbol.png" width="125">
+Tienda
 
 ### 7. Animación 
 
@@ -363,6 +445,7 @@ Steve
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/idleAnimation.gif" width="125">
 Pingu
 
 #### 7.2. Objetos 

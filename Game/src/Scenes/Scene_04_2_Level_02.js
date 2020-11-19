@@ -1,6 +1,7 @@
 class Scene_04_2_Level_02 extends Gen_Level {
     constructor() {
         super("Level_02");
+        this.levelName = "Simetría sinuosa";
         console.log("Level_02 constructor");
     }
 
@@ -9,7 +10,6 @@ class Scene_04_2_Level_02 extends Gen_Level {
         console.log("Level_02 create");
         super.create();
         super.createPlayer(this, 0, true);
-        currentScene = '02';
 
         //Add saws
         this.gen_saw_sprites.add(new Saw(this, {x: 6016 , y: 11136 }, {x: 6016 , y: 11584 }));
