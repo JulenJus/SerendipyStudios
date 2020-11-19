@@ -4,6 +4,8 @@ class Scene_02_3_Credits extends Phaser.Scene {
         console.log("Credits constructor");
     }
 
+
+
     create() {
         //Show the background
         this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
