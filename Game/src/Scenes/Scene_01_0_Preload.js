@@ -312,8 +312,8 @@ class Scene_01_0_Preload extends Phaser.Scene {
 
         //Power up box animations
         this.load.spritesheet('gen_powerUpBox_spriteAnimation_Idle', './assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png', {
-            frameWidth: 400,
-            frameHeight: 198
+            frameWidth: 120,
+            frameHeight: 59
         });
 
         //RaceLine

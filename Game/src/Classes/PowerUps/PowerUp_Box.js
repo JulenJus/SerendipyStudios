@@ -6,7 +6,7 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
         //this.gen_powerUp_shield_spriteTime = 5; //Time to control the power up's duration
 
         scene.add.existing(this);
-        this.setScale(0.3, 0.3);
+        //this.setScale(0.3, 0.3);
 
         //Power ups animations
         this.scene.anims.create({ //Shaking animation
@@ -15,6 +15,7 @@ class PowerUp_Box extends Phaser.Physics.Arcade.Sprite {
             frameRate: 20,
             repeat: -1       //The animation loops infinitely
         });
+
         this.anims.play('gen_powerUpBox_spriteAnimation_Idle');
     }
 
