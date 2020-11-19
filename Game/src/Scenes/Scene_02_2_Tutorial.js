@@ -18,9 +18,9 @@ class Scene_02_2_Tutorial extends Gen_Level {
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 448 , 2816 ));
 
         //Play power up boxes animation
-        Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
-            child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
-        });
+        // Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
+        //     child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
+        // });
 
         //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);

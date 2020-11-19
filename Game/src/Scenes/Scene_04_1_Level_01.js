@@ -34,9 +34,9 @@ class Scene_04_1_Level_01 extends Gen_Level {
         this.gen_cheerPenguins.add(new CheerPenguin(this, 'Pompoms',{x: this.levelWidth / 2 + 255 , y: this.levelHeight - 1025}));
 
         //Play power up boxes animation
-        Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
-            child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
-        });
+        // Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
+        //     child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
+        // });
 
         // //<editor-fold desc="Tilemap visual debugging">
         // const debugWalls = this.add.graphics().setAlpha(0.7);

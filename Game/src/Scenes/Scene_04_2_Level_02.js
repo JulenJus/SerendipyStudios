@@ -41,9 +41,9 @@ class Scene_04_2_Level_02 extends Gen_Level {
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 4544 , 1664 ));
 
         //Play power up boxes animation
-        Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
-            child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
-        });
+        // Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
+        //     child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
+        // });
     }
 
     update() {
