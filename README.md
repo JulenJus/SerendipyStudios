@@ -46,15 +46,15 @@ El equipo estará compuesto por los siguientes integrantes con sus respectivos r
 
 Julen Justo Neira: Compositor y Programador (aux). 
 
-Javier Morales López: Director y Productor. 
+Javier Morales López: Director, Community Manager  y Productor. 
 
-Sergio López Serrano: Level Designer y Game Designer. 
+Sergio López Serrano: Level Designer, Community Manager  y Game Designer. 
 
 Clara Bartolomé Pereira: Programadora y Artista 2D. 
 
 David González Bella: Programador. 
 
-Alexandra Izquierdo Esteban: Artista 2D, Animadora Community Manager 
+Alexandra Izquierdo Esteban: Artista 2D, Animadora y Community Manager.
 
 #### 3.2. Estimación temporal del desarrollo
 
@@ -276,7 +276,7 @@ Concept para Steve
 <img src="Concepts/Concepts/Sargento.jpg" width="225">
 Bocetos para el sargento 
 
-<img src="Concepts/Concepts/SargentoColores.png" width="125">
+<img src="Concepts/Concepts/SargentoColores.png" width="225">
 Estudio de color para el Sargento Jack 
 
 <img src="Concepts/Concepts/PinguColores.png" width="225">
