@@ -423,33 +423,33 @@ En el juego solo existe animaciones por parte de los personajes jugables y algun
 
 #### 7.1. Personajes 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png" width="300">
 Armin
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png" width="300">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png" width="300">
 Karta
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png" width="300">
 Steve
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Left.png" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Right.png" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Pompoms.png" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Idle/pinguIdleAnimationSheet.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Left.png" width="300">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Right.png" width="300">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Pompoms.png" width="300">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Idle/pinguIdleAnimationSheet.png" width="300">
 Pingu
 
 #### 7.2. Objetos 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png" width="300">
 Caja
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" width="300">
 Dash
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Enemies/gen_saw_animation.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Enemies/gen_saw_animation.png" width="300">
 Cuchillas
 
 
