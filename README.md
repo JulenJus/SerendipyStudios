@@ -400,7 +400,15 @@ Pantallas de Tutorial
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
 
+- Obstaculos
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Obstacles/P_down.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Obstacles/P_up.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Obstacles/P_right.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Obstacles/P_left.png" width="125">
+Pinchos
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Obstacles/Sierra1.png" width="125">
+Sierras
 
 - Packs
 
