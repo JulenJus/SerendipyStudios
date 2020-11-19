@@ -250,13 +250,13 @@ Boceto para el menú principal/cover
 <img src="Concepts/Concepts/conceptmenu1.jpg" width="125">
 Boceto para el menú principal/cover 
 
-<img src"https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mainscreen.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mainscreen.png" width="125">
 Cover/Menú Principal/Créditos
 
-<img src"https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/baseScreen.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/baseScreen.png" width="125">
 Fondo base 
 
-<img src"https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="125">
 Fondo para el navegador
 
 - Personajes:
@@ -264,17 +264,14 @@ Fondo para el navegador
 <img src="Concepts/Concepts/RefPenguis.jpg" width="125">
 Referencias de pingüinos 
 
-
 <img src="Concepts/Concepts/Penguins.jpg" width="125">
 Bocetos iniciales de pingüinos 
 
 <img src="Concepts/Concepts/pinguboceto2.jpg" width="125">
 Segundos bocetos de pingüinos 
 
-
 <img src="Concepts/Concepts/thumbnail.png" width="125">
 Concept para Steve 
-
 
 <img src="Concepts/Concepts/Sargento.jpg" width="125">
 Bocetos para el sargento 
@@ -309,7 +306,7 @@ Kurta
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
 Pingu
 
-Peluches de los personajes para el Lobby:
+ Peluches de los personajes para el Lobby:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/ArminPlush.png" width="125">
 Armin
@@ -361,8 +358,12 @@ Estudio de colores para el power up de velocidad
 
 <img src="Concepts/Concepts/PinguHalloween.jpg" width="125">
 Evento Halloween 
-- Fondos
+
 - Pantallas
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/MainMenu_Screenshot.PNG" width="125">
+Menú Principal
+
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Ajustes_Screenshot.PNG" width="125">
 Ajustes
 
@@ -371,9 +372,6 @@ Creditos
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Lobby_Screenshot.PNG" width="125">
 Lobby
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/MainMenu_Screenshot.PNG" width="125">
-Menú Principal
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/ModoDeJuego_Screenshot.PNG" width="125">
 Modo de Juego
@@ -422,7 +420,10 @@ Pack de verano
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Shop/Christmas%20Pack/SteveChristmas.png" width="125">
 Pack de navidad
 
+- Iconos:
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Icons/Shopsymbol.png" width="125">
+Tienda
 
 ### 7. Animación 
 
