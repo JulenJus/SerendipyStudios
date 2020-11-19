@@ -165,28 +165,28 @@ La historia se desarrolla en la Academia Pingüino, institución encargada de en
 Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en la Academia Pingüino, cada uno de ellos tiene una motivación, personalidad y trasfondo diferente: 
 
 - Por un lado, tenemos a Steve: este joven pingüino ha tenido un sueño desde muy pequeño: ser el mejor pingüino volador de Pinguinea. Para conseguirlo, armado de determinación, se unió a la Academia Pingüino para lograr sus sueños. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Steve/Steve.png" width="125">
 
 - Otro de nuestros protagonistas es Armin: devoró todos los libros que pudo sobre la historia de los pingüinos voladores y es un acérrimo fan del famoso general Jack. Después de reunir suficiente coraje para unirse a la academia, está decido a hacer realidad por sí mismo lo que ha estudiado en los libros de la aleta de su héroe. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Armin/Armin.png" width="125">
 
 - Es siguiente en la lista es Bob: Bob tiene las cosas muy claras: no es muy listo, no es muy atlético, pero hay una cosa que desde luego es: cabezota, y cuando se le mete algo entre ceja y ceja no para hasta conseguirlo. Y lo único que tiene ahora entre las aletas este afable pero constante pingüino es ser el mejor volador de Pinguinea. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Bob/Bob.png" width="125">
 
 - Y por último, pero no menos importante, está Karta: el fuerte de Karta no es hacer amigos pero sí lo es entrenar hasta quedarse sin aliento. Es una loca de la velocidad y hará honor a ello siendo la pingüino más rápida de la academia. 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Karta/Karta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Karta/Karta.png" width="125">
 
 ##### 5.2.2. Personajes no jugables
 
 - Este es el Sargento Jack, el superior del jugador, que le ayudará en el nivel tutorial, explicándole los controles y los objetivos. 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 
 - Esta es Kurta, la hermana gemela de Karta. A diferencia de su hermana, no le interesa ascender como soldado, sino vender su mercancía, por lo que es la encargada de la tienda de los DLCs.
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Kurta/Kurta.png" width="125">
 
 - Por otro lado, están los Pingus, crías de pingüino que desean crecer y algún día poder alistarse en la Academia Pingüino.
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Pingu/PinguHappy.png" width="125">
 
 
 
@@ -195,17 +195,17 @@ Si bien todos los pingüinos compiten entre ellos para mejorar como soldados en 
 Actualmente, Flyguins cuenta con 4 niveles, siendo uno de ellos el tutorial. Cada nivel se caracteriza por su forma, siendo el nombre de cada uno una pista que indica al jugador lo que se va a encontrar. Tenemos:
 
 - Diagonales Dolorosas:
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa1.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/mapa1.png" width="125">
 
 - Simetría Sinuosa:
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa2.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/mapa2.png" width="125">
 
 - Trayecto Torturoso:
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mapa3.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/mapa3.png" width="125">
 
 - Tutorial:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/tutorial.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/tutorial.png" width="125">
 
 A parte de estos mapas, hay otros dos mapas diseñados que serán lanzados como DLCs. Estos son:
 
@@ -229,31 +229,31 @@ Como bien se ha indicado en el apartado anterior, el juego cuenta con una estét
 
 También se ha usado la siguiente paleta de colores para todos los mapas:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/gamaColorButtons.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/gamaColorButtons.png" width="125">
 
 
 #### 6.3. Concept Art
 - Fondos:
 
-<img src="Concepts/Concepts/RefScreens.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/RefScreens.jpg" width="125">
 Referencias para el paisaje de las pantallas 
 
-<img src="Concepts/Concepts/conceptmenu4.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/conceptmenu1.jpg" width="125">
 Boceto para el menú principal/cover 
 
-<img src="Concepts/Concepts/conceptmenu3.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/conceptmenu2.jpg" width="125">
 Boceto para el menú principal/cover
 
-<img src="Concepts/Concepts/conceptmenu2.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/conceptmenu3.jpg" width="125">
 Boceto para el menú principal/cover
 
-<img src="Concepts/Concepts/conceptmenu1.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/conceptmenu4.jpg" width="125">
 Boceto para el menú principal/cover 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/mainscreen.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/mainscreen.png" width="125">
 Cover/Menú Principal/Créditos
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/baseScreen.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/baseScreen.png" width="125">
 Fondo base 
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="250">
@@ -261,49 +261,49 @@ Fondo para el navegador
 
 - Personajes:
 
-<img src="Concepts/Concepts/RefPenguis.jpg" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/RefPenguis.jpg" width="225">
 Referencias de pingüinos 
 
-<img src="Concepts/Concepts/Penguins.jpg" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/Penguins.jpg" width="225">
 Bocetos iniciales de pingüinos 
 
-<img src="Concepts/Concepts/pinguboceto2.jpg" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/pinguboceto2.jpg" width="225">
 Segundos bocetos de pingüinos 
 
-<img src="Concepts/Concepts/thumbnail.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/thumbnail.png" width="125">
 Concept para Steve 
 
-<img src="Concepts/Concepts/Sargento.jpg" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/Sargento.jpg" width="225">
 Bocetos para el sargento 
 
-<img src="Concepts/Concepts/SargentoColores.png" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/SargentoColores.png" width="225">
 Estudio de color para el Sargento Jack 
 
-<img src="Concepts/Concepts/PinguColores.png" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/PinguColores.png" width="225">
 Estudio de color para Pingu 
 
-<img src="Concepts/Concepts/PinguTurnaround.png" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/PinguTurnaround.png" width="225">
 Turnaround de Pingu
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Steve/Steve.png" width="125">
 Steve
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Armin/Armin.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Armin/Armin.png" width="125">
 Armin
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Bob/Bob.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Bob/Bob.png" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Karta/Karta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Karta/Karta.png" width="125">
 Karta
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Sergeant%20Jack/Sergeant.png" width="125">
 Sargento Jack
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Kurta/Kurta.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Kurta/Kurta.png" width="125">
 Kurta
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Basic%20Characters/Pingu/PinguHappy.png" width="125">
 Pingu
 
 - Peluches de los personajes para el Lobby:
@@ -314,26 +314,26 @@ Armin
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/BobPlush.png" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/KurtaPlush.png" width="125">
-Kurta
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/KartaPlush.png" width="125">
+Karta
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/StevePlush.png" width="125">
 Steve
 
 - Power Ups:
 
-<img src="Concepts/Concepts/CajaPowerUpBoceto.jpg" width="225">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/CajaPowerUpBoceto.jpg" width="225">
 Primeros bocetos de las cajas de los power ups 
 
 Estudio de colores para las cajas de power ups:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/cajapowerupdMarron.png" width="125">
 Caja Marrón
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/GreenPU.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/cajapowerupdVerde.png" width="125">
 Caja Verde
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/cajapowerupdMorada.png" width="125">
 Caja Morada
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/gen_powerUpBox_sprite.png" width="125">
@@ -351,12 +351,12 @@ Escudo Brillando
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Speed.png" width="125">
 Velocidad
 
-<img src="Concepts/Concepts/speedcolores.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/speedcolores.png" width="125">
 Estudio de colores para el power up de velocidad
 
 - Eventos
 
-<img src="Concepts/Concepts/PinguHalloween.jpg" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/PinguHalloween.jpg" width="125">
 Evento Halloween 
 
 - Pantallas
@@ -400,15 +400,7 @@ Pantallas de Tutorial
 - Tilesheet de mapas:
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Tilemaps/tilesheet.png" width="125">
 
-- Obstáculos:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_down.png" width="25"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_left.png" width="125">  <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_up.png" width="25"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/P_right.png" width="125">
-
-Pinchos
-
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra1.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra2.png" width="125"> <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Obstacles/Sierra3.png" width="125">
-
-Sierras
 
 - Packs
 
@@ -431,32 +423,33 @@ En el juego solo existe animaciones por parte de los personajes jugables y algun
 
 #### 7.1. Personajes 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/FlutterArmin.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png" width="125">
 Armin
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/FlutterBob.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Bob/gen_player_animation_Idle_Bob.png" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/FlutterKarta.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Karta/gen_player_animation_Idle_Karta.png" width="125">
 Karta
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/FlutterSteve.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Steve/gen_player_animation_Idle_Steve.png" width="125">
 Steve
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/idleAnimation.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Left.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Glove_Right.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/cheerPenguin_animation_Pompoms.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Idle/pinguIdleAnimationSheet.png" width="125">
 Pingu
 
 #### 7.2. Objetos 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Box/Box.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Box/gen_powerUpBox_spriteAnimation_Idle.png" width="125">
 Caja
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Dash/dashGif.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation.png" width="125">
 Dash
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Enemies/gen_saw_animation.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Enemies/gen_saw_animation.png" width="125">
 Cuchillas
 
 
