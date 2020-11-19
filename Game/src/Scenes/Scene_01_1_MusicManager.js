@@ -30,7 +30,7 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
 
         //On focus events
         game.events.on('visible', function(){
-            console.log("Resume all");
+            //console.log("Resume all");
 
             for (let i = 0; i < playingAudios.length; i++) {
                 playingAudios[i].resume();
@@ -38,7 +38,7 @@ class Scene_01_1_MusicManager extends Phaser.Scene {
         });
 
         game.events.on('hidden', function (){
-            console.log("Pause all");
+            //console.log("Pause all");
 
             for (let i = 0; i < playingAudios.length; i++) {
                 playingAudios[i].pause();

@@ -21,7 +21,32 @@
   <component name="ChangeListManager">
     <list default="true" id="94fa42a6-0620-4f04-a4bb-78ba096406f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Npcs/CheerPenguin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Npcs/CheerPenguin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player/Controls_InGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player/Controls_InGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/Player/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/Player/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/Gen_PowerUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/Gen_PowerUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Dash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Classes/PowerUps/PowerUp_Shield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Gen_Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_00_0_Charge.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_00_0_Charge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_0_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_0_Preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_1_MusicManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_01_1_MusicManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_0_MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_0_MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_1_HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_2_Tutorial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_3_Credits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_4_Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_4_Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_5_ChooseMode.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_5_ChooseMode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_6_Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_02_6_Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_03_0_Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_03_0_Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_0_InGameHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_1_Level_01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_2_Level_02.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_04_3_Level_03.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/Scenes/Scene_05_0_Ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/lib/UIBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/lib/UIBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Game/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +75,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Credits" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Shop" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Shop" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
-      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\lobby" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\Pingu\Cheer" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Gen" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\PowerUps\Dash" />
       <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Animations\Bob" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Credits" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Menus\Shop" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Sprites\Shop" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\assets\Tilemaps" />
+      <recent name="D:\GitHub\Repositories\SerendipyStudios\SerendipyStudios\Game\src\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,10 +178,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605788818946" />
-    <state x="1034" y="83" width="585" height="801" key="find.popup" timestamp="1605788490502">
+    <state x="1034" y="83" width="585" height="801" key="find.popup" timestamp="1605815377633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1034" y="83" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605788490502" />
+    <state x="1034" y="83" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605815377633" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602844039261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -20,7 +20,7 @@ class Gen_Level extends Phaser.Scene {
         this.wallsLayer = null;         //Walls
         this.obstaclesLayer = null;     //Dmg
 
-        console.log("Gen_Level constructor");
+        //console.log("Gen_Level constructor");
     }
 
     init(args) {
@@ -35,7 +35,7 @@ class Gen_Level extends Phaser.Scene {
         this.scene.get("MusicManager").music_play_InGame();
 
         //<editor-fold desc="Configure the map">
-        console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
+        //console.log("Gen_Level create:" + 'tilemap' + "_" + this.name);
 
         this.registry.set('timer', this.timer); //Registry (update) the timer in the game registry
 
@@ -52,8 +52,6 @@ class Gen_Level extends Phaser.Scene {
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
         this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
-        //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
 
@@ -64,26 +62,8 @@ class Gen_Level extends Phaser.Scene {
         this.wallsLayer.setCollisionByProperty({collide: true});
         this.obstaclesLayer.setCollisionByProperty({collide_obstacle: true});
 
-        //<editor-fold desc="Tilemap visual debugging">
-        // const debugWalls = this.add.graphics().setAlpha(0.7);
-        // this.wallsLayer.renderDebug(debugWalls, {
-        //     tileColor: null,
-        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        // });
-        //
-        // const debugObstacles = this.add.graphics().setAlpha(0.7);
-        // this.obstaclesLayer.renderDebug(debugObstacles, {
-        //     tileColor: null,
-        //     collidingTileColor: new Phaser.Display.Color(243, 234, 48),
-        //     faceColor: new Phaser.Display.Color(40, 39, 37, 255)
-        // });
-        //</editor-fold>
-
-
         //Saws
         this.gen_saw_sprites = this.physics.add.group({
-            //immovable: true,
             allowGravity: false,
             runChildUpdate: true
         });
@@ -108,7 +88,6 @@ class Gen_Level extends Phaser.Scene {
             y: this.levelHeight - 300
         }, this.playerSkin);
         this.players.push(thisPlayer);
-        //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
         this.physics.add.collider(thisPlayer, this.wallsLayer, this.collision, null, this);
@@ -116,9 +95,6 @@ class Gen_Level extends Phaser.Scene {
         this.sawLayerCollision = this.physics.add.collider(thisPlayer, this.gen_saw_sprites, this.takeDamageCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_powerUpBox_sprites, this.pickPowerUpCallback, null, this);
         this.physics.add.overlap(thisPlayer, this.gen_finishLine_sprite, this.winCallback, null, this);
-
-        console.log(this.sawLayerCollision);   //[HERE] The gen_finishLine_sprite is undefined
-        //console.log(gen_finishLine_spriteOverlap); //[HERE] As you can see, the object2 is undefined
 
         //Camera
         if (controllable) {
@@ -138,7 +114,7 @@ class Gen_Level extends Phaser.Scene {
 
     //<editor-fold desc="Callbacks">
     setPlayerReady() {
-        //[HERE] In the multiplayer mode, this method would wait until all the players have joined the race
+        //In the multiplayer mode, this method would wait until all the players have joined the race
         this.initRace()
     }
 
@@ -214,20 +190,6 @@ class Gen_Level extends Phaser.Scene {
         this.goToRanking();
     }
 
-    // endRace() {
-    //     this.goToRanking();
-    //     //this.SaveTime();
-    // }
-
-    // Exit() {
-    //     this.endRace();
-    //     //this.winCallback();
-    //     //this.scene.stop("InGameHUD")
-    //
-    //     //this.endRace();
-    //     //this.scene.start("MainMenu");
-    // }
-
     SetUpRanking() {
         if(this.name == 'Level_Tutorial') return; //The tutorial is not take into account
         //Prepare ranking board in case that it does not exist
@@ -240,7 +202,6 @@ class Gen_Level extends Phaser.Scene {
     }
 
     SaveTime() {
-        //localStorage.clear();
         this.auxCount = -1;
         for (let i = 0; i < this.rankingScores; i++) {
             if (parseFloat(`${this.timer.toFixed(2)}`.toString()) < parseFloat(localStorage.getItem('time_' + i + '_' + this.name))
@@ -264,18 +225,5 @@ class Gen_Level extends Phaser.Scene {
             localStorage.setItem('time_' + i + '_' + this.name, localStorage.getItem('time_' + (i - 1) + '_' + this.name));
         }
     }
-
-    //Camera zoom (not used)
-    // cameraZoomCallback() {
-    //     if (player.body.velocity.y < 0) {
-    //         this.physics.world.setBounds(0, 0, skySpr.width * scaledW, skySpr.height * scaledH);
-    //         this.cameras.main.zoomTo(1 / 3, 2000, "Linear", true);
-    //     } else if (player.body.velocity.y > 0) {
-    //         this.physics.world.setBounds(game.config.width * 2, 0, game.config.width * 2, skySpr.height * scaledH);
-    //         this.cameras.main.zoomTo(1, 2000, "Linear", true);
-    //     }
-    // }
-
     //</editor-fold>
-
 }

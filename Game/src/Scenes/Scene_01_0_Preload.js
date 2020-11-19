@@ -1,88 +1,15 @@
 class Scene_01_0_Preload extends Phaser.Scene {
     constructor() {
         super("Preload");
-        console.log("Preload constructor");
+        //console.log("Preload constructor");
     }
 
     preload() {
-        //<editor-fold desc="Preload animation">
-
-        /*
-
-        //Set the progress vars
-        let progressBar = this.add.graphics();
-        let progressBox = this.add.graphics();
-        progressBox.fillStyle(0x222222, 0.8);
-        progressBox.fillRect(game.config.width / 2 - 320 / 2, game.config.height / 2 - 50 / 2, 320, 50);
-
-        //Set texts
-        let loadingText = this.make.text({
-            x: game.config.width / 2,
-            y: game.config.height / 2 - 50,
-            text: 'Loading..',
-            style: {
-                font: '20px monospace',
-                fill: '#ffffff'
-            }
-        });
-        loadingText.setOrigin(0.5, 0.5);
-
-        let percentText = this.make.text({
-            x: game.config.width / 2,
-            y: game.config.height / 2,
-            text: '0%',
-            style: {
-                font: '18px monospace',
-                fill: '#ffffff'
-            }
-        });
-        percentText.setOrigin(0.5, 0.5);
-
-        let assetText = this.make.text({
-            x: game.config.width / 2,
-            y: game.config.height / 2 + 50,
-            text: '',
-            style: {
-                font: '18px monospace',
-                fill: '#ffffff'
-            }
-        });
-        assetText.setOrigin(0.5, 0.5);
-
-        //Event listeners
-        this.load.on('progress', function (value) {
-            //console.log(value);
-
-            //Set percent text
-            percentText.setText(parseInt(value * 100) + '%');
-
-            //Set progress bar
-            progressBar.clear();
-            progressBar.fillStyle(0xffffff, 1);
-            progressBar.fillRect(game.config.width / 2 - 300 / 2, game.config.height / 2 - 30 / 2, 300 * value, 30);
-        });
-
-        this.load.on('fileprogress', function (file) {
-            //Display the progress animation
-            assetText.setText('Loading asset: ' + file.key);
-        });
-
-        this.load.on('complete', function () {
-            //Destroy the bar and display the logo/animation
-            progressBar.destroy();
-            progressBox.destroy();
-            loadingText.destroy();
-            percentText.destroy();
-            assetText.destroy();
-        });
-*/
-
-        //</editor-fold>
 
         //Pass preload progress info to charge scene
         let thisScene = this.scene;
         this.load.on('progress', function (value) {
-            thisScene.get('Charge').setProgress(value);//console.log(value);
+            thisScene.get('Charge').setProgress(value);
         });
 
         //<editor-fold desc="Load assets">
@@ -101,18 +28,13 @@ class Scene_01_0_Preload extends Phaser.Scene {
         this.loadRanking();
 
         //</editor-fold>
-        //console.log("I'm here");
-
     }
 
     create() {
-        console.log("Create preload");
-        //this.scene.start("Level_01");
-
+        //console.log("Create preload");
         this.scene.stop("Charge");
         this.scene.start("MusicManager");
         this.scene.start("MainMenu");
-
     }
 
     //<editor-fold desc="Load functions">
@@ -222,19 +144,6 @@ class Scene_01_0_Preload extends Phaser.Scene {
         this.load.image('lobby_buttonSelNext_static', './assets/Sprites/Menus/Lobby/lobby_buttonSelNext_static.png');
         this.load.image('lobby_buttonSelNext_over', './assets/Sprites/Menus/Lobby/lobby_buttonSelNext_over.png');
 
-        //Colors
-        // let colors = ["Blue", "Green", "Orange", "Red"];
-        // for (let i = 0; i < colors.length; i++) {
-        //     this.load.image('lobby_buttonAccept_' + colors[i] + '_static', './assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_static.png');
-        //     this.load.image('lobby_buttonAccept_' + colors[i] + '_over', './assets/Sprites/Menus/Lobby/lobby_buttonAccept_' + colors[i] + '_over.png');
-        //     this.load.image('lobby_buttonBack_' + colors[i] + '_static', './assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_static.png');
-        //     this.load.image('lobby_buttonBack_' + colors[i] + '_over', './assets/Sprites/Menus/Lobby/lobby_buttonBack_' + colors[i] + '_over.png');
-        //     this.load.image('lobby_buttonBigSel_' + colors[i], './assets/Sprites/Menus/Lobby/lobby_buttonBigSel_' + colors[i] + '.png');
-        //     this.load.image('lobby_buttonLittleSel_' + colors[i], './assets/Sprites/Menus/Lobby/lobby_buttonLittleSel_' + colors[i] + '.png');
-        //     this.load.image('lobby_buttonNext_' + colors[i] + '_static', './assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_static.png');
-        //     this.load.image('lobby_buttonNext_' + colors[i] + '_over', './assets/Sprites/Menus/Lobby/lobby_buttonNext_' + colors[i] + '_over.png');
-        // }
-
         this.load.image('lobby_buttonBigSel_Blue', './assets/Sprites/Menus/Lobby/lobby_buttonsingleBigSelBlue.png');
         this.load.image('lobby_buttonAccept_Blue_static', './assets/Sprites/Menus/Lobby/lobby_buttonAccept_Blue_static.png');
         this.load.image('lobby_buttonAccept_Blue_over', './assets/Sprites/Menus/Lobby/lobby_buttonAccept_Blue_over.png');
@@ -252,7 +161,6 @@ class Scene_01_0_Preload extends Phaser.Scene {
         ];
         for (let i = 0; i < chars.length; i++) {
             this.load.image('lobby_char_' + chars[i] + 'Big', './assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Big.png');
-            //this.load.image('lobby_char_' + chars[i] + 'Mini', './assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Mini.png');
             this.load.image(chars[i] +'Plush', './assets/Sprites/Menus/Lobby/Plushes/' + chars[i] + 'Plush.png'); //Sofa penguins
         }
 
@@ -317,7 +225,6 @@ class Scene_01_0_Preload extends Phaser.Scene {
         });
 
         //RaceLine
-        //this.load.image('genLevel_gen_finishLine_sprite', './assets/Sprites/UI/gen_finishLine_sprite.png'); //Turn all the assets to this nommenclature
         this.load.image('gen_finishLine_sprite', './assets/Sprites/UI/gen_finishLine_sprite.png');
 
         //Audio

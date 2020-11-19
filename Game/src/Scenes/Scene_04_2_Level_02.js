@@ -2,12 +2,12 @@ class Scene_04_2_Level_02 extends Gen_Level {
     constructor() {
         super("Level_02");
         this.levelName = "Simetría sinuosa";
-        console.log("Level_02 constructor");
+        //console.log("Level_02 constructor");
     }
 
     //<editor-fold desc="Game Loop functions">
     create() {
-        console.log("Level_02 create");
+        //console.log("Level_02 create");
         super.create();
         super.createPlayer(this, 0, true);
 
@@ -40,10 +40,6 @@ class Scene_04_2_Level_02 extends Gen_Level {
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 4544 , 3712 ));
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 4544 , 1664 ));
 
-        //Play power up boxes animation
-        // Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
-        //     child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
-        // });
     }
 
     update() {

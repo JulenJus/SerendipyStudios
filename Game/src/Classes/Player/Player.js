@@ -3,7 +3,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     constructor(scene, id, controllable, initPos, skin) {
         super(scene, initPos.x, initPos.y, 'gen_player');
 
-        console.log("Player constructor")
+        //console.log("Player constructor")
 
         //Set object variables
         this.scene = scene;
@@ -194,9 +194,6 @@ class Player extends Phaser.Physics.Arcade.Sprite {
 
     UsePowerUp() {
         if (!this.scene.isRaceStarted) return;
-
-        console.log("Power up");
-
         //Use the power up if you have one
         if (this.powerUpObject_Boxed !== null) {
             this.powerUpObject_Boxed.Use();
@@ -204,8 +201,6 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     }
 
     Squawk() {
-        console.log("squawk");
-
         //Reproduce squawk audio depending on your skin
         this.scene.scene.get("MusicManager").sfx_play_squawk();
     }

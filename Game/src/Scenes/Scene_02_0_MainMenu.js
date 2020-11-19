@@ -1,7 +1,7 @@
 class Scene_02_0_MainMenu extends Phaser.Scene {
     constructor() {
         super("MainMenu");
-        console.log("MainMenu constructor")
+        //console.log("MainMenu constructor")
     }
 
     create() {
@@ -70,7 +70,6 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     b_Play() {
         this.scene.get("MusicManager").sfx_play_button();
-        //this.scene.start("Lobby", {pjId: 0, color: "Red"});
         this.scene.start("ChooseMode");
     }
 
@@ -87,10 +86,7 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
     b_Exit() {
         this.scene.get("MusicManager").sfx_play_button();
 
-        // window.open('https://serendipystudios.itch.io',
-        //     '_parent', '', true);
-
-        if(this.sys.game.device.os.chromeOS
+        if (this.sys.game.device.os.chromeOS
             || this.sys.game.device.os.webApp
             || this.sys.game.device.os.macOS
             || this.sys.game.device.os.desktop)
@@ -98,14 +94,6 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         else
             window.open('https://serendipystudios.itch.io/flyguins',
                 '_parent', '', true);
-
-        // if (window.history.length > 1) {
-        //     window.history.back();
-        // } else {
-        //     let thisWindow = window.open('','_self', '', true);
-        //     //window.close(thisWindow);
-        //     //game.close();
-        // }
     }
 
     b_Shop() {
@@ -117,7 +105,5 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
         this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("Settings");
     }
-
     //</editor-fold>
-
 }

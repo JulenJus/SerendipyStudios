@@ -17,7 +17,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         this.wallsLayer = null;         //Walls
         this.obstaclesLayer = null;     //Dmg
 
-        console.log("Ranking constructor");
+        //console.log("Ranking constructor");
     }
 
     init(args) {
@@ -30,7 +30,7 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     create() {
         this.scene.get("MusicManager").music_play_Ranking();
 
-        console.log("Ranking create");
+        //console.log("Ranking create");
         for (let i = 0; i < this.numStoredTimes; i++) {
             this.allScoresText += localStorage.getItem('time_' + i + '_' + this.playedLevel) + '\n'; //Write all scores
         }
@@ -55,8 +55,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5).depth = 1;
 
         //Level name
@@ -70,8 +68,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5).depth = 1;
 
         //Scores display
@@ -85,8 +81,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5).depth = 1;
 
         //Create layers from tilemap layers
@@ -118,7 +112,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
             y: this.levelHeight - 500
         }, this.playerSkin);
         this.players.push(thisPlayer);
-        //let thisPlayer = this.players.find(player => player.serverId === id);
 
         //Initialize physics
         //Set collisions between player and layers
@@ -128,7 +121,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
         //Camera
         if (controllable) {
             this.scene.run("InGameHUD", {player: thisPlayer, level: level});
-            //this.cameras.main.startFollow(thisPlayer);
         }
     }
 
@@ -143,7 +135,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
             callback: function () {
                 //Go back to the lobby
                 thisSceneManager.stop("InGameHUD");
-                //thisSceneManager.start("Lobby");
                 thisSceneManager.start("MainMenu");
                 thisSceneManager.get("MusicManager").music_stop_Ranking();
             }
@@ -151,6 +142,6 @@ class Scene_05_0_Ranking extends Phaser.Scene {
     }
 
     collideCallback() {
-        console.log("Collision");
+        //console.log("Collision");
     }
 }

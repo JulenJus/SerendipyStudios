@@ -1,7 +1,7 @@
 class Scene_02_1_HowToPlay extends Phaser.Scene {
     constructor() {
         super("HowToPlay");
-        console.log("HowToPlay constructor")
+        //console.log("HowToPlay constructor")
     }
 
     create() {
@@ -89,7 +89,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
         this.scene.get("MusicManager").sfx_play_button();
         if (this.sys.game.device.os.android ||
             this.sys.game.device.os.iPad) {
-            console.log("Mobile")
+            //console.log("Mobile")
             this.currentTip++;
             if (this.currentTip <= this.tipsPc.length - 1) {
                 switch (this.currentTip) {
@@ -127,7 +127,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 this.scene.get("MusicManager").music_stop_MainMenu();
             }
         } else {
-            console.log("Pc")
+            //console.log("Pc")
             this.currentTip++;
             if (this.currentTip <= this.tipsPc.length) {
                 this.tipsPc[this.currentTip - 1].visible = true;
@@ -143,7 +143,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
         this.scene.get("MusicManager").sfx_play_button();
         if (this.sys.game.device.os.android ||
             this.sys.game.device.os.iPad) {
-            console.log("Mobile")
+            //console.log("Mobile")
             if (this.currentTip > 1) {
                 this.currentTip--;
                 switch (this.currentTip) {
@@ -177,7 +177,7 @@ class Scene_02_1_HowToPlay extends Phaser.Scene {
                 }
             }
         } else {
-            console.log("Pc")
+            //console.log("Pc")
             if (this.currentTip > 1) {
                 this.currentTip--;
                 this.tipsPc[this.currentTip - 1].visible = true;

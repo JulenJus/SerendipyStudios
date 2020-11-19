@@ -1,7 +1,7 @@
 class Scene_02_6_Settings extends Phaser.Scene {
     constructor() {
         super("Settings");
-        console.log("Settings constructor");
+        //console.log("Settings constructor");
     }
 
     create() {
@@ -48,11 +48,9 @@ class Scene_02_6_Settings extends Phaser.Scene {
                 break;
             case 1:
                 //console.log("HowToPlay change sprite: " + mode);
-                //this.buttons[1].setTexture('gen_littleIce_' + mode);
                 break;
             case 2:
                 //console.log("HowToPlay change sprite: " + mode);
-                //this.buttons[2].setTexture('gen_littleIce_' + mode);
                 break;
             default:
                 break;
@@ -98,15 +96,12 @@ class Scene_02_6_Settings extends Phaser.Scene {
         //Set the progress bar fill
         //console.log(progress);
         bar.setCrop(0, 0, 498 * progress, 50);
-
         return;
-
     }
 
     b_Exit() {
         this.scene.get("MusicManager").sfx_play_button();
         this.scene.start("MainMenu");
     }
-
     //</editor-fold>
 }

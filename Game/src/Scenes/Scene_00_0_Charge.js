@@ -8,18 +8,12 @@ class Scene_00_0_Charge extends Phaser.Scene {
         this.loadPreload();
     }
 
-    init() {
-
-    }
-
     create() {
         //Set background
         this.background = this.add.image(0, 0, 'preload_background').setOrigin(0, 0);
 
         //Set the bar
-        //this.preloadBar = this.add.image(134, 930, 'preload_progressBar_empty').setOrigin(0,0);
         this.preloadBar_fill = this.add.image(135, 931, 'preload_progressBar_fill').setOrigin(0, 0);
-
         this.preloadBar_fill.setCrop(0, 0, 0, 50);
 
 

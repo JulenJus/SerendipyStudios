@@ -1,7 +1,7 @@
 class Scene_03_0_Lobby extends Phaser.Scene {
     constructor() {
         super("Lobby");
-        console.log("Lobby constructor");
+        //console.log("Lobby constructor");
 
         this.LEVELS = [
             "Nvl 1: Diagonales dolorosas",
@@ -49,30 +49,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5);
-
-        //Selection backgrounds
-        // let numInstantiatedLittleSel = 0;
-        // let colors = ["Blue", "Green", "Orange", "Red"];
-        // let cursedIndex = colors.find((value) => value === this.color);
-        // for (let i = 0; i < colors.length; i++) {
-        //     if (i !== cursedIndex) {
-        //         switch (numInstantiatedLittleSel) {
-        //             case 0:
-        //                 this.add.sprite(575, 194, 'lobby_buttonLittleSel_' + colors[i]).setOrigin(0, 0);
-        //                 break;
-        //             case 1:
-        //                 this.add.sprite(575, 354, 'lobby_buttonLittleSel_' + colors[i]).setOrigin(0, 0);
-        //                 break;
-        //             case 2:
-        //                 this.add.sprite(575, 514, 'lobby_buttonLittleSel_' + colors[i]).setOrigin(0, 0);
-        //                 break;
-        //         }
-        //         numInstantiatedLittleSel++;
-        //     }
-        // }
 
         //Buttons
         this.buttonsUI = [];
@@ -87,21 +64,11 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         this.buttonsColors.push(this.add.sprite(336, 572, 'lobby_buttonAccept_Blue_static').setOrigin(0, 0).setInteractive());
         this.buttonsColors.push(this.add.sprite(493, 572, 'lobby_buttonNext_Blue_static').setOrigin(0, 0).setInteractive());
 
-        // this.buttonsColors.push(this.add.sprite(85, 572, 'lobby_buttonBack_' + this.color + "_static").setOrigin(0, 0).setInteractive());
-        // this.buttonsColors.push(this.add.sprite(240, 572, 'lobby_buttonAccept_' + this.color + "_static").setOrigin(0, 0).setInteractive());
-        // this.buttonsColors.push(this.add.sprite(397, 572, 'lobby_buttonNext_' + this.color + "_static").setOrigin(0, 0).setInteractive());
-
         //Characters
         this.pjsSkinTexs = [];
         this.pjsSkinTexs.push(
             this.add.sprite(170, 247, 'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[0]]] + 'Big')
                 .setOrigin(0, 0));
-        // for (let i = 1; i < 4; i++) { //Paint little penguins
-        //     this.pjsSkinTexs.push(
-        //         this.add.sprite(607, 212 + (159 * (i - 1)),
-        //             'lobby_char_' + this.CHARS[this.pjsSkin[this.pjsIds[i]]] + 'Mini')
-        //             .setOrigin(0, 0));
-        // }
 
         //Sofa little penguins
         this.pjsSofa = []
@@ -118,20 +85,6 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         //Ticks
         this.readyTick = this.add.sprite(469, 198, 'lobby_ready_bigTick').setOrigin(0, 0);
         this.readyTick.visible = false;
-        // this.pjsTicks = [];
-        // this.pjsTicks.push(
-        //     this.add.sprite(469, 198, 'lobby_ready_bigTick')
-        //         .setOrigin(0, 0));
-        // for (let i = 1; i < 4; i++) {
-        //     this.pjsTicks.push(
-        //         this.add.sprite(704, 196 + (159 * (i - 1)),
-        //             'lobby_ready_littleTick')
-        //             .setOrigin(0, 0));
-        // }
-
-        // for (let i = 0; i < this.pjsTicks.Size; i++) {
-        //     this.pjsTicks[i].visible = false;
-        // }
 
         //Init callbacks
         this.b_InitializeCallbacks();
@@ -218,7 +171,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         }
 
         this.levelNameDisplay.setText(this.levelName);
-        console.log(this.levelName);
+        //console.log(this.levelName);
     }
 
     b_Play() {
@@ -240,7 +193,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         if (this.ready) return;
 
         this.scene.get("MusicManager").sfx_play_button();
-        console.log("Previous skin")
+        //console.log("Previous skin")
         this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === 0 ? this.CHARS.length - 1 : this.pjsSkin[this.pjId] - 1;
         this.pjSkinSofa = this.pjSkinSofa === 0 ? this.CHARS.length - 1 : this.pjSkinSofa - 1;
         this.ShowSkin(this.pjId);
@@ -249,7 +202,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     b_SelectSkin() {
         this.scene.get("MusicManager").sfx_play_button();
         this.ready = !this.ready;
-        console.log("Skin selected: " + this.ready);
+        //console.log("Skin selected: " + this.ready);
 
         //[HERE] Show the mark
         this.ShowMark(this.pjId, this.ready);
@@ -260,7 +213,7 @@ class Scene_03_0_Lobby extends Phaser.Scene {
         if (this.ready) return;
 
         this.scene.get("MusicManager").sfx_play_button();
-        console.log("Next skin");
+        //console.log("Next skin");
         this.pjsSkin[this.pjId] = this.pjsSkin[this.pjId] === this.CHARS.length - 1 ? 0 : this.pjsSkin[this.pjId] + 1;
         this.pjSkinSofa = this.pjSkinSofa === this.CHARS.length - 1 ? 0 : this.pjSkinSofa + 1;
         this.ShowSkin(this.pjId);
@@ -269,21 +222,13 @@ class Scene_03_0_Lobby extends Phaser.Scene {
     ShowSkin(pjId) {
         //Change the texture of the pj
         let pjLocalIndex = this.pjsIds.find((ele) => ele === pjId);
-        //if (pjLocalIndex === 0) {
         this.pjsSkinTexs[pjLocalIndex].setTexture(
             'lobby_char_' + this.CHARS[this.pjsSkin[pjLocalIndex]] + 'Big'
         );
-        // } else {
-        //     this.pjsSkinTexs[pjLocalIndex].setTexture(
-        //         'lobby_char_' + this.CHARS[this.pjsSkin[pjLocalIndex]] + 'Mini'
-        //     );
-        // }
     }
 
     ShowMark(pjId, isEnabled) {
         //Enable/disable the mark
-        //let pjLocalIndex = this.pjsIds.find((ele) => ele === pjId);
-        //this.pjsTicks[pjLocalIndex].visible = isEnabled;
         this.readyTick.visible = isEnabled;
 
         if (isEnabled)

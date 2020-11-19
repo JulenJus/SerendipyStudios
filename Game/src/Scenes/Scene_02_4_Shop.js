@@ -1,7 +1,7 @@
 class Scene_02_4_Shop extends Phaser.Scene{
     constructor() {
         super("Shop");
-        console.log("Shop constructor")
+        //console.log("Shop constructor")
     }
 
     create(){

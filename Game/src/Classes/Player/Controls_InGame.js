@@ -14,22 +14,22 @@ class Controls_InGame {
         });
 
         if (scene.sys.game.device.os.android) {
-            console.log("OS: Android");
+            //console.log("OS: Android");
             this.setControlsMobile();
         } else if (scene.sys.game.device.os.iPad) {
-            console.log("OS: iPad");
+            //console.log("OS: iPad");
             this.setControlsMobile();
         } else if (scene.sys.game.device.os.chromeOS) {
-            console.log("OS: Chrome");
+            //console.log("OS: Chrome");
             this.setControlsPc();
         } else if (scene.sys.game.device.os.webApp) {
-            console.log("OS: WebApp");
+            //console.log("OS: WebApp");
             this.setControlsPc();
         } else if (scene.sys.game.device.os.desktop) {
-            console.log("OS: Desktop");
+            //console.log("OS: Desktop");
             this.setControlsPc();
         } else if (scene.sys.game.device.os.macOS) {
-            console.log("OS: macOS");
+            //console.log("OS: macOS");
             this.setControlsPc();
         }
     }
@@ -86,7 +86,7 @@ class Controls_InGame {
         let player = this.player;
         let exitLevelEvent = this.onExitLevel;
         this.scene.input.on('pointerdown', function (pointer) {
-            console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
+            //console.log("Pointerdown. x: " + pointer.x + "; y: " + pointer.y);
 
             //Movement
             if (pointer.y >= 550 && !player.isDamaged) {

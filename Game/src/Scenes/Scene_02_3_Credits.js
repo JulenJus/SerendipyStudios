@@ -1,16 +1,13 @@
 class Scene_02_3_Credits extends Phaser.Scene {
     constructor() {
         super("Credits");
-        console.log("Credits constructor");
+        //console.log("Credits constructor");
     }
-
-
 
     create() {
         //Show the background
         this.add.sprite(0, 0, 'gen_mainscreen').setOrigin(0, 0);
         this.add.sprite(0, 0, 'credits_logs').setOrigin(0, 0);
-        //[HERE] Create the title
 
         //Show the buttons
         this.buttons = [];
@@ -26,7 +23,7 @@ class Scene_02_3_Credits extends Phaser.Scene {
     b_ChangeSprite(buttonIndex, mode) {
         switch (buttonIndex) {
             case 0:
-                console.log("Tw change sprite: " + mode);
+                //console.log("Tw change sprite: " + mode);
                 this.buttons[0].setTexture('credits_buttonTwitter_' + mode);
                 break;
             case 1:
@@ -40,7 +37,7 @@ class Scene_02_3_Credits extends Phaser.Scene {
 
     b_InitializeCallbacks() {
         for (let i = 0; i < this.buttons.length; i++) {
-            console.log(this.buttons[i])
+            //console.log(this.buttons[i])
             this.buttons[i].on('pointerover', () => this.b_ChangeSprite(i, "over"));
             this.buttons[i].on('pointerout', () => this.b_ChangeSprite(i, "static"));
         }

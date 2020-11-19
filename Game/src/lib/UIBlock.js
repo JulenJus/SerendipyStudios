@@ -42,7 +42,7 @@ class UIBlock {
     setChildDepth(child) {
         //console.log(child);
         var realDepth = this._depth * 100 + child.childIndex;
-        console.log(realDepth);
+        //console.log(realDepth);
         if (child.scene == undefined) {
             child.scene = gw.model.currentScene;
         }

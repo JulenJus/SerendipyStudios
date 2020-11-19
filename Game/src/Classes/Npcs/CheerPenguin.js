@@ -3,7 +3,7 @@ class CheerPenguin extends Phaser.Physics.Arcade.Sprite{
     constructor(scene, type, initPos) {
         super(scene, initPos.x, initPos.y, 'gen_player'); //Base sprite is not important. Animation will be rendered over it
 
-        console.log("CheerPenguin constructor")
+        //console.log("CheerPenguin constructor")
 
         //Set object variables
         this.scene = scene;

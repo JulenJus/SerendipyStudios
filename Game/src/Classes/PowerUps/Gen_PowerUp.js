@@ -1,7 +1,6 @@
 class Gen_PowerUp {
     constructor(player) {
         this.player = player;
-        //this.icon = null;
         this.sprite = null;
     }
 

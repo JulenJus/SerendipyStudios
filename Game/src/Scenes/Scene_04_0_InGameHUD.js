@@ -9,37 +9,17 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         //Power up icons
         this.dashIcon = null;
         this.gen_powerUp_shield_spritIcon = null;
-
         //console.log("Ingame hud constructor");
     }
 
     init(args) {
-        console.log("HUD");
+        //console.log("HUD");
         this.player = args.player;
         this.level = args.level;
         //console.log("Ingame hud init");
     }
 
     create() {
-        //Show the scene
-        //this.scene.start("InGameHUD");    //[HERE] YOU ARE SUCH AN ASSHOLE JULEN!
-        //console.log("Ingame hud create");
-
-        //Create score
-        // this.movementBarText = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
-        //     fontFamily: 'Gelato',
-        //     fontStyle: 'Italic',
-        //     fontSize: '32px',
-        //     fill: '#ffffff'
-        // });
-
-        // powerUpTime = this.add.text(this.cameras.main.scrollX + 50, this.cameras.main.scrollY + 50, '', {
-        //     fontFamily: 'Gelato',
-        //     fontStyle: 'Italic',
-        //     fontSize: '64px',
-        //     fill: '#000000'
-        // });
-
         //Event Listeners
         this.player.onPaintPowerUpIcon.on('onPaintPowerUpIcon', this.onPaintPowerUpIcon, this);
         this.player.controls.onExitLevel.on('onExitLevel', this.onExitLevel, this);
@@ -99,17 +79,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5);
-
-        //Race position
-        // this.racePosition = this.add.text(60, 230, '1st', {
-        //     fontFamily: 'Gelato',
-        //     fontStyle: 'Italic',
-        //     fontSize: '48px',
-        //     fill: '#000000'
-        // }).setOrigin(0.5, 0);
 
         //Exit button
         this.add.sprite(700, 70, 'UI_exitButton').setScale(0.6);
@@ -258,24 +228,4 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }
         this.scene.resume(this.level.name);
     }
-
-    StartCountdown() {
-        //While the player has not finished the race, count the time it is taking
-        let thisRaceTime = this.raceTime; //Reference for the change of scope
-
-        this.raceTimer = this.time.addEvent({ //Blink immunity effect
-            delay: 1000,
-            loop: true,
-            callback: function () {
-                raceTimeCount -= 1;
-                thisRaceTime.setText(raceTimeCount);
-            }
-        });
-    }
-
-    UpdateRacePosition(spot) {
-        this.player.racePosition += spot;
-        this.racePosition.setText(this.player.racePosition + "º");
-    }
-
 }

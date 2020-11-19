@@ -2,12 +2,12 @@ class Scene_04_3_Level_03 extends Gen_Level {
     constructor() {
         super("Level_03");
         this.levelName = "Trayecto tortuoso";
-        console.log("Level_03 constructor");
+        //console.log("Level_03 constructor");
     }
 
 //<editor-fold desc="Game Loop functions">
     create() {
-        console.log("Level_03 create");
+        //console.log("Level_03 create");
         super.create();
         super.createPlayer(this, 0, true);
 
@@ -36,10 +36,6 @@ class Scene_04_3_Level_03 extends Gen_Level {
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 6272 ));
         this.gen_powerUpBox_sprites.add(new PowerUp_Box(this, 1536 , 2048 ));
 
-        //Play power up boxes animation
-        // Phaser.Actions.Call(this.gen_powerUpBox_sprites.getChildren(), child => {
-        //     child.anims.play('gen_powerUpBox_spriteAnimation_Idle');
-        // });
     }
 
     update() {

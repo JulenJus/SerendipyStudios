@@ -18,8 +18,6 @@ class Scene_02_5_ChooseMode extends Phaser.Scene {
                 strokeThickness: 9,
                 align: "center",
                 fill: '#ffffff'
-                //fill: '#143675'
-                //fill: '#db6a00'
             }).setOrigin(0.5, 0.5).depth = 1;
 
 
@@ -53,7 +51,7 @@ class Scene_02_5_ChooseMode extends Phaser.Scene {
 
     goToLobby() {
         this.scene.get("MusicManager").sfx_play_button();
-        this.scene.start("Lobby", {pjId: 0/*, color: "Blue"*/});
+        this.scene.start("Lobby", {pjId: 0});
     }
 
     b_Exit() {
