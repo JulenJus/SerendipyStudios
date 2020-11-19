@@ -233,7 +233,7 @@ También se ha usado la siguiente paleta de colores para todos los mapas:
 
 
 #### 6.3. Concept Art
-- Pantallas:
+- Escenarios y fondos:
 
 <img src="Concepts/Concepts/RefScreens.jpg" width="125">
 Referencias para el paisaje de las pantallas 
@@ -249,6 +249,15 @@ Boceto para el menú principal/cover
 
 <img src="Concepts/Concepts/conceptmenu1.jpg" width="125">
 Boceto para el menú principal/cover 
+
+<img src"Game/assets/Sprites/Screens/mainscreen.png" width="125">
+Cover/Menú Principal/Créditos
+
+<img src"Game/assets/Sprites/Screens/baseScreen.png" width="125">
+Fondo base 
+
+<img src"Game/assets/Sprites/Browser/browserBackground.png" width="125">
+Fondo para el navegador
 
 - Personajes:
 
@@ -302,9 +311,10 @@ Pingu
 
 - Power Ups:
 
+<img src="Concepts/Concepts/CajaPowerUpBoceto.jpg" width="125">
 Primeros bocetos de las cajas de los power ups 
 
-Estudio de colores para las cajas de power ups 
+Estudio de colores para las cajas de power ups:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/BrownPU.png" width="125">
 Caja Marrón
@@ -313,10 +323,10 @@ Caja Marrón
 Caja Verde
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PurplePU.png" width="125">
-Caja Lila
+Caja Morada
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/gen_powerUpBox_sprite.png" width="125">
-Caja Verde Vista Frontal
+Caja Verde vista frontal
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/PowerUpBoxShine.png" width="125">
 Caja brillando
@@ -330,6 +340,12 @@ Escudo Brillando
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20PowerUps/Speed.png" width="125">
 Velocidad
 
+<img src="Concepts/Concepts/speedcolores.png" width="125">
+Estudio de colores para el power up de velocidad
+- Eventos
+
+Evento Halloween 
+- Fondos
 - Pantallas
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Screenshots/Ajustes_Screenshot.PNG" width="125">
 Ajustes
