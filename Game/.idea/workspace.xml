@@ -23,7 +23,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change beforePath="$PROJECT_DIR$/FirstSketch_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/Music/music_mainMenu_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/Music/music_mainMenu_2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_box.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_collision.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_long.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_short.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_damage.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_flap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_goal.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_powerUp_dash.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_powerUp_shield.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_powerUp_shield_broken.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_squawk.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/gen_button.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/ranking_clap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Armin/ArminSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Armin/FlutterArmin.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Bob/Bobsheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Bob/FlutterBob.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Enemies/gen_saw_animation.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Karta/FlutterKarta.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Karta/KartaSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Cheer/AnimationCheerFoamSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Cheer/AnimationCheerFoamSheet2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Cheer/animationCheerPomponsSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Pingu/Idle/idleAnimation.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/PowerUps/Box/Box.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/PowerUps/Dash/dashGif.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/PowerUps/Dash/gen_powerUp_dash_animation_original.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Steve/FlutterSteve.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Animations/Steve/SteveSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Armin/Armin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Bob/Bob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Bob/BobGreet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Bob/BobGreetKebab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Karta/Karta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Kurta/Kurta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Pingu/PinguHalloween.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Pingu/PinguHappy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Pingu/PinguMele.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Pingu/PinguTurnaroundPNG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Sergeant Jack/Sergeant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Sergeant Jack/SergeantColors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic Characters/Steve/Steve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic PowerUps/BrownPU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic PowerUps/GreenPU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Basic PowerUps/PurplePU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Browser/BackgroundBrowserTry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Menus/Credits/credits_buttonTwitter_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/P_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/P_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/P_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/P_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/Sierra1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/Sierra2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Obstacles/Sierra3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/baseScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/gamaColorButtons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/mainscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/mapa1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/mapa2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/mapa3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Screens/tutorial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenes/Scene_01_0_Preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenes/Scene_01_0_Preload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

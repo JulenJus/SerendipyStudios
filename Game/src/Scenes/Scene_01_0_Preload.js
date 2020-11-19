@@ -129,7 +129,7 @@ class Scene_01_0_Preload extends Phaser.Scene {
         this.load.image('gen_buttonExit_over', './assets/Sprites/Menus/Gen/gen_buttonExit_over.png');
 
         //Audio
-        this.load.audio('sfx_gen_button','./assets/Sounds/SFX/gen_button.wav');
+        this.load.audio('sfx_gen_button','./assets/Sounds/SFX/gen_button.mp3');
     }
 
     loadMainMenu() {
@@ -253,7 +253,7 @@ class Scene_01_0_Preload extends Phaser.Scene {
         for (let i = 0; i < chars.length; i++) {
             this.load.image('lobby_char_' + chars[i] + 'Big', './assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Big.png');
             //this.load.image('lobby_char_' + chars[i] + 'Mini', './assets/Sprites/Menus/Lobby/lobby_char_' + chars[i] + 'Mini.png');
-            this.load.image(chars[i] +'Plush', './assets/Sprites/Menus/lobby/Plushes/' + chars[i] + 'Plush.png'); //Sofa penguins
+            this.load.image(chars[i] +'Plush', './assets/Sprites/Menus/Lobby/Plushes/' + chars[i] + 'Plush.png'); //Sofa penguins
         }
 
         //Done ticks
@@ -273,7 +273,7 @@ class Scene_01_0_Preload extends Phaser.Scene {
 
     loadGenLevel() {
         //Player sprites
-        this.load.image('gen_player', './assets/Sprites/Characters/Armin/ArminScaled.png');
+        this.load.image('gen_player', './assets/Sprites/Characters/Steve/SteveScaled.png');
 
         //Player animations
         this.load.spritesheet('gen_player_animation_Idle_Armin', './assets/Sprites/Animations/Armin/gen_player_animation_Idle_Armin.png', {
@@ -321,17 +321,17 @@ class Scene_01_0_Preload extends Phaser.Scene {
         this.load.image('gen_finishLine_sprite', './assets/Sprites/UI/gen_finishLine_sprite.png');
 
         //Audio
-        this.load.audio('sfx_genLvl_box','./assets/Sounds/SFX/genLvl_box.wav');
-        this.load.audio('sfx_genLvl_powerUp_shield','./assets/Sounds/SFX/genLvl_powerUp_shield.wav');
-        this.load.audio('sfx_genLvl_powerUp_shield_broken','./assets/Sounds/SFX/genLvl_powerUp_shield_broken.wav');
-        this.load.audio('sfx_genLvl_powerUp_dash','./assets/Sounds/SFX/genLvl_powerUp_dash.wav');
-        this.load.audio('sfx_genLvl_collision','./assets/Sounds/SFX/genLvl_collision.wav');
-        this.load.audio('sfx_genLvl_squawk','./assets/Sounds/SFX/genLvl_squawk.wav');
-        this.load.audio('sfx_genLvl_flap','./assets/Sounds/SFX/genLvl_flap.wav');
-        this.load.audio('sfx_genLvl_goal','./assets/Sounds/SFX/genLvl_goal.wav');
-        this.load.audio('sfx_genLvl_damage','./assets/Sounds/SFX/genLvl_damage.wav');
-        this.load.audio('sfx_genLvl_countdown_short','./assets/Sounds/SFX/genLvl_countdown_short.wav');
-        this.load.audio('sfx_genLvl_countdown_long','./assets/Sounds/SFX/genLvl_countdown_long.wav');
+        this.load.audio('sfx_genLvl_box','./assets/Sounds/SFX/genLvl_box.mp3');
+        this.load.audio('sfx_genLvl_powerUp_shield','./assets/Sounds/SFX/genLvl_powerUp_shield.mp3');
+        this.load.audio('sfx_genLvl_powerUp_shield_broken','./assets/Sounds/SFX/genLvl_powerUp_shield_broken.mp3');
+        this.load.audio('sfx_genLvl_powerUp_dash','./assets/Sounds/SFX/genLvl_powerUp_dash.mp3');
+        this.load.audio('sfx_genLvl_collision','./assets/Sounds/SFX/genLvl_collision.mp3');
+        this.load.audio('sfx_genLvl_squawk','./assets/Sounds/SFX/genLvl_squawk.mp3');
+        this.load.audio('sfx_genLvl_flap','./assets/Sounds/SFX/genLvl_flap.mp3');
+        this.load.audio('sfx_genLvl_goal','./assets/Sounds/SFX/genLvl_goal.mp3');
+        this.load.audio('sfx_genLvl_damage','./assets/Sounds/SFX/genLvl_damage.mp3');
+        this.load.audio('sfx_genLvl_countdown_short','./assets/Sounds/SFX/genLvl_countdown_short.mp3');
+        this.load.audio('sfx_genLvl_countdown_long','./assets/Sounds/SFX/genLvl_countdown_long.mp3');
     }
 
     loadInGameHUD() {
@@ -397,7 +397,7 @@ class Scene_01_0_Preload extends Phaser.Scene {
         this.load.tilemapTiledJSON('tilemap_Ranking', './assets/Tilemaps/ranking.json');
 
         //Audio
-        this.load.audio('sfx_ranking_clap', './assets/Sounds/SFX/ranking_clap.wav');
+        this.load.audio('sfx_ranking_clap', './assets/Sounds/SFX/ranking_clap.mp3');
     }
 
     //</editor-fold>
