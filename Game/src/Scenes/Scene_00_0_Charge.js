@@ -18,9 +18,9 @@ class Scene_00_0_Charge extends Phaser.Scene {
 
         //Set the bar
         //this.preloadBar = this.add.image(134, 930, 'preload_progressBar_empty').setOrigin(0,0);
-        this.preloadBar_fill = this.add.image(134, 930, 'preload_progressBar_fill').setOrigin(0, 0);
+        this.preloadBar_fill = this.add.image(135, 931, 'preload_progressBar_fill').setOrigin(0, 0);
 
-        this.preloadBar_fill.setCrop(0, 0, 0, 38);
+        this.preloadBar_fill.setCrop(0, 0, 0, 50);
 
 
         //Set the phrases
@@ -55,7 +55,7 @@ class Scene_00_0_Charge extends Phaser.Scene {
         //console.log(progress);
 
         //Set the progress bar fill
-        this.preloadBar_fill.setCrop(0, 0, 498 * progress, 38);
+        this.preloadBar_fill.setCrop(0, 0, 498 * progress, 50);
 
         //Show a phrase
         let phraseIndex = parseInt(progress / ((100 / this.phrases.length) / 100));

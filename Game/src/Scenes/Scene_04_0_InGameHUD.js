@@ -232,7 +232,7 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }
 
         this.buttons[0].on('pointerup', () => this.resumeGame());
-        this.buttons[1].on('pointerup', () => this.goToRanking());
+        this.buttons[1].on('pointerup', () => this.Exit());
     }
 
     b_ChangeSprite(buttonIndex, mode) {
@@ -243,9 +243,9 @@ class Scene_04_0_InGameHUD extends Phaser.Scene {
         }
     }
 
-    goToRanking(){
+    Exit(){
         this.scene.get("MusicManager").sfx_play_button();
-        this.scene.get(this.level.name).goToRanking();
+        this.scene.get(this.level.name).Exit();
         this.scene.get("MusicManager").music_stop_InGame();
     }
 

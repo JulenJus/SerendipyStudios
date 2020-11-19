@@ -210,6 +210,10 @@ class Gen_Level extends Phaser.Scene {
         this.SaveTime();
     }
 
+    Exit(){
+        this.goToRanking();
+    }
+
     // endRace() {
     //     this.goToRanking();
     //     //this.SaveTime();
