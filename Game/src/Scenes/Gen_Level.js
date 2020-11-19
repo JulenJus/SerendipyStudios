@@ -51,8 +51,8 @@ class Gen_Level extends Phaser.Scene {
 
         //Create layers from tilemap layers
         this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
-        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
-        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
+        this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, 300, 'gen_finishLine_sprite'); //Create finish line
+        //this.gen_finishLine_sprite = this.physics.add.staticSprite(this.levelWidth / 2, this.levelHeight - 500, 'gen_finishLine_sprite');
         //this.map.createStaticLayer('decoration', this.tiles, 0, 0);
         this.wallsLayer = this.map.createStaticLayer('walls', this.tiles, 0, 0);
         this.obstaclesLayer = this.map.createStaticLayer('obstacles', this.tiles, 0, 0);
