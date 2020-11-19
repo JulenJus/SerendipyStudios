@@ -227,16 +227,29 @@ En cuanto al concepto general, el juego se desarrolla en la Academia Pingüino, 
 
 Como bien se ha indicado en el apartado anterior, el juego cuenta con una estética simple y homogénea. El estilo de dibujo es uno muy limpio, compuesto mayoritariamente por líneas no demasiado gruesas, y un sombreado plano. De esta forma, el jugador no se sentirá agobiado por el diseño, y podrá distinguir de una forma muy sencilla qué está ocurriendo en la pantalla, identificando y reconociendo cada uno de los elementos. 
 
-También se ha usado la siguiente paleta de colores para todos los mapas:
+En cuanto a paletas de colores, se han usado las siguientes:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/gamaColorButtons.png" width="125">
 
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/gamaColorButtons_over.png" width="125">
+Botones
+
+Asimismo, para los escenarios también se realizó un estudio de colores resultando como base en una paleta de azules con una selección de colores complementarios para los obstáculos a fin de destacarlos del resto del escenario. Esta paleta está basada en la utilizada en los botones a fin de mantener la consistencia del juego: 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Screens/gamaColorMaps.png" width="125">
+Mapas
 
 #### 6.3. Concept Art
 - Fondos:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/RefScreens.jpg" width="125">
 Referencias para el paisaje de las pantallas 
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/moodboard_escenarios.png" width="125">
+Moodboard para los mapas
+
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/WhatsApp%20Image%202020-11-19%20at%2010.18.07.jpeg" width="125">
+Boceto para el escenario
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Art/Concepts/conceptmenu1.jpg" width="125">
 Boceto para el menú principal/cover 
@@ -308,16 +321,16 @@ Pingu
 
 - Peluches de los personajes para el Lobby:
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/ArminPlush.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Lobby/Plushes/ArminPlush.png" width="125">
 Armin
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/BobPlush.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Lobby/Plushes/BobPlush.png" width="125">
 Bob
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/KartaPlush.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Lobby/Plushes/KartaPlush.png" width="125">
 Karta
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/StevePlush.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/Lobby/Plushes/StevePlush.png" width="125">
 Steve
 
 - Power Ups:
