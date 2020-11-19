@@ -86,7 +86,8 @@ class Scene_02_0_MainMenu extends Phaser.Scene {
 
     b_Exit() {
         this.scene.get("MusicManager").sfx_play_button();
-        window.close();
+        window.history.back();
+        //window.close();
     }
 
     b_Shop() {
