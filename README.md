@@ -256,33 +256,33 @@ Cover/Menú Principal/Créditos
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Screens/baseScreen.png" width="125">
 Fondo base 
 
-<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Browser/browserBackground.png" width="250">
 Fondo para el navegador
 
 - Personajes:
 
-<img src="Concepts/Concepts/RefPenguis.jpg" width="125">
+<img src="Concepts/Concepts/RefPenguis.jpg" width="225">
 Referencias de pingüinos 
 
-<img src="Concepts/Concepts/Penguins.jpg" width="125">
+<img src="Concepts/Concepts/Penguins.jpg" width="225">
 Bocetos iniciales de pingüinos 
 
-<img src="Concepts/Concepts/pinguboceto2.jpg" width="125">
+<img src="Concepts/Concepts/pinguboceto2.jpg" width="225">
 Segundos bocetos de pingüinos 
 
 <img src="Concepts/Concepts/thumbnail.png" width="125">
 Concept para Steve 
 
-<img src="Concepts/Concepts/Sargento.jpg" width="125">
+<img src="Concepts/Concepts/Sargento.jpg" width="225">
 Bocetos para el sargento 
 
 <img src="Concepts/Concepts/SargentoColores.png" width="125">
 Estudio de color para el Sargento Jack 
 
-<img src="Concepts/Concepts/PinguColores.png" width="125">
+<img src="Concepts/Concepts/PinguColores.png" width="225">
 Estudio de color para Pingu 
 
-<img src="Concepts/Concepts/PinguTurnaround.png" width="125">
+<img src="Concepts/Concepts/PinguTurnaround.png" width="225">
 Turnaround de Pingu
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Steve/Steve.png" width="125">
@@ -306,7 +306,7 @@ Kurta
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Basic%20Characters/Pingu/PinguHappy.png" width="125">
 Pingu
 
- Peluches de los personajes para el Lobby:
+- Peluches de los personajes para el Lobby:
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Menus/lobby/Plushes/ArminPlush.png" width="125">
 Armin
@@ -322,7 +322,7 @@ Steve
 
 - Power Ups:
 
-<img src="Concepts/Concepts/CajaPowerUpBoceto.jpg" width="125">
+<img src="Concepts/Concepts/CajaPowerUpBoceto.jpg" width="225">
 Primeros bocetos de las cajas de los power ups 
 
 Estudio de colores para las cajas de power ups:
@@ -445,6 +445,7 @@ Steve
 
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerFoam.gif" width="125">
 <img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/AnimacionCheerPompons.gif" width="125">
+<img src="https://github.com/SerendipyStudiosWeb/SerendipyStudios/blob/master/Game/assets/Sprites/Animations/Pingu/Cheer/idleAnimation.gif" width="125">
 Pingu
 
 #### 7.2. Objetos 
