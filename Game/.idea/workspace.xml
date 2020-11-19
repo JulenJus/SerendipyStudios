@@ -23,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b47ff3-09ca-4c20-b540-2567a64ed49b" name="Default Changelist" comment="FirstSketch resource load">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_box.wav" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_box.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_long.wav" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_long.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_short.wav" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sounds/SFX/genLvl_countdown_short.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sounds/Music/music_mainMenu.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Sounds/Music/music_mainMenu.mp3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +106,7 @@
       <workItem from="1605691780726" duration="4532000" />
       <workItem from="1605710171344" duration="11490000" />
       <workItem from="1605779674729" duration="749000" />
+      <workItem from="1605780734848" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="FirstSketch resource load">
       <created>1602234161578</created>
