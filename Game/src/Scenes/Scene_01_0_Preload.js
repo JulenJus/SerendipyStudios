@@ -338,11 +338,11 @@ class Scene_01_0_Preload extends Phaser.Scene {
         //General UI
         this.load.image('UI_powerUpEmpty', './assets/Sprites/UI/inGame_boostBase.png');
         this.load.image('UI_exitButton', './assets/Sprites/UI/inGame_buttonExit.png');
-        this.load.image('UI_exitConfirmationScreen', './assets/Sprites/Menus/preexit/preexit_background.png');
-        this.load.image('UI_exitConfirmationScreen_NoButton_over', './assets/Sprites/Menus/preexit/preexit_buttonNo_over.png');
-        this.load.image('UI_exitConfirmationScreen_NoButton_static', './assets/Sprites/Menus/preexit/preexit_buttonNo_static.png');
-        this.load.image('UI_exitConfirmationScreen_YesButton_over', './assets/Sprites/Menus/preexit/preexit_buttonYes_over.png');
-        this.load.image('UI_exitConfirmationScreen_YesButton_static', './assets/Sprites/Menus/preexit/preexit_buttonYes_static.png');
+        this.load.image('UI_exitConfirmationScreen', './assets/Sprites/Menus/Preexit/preexit_background.png');
+        this.load.image('UI_exitConfirmationScreen_NoButton_over', './assets/Sprites/Menus/Preexit/preexit_buttonNo_over.png');
+        this.load.image('UI_exitConfirmationScreen_NoButton_static', './assets/Sprites/Menus/Preexit/preexit_buttonNo_static.png');
+        this.load.image('UI_exitConfirmationScreen_YesButton_over', './assets/Sprites/Menus/Preexit/preexit_buttonYes_over.png');
+        this.load.image('UI_exitConfirmationScreen_YesButton_static', './assets/Sprites/Menus/Preexit/preexit_buttonYes_static.png');
 
         //MovementBar UI
         this.load.image('UI_bar', './assets/Sprites/UI/barra.png'); //Jumping bar assets
