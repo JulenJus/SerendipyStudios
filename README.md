@@ -391,12 +391,15 @@ Los efectos de sonido, a diferencia de la música de fondo, son más minimalista
 
 #### 8.3. Lista de sonidos 
 
-Si bien la mayoría de efectos musicales han sido modificados, todos han sido extraidos de una página de uso libre (FreeSound, concretamente). Por lo tanto, en cada sonido se indicará el link del cual procede el sonido originalmente.
+Si bien la mayoría de efectos musicales han sido modificados, todos han sido extraidos de una página de uso libre o de vídeos que los ofrecían para uso libre (FreeSound y YouTube, concretamente). Por lo tanto, en cada sonido se indicará el link del cual procede el sonido originalmente.
 
-- Efecto de aleteo: https://freesound.org/people/InspectorJ/sounds/404553/
+- Efecto de aleteo: https://www.youtube.com/watch?v=YYpNloXxowY 
 - Efecto de click en cualquier botón: https://freesound.org/people/timbreknight/sounds/342546/
 - Efecto de coger una caja: https://freesound.org/people/lartti/sounds/527580/
-- Efecto de colisión con los obstáculos: https://freesound.org/people/newagesoup/sounds/348244/
+- Efecto de colisión con las paredes: https://freesound.org/people/newagesoup/sounds/348244/
+- Efecto de colison con los obstáculos: https://www.youtube.com/watch?v=MoliqYxwdTU
+- Efecto de sonido del escudo: https://www.youtube.com/watch?v=eUxq1f99zcE
+- Efecto de sonido de la velocidad: https://www.youtube.com/watch?v=YYpNloXxowY 
 
 - Música del menú: https://freesound.org/people/v0idation/sounds/115144/
 - Música de la pantalla de jugar: https://freesound.org/people/Timbre/sounds/151171/
